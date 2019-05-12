@@ -997,9 +997,9 @@ img.shadow {
 }
 
 .hero-5 {
-  background-color: #a7c437;
+  background-color: #fff;
   border-color: #357680;
-  color: #fff;
+  color: #000;
   height: 100%;
   width: 100%;
   position: relative;
@@ -1019,24 +1019,23 @@ img.shadow {
   bottom: 0;
 }
 .hero-5 h4 {
-  font-weight: bold !important;
+  font-weight: 800 !important;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-family: "Montserrat", sans-serif;
+  color: #4c8c40;
 }
 .hero-5 hr {
-  opacity: 0.4;
+  border-top: 4px solid #98c93f;
 }
 .hero-5 .carousel-control {
   width: 10%;
   opacity: 0.7;
 }
 .hero-5 p {
-  color: #fff;
+  color: #000;
 }
 .hero-5 img {
-  -webkit-animation: zoom 24s infinite alternate; /* Chrome, Safari, Opera */
-  animation: zoom 24s infinite alternate;
+   /* Chrome, Safari, Opera */
 }
 
 @media (max-width: 767px) {
