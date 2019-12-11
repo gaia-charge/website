@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes fadeout {
+            from { opacity: 1; }
+            to   { opacity: 0; }
+        }
+
+        @keyframes leaf1 {
+            from { }
+            to   { margin-left: 10px; margin-top: -5px; }
+        }
+
+        @keyframes leaf2 {
+            from { }
+            to   { margin-left: 10px; margin-top: 5px; }
+        }
+
+        @keyframes leaf3 {
+            from { }
+            to   { margin-left: 15px; }
+        }
+
+        #wrapper {
+            width: 1000px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        #wrapper > div {
+            position: absolute;
+        }
+
+        #leaf1 {
+            left: 830px;
+            top: 180px;
+            animation: fadeout 2s infinite, leaf1 2s infinite;
+        }
+
+        #leaf2 {
+            left: 830px;
+            top: 220px;
+            animation: fadeout 1.5s infinite, leaf2 1.5s infinite;
+        }
+
+        #leaf3 {
+            left: 850px;
+            top: 205px;
+            animation: fadeout 2.5s infinite, leaf3 2.5s infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        NOTE: The element aren't placed according to the design. This is just to show the
+        animation principle.
+    -->
+    <div id="wrapper">
+        <div id="bus"><img src="assets/images/bus.svg" /></div>
+        <div id="leaf1"><img src="assets/images/leaf1.svg" /></div>
+        <div id="leaf2"><img src="assets/images/leaf2.svg" /></div>
+        <div id="leaf3"><img src="assets/images/leaf3.svg" /></div>
+    </div>
+</body>
+</html>
