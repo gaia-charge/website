@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="398px" viewBox="0 0 40 398" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Windmill" transform="translate(1.000000, 2.000000)">
+            <path d="M27.164,4.087 L37.073,392.976 L0.538,393.604 L11.113,3.633 C11.161,1.819 12.495,0.377 14.125,0.377 L23.733,0.377 C25.589,0.377 27.11,2.021 27.164,4.087 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M27.164,4.087 L37.073,392.976 L0.538,393.604 L11.113,3.633 C11.161,1.819 12.495,0.377 14.125,0.377 L23.733,0.377 C25.589,0.377 27.11,2.021 27.164,4.087 Z" id="Path" stroke="#468689" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="9.376 122.503 28.87 122.503 28.612 112.184 9.634 112.184"></polygon>
+            <polygon id="Path" fill="#C0EFEC" fill-rule="nonzero" points="18.154 0.376 11.958 393.324 0.539 393.604 12.008 1.346"></polygon>
+            <path d="M27.164,4.087 L37.073,392.976 L0.538,393.604 L11.113,3.633 C11.161,1.819 12.495,0.377 14.125,0.377 L23.733,0.377 C25.589,0.377 27.11,2.021 27.164,4.087 Z" id="Path" stroke="#275E5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <line x1="29.92" y1="112.185" x2="8.168" y2="112.185" id="Path" stroke="#275E5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="30.188" y1="122.503" x2="7.878" y2="122.503" id="Path" stroke="#275E5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></line>
+        </g>
+    </g>
+</svg>

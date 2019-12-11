@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes spin { 
+            from { 
+                transform: rotate(0deg); 
+            } to { 
+                transform: rotate(360deg); 
+            }
+        }
+
+        #wrapper {
+            width: 500px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        #wrapper > div {
+            position: absolute;
+        }
+
+        #pole {
+            left: 184px;
+            top: 220px;
+        }
+
+        #blades {
+            animation-name: spin;
+            animation-duration: 8000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform-origin: 204.5px 208.5px;
+        }
+
+        #ring_inner {
+            left: 36px;
+            top: 45px;
+            animation-name: spin;
+            animation-duration: 16000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        #ring_outer {
+            left: 12px;
+            top: 15px;
+            animation-name: spin;
+            animation-duration: 20000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        NOTE: The animations aren't properly centered. This is just to show the
+        animation principle.
+    -->
+    <div id="wrapper">
+        <div id="ring_inner"><img src="assets/images/ring_inner.svg" /></div>
+        <div id="ring_outer"><img src="assets/images/ring_outer.svg" /></div>
+        <div id="pole"><img src="assets/images/pole.svg" /></div>
+        <div id="blades"><img src="assets/images/blades.svg" /></div>
+    </div>
+</body>
+</html>
