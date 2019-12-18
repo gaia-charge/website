@@ -1,36 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+@font-face {
+	font-family: 'Inter';
+	font-style:  normal;
+	font-weight: 800;
+	font-display: swap;
+	src: url('/fonts/Inter-ExtraBold.woff2?v=3.11') format("woff2"),
+		 url('/fonts/Inter-ExtraBold.woff?v=3.11') format("woff");
+}
+
 body {
 	margin: 0;
-	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
+	font-family: Nunito Sans -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	line-height: 1.6;
 	color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5em 0;
-	font-weight: 400;
+.container {
+	width: 100%;
+	max-width: 92rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin: 0 auto;
+}
+
+.subtitle {
+	font-family: Inter;
+	font-weight: 800;
+	font-size: .875rem;
 	line-height: 1.2;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	color: #4C8C40;
+	margin-top: 0;
+	margin-bottom: 1rem;
 }
 
-h1 {
-	font-size: 2em;
+.title {
+	font-family: Inter;
+	font-weight: 800;
+	font-size: 3rem;
+	line-height: 1.15;
+	color: #011625;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
 }
 
-a {
-	color: inherit;
+.lead {
+	font-weight: normal;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #1E2624;
+	opacity: 0.8;
+	width: 25rem;
+	max-width: 100%;
 }
 
-code {
-	font-family: menlo, inconsolata, monospace;
-	font-size: calc(1em - 2px);
-	color: #555;
-	background-color: #f0f0f0;
-	padding: 0.2em 0.4em;
-	border-radius: 2px;
-}
-
-@media (min-width: 400px) {
-	body {
-		font-size: 16px;
-	}
+.lead p:last-child {
+	margin-bottom: 0;
 }
