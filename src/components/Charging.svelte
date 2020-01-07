@@ -3,30 +3,21 @@
     import SvgCar from '../components/svg_Car.svelte';
 </script>
 
-<svg style="display: none" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="svg-cloud" viewBox="0 0 275 52">
-        <path d="M0 51.36c2.84-17.22 17.12-30.33 34.32-30.33A33.7 33.7 0 0156.8 29.7C68.6 11.84 87.4.29 108.6.29c21.2 0 40.03 11.56 51.82 29.42a33.34 33.34 0 0128.24-15.81c13.14 0 24.5 7.74 30.01 19.01 6-4.5 13.6-7.2 21.9-7.2 16.73 0 30.67 10.99 34.1 25.65H0z" fill="#fff" stroke="#79A5AA" stroke-width="2"/>
-    </symbol>
-    <symbol id="svg-bird" viewBox="0 0 41 10">
-        <path d="m1.35 10a.75.75 0 0 1 -.21 0 1 1 0 0 1 -.77-1.25 10.9 10.9 0 0 1 20.16-3.07 10.91 10.91 0 0 1 20.2 3 1 1 0 0 1 -.73 1.19 1 1 0 0 1 -1.19-.77 8.91 8.91 0 0 0 -17.31-.58 1 1 0 0 1 -1 .72 1 1 0 0 1 -1-.72 8.91 8.91 0 0 0 -17.25.65 1 1 0 0 1 -.9.83z" fill="#79a5aa"/>
-    </symbol>
-</svg>
-
 <div class="scene charging">
     <div class="clouds">
-        <svg class="cloud cloud-1">
+        <svg width="275" height="52" class="cloud cloud-1">
             <use xlink:href="#svg-cloud"></use>
         </svg>
-        <svg class="cloud cloud-2">
+        <svg width="275" height="52" class="cloud cloud-2">
             <use xlink:href="#svg-cloud"></use>
         </svg>
-        <svg class="cloud cloud-3">
+        <svg width="275" height="52" class="cloud cloud-3">
             <use xlink:href="#svg-cloud"></use>
         </svg>
 
-        <svg class="bird bird-1"><use xlink:href="#svg-bird" /></svg>
-        <svg class="bird bird-2"><use xlink:href="#svg-bird" /></svg>
-        <svg class="bird bird-3"><use xlink:href="#svg-bird" /></svg>
+        <svg width="41" height="10" class="bird bird-1"><use xlink:href="#svg-bird" /></svg>
+        <svg width="41" height="10" class="bird bird-2"><use xlink:href="#svg-bird" /></svg>
+        <svg width="41" height="10" class="bird bird-3"><use xlink:href="#svg-bird" /></svg>
     </div>
     <div class="middle">
         <svg class="hill hill-1" viewBox="0 0 629.7 594.48" xmlns="http://www.w3.org/2000/svg">
@@ -89,25 +80,8 @@
     }
 }
 
-.scene {
-    height: 100vh;
-    background: linear-gradient(0deg, #DAF9F9, #DAF9F9);
-    position: relative;
-    overflow: hidden;
-}
-
 .clouds {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
     z-index: 2;
-}
-
-.cloud {
-    position: absolute;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 }
 
 .cloud-1 {
@@ -135,13 +109,6 @@
     animation-duration: 100s;
     animation-direction: alternate-reverse;
     animation-delay: 3s;
-}
-
-.bird {
-    width: 2rem;
-    height: auto;
-    position: absolute;
-    opacity: .8;
 }
 
 .bird-1 {
@@ -240,13 +207,7 @@ opacity: .8;
 }
 
 .text {
-    position: absolute;
-    top: 0;
     bottom: calc(321.11/853.89 * 59.25vw); /* hill-3 height */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 10;
 }
 </style>
