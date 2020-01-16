@@ -1,6 +1,7 @@
 <script>
 	import Charging from '../components/Charging.svelte';
 	import Mobility from '../components/Mobility.svelte';
+	import Bottom from '../components/Bottom.svelte';
 </script>
 
 <style>
@@ -21,3 +22,4 @@
 
 <Charging />
 <Mobility />
+<Bottom />
