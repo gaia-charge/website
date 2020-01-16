@@ -1,15 +1,19 @@
 <script>
-    import Mobility from '../components/svg_Mobility.svelte';
+    import Mobility from '../svg/2_mobility.svelte';
+
+    import Bus from '../svg/2_bus.svelte';
+    import Foreground from '../svg/2_foreground.svelte';
+
     import Person1 from '../svg/2_person_1.svelte';
     import Person2 from '../svg/2_person_2.svelte';
     import Person3 from '../svg/2_person_3.svelte';
+
     import Scooter from '../svg/2_scooter.svelte';
     import Biker from '../svg/2_biker.svelte';
+
     import Bushes1 from '../svg/2_bushes_1.svelte';
     import Bushes2 from '../svg/2_bushes_2.svelte';
     import Bushes3 from '../svg/2_bushes_3.svelte';
-    import Bus from '../svg/2_bus.svelte';
-    import Foreground from '../svg/2_foreground.svelte';
 </script>
 
 <div id="mobility" class="scene mobility">
@@ -193,7 +197,7 @@
 .road-bike :global(.biker) {
     width: 33.5vw;
     position: absolute;
-    bottom: 4%;
+    bottom: 20%;
     left: 1vw;
 }
 

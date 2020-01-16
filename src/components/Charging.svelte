@@ -1,6 +1,6 @@
 <script>
-    import SvgMotorbike from '../components/svg_Motorbike.svelte';
-    import SvgCar from '../components/svg_Car.svelte';
+    import SvgMotorbike from '../svg/1_motorbike.svelte';
+    import SvgCar from '../svg/1_car.svelte';
 </script>
 
 <div class="scene charging">
