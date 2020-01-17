@@ -230,6 +230,11 @@
         overflow: hidden;
     }
 
+    .background,
+    .foreground {
+        width: 100%;
+    }
+
     .windturbine-1 {
         z-index: 1;
         width: 19vw;

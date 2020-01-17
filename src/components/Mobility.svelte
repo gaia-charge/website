@@ -16,7 +16,7 @@
     import Bushes3 from '../svg/2_bushes_3.svelte';
 </script>
 
-<div id="mobility" class="scene mobility">
+<div class="scene mobility">
     <div class="clouds">
         <svg width="275" height="52" class="cloud cloud-1">
             <use xlink:href="#svg-cloud"></use>
@@ -76,21 +76,6 @@
     flex-direction: column;
     position: relative;
 }
-
-/* .mobility::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-image: url(temp/slide_2.png);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    z-index: 9999;
-    opacity: .25;
-    pointer-events: none;
-} */
 
 .buildings {
     flex: 1 1 62vh;

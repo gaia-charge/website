@@ -1,14 +1,17 @@
 <script>
-	import Charging from '../components/Charging.svelte';
-	import Mobility from '../components/Mobility.svelte';
-	import Bottom from '../components/Bottom.svelte';
+    import { scrollto } from "svelte-scrollto";
+
+    import Charging from '../components/Charging.svelte';
+    import Mobility from '../components/Mobility.svelte';
+    import Energy from '../components/Energy.svelte';
+    import Contact from '../components/Contact.svelte';
+    import Footer from '../components/Footer.svelte';
+
+    import Bottom from '../svg/3_bottom.svelte';
 </script>
 
-<style>
-</style>
-
 <svelte:head>
-	<title>Gaia Green Tech</title>
+    <title>Gaia Green Tech</title>
 </svelte:head>
 
 <svg style="display: none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,6 +23,60 @@
     </symbol>
 </svg>
 
-<Charging />
-<Mobility />
-<Bottom />
+
+<ul class="nav">
+    <li>
+        <a href="#" use:scrollto={'#charging'}>
+            Charging
+        </a>
+    </li>
+    <li>
+        <a href="#" use:scrollto={'#mobility'}>
+            Mobility
+        </a>
+    </li>
+    <li>
+        <a href="#" use:scrollto={'#energy'}>
+            Energy
+        </a>
+    </li>
+    <li class="nav__contact">
+        <a href="#" use:scrollto={'#contact'}>
+            Contact
+        </a>
+    </li>
+</ul>
+
+<section id="charging">
+    <Charging />
+</section>
+
+<section id="mobility">
+    <Mobility />
+</section>
+
+<div class="bottom">
+    <Bottom />
+
+    <section id="energy">
+        <Energy />
+    </section>
+
+    <section id="contact">
+        <Contact />
+    </section>
+
+    <Footer />
+</div>
+
+<style>
+.nav {
+    position: fixed;
+    z-index: 100;
+}
+
+.bottom {
+    position: relative;
+    overflow: hidden;
+}
+</style>
