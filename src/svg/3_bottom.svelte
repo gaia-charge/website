@@ -227,6 +227,7 @@
         top: 0;
         left: 0;
         z-index: 1;
+        overflow: hidden;
     }
 
     .windturbine-1 {
