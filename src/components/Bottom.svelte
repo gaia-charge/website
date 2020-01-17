@@ -1,11 +1,13 @@
 <script>
     import Bottom from '../svg/3_bottom.svelte';
+    import BottomForm from '../components/BottomForm.svelte';
+    import BottomFooter from '../components/BottomFooter.svelte';
 </script>
 
 <div id="bottom" class="bottom">
     <Bottom />
 
-    <div class="scene clean">
+    <div id="energy" class="scene energy">
         <div class="text">
             <div class="container">
                 <div class="text__inside">
@@ -21,56 +23,82 @@
             </div>
         </div>
     </div>
-    <div class="scene contact">
+
+    <div id="contact" class="scene contact">
         <div class="text">
             <div class="text__inside">
                 <h2 class="title">
-                    Let's connect
+                    Let's connect!
                 </h2>
                 <div class="lead">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing  elit. Porttitor odio sed eros adipiscing commodo. Tempor semper orci, fames neque.</p>
                 </div>
+
+                <BottomForm />
             </div>
         </div>
     </div>
+
+    <BottomFooter />
 </div>
 
 <style>
-.clean,
+.energy,
 .contact {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     position: relative;
+    background: none;
 }
 
 .bottom {
     position: relative;
 }
 
-.bottom::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: 100% auto;
-    background-image: url(temp/slide_3.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    z-index: 9999;
-    opacity: .25;
-    pointer-events: none;
-    left: 0;
-    top: 0;
+/* energy */
+.energy {
+    z-index: 5;
 }
 
-/* CLEAN */
-.clean .text {
+.energy .text {
     top: 18.7vh;
 }
 
-.clean .text .container {
+.energy .text .container {
     margin-left: 11vw;
+}
+
+/* CONTACT */
+.contact {
+    z-index: 6;
+    height: 80vh;
+}
+
+.contact::after {
+    content: "";
+    display: block;
+    height: 50vh;
+    width: 100%;
+    background-color: #ccf06b;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.contact .text {
+    top: 5vh;
+    justify-content: flex-end;
+}
+
+.contact .text__inside {
+    width: 28vw;
+    margin-right: 21vw;
+}
+
+.lead {
+    margin-bottom: 4.5vh;
 }
 </style>
