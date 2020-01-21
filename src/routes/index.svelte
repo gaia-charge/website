@@ -1,5 +1,11 @@
 <script>
-    import { scrollto } from "svelte-scrollto";
+    import { onMount } from "svelte";
+
+    let animateScroll;
+
+    onMount(async () => {
+        animateScroll = await import("svelte-scrollto");
+    });
 
     import Charging from '../components/Charging.svelte';
     import Mobility from '../components/Mobility.svelte';
@@ -23,25 +29,24 @@
     </symbol>
 </svg>
 
-
 <ul class="nav">
     <li>
-        <a href="#" use:scrollto={'#charging'}>
+        <a href="/" on:click={() => animateScroll.scrollTo({element: '#charging'})}>
             Charging
         </a>
     </li>
     <li>
-        <a href="#" use:scrollto={'#mobility'}>
+        <a href="/" on:click={() => animateScroll.scrollTo({element: '#mobility'})}>
             Mobility
         </a>
     </li>
     <li>
-        <a href="#" use:scrollto={'#energy'}>
+        <a href="/" on:click={() => animateScroll.scrollTo({element: '#energy'})}>
             Energy
         </a>
     </li>
     <li class="nav__contact">
-        <a href="#" use:scrollto={'#contact'}>
+        <a href="/" on:click={() => animateScroll.scrollTo({element: '#contact'})}>
             Contact
         </a>
     </li>
