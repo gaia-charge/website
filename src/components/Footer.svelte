@@ -58,6 +58,9 @@
 .footer__right {
     text-align: right;
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .footer__social {
