@@ -1,10 +1,8 @@
 <script>
-  export let style;
   export let classes;
 </script>
 <svg
   class={classes}
-  {style}
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 881 260">
   <defs>
