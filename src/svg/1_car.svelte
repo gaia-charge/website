@@ -1,8 +1,4 @@
-<script>
-  export let style;
-</script>
-
-<svg class="car" { style } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 907.09 396.85">
+<svg class="car" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 907.09 396.85">
     <g class="charging-station">
         <path class="cls-1" d="M146.34,324.39h-84a12,12,0,0,1-12-12v-171a12,12,0,0,1,12-12h84a12,12,0,0,1,12,12v171A12,12,0,0,1,146.34,324.39Z"/>
         <path class="cls-2" d="M69.73,131.58H62.39a11.93,11.93,0,0,0-12,11.78v141a11.93,11.93,0,0,0,12,11.78h7.34Z"/>
@@ -117,6 +113,7 @@
 }
 
 .car {
+  width: 62vw;
   position: absolute;
   left: 10vw;
   bottom: .25rem;

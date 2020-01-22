@@ -1,9 +1,8 @@
 <script>
-  export let style;
   export let classes;
 </script>
 
-<svg class={classes} {style} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 99">
+<svg class={classes} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 99">
   <defs>
     <mask id="mask" x="9.57" y="55.3" width="6.6" height="7.92" maskUnits="userSpaceOnUse">
       <path d="M15.18 63.1l-.71-5.87-4.27 3.52" fill="#fff" id="path-3-inside-1"/>

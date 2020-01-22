@@ -1,8 +1,4 @@
-<script>
-  export let style;
-</script>
-
-<svg class="motorbike" { style } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396.85 252">
+<svg class="motorbike" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396.85 252">
   <g class="wheel-right">
     <path class="cls-2" d="M277.51 216.77A33.53 33.53 0 11244 183.25a33.53 33.53 0 0133.51 33.52z"/>
     <path class="cls-3" d="M244 251.8a35 35 0 1135-35 35.06 35.06 0 01-35 35zm0-67.05a32 32 0 1032 32 32.06 32.06 0 00-32-32z"/>
@@ -144,6 +140,7 @@
 }
 
 .motorbike {
+  width: 28vw;
   position: absolute;
   bottom: 4.5rem; /* 80% * road */
   right: -3vw;
