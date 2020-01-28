@@ -29,8 +29,10 @@
 <style>
 .footer {
     color: #292B29;
-    border-top: 3px solid #275E5E;
+    border-top:  solid #275E5E;
     position: relative;
+    height: 6.5rem;
+    overflow: hidden;
     background-color: #fff;
     z-index: 2;
 }
@@ -38,7 +40,7 @@
 .footer .container {
     display: flex;
     align-items: center;
-    min-height: 6.5rem;
+    height: calc(6.5rem - 3px);
 }
 
 .footer__left {
