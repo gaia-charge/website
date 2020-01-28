@@ -1,10 +1,18 @@
 <script>
     import { onMount } from "svelte";
 
-    let animateScroll;
+    const updateVh = () => {
+        let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
 
     onMount(async () => {
-        animateScroll = await import("svelte-scrollto");
+        ;[...document.querySelectorAll('a[href^="#"]')].map(
+            x => (x.href = document.location + new URL(x.href).hash)
+        )
+
+        updateVh();
+        window.addEventListener('resize', updateVh);
     });
 
     import Charging from '../components/Charging.svelte';
@@ -38,26 +46,22 @@
         </a>
         <nav id="navbar" class="nav">
             <a
-                href="#charging"
-                on:click={() => animateScroll.scrollTo({element: '#charging'})}
+                href="http://localhost:3000/#charging"
                 class="nav__link active">
                 Charging
             </a>
             <a
-                href="#mobility"
-                on:click={() => animateScroll.scrollTo({element: '#mobility'})}
+                href="http://localhost:3000/#mobility"
                 class="nav__link">
                 Mobility
             </a>
             <a
-                href="#energy"
-                on:click={() => animateScroll.scrollTo({element: '#energy'})}
+                href="http://localhost:3000/#energy"
                 class="nav__link">
                 Energy
             </a>
             <a
-                href="#contact"
-                on:click={() => animateScroll.scrollTo({element: '#contact'})}
+                href="http://localhost:3000/#contact"
                 class="nav__link is-contact">
                 Contact
             </a>
@@ -81,8 +85,6 @@
 </section>
 
 <div class="bottom">
-    <Bottom />
-
     <section id="energy">
         <Energy />
     </section>
@@ -92,6 +94,8 @@
     </section>
 
     <Footer />
+
+
 </div>
 
 <style>
@@ -140,8 +144,19 @@
     color: #fff;
 }
 
+#energy {
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+}
+
+#contact {
+    height: calc(var(--vh, 1vh) * 80);
+    overflow: hidden;
+}
+
 .bottom {
     position: relative;
     overflow: hidden;
+    height: calc(180vh + 6.5rem + 3px);
 }
 </style>

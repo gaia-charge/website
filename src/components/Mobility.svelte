@@ -290,7 +290,10 @@
 
 /* FOREGROUND */
 .mobility :global(.foreground) {
-    width: 73vw;
+    max-height: 33vh;
+    width: auto;
+    max-width: 73vw;
+    height: auto;
     position: absolute;
     bottom: 0;
     right: 0;

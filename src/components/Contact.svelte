@@ -25,10 +25,13 @@
     position: relative;
     background: none;
     z-index: 6;
-    height: 80vh;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 80);
+    overflow: hidden;
+    outline: 1px dashed blue;
 }
 
-.contact::after {
+/* .contact::after {
     content: "";
     display: block;
     height: 50vh;
@@ -39,7 +42,7 @@
     left: 0;
     right: 0;
     z-index: -1;
-}
+} */
 
 .contact .text {
     top: 5vh;
