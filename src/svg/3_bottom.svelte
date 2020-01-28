@@ -1,4 +1,5 @@
 <div class="bg">
+
     <div class="windturbine windturbine-1">
         <div class="windturbine__center">
             <div class="windturbine__elem is-moving is-inner"></div>

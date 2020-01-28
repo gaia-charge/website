@@ -91,48 +91,6 @@
     }
 }
 
-@keyframes fadeout {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
-    }
-}
-
-@keyframes leaf-1 {
-    to {
-      transform: translate(10px, -5px);
-    }
-}
-
-@keyframes leaf-2 {
-    to {
-      transform: translate(15px, 0);
-    }
-}
-
-@keyframes leaf-3 {
-    to {
-      transform: translate(10px, 5px);
-    }
-}
-
-@keyframes motorbike {
-  100% {
-    transform: translateY(-1px);
-  }
-
-  50% {
-    transform: translateY(0);
-  }
-
-  0% {
-    transform: translateY(-1px);
-  }
-}
-
 @keyframes move-left {
   to {
     transform: translateX(-5vw);
@@ -205,7 +163,7 @@
 }
 
 .person-and-bike {
-  animation: motorbike 1s linear infinite;
+  animation: vehicle 1s linear infinite;
 }
 
 .leaf-1 {

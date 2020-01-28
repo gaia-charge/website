@@ -23,6 +23,56 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+/* Global Keyframes */
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes leaf-1 {
+    to {
+        transform: translate(10px, -5px);
+    }
+}
+
+@keyframes leaf-2 {
+    to {
+        transform: translate(15px, 0);
+    }
+}
+
+@keyframes leaf-3 {
+    to {
+        transform: translate(10px, 5px);
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes vehicle {
+    100% {
+        transform: translateY(-1px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    0% {
+        transform: translateY(-1px);
+    }
+}
+
 /*
     Screen readers mixin taken from Bootstrap
     https://github.com/twbs/bootstrap/blob/master/scss/mixins/_screen-reader.scss

@@ -159,11 +159,18 @@
     z-index: 4;
 }
 
+@keyframes move-left {
+  to {
+    transform: translateX(-5vw);
+  }
+}
+
 .road-scooter :global(.scooter) {
     width: 4.5vw;
     position: absolute;
     bottom: 44%;
-    right: 24vw;
+    right: 19vw;
+    animation: move-left 60s linear forwards;
 }
 
 .road-scooter :global(.bushes) {
@@ -279,13 +286,15 @@
 .text {
     display: flex;
     justify-content: flex-end;
-    top: 15.75vh;
+    bottom: 45vh;
     z-index: 10;
+    padding-right: calc(100vw * 280/1440);
+    padding-left: calc(100vw * 660/1440);
+    width: 100%;
 }
 
 .text__inside {
-    margin-right: calc(100vw * 305/1440); /* adds a margin to the building */
-    min-width: calc(100vw * 340/1440);
+    flex: 0 1 25rem;
 }
 
 /* FOREGROUND */
