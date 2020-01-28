@@ -222,7 +222,7 @@
     /* WRAPPER */
     .bg {
         width: 100%;
-        height: auto;
+        height: calc(180vh + 6.5rem);
         position: absolute;
         top: 0;
         left: 0;
@@ -243,7 +243,7 @@
     }
 
     .background {
-        position: relative;
+        position: static;
         z-index: 2;
     }
 
@@ -257,7 +257,7 @@
     .foreground {
         position: absolute;
         left: 0;
-        bottom: 0;
+        top: 0;
         z-index: 4;
     }
 

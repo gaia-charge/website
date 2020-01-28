@@ -26,9 +26,8 @@
     background: none;
     z-index: 6;
     width: 100%;
-    height: calc(var(--vh, 1vh) * 80);
+    height: 80vh;
     overflow: hidden;
-    outline: 1px dashed blue;
 }
 
 /* .contact::after {
