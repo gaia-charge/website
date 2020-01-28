@@ -8,6 +8,7 @@
 html,
 body {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -49,8 +50,7 @@ svg {
 }
 
 .scene {
-    height: calc(var(--vh, 1vh) * 100);
-    max-height: 100vh;
+    height: 100vh;
     background: linear-gradient(0deg, #DAF9F9, #DAF9F9);
     position: relative;
     overflow: hidden;

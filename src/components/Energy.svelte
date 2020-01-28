@@ -24,7 +24,6 @@
     background: none;
     overflow: hidden;
     z-index: 5;
-    outline: 1px dotted red;
 }
 
 .energy .text {

@@ -95,7 +95,7 @@
 
     <Footer />
 
-
+    <Bottom />
 </div>
 
 <style>
@@ -144,19 +144,8 @@
     color: #fff;
 }
 
-#energy {
-    height: calc(var(--vh, 1vh) * 100);
-    overflow: hidden;
-}
-
-#contact {
-    height: calc(var(--vh, 1vh) * 80);
-    overflow: hidden;
-}
-
 .bottom {
     position: relative;
     overflow: hidden;
-    height: calc(180vh + 6.5rem + 3px);
 }
 </style>
