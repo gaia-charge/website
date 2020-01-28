@@ -10,6 +10,16 @@ const alias = { svelte: path.resolve('node_modules', 'svelte') };
 const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
 
+const preprocessOptions = {
+	transformers: {
+		postcss: {
+			plugins: [
+				require("autoprefixer")()
+			]
+		}
+	}
+};
+
 module.exports = {
 	client: {
 		entry: config.client.entry(),
@@ -24,7 +34,10 @@ module.exports = {
 						options: {
 							dev,
 							hydratable: true,
-							hotReload: false // pending https://github.com/sveltejs/svelte/issues/2377
+							hotReload: false, // pending https://github.com/sveltejs/svelte/issues/2377
+							preprocess: require("svelte-preprocess")(
+								preprocessOptions
+							)
 						}
 					}
 				}
@@ -57,7 +70,10 @@ module.exports = {
 						options: {
 							css: false,
 							generate: 'ssr',
-							dev
+							dev,
+							preprocess: require("svelte-preprocess")(
+								preprocessOptions
+							)
 						}
 					}
 				}
