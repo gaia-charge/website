@@ -1,3 +1,8 @@
+<script>
+    import Bush1 from '../svg/3_bushes_1.svelte';
+    import Bush2 from '../svg/3_bushes_2.svelte';
+</script>
+
 <footer class="footer">
     <div class="container">
         <div class="footer__left">
@@ -24,6 +29,11 @@
             </a>
         </div>
     </div>
+
+    <Bush1 />
+    <Bush2 />
+
+
 </footer>
 
 <style>
@@ -32,7 +42,6 @@
     border-top:  solid #275E5E;
     position: relative;
     height: 6.5rem;
-    overflow: hidden;
     background-color: #fff;
     z-index: 2;
 }

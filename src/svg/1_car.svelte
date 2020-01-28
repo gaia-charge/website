@@ -68,16 +68,6 @@
 </svg>
 
 <style>
-@keyframes fadeout {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
-    }
-}
-
 @keyframes fadeout-2 {
     from {
       opacity: 1;
@@ -106,12 +96,6 @@
     }
 }
 
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 .car {
   width: 62vw;
   position: absolute;
@@ -128,6 +112,9 @@
   stroke-linecap: round;
   stroke-miterlimit: 10;
   stroke-width: 3px;
+  stroke-dasharray: 10;
+  stroke-dashoffset: -1000;
+  animation: dash 20s linear infinite;
 }
 
 .leaf-big {
@@ -144,11 +131,5 @@
 
 .leaf-3 {
   animation: fadeout 2.33s infinite, leaf-3 2.5s infinite;
-}
-
-.cls-16 {
-  stroke-dasharray: 10;
-  stroke-dashoffset: -1000;
-  animation: dash 20s linear infinite;
 }
 </style>

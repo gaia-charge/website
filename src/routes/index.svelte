@@ -96,6 +96,7 @@
     <Footer />
 
     <Bottom />
+    <div class="bg-green"></div>
 </div>
 
 <style>
@@ -147,5 +148,15 @@
 .bottom {
     position: relative;
     overflow: hidden;
+}
+
+.bg-green {
+    height: calc(100% - (180vh + 6.5rem));
+    background-color: #ccf06b;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
 }
 </style>

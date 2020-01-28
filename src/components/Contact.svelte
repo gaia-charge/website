@@ -20,14 +20,22 @@
 <style>
 .contact {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
+    justify-content: center;
     flex-direction: column;
     position: relative;
     background: none;
     z-index: 6;
     width: 100%;
     height: 80vh;
+    min-height: 60rem;
     overflow: hidden;
+}
+
+@media (max-aspect-ratio: 1600/1000) {
+    .contact {
+        justify-content: flex-start;
+    }
 }
 
 /* .contact::after {
@@ -44,7 +52,9 @@
 } */
 
 .contact .text {
-    top: 5vh;
+    position: relative;
+    top: 0;
+    left: 0;
     justify-content: flex-end;
 }
 
