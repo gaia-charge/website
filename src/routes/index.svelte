@@ -1,5 +1,11 @@
 <script>
     import { onMount } from "svelte";
+    import Foreground from '../svg/2_foreground.svelte';
+    import { _, locale} from 'svelte-i18n';
+
+
+     if( !$locale )
+         $locale = 'en';
 
     const updateVh = () => {
         let vh = window.innerHeight * 0.01;
@@ -11,10 +17,34 @@
             x => (x.href = document.location + new URL(x.href).hash)
         )
 
+        // update active section if the h2 is visible
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                
+                if( document.getElementById(`-${id}`) )
+                    
+                    if (entry.intersectionRatio > 0) {
+                        document.querySelectorAll('.nav__link').forEach((el) => {
+                            el.classList.remove('active');
+                        });
+
+                        document.getElementById(`-${id}`).classList.add('active');
+                    } 
+            });
+        });
+
+        // Track all sections
+        document.querySelectorAll('h2[id]').forEach((section) => {
+            observer.observe(section);
+        });
+
+
         updateVh();
         window.addEventListener('resize', updateVh);
     });
 
+    
     import Charging from '../components/Charging.svelte';
     import Mobility from '../components/Mobility.svelte';
     import Energy from '../components/Energy.svelte';
@@ -22,11 +52,18 @@
     import Footer from '../components/Footer.svelte';
 
     import Bottom from '../svg/3_bottom.svelte';
+
+    function changeLocale(loc){
+        $locale = loc;
+    }
+ 
 </script>
 
 <svelte:head>
     <title>Gaia Green Tech</title>
 </svelte:head>
+
+<!--svelte:window on:scroll={throttle(handleScrollY,100)}/-->
 
 <svg style="display: none" fill="none" xmlns="http://www.w3.org/2000/svg">
     <symbol id="svg-cloud" viewBox="0 0 275 52">
@@ -46,17 +83,20 @@
         </a>
         <nav id="navbar" class="nav">
             <a
-                href="http://localhost:3000/#charging"
+                id="-visibleCharging"
+                href="/#charging"
                 class="nav__link active">
                 Charging
             </a>
             <a
-                href="http://localhost:3000/#mobility"
+                id="-visibleMobility"
+                href="/#mobility"
                 class="nav__link">
                 Mobility
             </a>
             <a
-                href="http://localhost:3000/#energy"
+                id="-visibleEnergy"
+                href="/#energy"
                 class="nav__link">
                 Energy
             </a>
@@ -66,40 +106,99 @@
                 Contact
             </a>
 
-            <a href="/" class="nav__link is-active">
+            <a href="/" class="nav__link" class:is-active={$locale=='en'? true : false} on:click|preventDefault={() => changeLocale('en')}>
                 EN
             </a>
-            <a href="/" class="nav__link">
+            <a href="/" class="nav__link" class:is-active={$locale=='es-ES'? true : false} on:click|preventDefault={() => changeLocale('es-ES')}>
                 ES
             </a>
         </nav>
     </div>
 </header>
 
-<section id="charging">
-    <Charging />
-</section>
 
-<section id="mobility">
-    <Mobility />
-</section>
-
-<div class="bottom">
-    <section id="energy">
-        <Energy />
+<div class="base-wrapper">
+    <section class="charging" id="charging">
+        <Charging />
     </section>
 
-    <section id="contact">
-        <Contact />
+    <section class="seam-1-2"/>
+
+    <section style="z-index: 5 !important; height: 125vh;" id="mobility">
+        <Mobility />
     </section>
 
-    <Footer />
+    
 
-    <Bottom />
-    <div class="bg-green"></div>
+    <div class="bottom">
+
+        <section class="seam-2-3">
+            <Foreground/>
+        </section>
+
+        <section style="z-index: 10 !important;" id="energy">
+            <Energy />
+        </section>
+
+        <section style="z-index:12;" id="contact">
+            <Contact />
+        </section>
+
+        
+
+        <Bottom />
+        <Footer/>
+        <div class="bg-green">
+        
+        </div> 
+    </div>
+
 </div>
 
+
+
+
 <style>
+
+/* PARALLAX */
+.base-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 3px;
+  position: relative;
+}
+section{
+    position:relative
+}
+
+.charging{
+    z-index: 2 !important;
+    height: 125vh;
+}
+
+.seam-1-2{
+    background-image: url('/seam-section-1-2.svg');
+    background-size: cover;
+    z-index: 2 !important;
+    height: 100vh;
+    width: 100vw;
+    bottom: calc( 8vw - (570px - 5vw));
+    position: absolute;
+    z-index: 2 !important;
+    transform: translateZ(.8px) scale(.8);
+}
+
+.seam-2-3{
+    z-index: 2 !important;
+    height: 50vh;
+    width: 105vw;
+    top: calc( -39vw - (250px - 16vw));
+    position: absolute;
+    z-index: 6 !important;
+    transform: translateZ(.7px) scale(.8);
+}
+
 .header {
     top: 2rem;
     left: 0;
@@ -133,7 +232,11 @@
 }
 
 :global(.nav__link.active) {
-    font-weight: 800;
+    font-weight: 800 !important;
+}
+
+:global(.nav__link.is-active) {
+    font-weight: 800 !important;
 }
 
 .nav__link.is-contact {
@@ -147,11 +250,12 @@
 
 .bottom {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .bg-green {
-    height: calc(100% - (180vh + 6.5rem));
+    /* height: calc(100% - (180vh + 6.5rem)); */
+    height: 100%;
     background-color: #ccf06b;
     position: absolute;
     left: 0;

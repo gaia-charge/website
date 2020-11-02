@@ -114,10 +114,10 @@
   stroke-width: 3px;
   stroke-dasharray: 10;
   stroke-dashoffset: -1000;
-  animation: dash 20s linear infinite;
+  /* animation: dash 20s linear infinite; */
 }
 
-.leaf-big {
+/* .leaf-big {
   animation: fadeout-2 1s linear infinite alternate;
 }
 
@@ -131,5 +131,5 @@
 
 .leaf-3 {
   animation: fadeout 2.33s infinite, leaf-3 2.5s infinite;
-}
+} */
 </style>

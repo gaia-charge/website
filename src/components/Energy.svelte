@@ -3,7 +3,7 @@
         <div class="container">
             <div class="text__inside">
                 <p class="subtitle"><strong>Gaia Green Tech</strong> is</p>
-                <h2 class="title">
+                <h2 class="title" id="visibleEnergy">
                     Clean<br>
                     energy supply
                 </h2>
@@ -21,16 +21,19 @@
     align-items: flex-start;
     flex-direction: column;
     position: relative;
-    background: none;
+   /* background: none;*/
     overflow: hidden;
-    z-index: 5;
+    z-index: 2;
 }
 
 .energy .text {
-    top: 18.7vh;
+    top: 14.7vh;
+}
+.lead{
+    width: 38vw;
 }
 
 .energy .text .container {
-    margin-left: 11vw;
+    /* margin-left: 2rem; */
 }
 </style>

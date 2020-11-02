@@ -5,7 +5,7 @@
 <div class="scene contact">
     <div class="text">
         <div class="text__inside">
-            <h2 class="title">
+            <h2 class="title" id="visibleContact">
                 Let's connect!
             </h2>
             <div class="lead">
@@ -28,7 +28,8 @@
     z-index: 6;
     width: 100%;
     height: 80vh;
-    min-height: 60rem;
+    /* min-height: 60rem; */
+    min-height: 60vw;
     overflow: hidden;
 }
 
@@ -59,7 +60,7 @@
 }
 
 .contact .text__inside {
-    width: 28vw;
+    width: 38vw;
     margin-right: 21vw;
 }
 

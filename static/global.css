@@ -145,6 +145,41 @@ svg {
     width: 25rem;
     max-width: 100%;
 }
+/* Medium devices (landscape tablets,) */
+@media only screen and (max-width: 1064px){
+    .subtitle {
+        font-size: .775rem;
+        margin-bottom: .8rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .lead {
+        font-size: .9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Medium devices (portrait tablets and large phones,) */
+@media only screen and (max-width: 864px){
+    .subtitle {
+        font-size: .775rem;
+    }
+    
+    .title {
+        font-size: 2rem;
+        margin-bottom: .9rem;
+        line-height: 1;
+    }
+    
+    .lead {
+        font-size: .8rem;
+        line-height: 1.3;
+    }
+}
 
 .lead p:last-child {
     margin-bottom: 0;

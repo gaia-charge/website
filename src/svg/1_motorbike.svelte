@@ -92,8 +92,9 @@
 }
 
 @keyframes move-left {
+
   to {
-    transform: translateX(-5vw);
+    transform: translateX(-100vw);
   }
 }
 
@@ -102,7 +103,9 @@
   position: absolute;
   bottom: 4.5rem; /* 80% * road */
   right: -3vw;
-  animation: move-left 240s linear forwards;
+  animation: move-left 20s linear forwards;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
   z-index: 6;
 }
 
@@ -158,7 +161,7 @@
   fill: #ffe9ca;
 }
 
-.lamp {
+/* .lamp {
   animation: lamp 3s linear infinite alternate;
 }
 
@@ -176,5 +179,5 @@
 
 .leaf-3 {
   animation: fadeout 2.5s infinite, leaf-3 2.5s infinite;
-}
+} */
 </style>

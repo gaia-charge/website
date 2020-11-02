@@ -80,6 +80,9 @@
 </svg>
 
 <style>
+    .mobility{
+        transform: translateZ(-.4px) scale(1.136) scaleY(1.1);
+    }
     svg {
         display: block;
         flex: 0 0 auto;

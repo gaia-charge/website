@@ -2,7 +2,7 @@
     import Mobility from '../svg/2_mobility.svelte';
 
     import Bus from '../svg/2_bus.svelte';
-    import Foreground from '../svg/2_foreground.svelte';
+   // import Foreground from '../svg/2_foreground.svelte';
 
     import Person1 from '../svg/2_person_1.svelte';
     import Person2 from '../svg/2_person_2.svelte';
@@ -57,7 +57,7 @@
     <div class="text">
         <div class="text__inside">
             <p class="subtitle"><strong>Gaia Green Tech</strong> is</p>
-            <h2 class="title">
+            <h2 class="title" id="visibleMobility">
                 Sustainable<br>
                 mobility
             </h2>
@@ -66,7 +66,7 @@
             </div>
         </div>
     </div>
-    <Foreground classes="foreground" />
+    <!--Foreground classes="foreground" /-->
 </div>
 
 <style>
@@ -161,7 +161,13 @@
 
 @keyframes move-left {
   to {
-    transform: translateX(-5vw);
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes move-right {
+  to {
+    transform: translateX(100vw);
   }
 }
 
@@ -170,7 +176,9 @@
     position: absolute;
     bottom: 44%;
     right: 19vw;
-    animation: move-left 60s linear forwards;
+    /* animation: move-left 60s linear forwards;
+    animation-delay: 3s;
+    animation-iteration-count: infinite; */
 }
 
 .road-scooter :global(.bushes) {
@@ -191,6 +199,9 @@
     position: absolute;
     bottom: 20%;
     left: 1vw;
+    animation: move-right 20s linear forwards;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
 }
 
 .road-cars {
@@ -243,7 +254,7 @@
     width: calc(100vw * 127/1440);
     top: calc(64vh * 59/555);
     left: 20vw;
-    animation-name: move-clouds-1;
+    /* animation-name: move-clouds-1; */
     animation-duration: 90s;
 }
 
@@ -251,7 +262,7 @@
     width: calc(100vw * 104/1440);
     top: calc(64vh * 131/555);
     right: calc(100vw * 108/1440);
-    animation-name: move-clouds-2;
+    /* animation-name: move-clouds-2; */
     animation-duration: 240s;
 }
 
@@ -260,7 +271,7 @@
     top: calc(64vh * 213/555);
     left: calc(100vw * 246/1440);
     transform: translateX(0) scaleX(-1);
-    animation-name: move-clouds-3;
+    /* animation-name: move-clouds-3; */
     animation-duration: 100s;
     animation-direction: alternate-reverse;
 }
@@ -285,7 +296,7 @@
 /* TEXT */
 .text {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     bottom: 45vh;
     z-index: 10;
     padding-right: calc(100vw * 280/1440);

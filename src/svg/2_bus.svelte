@@ -462,7 +462,7 @@
     mask: url(#mask-2);
   }
 
-  .chassis {
+  /* .chassis {
     animation: vehicle 2s linear infinite;
   }
 
@@ -476,5 +476,5 @@
 
   .leaf-3 {
     animation: fadeout 2.5s infinite, leaf-3 2.5s infinite;
-  }
+  } */
 </style>

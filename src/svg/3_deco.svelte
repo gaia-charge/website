@@ -27,7 +27,7 @@
     position: absolute;
     right: 100%;
     bottom: 50%;
-    transform: translate(-2.5vw, 17%);
+    /* transform: translate(-2.5vw, 17%); */
 }
 
 .dashed-path {
@@ -38,9 +38,9 @@
   stroke-width: 3px;
   stroke-dasharray: 10;
   stroke-dashoffset: -1000;
-  animation: dash 60s linear infinite;
+  /* animation: dash 60s linear infinite; */
 }
-
+/* 
 @keyframes leaf-3 {
     to {
         transform: translate(5px, -10px);
@@ -84,5 +84,5 @@
 
 .glowing {
   animation: glowingLeaf 3s linear infinite alternate;
-}
+} */
 </style>
