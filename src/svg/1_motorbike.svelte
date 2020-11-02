@@ -93,8 +93,47 @@
 
 @keyframes move-left {
 
-  to {
+  /* to {
     transform: translateX(-100vw);
+  } */
+  0%{
+      transform: translateX(-0vw);
+       
+  }
+  20%{
+      transform: translateX(-25vw);
+  }
+  40%{
+      transform: translateX(-50vw);
+      opacity:1
+  }
+  60%{
+      transform: translateX(-75vw);
+  }
+  78%{
+      opacity:1
+  }
+  79%{
+      opacity:0
+  }
+  80%{
+      transform: translateX(-100vw);
+      opacity:0
+  }
+  81%{
+    opacity:0
+  }
+  82%{
+      transform: translateX(+25vw);
+      opacity:0
+  }
+  83%{
+    opacity:1
+  }
+  
+  100%{
+      opacity:1;
+      transform: translateX(0vw);
   }
 }
 

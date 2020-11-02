@@ -1,15 +1,16 @@
 <script>
     import ContactForm from '../components/ContactForm.svelte';
+    import { _ } from 'svelte-i18n';
 </script>
 
 <div class="scene contact">
     <div class="text">
         <div class="text__inside">
             <h2 class="title" id="visibleContact">
-                Let's connect!
+                {$_('contact.title', { default: "Let's connect!" })}
             </h2>
             <div class="lead">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing  elit. Porttitor odio sed eros adipiscing commodo. Tempor semper orci, fames neque.</p>
+                <p>{$_('contact.lead', { default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo. Tempor semper orci, fames neque.' })}</p>
             </div>
 
             <ContactForm />

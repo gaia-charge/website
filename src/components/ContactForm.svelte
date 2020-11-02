@@ -2,6 +2,7 @@
     import Deco from '../svg/3_deco.svelte';
     import Leaves from '../svg/3_leaves.svelte';
     import axios from 'axios';
+    import { _ } from 'svelte-i18n';
 
     let email;
     let errorEmail;
@@ -10,7 +11,7 @@
     let message;
     let errorMessage;
     let err;
-    let send = 'Send message'
+    let send = $_('contact.button', { default: "Send message" });
 
     function validateEmail(value) { 
         const regex = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
@@ -65,13 +66,13 @@
         <p style="color:red !important; margin:0">{err}</p>
     {/if}
     <div class="form__group">
-        <input type="text" class="form__control" class:error={errorName} bind:value={name} placeholder="Your name">
+        <input type="text" class="form__control" class:error={errorName} bind:value={name} placeholder="{$_('contact.phName', { default: "Your name" })}">
     </div>
     <div class="form__group">
-        <input type="email" class="form__control" class:error={errorEmail} bind:value={email} placeholder="user@domain.com">
+        <input type="email" class="form__control" class:error={errorEmail} bind:value={email} placeholder="{$_('contact.phEmail', { default: "user@domain.com" })}">
     </div>
     <div class="form__group">
-        <textarea class="form__control is-textarea" class:error={errorMessage} bind:value={message} placeholder="Leave us a message"></textarea>
+        <textarea class="form__control is-textarea" class:error={errorMessage} bind:value={message} placeholder="{$_('contact.phMessage', { default: "Leave us a message" })}"></textarea>
     </div>
     <button type="submit" on:click|preventDefault={sendSubmitt} class="form__submit">{send}</button>
 

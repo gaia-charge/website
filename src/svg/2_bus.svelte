@@ -465,16 +465,19 @@
   /* .chassis {
     animation: vehicle 2s linear infinite;
   }
-
+*/
   .leaf-1 {
-    animation: fadeout 2s infinite, leaf-1 2s infinite;
+    animation: fadeout 3.5s infinite, leaf-1 3.5s infinite;
+    animation-delay: 1s;
   }
 
   .leaf-2 {
-    animation: fadeout 1.5s infinite, leaf-2 1.5s infinite;
+    animation: fadeout 2.5s infinite, leaf-2 2.5s infinite;
+    animation-delay: 2s;
   }
 
   .leaf-3 {
-    animation: fadeout 2.5s infinite, leaf-3 2.5s infinite;
-  } */
+    animation: fadeout 4.5s infinite, leaf-3 4.5s infinite;
+    animation-delay: 3s;
+  } 
 </style>

@@ -1,4 +1,5 @@
 <script>
+    import { _ } from 'svelte-i18n';
     import Mobility from '../svg/2_mobility.svelte';
 
     import Bus from '../svg/2_bus.svelte';
@@ -56,13 +57,13 @@
     </div>
     <div class="text">
         <div class="text__inside">
-            <p class="subtitle"><strong>Gaia Green Tech</strong> is</p>
+            <p class="subtitle"><strong>{$_('subtitle', { default: 'Gaia Green Tech is' })}</strong></p>
             <h2 class="title" id="visibleMobility">
-                Sustainable<br>
-                mobility
+                {$_('mobility.title1', { default: 'Sustainable' })}<br>
+                {$_('mobility.title2', { default: 'mobility' })}
             </h2>
             <div class="lead">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo. Tempor semper orci, fames neque.</p>
+                <p>{$_('mobility.lead', { default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo. Tempor semper orci, fames neque.' })}</p>
             </div>
         </div>
     </div>
@@ -166,10 +167,47 @@
 }
 
 @keyframes move-right {
-  to {
-    transform: translateX(100vw);
+  0%{
+      transform: translateX(0vw);
+       
+  }
+  20%{
+      transform: translateX(25vw);
+  }
+  40%{
+      transform: translateX(50vw);
+      opacity:1
+  }
+  60%{
+      transform: translateX(75vw);
+  }
+  78%{
+      opacity:1
+  }
+  79%{
+      opacity:0
+  }
+  80%{
+      transform: translateX(100vw);
+      opacity:0
+  }
+  81%{
+    opacity:0
+  }
+  82%{
+      transform: translateX(-25vw);
+      opacity:0
+  }
+  83%{
+    opacity:1
+  }
+  
+  100%{
+      opacity:1;
+      transform: translateX(0vw);
   }
 }
+
 
 .road-scooter :global(.scooter) {
     width: 4.5vw;
@@ -239,11 +277,11 @@
 
 @keyframes move-clouds-3 {
     from {
-        transform: translateX(50vw) scaleX(-1);
+        transform: translateX(50vw);
     }
 
     to {
-        transform: translateX(0) scaleX(-1);
+        transform: translateX(0);
     }
 }
 .clouds {
@@ -254,16 +292,18 @@
     width: calc(100vw * 127/1440);
     top: calc(64vh * 59/555);
     left: 20vw;
-    /* animation-name: move-clouds-1; */
+    animation-name: move-clouds-1;
     animation-duration: 90s;
+    animation-delay: 4s;
 }
 
 .cloud-2 {
     width: calc(100vw * 104/1440);
     top: calc(64vh * 131/555);
     right: calc(100vw * 108/1440);
-    /* animation-name: move-clouds-2; */
+    animation-name: move-clouds-2;
     animation-duration: 240s;
+    animation-delay: 3s;
 }
 
 .cloud-3 {
@@ -271,9 +311,10 @@
     top: calc(64vh * 213/555);
     left: calc(100vw * 246/1440);
     transform: translateX(0) scaleX(-1);
-    /* animation-name: move-clouds-3; */
+    animation-name: move-clouds-3;
     animation-duration: 100s;
     animation-direction: alternate-reverse;
+    animation-delay: 2.5s;
 }
 
 .bird-1 {

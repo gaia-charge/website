@@ -1,6 +1,26 @@
 {
+  "subtitle":"Gaia Green Tech is",
     "charging": {
       "title1": "Red de",
-      "title2": "carga accesible"
+      "title2": "carga accesible",
+      "lead":"Imagine a world where everything is as ideal as can be. And you are participating in that situation. Sounds perfect, right?"
+    },
+    "mobility": {
+      "title1": "Sustainable",
+      "title2": "mobility",
+      "lead":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo. Tempor semper orci, fames neque."
+    },
+    "energy": {
+      "title1": "Clean",
+      "title2": "energy supply",
+      "lead":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo."
+    },
+    "contact": {
+      "title": "Let's connect!",
+      "lead":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo.",
+      "phName":"Your name",
+      "phMessage":"Leave us a message",
+      "phEmail":"user@domain.com",
+      "button":"Send message"
     }
 }
