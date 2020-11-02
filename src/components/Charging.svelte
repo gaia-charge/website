@@ -49,14 +49,13 @@
     </div>
     <div class="text">
         <div class="container">
-            <p class="subtitle"><strong>Gaia Green Tech</strong> is</p>
+            <p class="subtitle"><strong>{$_('subtitle', { default: 'Gaia Green Tech is' })}</strong></p>
             <h2 class="title" id="visibleCharging">
-                
                 {$_('charging.title1', { default: 'Accessible' })}<br>
                 {$_('charging.title2', { default: 'charging network' })}
             </h2>
             <div class="lead">
-                <p>Imagine a world where everything is as ideal as can be. And you are participating in that situation. Sounds perfect, right?</p>
+                <p>{$_('charging.lead', { default: 'Imagine a world where everything is as ideal as can be. And you are participating in that situation. Sounds perfect, right?' })}</p>
             </div>
         </div>
     </div>
@@ -93,16 +92,18 @@
     width: 17.5rem;
     top: 100px; /* temp */
     left: 20vw;
-    /* animation-name: move-clouds-1; */
+    animation-name: move-clouds-1;
     animation-duration: 90s;
+    animation-delay: 2s;
 }
 
 .cloud-2 {
     width: 12rem;
     top: 235px; /* temp */
     right: 5vw;
-    /* animation-name: move-clouds-2; */
+    animation-name: move-clouds-2;
     animation-duration: 120s;
+    animation-delay: 3s;
 }
 
 .cloud-3 {
@@ -110,10 +111,10 @@
     top: 365px; /* temp */
     right: 22.5vw;
     transform: translateX(0) scaleX(-1);
-    /* animation-name: move-clouds-3; */
+    animation-name: move-clouds-3;
     animation-duration: 100s;
     animation-direction: alternate-reverse;
-    animation-delay: 3s;
+    animation-delay: 4s;
 }
 
 .bird-1 {
