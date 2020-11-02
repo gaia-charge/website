@@ -1,25 +1,102 @@
 <script>
     import Deco from '../svg/3_deco.svelte';
     import Leaves from '../svg/3_leaves.svelte';
+    import axios from 'axios';
+
+    let email;
+    let errorEmail;
+    let name;
+    let errorName;
+    let message;
+    let errorMessage;
+    let err;
+    let send = 'Send message'
+
+    function validateEmail(value) { 
+        const regex = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+        return ( value && regex.test(String(value).toLowerCase()) )
+    }
+
+    async function sendSubmitt(){
+        err = null;
+        errorEmail = false;
+        errorMessage = false;
+        errorName = false;
+        console.log(name)
+
+        if( !name || name == '')
+        {
+            errorName = true
+            err = 'Please insert your name';
+            return false;
+        }
+        
+        let booleanSend = validateEmail(email);
+
+        if(  !booleanSend ){
+            errorEmail = true;
+            err = 'Please, insert a valid email'
+            return false;
+        }
+
+        if( !message )
+        {
+            errorMessage = true
+            err = 'Please insert a message';
+            return false;
+        }
+            
+        try{
+        // const response = await axios.post('https://',{})
+        }
+        catch(err){
+            console.error(err)
+            error = false;
+        }
+        error = false;
+        send = 'Thank you!'
+       
+
+    }
 </script>
 
 <form action="" class="form">
+    {#if err}
+        <p style="color:red !important; margin:0">{err}</p>
+    {/if}
     <div class="form__group">
-        <input type="text" class="form__control" placeholder="Your name">
+        <input type="text" class="form__control" class:error={errorName} bind:value={name} placeholder="Your name">
     </div>
     <div class="form__group">
-        <input type="email" class="form__control" placeholder="user@domain.com">
+        <input type="email" class="form__control" class:error={errorEmail} bind:value={email} placeholder="user@domain.com">
     </div>
     <div class="form__group">
-        <textarea class="form__control is-textarea" placeholder="Leave us a message"></textarea>
+        <textarea class="form__control is-textarea" class:error={errorMessage} bind:value={message} placeholder="Leave us a message"></textarea>
     </div>
-    <button type="submit" class="form__submit">Send message</button>
+    <button type="submit" on:click|preventDefault={sendSubmitt} class="form__submit">{send}</button>
 
     <Deco />
     <Leaves />
 </form>
 
 <style>
+.error{
+    border-color: red !important;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .5s;
+    opacity: 1;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .form {
     position: relative;
     width: 100%;

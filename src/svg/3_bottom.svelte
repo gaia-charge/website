@@ -225,9 +225,9 @@
         width: 100%;
         height: calc(180vh + 6.5rem);
         position: absolute;
-        top: 0;
+        top: 2vh;
         left: 0;
-        z-index: 1;
+        z-index: 11;
         overflow: hidden;
     }
 
