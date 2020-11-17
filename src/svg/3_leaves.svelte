@@ -21,8 +21,21 @@
   bottom: 25%;
 }
 
+@media only screen and (max-width: 768px) {
+    .form_leaves{ 
+      left: 80%;
+      height: 90%;
+    }
+    .leaf-1 {
+      transform: translateY(-6vh);
+    }
+    .leaf-2 {
+      transform: translateY(12vh);
+    }
+}
 
-.leaf-1 {
+
+/* .leaf-1 {
   animation: fadeout 3.5s infinite, leaf-1 3.5s infinite;
   animation-delay: 2s;
 }
@@ -30,5 +43,5 @@
 .leaf-2 {
   animation: fadeout 2.5s infinite, leaf-2 2.5s infinite;
   animation-delay: 4s;
-}
+} */
 </style>

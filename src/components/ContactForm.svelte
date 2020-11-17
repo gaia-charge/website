@@ -12,11 +12,22 @@
     let errorMessage;
     let err;
     let send = $_('contact.button', { default: "Send message" });
+    export let showPopup;
 
     function validateEmail(value) { 
         const regex = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
         return ( value && regex.test(String(value).toLowerCase()) )
     }
+
+    function showModal(){
+        showPopup = true;
+    }
+
+    const config = {
+    headers:{
+            "Content-Type": "application/json"
+        }
+    };
 
     async function sendSubmitt(){
         err = null;
@@ -48,14 +59,28 @@
         }
             
         try{
-        // const response = await axios.post('https://',{})
+            const response = await axios.post('https://hooks.zapier.com/hooks/catch/267763/o60i84z/',
+                                            {
+                                                "name": name,
+                                                "email": email,
+                                                "message": message
+                                            }
+                                            , config)
         }
+                    
         catch(err){
             console.error(err)
-            error = false;
+            err = 'Something went wrong, try again';
         }
-        error = false;
-        send = 'Thank you!'
+        err = '';
+        errorName = false;
+        errorEmail = false;
+        errorMessage = false;
+        name = '';
+        email = '';
+        message = '';
+       // send = 'Thank you!'
+        showPopup = true;
        
 
     }
@@ -80,6 +105,7 @@
     <Leaves />
 </form>
 
+
 <style>
 .error{
     border-color: red !important;
@@ -101,6 +127,7 @@
 .form {
     position: relative;
     width: 100%;
+    padding: 2rem 0;
 }
 
 .form__group + .form__group {
@@ -139,5 +166,11 @@
     font-weight: 600;
     color: #fff;
     margin-top: 1rem;
+}
+/* TABLET */
+@media only screen and (min-width: 540px) and (max-width: 768px) and (min-height: 720px) {
+    .form__group{
+        margin: 1rem 0;
+    }
 }
 </style>

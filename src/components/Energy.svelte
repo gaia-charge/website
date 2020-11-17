@@ -36,6 +36,32 @@
 .lead{
     width: 38vw;
 }
+@media only screen and (max-width: 768px) {
+    .energy .text{
+        top: 0.7vh;
+    }
+    .energy{
+        top: 12vh;
+        height: 144vh;
+    }
+    .lead{
+        width: 100vw;
+    }
+}
+
+/* iPhonw X */
+@media only screen and (max-width: 380px) and (min-height: 740px) {
+    .energy{
+        height: 120vh;
+    }
+}
+/* TABLET */
+@media only screen and (min-width: 540px) and (max-width: 768px) and (min-height: 720px) {
+    .energy{
+        top: 12vh;
+        height: 160vh;
+    }
+}
 
 /* .energy .text .container {
     margin-left: 2rem;
