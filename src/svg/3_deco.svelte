@@ -85,4 +85,12 @@
 .glowing {
   animation: glowingLeaf 3s linear infinite alternate;
 } */
+
+    /* MOBILE */
+@media only screen and (max-width: 768px) {
+    .form__deco{
+        display:none;
+    }
+}
+
 </style>

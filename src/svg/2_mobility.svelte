@@ -78,10 +78,82 @@
     <path class="cls-11" d="M1029.08 478.87c-5.31-1.38-21.16-.45-22.09 13.72 0 0-5.08-1.15-7 3.43l-4.06-.78a6.55 6.55 0 017-5.76s5.78-19.62 26.18-11c.28.08.2.45-.03.39z"/>
     <path class="cls-12" d="M1012.15 496.25H996a1 1 0 01-1-1 2.18 2.18 0 010-.25c0-3.7 3.31-6.69 7.28-6.63 2.08-7.67 9.62-13.15 18.29-13.15a19.87 19.87 0 0110.37 2.88 1 1 0 01-1 1.7 18 18 0 00-9.33-2.58c-8 0-15 5.23-16.54 12.42a1 1 0 01-1.12.79 5.24 5.24 0 00-5.84 3.78h15.14a1 1 0 110 2z"/>
 </svg>
+<div class="building-mobile">
+    <svg  class="buildingRatio b1" viewBox="0 0 54 243" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Building">
+    <path id="Vector" d="M40.2481 240.648H-36.7519C-43.3519 240.648 -48.7519 235.248 -48.7519 228.648V13.689C-48.7519 7.08896 -43.3519 1.68896 -36.7519 1.68896H40.2481C46.8481 1.68896 52.2481 7.08896 52.2481 13.689V228.648C52.2481 235.248 46.8481 240.648 40.2481 240.648Z" fill="#F0FFFF"/>
+    <path id="Vector_2" d="M40.2481 240.648H-36.7519C-43.3519 240.648 -48.7519 235.248 -48.7519 228.648V13.689C-48.7519 7.08896 -43.3519 1.68896 -36.7519 1.68896H40.2481C46.8481 1.68896 52.2481 7.08896 52.2481 13.689V228.648C52.2481 235.248 46.8481 240.648 40.2481 240.648Z" stroke="#79A5AA" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    </svg>
+    <svg  class="buildingRatio b2"  viewBox="0 0 375 257" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Building">
+    <path id="Vector" d="M453.717 255.239H-129.458C-138.006 255.239 -145 248.092 -145 239.353V17.6802C-145 8.94275 -138.006 1.79395 -129.458 1.79395H453.717C462.265 1.79395 469.259 8.94275 469.259 17.6802V239.353C469.259 248.092 462.264 255.239 453.717 255.239Z" fill="white"/>
+    <path id="Vector_2" d="M453.717 255.239H-129.458C-138.006 255.239 -145 248.092 -145 239.353V17.6802C-145 8.94275 -138.006 1.79395 -129.458 1.79395H453.717C462.265 1.79395 469.259 8.94275 469.259 17.6802V239.353C469.259 248.092 462.264 255.239 453.717 255.239Z" stroke="#79A5AA" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_3" d="M-50.0404 131.356H457.76" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_4" d="M-103.864 179.793H458.393" stroke="#93CCCC" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_5" d="M320.62 233.685V79.1292" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_6" d="M320.62 61.9009V45.3152" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_7" d="M182.254 223.684V55.3527" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_8" d="M10.9466 233.698V214.15" stroke="#93CCCC" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"/>
+    </g>
+    </svg>
+    <svg  class="buildingRatio b3"  viewBox="0 0 132 354" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Building">
+    <g id="Solar panel">
+    <path id="Vector" d="M70.897 53.803V35.093" stroke="#385365" stroke-width="3" stroke-miterlimit="10"/>
+    <path id="Vector_2" d="M34.131 43.799H97.467C99.946 43.799 102.531 41.981 103.242 39.739L110.808 15.874C111.519 13.631 110.084 11.814 107.606 11.814H44.2709C41.7919 11.814 39.2059 13.631 38.4949 15.874L30.9299 39.739C30.2189 41.981 31.652 43.799 34.131 43.799Z" fill="#3E637C"/>
+    <path id="Vector_3" d="M106.96 28.011H34.647" stroke="white" stroke-miterlimit="10"/>
+    <path id="Vector_4" d="M92.866 13.126L82.726 45.111" stroke="white" stroke-miterlimit="10"/>
+    <path id="Vector_5" d="M57.598 12.813L47.4579 44.799" stroke="white" stroke-miterlimit="10"/>
+    <path id="Vector_6" d="M74.7339 12.312L64.595 44.297" stroke="white" stroke-miterlimit="10"/>
+    <path id="Vector_7" d="M34.131 43.799H97.467C99.946 43.799 102.531 41.981 103.242 39.739L110.808 15.874C111.519 13.631 110.084 11.814 107.606 11.814H44.2709C41.7919 11.814 39.2059 13.631 38.4949 15.874L30.9299 39.739C30.2189 41.981 31.652 43.799 34.131 43.799Z" stroke="#385365" stroke-width="3" stroke-miterlimit="10"/>
+    </g>
+    <path id="Vector_8" d="M325.144 351.8H14C7.4 351.8 2 346.4 2 339.8V64.677C2 58.077 7.4 52.677 14 52.677H325.144C331.744 52.677 337.144 58.077 337.144 64.677V339.8C337.144 346.399 331.744 351.8 325.144 351.8Z" fill="white"/>
+    <path id="Vector_9" d="M325.144 351.8H14C7.4 351.8 2 346.4 2 339.8V64.677C2 58.077 7.4 52.677 14 52.677H325.144C331.744 52.677 337.144 58.077 337.144 64.677V339.8C337.144 346.399 331.744 351.8 325.144 351.8Z" stroke="#79A5AA" stroke-width="3" stroke-miterlimit="10"/>
+    <path id="Vector_10" d="M64.7689 121.154V104.495" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_11" d="M64.7689 290.716V274.057" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_12" d="M64.7689 202.83V186.171" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    </g>
+    </svg>
+    <svg  class="buildingRatio b4"  viewBox="0 0 117 387" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Building">
+    <path id="Vector" d="M102.71 384.648H14C7.4 384.648 2 378.805 2 371.66V14.9878C2 7.8445 7.4 2 14 2H102.71C109.31 2 114.71 7.8445 114.71 14.9878V371.66C114.71 378.805 109.31 384.648 102.71 384.648Z" fill="#C0EFEC"/>
+    <path id="Vector_2" d="M102.71 384.648H14C7.4 384.648 2 378.805 2 371.66V14.9878C2 7.8445 7.4 2 14 2H102.71C109.31 2 114.71 7.8445 114.71 14.9878V371.66C114.71 378.805 109.31 384.648 102.71 384.648Z" stroke="#79A5AA" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_3" d="M79.6541 75.6948V57.6644" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_4" d="M36.715 75.6948V57.6644" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_5" d="M79.6541 235.011V216.981" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_6" d="M36.715 235.011V216.981" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_7" d="M79.6541 154.009V135.979" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_8" d="M36.715 154.009V135.979" stroke="#93CCCC" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_9" d="M79.652 314.336V296.305" stroke="#93CCCC" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_10" d="M36.7119 314.336V296.305" stroke="#93CCCC" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"/>
+    </g>
+    </svg>
+    <svg  class="buildingRatio bush1"  viewBox="0 0 43 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Bushes">
+    <path id="Vector" d="M28.6481 14.2371C28.1221 14.2371 27.6051 14.264 27.0961 14.311C24.4811 7.13404 15.8271 1.86401 5.54711 1.86401C-5.32189 1.86401 -14.3749 7.75296 -16.3939 15.559C-16.7699 15.516 -17.1549 15.493 -17.5469 15.493C-21.7859 15.493 -25.2219 18.103 -25.2219 21.322C-25.2219 21.395 -25.2179 21.4669 -25.2149 21.5389H41.0211C39.6181 17.3419 34.6111 14.2371 28.6481 14.2371Z" fill="#BFE067"/>
+    <path id="Vector_2" d="M17.3061 4.90409C10.5241 3.54109 -10.4169 4.98103 -11.5959 19.016C-11.5959 19.016 -18.1039 17.924 -18.8869 20.575L-25.0269 20.6441C-25.0269 20.6441 -24.2339 15.2241 -16.0289 15.4091C-16.0289 15.4091 -8.63789 -4.01593 17.4261 4.50407C17.7061 4.59507 17.5991 4.96409 17.3061 4.90409Z" fill="#98C93F"/>
+    <path id="Vector_3" d="M28.6361 14.347C28.1101 14.347 27.5931 14.373 27.0841 14.42C24.4691 7.24404 15.8151 1.974 5.53511 1.974C-5.33389 1.974 -14.3869 7.86297 -16.4059 15.668C-16.7819 15.625 -17.1669 15.603 -17.5589 15.603C-21.7979 15.603 -25.2339 18.213 -25.2339 21.432C-25.2339 21.504 -25.2299 21.577 -25.2269 21.649H41.0091C39.6061 17.451 34.5991 14.347 28.6361 14.347Z" stroke="#548080" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    </svg>
+    <svg  class="buildingRatio bush2"  viewBox="0 0 107 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Bushes">
+    <path id="Vector" d="M54.881 13.723C54.356 13.723 53.838 13.749 53.329 13.796C50.714 6.62002 42.06 1.34998 31.78 1.34998C20.912 1.34998 11.858 7.23895 9.83899 15.0439C9.46299 15.0009 9.07801 14.979 8.68701 14.979C4.44801 14.979 1.01196 17.588 1.01196 20.808C1.01196 20.88 1.01592 20.953 1.01892 21.025H67.255C65.852 16.827 60.844 13.723 54.881 13.723Z" fill="#BFE067"/>
+    <path id="Vector_2" d="M43.5389 4.39006C36.7569 3.02606 15.816 4.467 14.637 18.502C14.637 18.502 8.12895 17.4091 7.34595 20.0611L1.20593 20.13C1.20593 20.13 1.99898 14.7091 10.204 14.8941C10.204 14.8941 17.5949 -4.52994 43.6589 3.98906C43.9399 4.07906 43.8319 4.44806 43.5389 4.39006Z" fill="#98C93F"/>
+    <path id="Vector_3" d="M54.87 13.8311C54.345 13.8311 53.827 13.858 53.318 13.905C50.703 6.72903 42.0479 1.45801 31.7689 1.45801C20.8999 1.45801 11.846 7.34795 9.828 15.153C9.452 15.11 9.06693 15.088 8.67493 15.088C4.43693 15.088 1 17.697 1 20.916C1 20.989 1.00396 21.0621 1.00696 21.1331H67.2429C65.8389 16.9371 60.832 13.8311 54.87 13.8311Z" stroke="#548080" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_4" d="M96.335 14.533C95.964 14.533 95.599 14.557 95.239 14.598C93.394 8.27402 87.287 3.62903 80.032 3.62903C72.363 3.62903 65.9739 8.81802 64.5499 15.697C64.2839 15.659 64.013 15.639 63.736 15.639C60.745 15.639 58.3209 17.939 58.3209 20.776C58.3209 20.84 58.3229 20.903 58.3259 20.967H105.067C104.076 17.27 100.543 14.533 96.335 14.533Z" fill="#BFE067"/>
+    <path id="Vector_5" d="M96.335 14.533C95.964 14.533 95.599 14.557 95.239 14.598C93.394 8.27402 87.287 3.62903 80.032 3.62903C72.363 3.62903 65.9739 8.81802 64.5499 15.697C64.2839 15.659 64.013 15.639 63.736 15.639C60.745 15.639 58.3209 17.939 58.3209 20.776C58.3209 20.84 58.3229 20.903 58.3259 20.967H105.067C104.076 17.27 100.543 14.533 96.335 14.533Z" stroke="#93CCCC" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_6" d="M88.3309 6.30895C83.5449 5.10795 68.7669 6.37696 67.9349 18.746C67.9349 18.746 63.3429 17.784 62.7899 20.12L58.458 20.181C58.458 20.181 59.017 15.405 64.807 15.568C64.807 15.568 70.023 -1.54998 88.416 5.95702C88.614 6.03602 88.5379 6.36095 88.3309 6.30895Z" fill="#98C93F"/>
+    <path id="Vector_7" d="M96.335 14.533C95.964 14.533 95.599 14.557 95.239 14.598C93.394 8.27402 87.287 3.62903 80.032 3.62903C72.363 3.62903 65.9739 8.81802 64.5499 15.697C64.2839 15.659 64.013 15.639 63.736 15.639C60.745 15.639 58.3209 17.939 58.3209 20.776C58.3209 20.84 58.3229 20.903 58.3259 20.967H105.067C104.076 17.27 100.543 14.533 96.335 14.533Z" stroke="#548080" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    </svg>
+</div>
+
 
 <style>
     .mobility{
-        transform: translateZ(-.4px) scale(1.136) scaleY(1.1);
+        -webkit-transform: translateZ(-.4px) scale(1.136) translateY(2vh);
+        transform: translateZ(-.4px) scale(1.136) translateY(2vh);
     }
     svg {
         display: block;
@@ -145,4 +217,61 @@
     .cls-15 {
         fill: #3e637c;
     }
+    .building-mobile{
+        display:none;
+    }
+
+    /* MOBILE */
+
+    .buildingRatio{
+
+        position: absolute;
+        bottom: 0vh;
+    }
+@media only screen and (max-width: 768px) {
+    .building-mobile{
+        display:block !important;
+        position: absolute;
+        height: 30vh;
+        width: 100vw;
+        bottom: -5vh;
+    }
+    .mobility{
+        display:none !important;
+    }
+    .b1{
+        left: 0vw;
+        bottom: 8vh;
+        width: 10%;
+    }
+    .b2{
+        left: 0vw;
+        width: 100%;
+        /* height: 20vh; */
+        z-index: 2;
+        bottom: -16vh;
+    }
+    .b3{
+        left: 70vw;
+        z-index: 3;
+        width: 30%;
+    }
+    .b4{
+        left: 60vw;
+        bottom: -8vh;
+        width: 20%;
+    }
+    .bush1{
+        left: 0vw;
+        z-index: 5;
+        width: 10%;
+        bottom: 5vh;
+    }
+    .bush2{
+        left: 19vw;
+        z-index: 5;
+        bottom: 4.8vh;
+        width: 24%;
+    }
+}
 </style>

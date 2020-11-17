@@ -15,17 +15,19 @@
     import Bushes1 from '../svg/2_bushes_1.svelte';
     import Bushes2 from '../svg/2_bushes_2.svelte';
     import Bushes3 from '../svg/2_bushes_3.svelte';
+
+    export let stopAnimationMobility;
 </script>
 
 <div class="scene mobility">
     <div class="clouds">
-        <svg width="275" height="52" class="cloud cloud-1">
+        <svg width="275" height="52" class="cloud cloud-1" class:kill-animation={stopAnimationMobility}>
             <use xlink:href="#svg-cloud"></use>
         </svg>
-        <svg width="275" height="52" class="cloud cloud-2">
+        <svg width="275" height="52" class="cloud cloud-2" class:kill-animation={stopAnimationMobility}>
             <use xlink:href="#svg-cloud"></use>
         </svg>
-        <svg width="275" height="52" class="cloud cloud-3">
+        <svg width="275" height="52" class="cloud cloud-3" class:kill-animation={stopAnimationMobility}>
             <use xlink:href="#svg-cloud"></use>
         </svg>
 
@@ -48,11 +50,11 @@
             <Bushes2 classes="bushes" />
         </div>
         <div class="road road-cars road-5x">
-            <Bus classes="bus" />
+            <Bus classes="bus" {stopAnimationMobility}/>
             <Bushes1 classes="bushes" />
         </div>
         <div class="road road-bike road-3x">
-            <Biker classes="biker" />
+            <Biker classes="biker" {stopAnimationMobility}/>
         </div>
     </div>
     <div class="text">
@@ -238,7 +240,7 @@
     bottom: 20%;
     left: 1vw;
     animation: move-right 20s linear forwards;
-    animation-delay: 3s;
+    /* animation-delay: 1s; */
     animation-iteration-count: infinite;
 }
 
@@ -338,7 +340,7 @@
 .text {
     display: flex;
     justify-content: center;
-    bottom: 45vh;
+    bottom: 38vh;
     z-index: 10;
     padding-right: calc(100vw * 280/1440);
     padding-left: calc(100vw * 660/1440);
@@ -359,6 +361,98 @@
     bottom: 0;
     right: 0;
     z-index: 10;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+    .road-bike :global(.biker){
+        width: 85.5vw;
+        left: -29vw;
+    }
+    .road-cars :global(.bushes) {
+        width: 106vw;
+    }
+    .road-cars :global(.bus){
+        position: absolute;
+        bottom: 21%;
+        width: 235vw;
+        left: 74.8vw;
+    }
+    .road-scooter :global(.bushes){
+        right: 83.25vw;
+    }
+    .road-scooter :global(.scooter){
+        width: 15.5vw;
+        right: 36vw;
+    }
+    .road-cars{
+        height: 13vh;
+    }
+    .roads{
+        flex: 1 1 9vh;
+    }
+    .road-walk{
+        height: 5vh;
+    }
+    .road-walk :global(.person-3){
+        left: -3.8vw;
+        bottom: 45%;
+        width: 9vw;
+    }
+    .road-walk :global(.person-2){
+        display:none
+    }
+    .road-walk :global(.person-1){
+        display: none;
+    }
+    .text__inside{
+        transform: translateZ(-.2px) scale(1.02);
+        width: 100%;
+        max-width: 92rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        position: absolute;
+    }
+    .text{
+        bottom: 50vh;
+        padding:0;
+    }
+    .cloud-1{
+        display:none;
+    }
+    .cloud-3{
+        display:none;
+    }
+    .bird-1{
+        display:none;
+    }
+    .bird-2{
+        display:none;
+    }
+    .cloud-2{
+        width: 30vw !important;
+        right: -10vw !important;
+    }
+    .bird-3{
+        width: 1rem;
+        right: 19vw;
+    }
+}
+/* iPhonw X */
+@media only screen and (max-width: 380px) and (min-height: 740px) {
+    .roads{
+        flex: 2 1 9vh;
+    }
+    .text{
+        bottom: 55vh;
+        padding:0;
+    }
+}
+/* TABLET */
+@media only screen and (min-width: 540px) and (max-width: 768px) and (min-height: 720px) {
+    .text__inside{
+        top:6vh;
+    }
 }
 
 </style>

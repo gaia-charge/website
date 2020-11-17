@@ -1,6 +1,9 @@
 <script>
     import ContactForm from '../components/ContactForm.svelte';
     import { _ } from 'svelte-i18n';
+    
+
+    export let showPopup;
 </script>
 
 <div class="scene contact">
@@ -13,10 +16,11 @@
                 <p>{$_('contact.lead', { default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo. Tempor semper orci, fames neque.' })}</p>
             </div>
 
-            <ContactForm />
+            <ContactForm bind:showPopup />
         </div>
     </div>
 </div>
+
 
 <style>
 .contact {
@@ -28,7 +32,8 @@
     background: none;
     z-index: 6;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
+    /* height: 80vh; */
     /* min-height: 60rem; */
     min-height: 60vw;
     overflow: hidden;
@@ -54,6 +59,7 @@
 } */
 
 .contact .text {
+    padding-top: 10vh;
     position: relative;
     top: 0;
     left: 0;
@@ -67,5 +73,18 @@
 
 .contact .lead {
     margin-bottom: 4.5vh;
+}
+
+    /* MOBILE */
+@media only screen and (max-width: 768px) {
+    .contact .text__inside{
+        width: 92vw;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        padding-top: 15vh;
+    }
+    .contact{
+        height: 100vh;
+    }
 }
 </style>
