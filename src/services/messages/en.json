@@ -22,5 +22,9 @@
       "phMessage":"Leave us a message",
       "phEmail":"user@domain.com",
       "button":"Send message"
+    },
+    "contact_popup":{
+      "title":"Thank you!",
+      "lead":"Our team will come back to you as soon as possible. Thank you for your message."
     }
 }
