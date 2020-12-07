@@ -332,11 +332,22 @@
         width: 100%;
         height: calc(180vh + 6.5rem);
         position: absolute;
-        top: -1vh;
+        top: 1vh;
         left: 0;
         z-index: 11;
         overflow: hidden;
+        
+        transform: translate3d(0px, 0px, .3px);
+        
     }
+    @media not all and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) { 
+   
+    
+        .bg{
+            transform: initial;
+        }
+}
+        
 
     .background,
     .foreground {
@@ -467,7 +478,7 @@
         display:none;
     }
     .bg{
-        top: 42vh;
+        top: 38vh;
     }
     .foreground-mobile{
         display:block;
@@ -490,10 +501,11 @@
     }
 }
 
+
 /* iPhonw X */
-@media only screen and (max-width: 380px) and (min-height: 740px) {
+@media only screen and (max-width: 411px) and (min-height: 740px) {
     .bg{
-        top: 42vh;
+        top: 38vh;
     }
 }
 
@@ -512,6 +524,14 @@
 @media only screen and (min-width: 900px) and (max-width: 1124px) and (min-height: 1150px) {
     .bg{
         top: 18vh;
+    }
+}
+
+/* galaxy Fold X */
+
+@media only screen and (max-width: 300px) and (min-height: 600px) {
+    .bg{
+        top: 55vh;
     }
 }
 
