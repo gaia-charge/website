@@ -39,11 +39,11 @@
     overflow: hidden;
 }
 
-@media (max-aspect-ratio: 1600/1000) {
+/* @media (max-aspect-ratio: 1600/1000) {
     .contact {
         justify-content: flex-start;
     }
-}
+} */
 
 /* .contact::after {
     content: "";

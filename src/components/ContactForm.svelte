@@ -107,6 +107,20 @@
 
 
 <style>
+
+input[type=text], [type=email]{   
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+textarea{   
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 .error{
     border-color: red !important;
     animation-name: fadeInOpacity;

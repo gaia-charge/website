@@ -242,7 +242,6 @@
 
     /* Desktop / Link */
 
-    font-family: Nunito;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;

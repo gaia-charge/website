@@ -27,7 +27,8 @@
     position: relative;
    /* background: none;*/
     overflow: hidden;
-    z-index: 2;
+    z-index: 5;
+    height: 96vh;
 }
 
 .energy .text {
@@ -41,8 +42,8 @@
         top: 0.7vh;
     }
     .energy{
-        top: 12vh;
-        height: 144vh;
+        top: 6vh;
+        height: 140vh;
     }
     .lead{
         width: 100vw;
@@ -50,9 +51,10 @@
 }
 
 /* iPhonw X */
-@media only screen and (max-width: 380px) and (min-height: 740px) {
+@media only screen and (max-width: 411px) and (min-height: 740px) {
     .energy{
         height: 120vh;
+        top:4vh;
     }
 }
 /* TABLET */
@@ -66,4 +68,17 @@
 /* .energy .text .container {
     margin-left: 2rem;
 } */
+
+@media only screen and (min-width: 1500px) {
+    .lead{
+        width:30vw;
+    }
+}
+
+/* galaxy Fold X */
+@media only screen and (max-width: 300px) and (min-height: 600px) {
+    .energy{
+        height: 125vh;
+    }
+}
 </style>

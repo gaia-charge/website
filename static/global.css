@@ -146,7 +146,9 @@ svg {
     max-width: 100%;
 }
 .kill-animation{
-    animation:none !important;
+    /* animation:none !important;
+    display:none; */
+    animation-play-state: paused !important;
   }
 /* Medium devices (landscape tablets,) */
 @media only screen and (max-width: 1064px){

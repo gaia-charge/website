@@ -15,6 +15,7 @@
     import Bushes1 from '../svg/2_bushes_1.svelte';
     import Bushes2 from '../svg/2_bushes_2.svelte';
     import Bushes3 from '../svg/2_bushes_3.svelte';
+    import VisibilityGuard from './utils/VisibilityGuard.svelte';
 
     export let stopAnimationMobility;
 </script>
@@ -54,7 +55,10 @@
             <Bushes1 classes="bushes" />
         </div>
         <div class="road road-bike road-3x">
-            <Biker classes="biker" {stopAnimationMobility}/>
+        <VisibilityGuard let:visible>
+            <Biker classes="biker" {visible}/>
+        </VisibilityGuard>
+            
         </div>
     </div>
     <div class="text">

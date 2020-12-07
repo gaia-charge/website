@@ -1,6 +1,5 @@
 <script>
     import { onMount } from "svelte";
-    import Foreground from '../svg/2_foreground.svelte';
     import ContactSubmitted from './../components/ContactSubmitted.svelte'
     import { _, locale} from 'svelte-i18n';
 
@@ -159,7 +158,7 @@
                 <li on:click={handleLiClick}>
                     <a
                         id="-visibleContact"
-                        href="http://localhost:3000/#contact"
+                        href="/#contact"
                         class="nav__link is-contact"
                         class:is-contact-active={activeContact}>
                         Contact
@@ -185,24 +184,28 @@
 
 <div class="base-wrapper">
     <span id="scrollMenu"></span>
+
     <section class="charging" id="charging">
         <Charging {stopAnimationCharcing}/>
     </section>
 
-    <section class="seam-1-2"/>
+    <section class="seam-1-2">
+        
+    </section>
 
     <section class="mobility" id="mobility">
         <Mobility {stopAnimationMobility}/>
     </section>
-
     
+    <section class="seam-2-3">
+        
+        </section>
 
     <div class="bottom">
 
-        <section class="seam-2-3">
-            <Foreground/>
-        </section>
+        
 
+       
         <section style="z-index: 10 !important;" id="energy">
             <Energy />
         </section>
@@ -212,12 +215,18 @@
         </section>
 
         
-
+        
         <Bottom {stopAnimationEnergy}/>
-        <Footer/>
+       
+        
+        
         <div class="bg-green">
         
         </div> 
+        
+        <Footer/>
+
+        
     </div>
 
 </div>
@@ -260,39 +269,48 @@ section{
 
 .charging{
     z-index: 2 !important;
-    height: 125vh;
+    height: 130vh;
+    background: linear-gradient(0deg, #DAF9F9, #DAF9F9);
 }
 
 .seam-1-2{
-    background-image: url('/seam-section-1-2.svg');
+    background-image: url(seam-section-1-2.svg);
     background-size: cover;
-    z-index: 2 !important;
-    height: 100vh;
+    height: calc( 53vh + 12vw );
     width: 100vw;
-    bottom: calc( 8vw - (570px - 5vw));
+    bottom: -32vh;
     position: absolute;
     z-index: 2 !important;
+    -webkit-transform: translateZ(.8px) scale(.8);
     transform: translateZ(.8px) scale(.8);
+    overflow-y: hidden;
 }
 
 .seam-2-3{
+    background-image: url(seam-section-2-3.svg);
+    background-size: cover;
     z-index: 2 !important;
-    height: 50vh;
-    width: 105vw;
-    top: calc( -39vw - (250px - 16vw));
+    height: calc( 80vh + 10vw );
+    width: 100vw;
+    bottom: -174vh;
+    /* top: calc( -39vw - (250px - 16vw)); */
+    /* top: -84vh; */
     position: absolute;
-    z-index: 6 !important;
+    /* z-index: 6 !important; */
     transform: translateZ(.7px) scale(.8);
+
+    /* transform: translate3d(0,0,0.5px); */
+    overflow-y: hidden;
 }
 
 .mobility{
-    z-index: 5 !important; 
+    z-index: 2 !important; 
     height: 125vh;
 }
 
 .header {
     /* top: 2rem; */
-    padding: .75rem 0;
+    padding: .5vh 0;
     left: 0;
     right: 0;
     position: fixed;
@@ -389,6 +407,9 @@ nav ul li{
   display: none;
 }
 @media only screen and (max-width: 768px) {
+    header{
+      padding: 1.5vh 0 !important;
+    }
     .checkbtn{
         display: block;
     }
@@ -425,38 +446,46 @@ nav ul li{
         font-size: 22px;
         line-height: 30px;
     }
-    .seam-1-2{
-        top: 68vh !important;
-        width: 93.5vw;
-        left: 9px;
-    }
+    /* .seam-1-2{
+        top: 53vh !important;
+        width: 110vw;
+        left: -2vw;
+    } */
     .seam-2-3{
-        height: 50vh;
         width: 135vw;
         left: -25vw;
-        top: -45vh;
+        top: 194vh;
+        height: calc( 74vh + 10vw );
         -webkit-transform: translateZ(.7px) scale(.8) scaleX(1.2);
         transform: translateZ(.7px) scale(.8) scaleX(1.2);
     }
     .mobility{
-        height: 115vh;
+        height: 120vh;
     }
 }
+
+
 /* TABLET */
 @media only screen and (min-width: 540px) and (max-width: 768px) and (min-height: 720px) {
     .seam-1-2 {
         top: 65vh !important;
         width: 100.5vw;
   }
+  header{
+      padding: 1.5vh 0 !important;
+  }
 }
 
 /* iPad Pro */
 @media only screen and (min-width: 900px) and (max-width: 1124px) and (min-height: 1150px) {
-    .seam-1-2 {
+    /* .seam-1-2 {
         bottom: -67vh;
-    }
+    }*/
     .seam-2-3{
-        top: -56vh;
+        height: calc( 97vh + 11vw );
+    } 
+    .charging{
+        height: 110vh;
     }
 }
 /* @media only screen and (max-width: 380px) and (min-height: 740px) {

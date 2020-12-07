@@ -152,7 +152,11 @@
 
 <style>
     .mobility{
-        -webkit-transform: translateZ(-.4px) scale(1.136) translateY(2vh);
+        -webkit-transform: translateZ(-1px) scale(1) translateY(4vh);
+        -ms-transform: translateZ(-1px) scale(1) translateY(4vh);
+        -moz-transform: translateZ(-1px) scale(1) translateY(4vh);
+        -o-transform: translateZ(-1px) scale(1) translateY(4vh);
+
         transform: translateZ(-.4px) scale(1.136) translateY(2vh);
     }
     svg {
