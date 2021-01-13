@@ -87,4 +87,19 @@
     width: 1.5rem;
     height: auto;
 }
+    /* MOBILE */
+@media only screen and (max-width: 768px) {
+    .footer .container{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        row-gap: 1rem;
+    }
+    .footer__right{
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        margin:0;
+    }
+}
 </style>

@@ -1,4 +1,5 @@
 <script>
+export let segment;
 </script>
 
 <style>
@@ -10,6 +11,6 @@
 	}
 </style>
 
-<main>
+<main {segment}>
 	<slot></slot>
 </main>
