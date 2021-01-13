@@ -1,4 +1,9 @@
-<svg class="motorbike" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396.85 252">
+<script>
+export let visible;
+
+</script>
+
+<svg class="motorbike" class:kill-animation={!visible} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396.85 252">
   <g class="wheel-right">
     <path class="cls-2" d="M277.51 216.77A33.53 33.53 0 11244 183.25a33.53 33.53 0 0133.51 33.52z"/>
     <path class="cls-3" d="M244 251.8a35 35 0 1135-35 35.06 35.06 0 01-35 35zm0-67.05a32 32 0 1032 32 32.06 32.06 0 00-32-32z"/>
@@ -92,8 +97,48 @@
 }
 
 @keyframes move-left {
-  to {
-    transform: translateX(-5vw);
+
+  /* to {
+    transform: translateX(-100vw);
+  } */
+  0%{
+      transform: translateX(-0vw);
+       
+  }
+  20%{
+      transform: translateX(-25vw);
+  }
+  40%{
+      transform: translateX(-50vw);
+      opacity:1
+  }
+  60%{
+      transform: translateX(-75vw);
+  }
+  78%{
+      opacity:1
+  }
+  79%{
+      opacity:0
+  }
+  80%{
+      transform: translateX(-100vw);
+      opacity:0
+  }
+  81%{
+    opacity:0
+  }
+  82%{
+      transform: translateX(+25vw);
+      opacity:0
+  }
+  83%{
+    opacity:1
+  }
+  
+  100%{
+      opacity:1;
+      transform: translateX(0vw);
   }
 }
 
@@ -102,9 +147,13 @@
   position: absolute;
   bottom: 4.5rem; /* 80% * road */
   right: -3vw;
-  animation: move-left 240s linear forwards;
+  animation: move-left 20s linear forwards;
+  /* animation-delay: 1s; */
+  animation-iteration-count: infinite;
   z-index: 6;
 }
+
+
 
 .cls-1 {
   fill: #c0efec;
@@ -158,7 +207,7 @@
   fill: #ffe9ca;
 }
 
-.lamp {
+/* .lamp {
   animation: lamp 3s linear infinite alternate;
 }
 
@@ -176,5 +225,12 @@
 
 .leaf-3 {
   animation: fadeout 2.5s infinite, leaf-3 2.5s infinite;
+} */
+@media only screen and (max-width: 768px) {
+  .motorbike{
+    display:none;
+    animation:none;
+  }
+  
 }
 </style>

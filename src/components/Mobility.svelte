@@ -1,8 +1,9 @@
 <script>
+    import { _ } from 'svelte-i18n';
     import Mobility from '../svg/2_mobility.svelte';
 
     import Bus from '../svg/2_bus.svelte';
-    import Foreground from '../svg/2_foreground.svelte';
+   // import Foreground from '../svg/2_foreground.svelte';
 
     import Person1 from '../svg/2_person_1.svelte';
     import Person2 from '../svg/2_person_2.svelte';
@@ -14,17 +15,20 @@
     import Bushes1 from '../svg/2_bushes_1.svelte';
     import Bushes2 from '../svg/2_bushes_2.svelte';
     import Bushes3 from '../svg/2_bushes_3.svelte';
+    import VisibilityGuard from './utils/VisibilityGuard.svelte';
+
+    export let stopAnimationMobility;
 </script>
 
 <div class="scene mobility">
     <div class="clouds">
-        <svg width="275" height="52" class="cloud cloud-1">
+        <svg width="275" height="52" class="cloud cloud-1" class:kill-animation={stopAnimationMobility}>
             <use xlink:href="#svg-cloud"></use>
         </svg>
-        <svg width="275" height="52" class="cloud cloud-2">
+        <svg width="275" height="52" class="cloud cloud-2" class:kill-animation={stopAnimationMobility}>
             <use xlink:href="#svg-cloud"></use>
         </svg>
-        <svg width="275" height="52" class="cloud cloud-3">
+        <svg width="275" height="52" class="cloud cloud-3" class:kill-animation={stopAnimationMobility}>
             <use xlink:href="#svg-cloud"></use>
         </svg>
 
@@ -47,26 +51,29 @@
             <Bushes2 classes="bushes" />
         </div>
         <div class="road road-cars road-5x">
-            <Bus classes="bus" />
+            <Bus classes="bus" {stopAnimationMobility}/>
             <Bushes1 classes="bushes" />
         </div>
         <div class="road road-bike road-3x">
-            <Biker classes="biker" />
+        <VisibilityGuard let:visible>
+            <Biker classes="biker" {visible}/>
+        </VisibilityGuard>
+            
         </div>
     </div>
     <div class="text">
         <div class="text__inside">
-            <p class="subtitle"><strong>Gaia Green Tech</strong> is</p>
-            <h2 class="title">
-                Sustainable<br>
-                mobility
+            <p class="subtitle"><strong>{$_('subtitle', { default: 'Gaia Green Tech is' })}</strong></p>
+            <h2 class="title" id="visibleMobility">
+                {$_('mobility.title1', { default: 'Sustainable' })}<br>
+                {$_('mobility.title2', { default: 'mobility' })}
             </h2>
             <div class="lead">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo. Tempor semper orci, fames neque.</p>
+                <p>{$_('mobility.lead', { default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo. Tempor semper orci, fames neque.' })}</p>
             </div>
         </div>
     </div>
-    <Foreground classes="foreground" />
+    <!--Foreground classes="foreground" /-->
 </div>
 
 <style>
@@ -161,16 +168,61 @@
 
 @keyframes move-left {
   to {
-    transform: translateX(-5vw);
+    transform: translateX(-100vw);
   }
 }
+
+@keyframes move-right {
+  0%{
+      transform: translateX(0vw);
+       
+  }
+  20%{
+      transform: translateX(25vw);
+  }
+  40%{
+      transform: translateX(50vw);
+      opacity:1
+  }
+  60%{
+      transform: translateX(75vw);
+  }
+  78%{
+      opacity:1
+  }
+  79%{
+      opacity:0
+  }
+  80%{
+      transform: translateX(100vw);
+      opacity:0
+  }
+  81%{
+    opacity:0
+  }
+  82%{
+      transform: translateX(-25vw);
+      opacity:0
+  }
+  83%{
+    opacity:1
+  }
+  
+  100%{
+      opacity:1;
+      transform: translateX(0vw);
+  }
+}
+
 
 .road-scooter :global(.scooter) {
     width: 4.5vw;
     position: absolute;
     bottom: 44%;
     right: 19vw;
-    animation: move-left 60s linear forwards;
+    /* animation: move-left 60s linear forwards;
+    animation-delay: 3s;
+    animation-iteration-count: infinite; */
 }
 
 .road-scooter :global(.bushes) {
@@ -191,6 +243,9 @@
     position: absolute;
     bottom: 20%;
     left: 1vw;
+    animation: move-right 20s linear forwards;
+    /* animation-delay: 1s; */
+    animation-iteration-count: infinite;
 }
 
 .road-cars {
@@ -228,11 +283,11 @@
 
 @keyframes move-clouds-3 {
     from {
-        transform: translateX(50vw) scaleX(-1);
+        transform: translateX(50vw);
     }
 
     to {
-        transform: translateX(0) scaleX(-1);
+        transform: translateX(0);
     }
 }
 .clouds {
@@ -245,6 +300,7 @@
     left: 20vw;
     animation-name: move-clouds-1;
     animation-duration: 90s;
+    animation-delay: 4s;
 }
 
 .cloud-2 {
@@ -253,6 +309,7 @@
     right: calc(100vw * 108/1440);
     animation-name: move-clouds-2;
     animation-duration: 240s;
+    animation-delay: 3s;
 }
 
 .cloud-3 {
@@ -263,6 +320,7 @@
     animation-name: move-clouds-3;
     animation-duration: 100s;
     animation-direction: alternate-reverse;
+    animation-delay: 2.5s;
 }
 
 .bird-1 {
@@ -285,8 +343,8 @@
 /* TEXT */
 .text {
     display: flex;
-    justify-content: flex-end;
-    bottom: 45vh;
+    justify-content: center;
+    bottom: 38vh;
     z-index: 10;
     padding-right: calc(100vw * 280/1440);
     padding-left: calc(100vw * 660/1440);
@@ -307,6 +365,98 @@
     bottom: 0;
     right: 0;
     z-index: 10;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+    .road-bike :global(.biker){
+        width: 85.5vw;
+        left: -29vw;
+    }
+    .road-cars :global(.bushes) {
+        width: 106vw;
+    }
+    .road-cars :global(.bus){
+        position: absolute;
+        bottom: 21%;
+        width: 235vw;
+        left: 74.8vw;
+    }
+    .road-scooter :global(.bushes){
+        right: 83.25vw;
+    }
+    .road-scooter :global(.scooter){
+        width: 15.5vw;
+        right: 36vw;
+    }
+    .road-cars{
+        height: 13vh;
+    }
+    .roads{
+        flex: 1 1 9vh;
+    }
+    .road-walk{
+        height: 5vh;
+    }
+    .road-walk :global(.person-3){
+        left: -3.8vw;
+        bottom: 45%;
+        width: 9vw;
+    }
+    .road-walk :global(.person-2){
+        display:none
+    }
+    .road-walk :global(.person-1){
+        display: none;
+    }
+    .text__inside{
+        transform: translateZ(-.2px) scale(1.02);
+        width: 100%;
+        max-width: 92rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        position: absolute;
+    }
+    .text{
+        bottom: 50vh;
+        padding:0;
+    }
+    .cloud-1{
+        display:none;
+    }
+    .cloud-3{
+        display:none;
+    }
+    .bird-1{
+        display:none;
+    }
+    .bird-2{
+        display:none;
+    }
+    .cloud-2{
+        width: 30vw !important;
+        right: -10vw !important;
+    }
+    .bird-3{
+        width: 1rem;
+        right: 19vw;
+    }
+}
+/* iPhonw X */
+@media only screen and (max-width: 380px) and (min-height: 740px) {
+    .roads{
+        flex: 2 1 9vh;
+    }
+    .text{
+        bottom: 55vh;
+        padding:0;
+    }
+}
+/* TABLET */
+@media only screen and (min-width: 540px) and (max-width: 768px) and (min-height: 720px) {
+    .text__inside{
+        top:6vh;
+    }
 }
 
 </style>

@@ -1,20 +1,88 @@
 <script>
     import { onMount } from "svelte";
+    import ContactSubmitted from './../components/ContactSubmitted.svelte'
+    import { _, locale} from 'svelte-i18n';
+
+    let whiteBackground = true;
+    let activeContact = false;
+    let stopAnimationCharcing = false;
+    let stopAnimationMobility = false;
+    let stopAnimationEnergy = false;
+
+    export let showPopup = false;
+
+    if( !$locale )
+         $locale = 'en';
 
     const updateVh = () => {
         let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
 
+    const updateBackgroundHeader = (visibility) =>{
+        whiteBackground = visibility;
+    }
+
+    const updateActiveSection = (id)=>{
+
+        document.querySelectorAll('.nav__link').forEach((el) => {
+            el.classList.remove('active');
+            stopAnimationCharcing = true;
+            stopAnimationMobility=true;
+            stopAnimationEnergy =true;
+        });
+
+        if( id == 'visibleCharging')
+            stopAnimationCharcing =false;
+        else if( id == 'visibleMobility')
+            stopAnimationMobility =false;
+        else if( id == 'visibleEnergy')
+            stopAnimationEnergy =false;
+
+        if( id == 'visibleContact') 
+        {
+            activeContact = true;
+        }
+        else{
+            activeContact = false;    
+            document.getElementById(`-${id}`).classList.add('active');
+        }
+        
+    }
+    
     onMount(async () => {
         ;[...document.querySelectorAll('a[href^="#"]')].map(
             x => (x.href = document.location + new URL(x.href).hash)
         )
 
+        // update active section if the h2 is visible
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+
+                if( id == 'scrollMenu'){
+                    updateBackgroundHeader(entry.intersectionRatio)
+                    return false;
+                }
+                
+                if( entry.intersectionRatio > 0 && document.getElementById(`-${id}`) )
+                    updateActiveSection(id)
+
+            });
+        });
+
+        // Track all sections
+        document.querySelectorAll('h2[id]').forEach((section) => {
+            observer.observe(section);
+        });
+        observer.observe(document.getElementById('scrollMenu'));
+
+
         updateVh();
         window.addEventListener('resize', updateVh);
     });
 
+    
     import Charging from '../components/Charging.svelte';
     import Mobility from '../components/Mobility.svelte';
     import Energy from '../components/Energy.svelte';
@@ -22,11 +90,24 @@
     import Footer from '../components/Footer.svelte';
 
     import Bottom from '../svg/3_bottom.svelte';
+
+    function changeLocale(loc){
+        $locale = loc;
+    }
+
+    let checkInput = false;
+    function handleLiClick(){
+        checkInput = false;
+        return true;
+    }
+ 
 </script>
 
 <svelte:head>
     <title>Gaia Green Tech</title>
 </svelte:head>
+
+<!--svelte:window on:scroll={throttle(handleScrollY,100)}/-->
 
 <svg style="display: none" fill="none" xmlns="http://www.w3.org/2000/svg">
     <symbol id="svg-cloud" viewBox="0 0 275 52">
@@ -37,7 +118,7 @@
     </symbol>
 </svg>
 
-<header class="header">
+<header class="header" class:whiteBackground={!whiteBackground}>
     <div class="container">
         <a href="/" class="header__link">
             <svg class="header__logo" width="122" height="35" viewBox="0 0 122 35" xmlns="http://www.w3.org/2000/svg">
@@ -45,63 +126,191 @@
             </svg>
         </a>
         <nav id="navbar" class="nav">
-            <a
-                href="http://localhost:3000/#charging"
-                class="nav__link active">
-                Charging
-            </a>
-            <a
-                href="http://localhost:3000/#mobility"
-                class="nav__link">
-                Mobility
-            </a>
-            <a
-                href="http://localhost:3000/#energy"
-                class="nav__link">
-                Energy
-            </a>
-            <a
-                href="http://localhost:3000/#contact"
-                class="nav__link is-contact">
-                Contact
-            </a>
+            <input type="checkbox" id="check" bind:checked={checkInput}>
+            <label for="check" class="checkbtn">
+                <span></span>
+            </label>
+            <ul>
+                <li on:click={handleLiClick}> 
+                    <a
+                        id="-visibleCharging"
+                        href="/#charging"
+                        class="nav__link active">
+                        Charging
+                    </a>
+                </li>
+                <li on:click={handleLiClick}>
+                    <a
+                        id="-visibleMobility"
+                        href="/#mobility"
+                        class="nav__link">
+                        Mobility
+                    </a>
+                </li>
+                <li on:click={handleLiClick}>
+                    <a
+                        id="-visibleEnergy"
+                        href="/#energy"
+                        class="nav__link">
+                        Energy
+                    </a>
+                </li>
+                <li on:click={handleLiClick}>
+                    <a
+                        id="-visibleContact"
+                        href="/#contact"
+                        class="nav__link is-contact"
+                        class:is-contact-active={activeContact}>
+                        Contact
+                    </a>
+                </li>
 
-            <a href="/" class="nav__link is-active">
-                EN
-            </a>
-            <a href="/" class="nav__link">
-                ES
-            </a>
+                <li on:click={handleLiClick}>
+                    <a href="/" class="nav__link" class:is-active={$locale=='en'? true : false} on:click|preventDefault={() => changeLocale('en')}>
+                        EN
+                    </a>
+                <!-- </li>
+                <li class="nav_language"> -->
+                    <a href="/" class="nav__link" class:is-active={$locale=='es-ES'? true : false} on:click|preventDefault={() => changeLocale('es-ES')}>
+                        ES
+                    </a>
+                </li>
+            </ul>
+            
         </nav>
     </div>
 </header>
 
-<section id="charging">
-    <Charging />
-</section>
 
-<section id="mobility">
-    <Mobility />
-</section>
+<div class="base-wrapper">
+    <span id="scrollMenu"></span>
 
-<div class="bottom">
-    <section id="energy">
-        <Energy />
+    <section class="charging" id="charging">
+        <Charging {stopAnimationCharcing}/>
     </section>
 
-    <section id="contact">
-        <Contact />
+    <section class="seam-1-2">
+        
     </section>
 
-    <Footer />
+    <section class="mobility" id="mobility">
+        <Mobility {stopAnimationMobility}/>
+    </section>
+    
+    <section class="seam-2-3">
+        
+        </section>
 
-    <Bottom />
-    <div class="bg-green"></div>
+    <div class="bottom">
+
+        
+
+       
+        <section style="z-index: 10 !important;" id="energy">
+            <Energy />
+        </section>
+
+        <section style="z-index:12;" id="contact">
+            <Contact bind:showPopup />
+        </section>
+
+        
+        
+        <Bottom {stopAnimationEnergy}/>
+       
+        
+        
+        <div class="bg-green">
+        
+        </div> 
+        
+        <Footer/>
+
+        
+    </div>
+
 </div>
 
+{#if showPopup}
+    <ContactSubmitted bind:showPopup/>
+{/if}
+
+
+
 <style>
+
+/* HEADER */
+.header__link{
+    z-index: 2;
+}
+.whiteBackground{
+    background-color: white;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+}
+.is-contact-active {
+
+    background-color:white !important;
+    color: #6C9B64 !important;
+    border: 2px solid #6C9B64 !important;
+    font-weight: 800 !important;
+}
+
+/* PARALLAX */
+.base-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 3px;
+  position: relative;
+}
+section{
+    position:relative
+}
+
+.charging{
+    z-index: 2 !important;
+    height: 130vh;
+    background: linear-gradient(0deg, #DAF9F9, #DAF9F9);
+}
+
+.seam-1-2{
+    background-image: url(seam-section-1-2.svg);
+    background-size: cover;
+    height: calc( 53vh + 12vw );
+    width: 100vw;
+    bottom: -32vh;
+    position: absolute;
+    z-index: 2 !important;
+    -webkit-transform: translateZ(.8px) scale(.8);
+    transform: translateZ(.8px) scale(.8);
+    overflow-y: hidden;
+}
+
+.seam-2-3{
+    background-image: url(seam-section-2-3.svg);
+    background-size: cover;
+    z-index: 2 !important;
+    height: calc( 80vh + 10vw );
+    width: 100vw;
+    bottom: -174vh;
+    /* top: calc( -39vw - (250px - 16vw)); */
+    /* top: -84vh; */
+    position: absolute;
+    /* z-index: 6 !important; */
+    transform: translateZ(.7px) scale(.8);
+
+    /* transform: translate3d(0,0,0.5px); */
+    overflow-y: hidden;
+}
+
+.mobility{
+    z-index: 2 !important; 
+    height: 125vh;
+}
+
 .header {
-    top: 2rem;
+    /* top: 2rem; */
+    padding: .5vh 0;
     left: 0;
     right: 0;
     position: fixed;
@@ -126,14 +335,25 @@
     text-decoration: none;
     color: #385365;
     font-weight: 400;
+    /* margin-left: 2rem; */
 }
 
-.nav__link + .nav__link {
+ul li .nav__link + ul li .nav__link {
     margin-left: 2rem;
+}
+li + li{
+    margin-left: 2rem;
+}
+li a + a{
+    margin-left: 1rem ;
 }
 
 :global(.nav__link.active) {
-    font-weight: 800;
+    font-weight: 800 !important;
+}
+
+:global(.nav__link.is-active) {
+    font-weight: 800 !important;
 }
 
 .nav__link.is-contact {
@@ -147,11 +367,12 @@
 
 .bottom {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .bg-green {
-    height: calc(100% - (180vh + 6.5rem));
+    /* height: calc(100% - (180vh + 6.5rem)); */
+    height: 100%;
     background-color: #ccf06b;
     position: absolute;
     left: 0;
@@ -159,4 +380,117 @@
     bottom: 0;
     z-index: 0;
 }
+
+/* MOBILE */
+nav ul li{
+  display: inline-block;
+  /* line-height: 80px;
+  margin: 0 5px; */
+}
+.checkbtn{
+  /* font-size: 30px;
+  color: white; */
+  float: right;
+  line-height: 80px;
+  /* margin-right: 40px; */
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+.checkbtn span{
+    width: 24px;
+    height:18px;
+    background: url(menu.svg) left top no-repeat;
+    display:block;
+}
+#check{
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+    header{
+      padding: 1.5vh 0 !important;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        left: calc( 100% + 12px);
+        top:0px;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+        margin: 0;
+        padding: 2rem;
+        padding-top: 20vh;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0px;
+        
+    }
+    #check:checked ~ label > span{
+        background: url(exit-menu.svg) left top no-repeat;
+    }
+    .nav__link{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    /* .seam-1-2{
+        top: 53vh !important;
+        width: 110vw;
+        left: -2vw;
+    } */
+    .seam-2-3{
+        width: 135vw;
+        left: -25vw;
+        top: 194vh;
+        height: calc( 74vh + 10vw );
+        -webkit-transform: translateZ(.7px) scale(.8) scaleX(1.2);
+        transform: translateZ(.7px) scale(.8) scaleX(1.2);
+    }
+    .mobility{
+        height: 120vh;
+    }
+}
+
+
+/* TABLET */
+@media only screen and (min-width: 540px) and (max-width: 768px) and (min-height: 720px) {
+    .seam-1-2 {
+        top: 65vh !important;
+        width: 100.5vw;
+  }
+  header{
+      padding: 1.5vh 0 !important;
+  }
+}
+
+/* iPad Pro */
+@media only screen and (min-width: 900px) and (max-width: 1124px) and (min-height: 1150px) {
+    /* .seam-1-2 {
+        bottom: -67vh;
+    }*/
+    .seam-2-3{
+        height: calc( 97vh + 11vw );
+    } 
+    .charging{
+        height: 110vh;
+    }
+}
+/* @media only screen and (max-width: 380px) and (min-height: 740px) {
+    .seam-2-3{
+        top: -53vh;
+    }
+} */
 </style>
