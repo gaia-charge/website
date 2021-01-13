@@ -1,30 +1,40 @@
 {
-  "subtitle":"Gaia Green Tech is",
+    "header": {
+        "charging": "Charging",
+        "mobility": "Mobility",
+        "energy": "Energy",
+        "contact": "Contact"
+    },
+    "subtitle": "Gaia Green Tech is",
     "charging": {
-      "title1": "Accessible",
-      "title2": "charging network",
-      "lead":"Imagine a world where everything is as ideal as can be. And you are participating in that situation. Sounds perfect, right?"
+        "title1": "Accessible",
+        "title2": "charging network",
+        "lead": "Charge your electric vehicle while working, shopping, or going out! There's no need to keep thinking about how much battery is left."
     },
     "mobility": {
-      "title1": "Sustainable",
-      "title2": "mobility",
-      "lead":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo. Tempor semper orci, fames neque."
+        "title1": "Sustainable",
+        "title2": "mobility",
+        "lead": "Pick the best mode of transport for you. A car, a bicycle, a bus, or even a short walk. We try to make it as convenient as possible."
     },
     "energy": {
-      "title1": "Clean",
-      "title2": "energy supply",
-      "lead":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo."
+        "title1": "Clean",
+        "title2": "energy supply",
+        "lead": "All of this infrastructure is supported by renewable energy sources and strives to be carbon negative."
     },
     "contact": {
-      "title": "Let's connect!",
-      "lead":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor odio sed eros adipiscing commodo.",
-      "phName":"Your name",
-      "phMessage":"Leave us a message",
-      "phEmail":"user@domain.com",
-      "button":"Send message"
+        "title": "Let's connect!",
+        "lead": "Feel free to send us a message or check out our social media. We're happy to chat!",
+        "phName": "Your name",
+        "phMessage": "Leave us a message",
+        "phEmail": "user@domain.com",
+        "button": "Send message",
+        "errorName": "Please enter your name",
+        "errorEmail": "Please enter a valid email",
+        "errorMessage": "Please enter the message",
+        "errorFail": "Something went wrong, please try again"
     },
-    "contact_popup":{
-      "title":"Thank you!",
-      "lead":"Our team will come back to you as soon as possible. Thank you for your message."
+    "contactPopup": {
+        "title": "Thank you!",
+        "lead": "Our team will come back to you as soon as possible. Thank you for your message."
     }
 }

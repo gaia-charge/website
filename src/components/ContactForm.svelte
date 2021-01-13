@@ -11,7 +11,6 @@
     let message;
     let errorMessage;
     let err;
-    let send = $_('contact.button', { default: "Send message" });
     export let showPopup;
 
     function validateEmail(value) { 
@@ -39,7 +38,7 @@
         if( !name || name == '')
         {
             errorName = true
-            err = 'Please insert your name';
+            err = $_('contact.errorName', { default: 'Please enter your name' });
             return false;
         }
         
@@ -47,14 +46,14 @@
 
         if(  !booleanSend ){
             errorEmail = true;
-            err = 'Please, insert a valid email'
+            err = $_('contact.errorEmail', { default: 'Please enter a valid email' });
             return false;
         }
 
         if( !message )
         {
             errorMessage = true
-            err = 'Please insert a message';
+            err = $_('contact.errorMessage', { default: 'Please enter the message' });
             return false;
         }
             
@@ -70,7 +69,7 @@
                     
         catch(err){
             console.error(err)
-            err = 'Something went wrong, try again';
+            err = $_('contact.errorFail', { default: 'Something went wrong, please try again' });
         }
         err = '';
         errorName = false;
@@ -79,7 +78,6 @@
         name = '';
         email = '';
         message = '';
-       // send = 'Thank you!'
         showPopup = true;
        
 
@@ -99,7 +97,7 @@
     <div class="form__group">
         <textarea class="form__control is-textarea" class:error={errorMessage} bind:value={message} placeholder="{$_('contact.phMessage', { default: "Leave us a message" })}"></textarea>
     </div>
-    <button type="submit" on:click|preventDefault={sendSubmitt} class="form__submit">{send}</button>
+    <button type="submit" on:click|preventDefault={sendSubmitt} class="form__submit">{$_('contact.button', { default: "Send message" })}</button>
 
     <Deco />
     <Leaves />
