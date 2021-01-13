@@ -16,10 +16,10 @@
         
         <div class="text__inside">
             <h2 class="title" id="visibleContact">
-                {$_('contact_popup.title', { default: "Thank you!" })}
+                {$_('contactPopup.title', { default: "Thank you!" })}
             </h2>
             <div class="lead no-width">
-                <p>{$_('contact_popup.lead', { default: 'Our team will come back to you as soon as possible. Thank you for your message.' })}</p>
+                <p>{$_('contactPopup.lead', { default: 'Our team will come back to you as soon as possible. Thank you for your message.' })}</p>
             </div>
         </div>
         

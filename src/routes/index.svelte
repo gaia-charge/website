@@ -136,7 +136,7 @@
                         id="-visibleCharging"
                         href="/#charging"
                         class="nav__link active">
-                        Charging
+                        {$_('header.charging', { default: "Charging" })}
                     </a>
                 </li>
                 <li on:click={handleLiClick}>
@@ -144,7 +144,7 @@
                         id="-visibleMobility"
                         href="/#mobility"
                         class="nav__link">
-                        Mobility
+                        {$_('header.mobility', { default: "Mobility" })}
                     </a>
                 </li>
                 <li on:click={handleLiClick}>
@@ -152,7 +152,7 @@
                         id="-visibleEnergy"
                         href="/#energy"
                         class="nav__link">
-                        Energy
+                        {$_('header.energy', { default: "Energy" })}
                     </a>
                 </li>
                 <li on:click={handleLiClick}>
@@ -161,7 +161,7 @@
                         href="/#contact"
                         class="nav__link is-contact"
                         class:is-contact-active={activeContact}>
-                        Contact
+                        {$_('header.contact', { default: "Contact" })}
                     </a>
                 </li>
 
@@ -169,10 +169,11 @@
                     <a href="/" class="nav__link" class:is-active={$locale=='en'? true : false} on:click|preventDefault={() => changeLocale('en')}>
                         EN
                     </a>
-                <!-- </li>
-                <li class="nav_language"> -->
                     <a href="/" class="nav__link" class:is-active={$locale=='es-ES'? true : false} on:click|preventDefault={() => changeLocale('es-ES')}>
                         ES
+                    </a>
+                    <a href="/" class="nav__link" class:is-active={$locale=='cat-VAL'? true : false} on:click|preventDefault={() => changeLocale('cat-VAL')}>
+                        VAL
                     </a>
                 </li>
             </ul>

@@ -19,6 +19,7 @@ export let currentLocale = null;
 
 register('en', () => import('./messages/en.json'));
 register('es-ES', () => import('./messages/es-ES.json'));
+register('cat-VAL', () => import('./messages/cat-VAL.json'));
 
 
 $locale.subscribe((value) => {
