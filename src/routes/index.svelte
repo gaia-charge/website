@@ -8,6 +8,7 @@
     let stopAnimationCharcing = false;
     let stopAnimationMobility = false;
     let stopAnimationEnergy = false;
+    let y;
 
     export let showPopup = false;
 
@@ -100,15 +101,24 @@
         checkInput = false;
         return true;
     }
+
+    function handleScrollY(e){
+        //console.log(e.target.scrollTop);
+
+    //  y = window.pageYOffset;
+    y = e.target.scrollTop;
+	// console.log(document.documentElement.scrollTop)
+}
  
 </script>
+
 
 <svelte:head>
     <title>Gaia Green Tech</title>
 </svelte:head>
 
-<!--svelte:window on:scroll={throttle(handleScrollY,100)}/-->
-
+<svelte:window on:scroll={handleScrollY}/>
+<!-- <svelte:window  bind:scrollY={y}/> -->
 <svg style="display: none" fill="none" xmlns="http://www.w3.org/2000/svg">
     <symbol id="svg-cloud" viewBox="0 0 275 52">
         <path d="M0 51.36c2.84-17.22 17.12-30.33 34.32-30.33A33.7 33.7 0 0156.8 29.7C68.6 11.84 87.4.29 108.6.29c21.2 0 40.03 11.56 51.82 29.42a33.34 33.34 0 0128.24-15.81c13.14 0 24.5 7.74 30.01 19.01 6-4.5 13.6-7.2 21.9-7.2 16.73 0 30.67 10.99 34.1 25.65H0z" fill="#fff" stroke="#79A5AA" stroke-width="2"/>
@@ -182,7 +192,7 @@
 </header>
 
 
-<div class="base-wrapper">
+<div on:scroll={handleScrollY} class="base-wrapper">
     <span id="scrollMenu"></span>
 
     <section class="charging" id="charging">
@@ -197,9 +207,9 @@
         <Mobility {stopAnimationMobility}/>
     </section>
     
-    <section class="seam-2-3">
+    <section id="seam-2-3" class="seam-2-3" style='transform: translate(0,{-y * 0.2}px)' >
         
-        </section>
+    </section>
 
     <div class="bottom">
 
@@ -291,15 +301,17 @@ section{
     background-size: cover;
     z-index: 2 !important;
     height: calc( 80vh + 10vw );
-    width: 100vw;
-    bottom: -174vh;
-    /* top: calc( -39vw - (250px - 16vw)); */
-    /* top: -84vh; */
-    position: absolute;
-    /* z-index: 6 !important; */
-    transform: translateZ(.7px) scale(.8);
+    /* width: 100vw;
+    bottom: -174vh; */
+    width: 103vw;
+    bottom: -212vh;
+    left: -2vw;
 
-    /* transform: translate3d(0,0,0.5px); */
+    position: absolute;
+    z-index: 6 !important;
+    /* transform: translateZ(.7px) scale(.8); */
+    will-change: transform;
+
     overflow-y: hidden;
 }
 
@@ -454,10 +466,11 @@ nav ul li{
     .seam-2-3{
         width: 135vw;
         left: -25vw;
-        top: 194vh;
+        /* top: 194vh; */
+        bottom: -215vh;
         height: calc( 74vh + 10vw );
-        -webkit-transform: translateZ(.7px) scale(.8) scaleX(1.2);
-        transform: translateZ(.7px) scale(.8) scaleX(1.2);
+        /* -webkit-transform: translateZ(.7px) scale(.8) scaleX(1.2);
+        transform: translateZ(.7px) scale(.8) scaleX(1.2); */
     }
     .mobility{
         height: 120vh;
