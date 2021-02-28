@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  //import {  afterUpdate } from 'svelte';
 
   export let top = 0;
   export let bottom = 0;
@@ -13,29 +12,28 @@
   let hasBeenVisible = false;
   let observer;
 
-  // afterUpdate(() => {
-  //   if (hasBeenVisible) 
-  //     observer.unobserve(el);
-	// });
-    
-
   onMount(() => {
-    if(!hasBeenVisible){
+    if (!hasBeenVisible) {
       const rootMargin = `${bottom}px ${left}px ${top}px ${right}px`;
-      observer = new IntersectionObserver(entries => {
-        visible = entries[0].isIntersecting;
-        hasBeenVisible = hasBeenVisible || visible;
-      },{
-        rootMargin
-      });
-    observer.observe(el);
+      observer = new IntersectionObserver(
+        (entries) => {
+          visible = entries[0].isIntersecting;
+          hasBeenVisible = hasBeenVisible || visible;
+        },
+        {
+          rootMargin,
+        }
+      );
+      observer.observe(el);
     }
-      
 
     return () => observer.unobserve(el);
   });
-
 </script>
+
+<div bind:this={el}>
+  <slot {visible} {hasBeenVisible} />
+</div>
 
 <style>
   div {
@@ -43,7 +41,3 @@
     height: 100%;
   }
 </style>
-
-<div bind:this={el}>
-  <slot {visible} {hasBeenVisible} />
-</div>
