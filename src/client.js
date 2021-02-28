@@ -1,9 +1,9 @@
-import * as sapper from '@sapper/app';
+import * as sapper from "@sapper/app";
 
-import { startClient } from './services/i18n.js';
+import { startClient } from "./services/i18n.js";
 
 startClient();
 
 sapper.start({
-	target: document.querySelector('#sapper')
+  target: document.querySelector("#sapper"),
 });
