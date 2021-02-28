@@ -19,3 +19,7 @@ Open up [localhost:3000](http://localhost:3000) and start clicking around.
 ## Deployment
 
 The website is automatically deployed with Netlify. Once you create a PR, it will build a preview website (you'll see the link as "deploy/netlify" in the Check section of your PR). Once the PR is merged in, it will be built and deployed automatically.
+
+## Code formatting
+
+The code is being formatted with [Prettier](https://prettier.io/) and [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte) plugin.
