@@ -23,3 +23,10 @@ The website is automatically deployed with Netlify. Once you create a PR, it wil
 ## Code formatting
 
 The code is being formatted with [Prettier](https://prettier.io/) and [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte) plugin.
+Before pushing code, you should run Prettier:
+
+```
+npm run prettier
+```
+
+Otherwise, the [.github/workflows/ci.yaml](GitHub Action) will create a commit in your branch with a cleanup.
