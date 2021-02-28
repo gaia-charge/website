@@ -21,7 +21,6 @@ register('en', () => import('./messages/en.json'));
 register('es-ES', () => import('./messages/es-ES.json'));
 register('cat-VAL', () => import('./messages/cat-VAL.json'));
 
-
 $locale.subscribe((value) => {
 	if (value == null) return;
 
