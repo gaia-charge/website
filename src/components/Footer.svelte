@@ -43,7 +43,7 @@
     position: relative;
     height: 6.5rem;
     background-color: #fff;
-    z-index: 2;
+    z-index: 100;
 }
 
 .footer .container {
