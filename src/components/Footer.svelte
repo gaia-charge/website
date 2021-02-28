@@ -32,8 +32,6 @@
 
     <Bush1 />
     <Bush2 />
-
-
 </footer>
 
 <style>
@@ -87,7 +85,8 @@
     width: 1.5rem;
     height: auto;
 }
-    /* MOBILE */
+
+/* MOBILE */
 @media only screen and (max-width: 768px) {
     .footer .container{
         display: grid;

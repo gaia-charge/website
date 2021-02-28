@@ -1,6 +1,10 @@
 <script>
-export let segment;
+	export let segment;
 </script>
+
+<main {segment}>
+	<slot />
+</main>
 
 <style>
 	main {
@@ -10,7 +14,3 @@ export let segment;
 		box-sizing: border-box;
 	}
 </style>
-
-<main {segment}>
-	<slot></slot>
-</main>
