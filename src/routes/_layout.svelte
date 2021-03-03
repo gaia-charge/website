@@ -1,4 +1,27 @@
 <script>
+  import { afterUpdate, beforeUpdate } from "svelte";
+  import { useAckeeSapper } from "svelte-ackee";
+  import { stores } from "@sapper/app";
+
+  const { session } = stores();
+
+  session.subscribe((value) => {
+    const { ACKEE_SERVER, ACKEE_DOMAIN_ID } = value;
+
+    useAckeeSapper(
+      beforeUpdate,
+      afterUpdate,
+      {
+        server: ACKEE_SERVER,
+        domainId: ACKEE_DOMAIN_ID,
+      },
+      {
+        ignoreLocalhost: false,
+        detailed: true,
+      }
+    );
+  });
+
   export let segment;
 </script>
 
