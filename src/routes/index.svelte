@@ -1,7 +1,8 @@
 <script>
   import { onMount } from "svelte";
-  import ContactSubmitted from "./../components/ContactSubmitted.svelte";
   import { _, locale } from "svelte-i18n";
+  import ContactSubmitted from "./../components/ContactSubmitted.svelte";
+  import { getCookie } from "./../services/cookie.js";
 
   let whiteBackground = true;
   let activeContact = false;
@@ -12,7 +13,9 @@
 
   export let showPopup = false;
 
-  if (!$locale) $locale = "en";
+  if (!$locale) {
+    $locale = getCookie("locale") || "en";
+  }
 
   const updateVh = () => {
     let vh = window.innerHeight * 0.01;
@@ -211,16 +214,16 @@
           <a
             href="/"
             class="nav__link"
-            class:is-active={$locale == "es-ES" ? true : false}
-            on:click|preventDefault={() => changeLocale("es-ES")}
+            class:is-active={$locale == "es" ? true : false}
+            on:click|preventDefault={() => changeLocale("es")}
           >
             ES
           </a>
           <a
             href="/"
             class="nav__link"
-            class:is-active={$locale == "cat-VAL" ? true : false}
-            on:click|preventDefault={() => changeLocale("cat-VAL")}
+            class:is-active={$locale == "val" ? true : false}
+            on:click|preventDefault={() => changeLocale("val")}
           >
             VAL
           </a>
