@@ -29,4 +29,4 @@ Before pushing code, you should run Prettier:
 npm run prettier
 ```
 
-Otherwise, the [`.github/workflows/ci.yaml`](GitHub Action) will create a commit in your branch with a cleanup.
+Otherwise, the [GitHub Action](.github/workflows/ci.yaml) will create a commit in your branch with a cleanup.
