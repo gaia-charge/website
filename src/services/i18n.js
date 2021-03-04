@@ -9,7 +9,7 @@ import { setCookie, getCookie } from "./cookie.js";
 
 const INIT_OPTIONS = {
   fallbackLocale: "en",
-  initialLocale: "en",
+  initialLocale: null,
   loadingDelay: 200,
   formats: {},
   warnOnMissingMessages: false,
@@ -18,8 +18,12 @@ const INIT_OPTIONS = {
 export let currentLocale = null;
 
 register("en", () => import("./messages/en.json"));
-register("es-ES", () => import("./messages/es-ES.json"));
-register("cat-VAL", () => import("./messages/cat-VAL.json"));
+register("es", () => import("./messages/es-ES.json"));
+register("val", () => import("./messages/cat-VAL.json"));
+
+function languageFromLocale(locale) {
+  return locale.split("-")[0];
+}
 
 $locale.subscribe((value) => {
   if (value == null) return;
@@ -35,8 +39,11 @@ $locale.subscribe((value) => {
 // initialize the i18n library in client
 export function startClient() {
   init({
-    ...INIT_OPTIONS, //,
-    //initialLocale: getCookie('locale') || getLocaleFromNavigator() || 'en',
+    ...INIT_OPTIONS,
+    initialLocale:
+      getCookie("locale") ||
+      languageFromLocale(getLocaleFromNavigator()) ||
+      INIT_OPTIONS.fallbackLocale,
   });
 }
 
@@ -62,7 +69,7 @@ export function i18nMiddleware() {
       if (req.headers["accept-language"]) {
         const headerLang = req.headers["accept-language"].split(",")[0].trim();
         if (headerLang.length > 1) {
-          locale = headerLang;
+          locale = languageFromLocale(headerLang);
         }
       } else {
         locale = INIT_OPTIONS.initialLocale || INIT_OPTIONS.fallbackLocale;
