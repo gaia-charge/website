@@ -311,7 +311,7 @@
   }
 
   .seam-1-2 {
-    background-image: url(seam-section-1-2.svg);
+    background-image: url(seam_section_1_2.svg);
     background-size: cover;
     height: calc(53vh + 12vw);
     width: 100vw;
@@ -324,7 +324,7 @@
   }
 
   .seam-2-3 {
-    background-image: url(seam-section-2-3.svg);
+    background-image: url(seam_section_2_3.svg);
     background-size: cover;
     z-index: 2 !important;
     height: calc(80vh + 10vw);
@@ -476,7 +476,7 @@
     }
 
     #check:checked ~ label > span {
-      background: url(exit-menu.svg) left top no-repeat;
+      background: url(exit_menu.svg) left top no-repeat;
     }
 
     .nav__link {
