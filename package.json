@@ -13,7 +13,7 @@
     "prettier": "prettier --write **/*.{js,md,svelte}"
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "compression": "^1.7.1",
     "dotenv": "^8.2.0",
     "polka": "next",
