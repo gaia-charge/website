@@ -1,0 +1,40 @@
+{
+    "subtitle": "Gaia Green Tech es",
+    "charging": {
+        "title1": "Una red",
+        "title2": "de carga accesible",
+        "lead": "Carga tu coche eléctrico durante el trabajo, la compra o mientras sales por la ciudad. No te preocuparás del estado de la carga de tu batería."
+    },
+    "mobility": {
+        "title1": "Movilidad",
+        "title2": "sostenible",
+        "lead": "Usa el transporte que te resulte más cómodo. El coche, la bicicleta, el autobús o a pie. Te lo ponemos lo más fácil posible"
+    },
+    "energy": {
+        "title1": "Fuente",
+        "title2": "de energía limpia",
+        "lead": "Toda la infraestructura está suministrada por fuentes de energía renovable y nos esforzamos por conseguir una huella de carbono negativa."
+    },
+    "contact": {
+        "title": "¡Conectemos!",
+        "lead": "Déjanos un mensaje o echa un vistazo a nuestras redes sociales. ¡Estaremos encantados de charlar!",
+        "phName": "Nombre",
+        "phMessage": "Déjanos un mensaje",
+        "phEmail": "mi@correo.es",
+        "button": "Enviar",
+        "errorName": "Por favor, introduce tu nombre",
+        "errorEmail": "Por favor, introduce un e-mail válido",
+        "errorMessage": "Por favor, introduce tu mensaje",
+        "errorFail": "Ha habido un error, por favor inténtalo de nuevo"
+    },
+    "header": {
+        "charging": "Carga",
+        "mobility": "Movilidad",
+        "energy": "Energía",
+        "contact": "Contacto"
+    },
+    "contactPopup": {
+        "title": "¡Gracias!",
+        "lead": "Nuestro equipo se pondrá en contacto contigo tan pronto como nos sea posible. Gracias por tu mensaje."
+    }
+}

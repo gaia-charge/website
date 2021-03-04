@@ -1,0 +1,40 @@
+{
+    "subtitle": "Gaia Green Tech és",
+    "charging": {
+        "title1": "Una xarxa",
+        "title2": "de càrrega accessible",
+        "lead": "Carrega el teu vehicle elèctric mentre treballes, compres o eixes per la ciutat. No et preocupes de l’estat de de càrrega de la bateria."
+    },
+    "mobility": {
+        "title1": "Mobilitat",
+        "title2": "sostenible ",
+        "lead": "Escull el millor mitjà de transport per a tu. El cotxe, la bicicleta, el autobus o a peu. Tractem de deixarte-ho el més fàcil possible!"
+    },
+    "energy": {
+        "title1": "Font d’energia",
+        "title2": "limpia",
+        "lead": "Tota la infraestructura és suministrada per fonts d’energia renovables i ens esforcem per conseguir una petjada de carboni negativa."
+    },
+    "contact": {
+        "title": "Connectem!",
+        "lead": "Deixa’ns un missatge o visita les nostres xarxes socials. Estarem encantats de parlar!",
+        "phName": "El teu nom",
+        "phMessage": "Deixa’ns el teu missatge",
+        "phEmail": "usuari@correu.com",
+        "button": "Enviar missatge",
+        "errorName": "Per favor, escriu el tu nom.",
+        "errorEmail": "Per favor, escriu un e-mail vàlid",
+        "errorMessage": "Per favor, escriu el teu missatge",
+        "errorFail": "Hi ha hagut un error. Per favor, torna a intentar-ho."
+    },
+    "header": {
+        "charging": "Carrega",
+        "mobility": "Mobilitat",
+        "energy": "Energia",
+        "contact": "Contacte"
+    },
+    "contactPopup": {
+        "title": "Gràcies!",
+        "lead": "Ens posarem en contacte amb tu el més ràpidament possible. Gràcies pel teu missatge."
+    }
+}

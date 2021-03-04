@@ -1,0 +1,20 @@
+{
+	"background_color": "#ffffff",
+	"theme_color": "#4c8c40",
+	"name": "Gaia Green Tech",
+	"short_name": "Gaia",
+	"display": "minimal-ui",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "favicons/logo-192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "favicons/logo-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
