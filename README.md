@@ -1,4 +1,4 @@
-<img src="static/GaiaGreenTechLogo.svg" width=400 alt="Gaia Green Tech" />
+<img src="static/gaia_green_tech_logo.svg" width=400 alt="Gaia Green Tech" />
 
 # Main website
 
@@ -29,4 +29,4 @@ Before pushing code, you should run Prettier:
 npm run prettier
 ```
 
-Otherwise, the [.github/workflows/ci.yaml](GitHub Action) will create a commit in your branch with a cleanup.
+Otherwise, the [`.github/workflows/ci.yaml`](GitHub Action) will create a commit in your branch with a cleanup.
