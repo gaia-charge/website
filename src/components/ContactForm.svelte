@@ -64,7 +64,7 @@
 
     try {
       const response = await axios.post(
-        "https://hooks.zapier.com/hooks/catch/267763/o60i84z/",
+        "https://formsubmit.co/contact@gaiagreen.tech",
         {
           name: name,
           email: email,

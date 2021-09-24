@@ -247,15 +247,15 @@
   }
 
   .windturbine__elem.is-blades {
-    background-image: url(windturbine_blades.svg);
+    background-image: url(/windturbine_blades.svg);
   }
 
   .windturbine__elem.is-inner {
-    background-image: url(windturbine_inner.svg);
+    background-image: url(/windturbine_inner.svg);
   }
 
   .windturbine__elem.is-outer {
-    background-image: url(windturbine_outer.svg);
+    background-image: url(/windturbine_outer.svg);
   }
 
   .windturbine__elem.is-stand {
