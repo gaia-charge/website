@@ -42,7 +42,9 @@ export function startClient() {
     ...INIT_OPTIONS,
     initialLocale:
       getCookie("locale") ||
-      languageFromLocale(getLocaleFromNavigator() || INIT_OPTIONS.fallbackLocale)
+      languageFromLocale(
+        getLocaleFromNavigator() || INIT_OPTIONS.fallbackLocale
+      ),
   });
 }
 
@@ -65,7 +67,9 @@ export function i18nMiddleware(request) {
   // no cookie, let's get the first accepted language
   if (locale == null) {
     if (request.headers["accept-language"]) {
-      const headerLang = request.headers["accept-language"].split(",")[0].trim();
+      const headerLang = request.headers["accept-language"]
+        .split(",")[0]
+        .trim();
       if (headerLang.length > 1) {
         locale = languageFromLocale(headerLang);
       }
