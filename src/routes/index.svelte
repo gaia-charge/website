@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { _, locale, isLoading } from "svelte-i18n";
+  import { _, locale } from "svelte-i18n";
   import ContactSubmitted from "./../components/ContactSubmitted.svelte";
   import { getCookie } from "./../services/cookie";
   import { startClient } from "../services/i18n";
@@ -14,9 +14,9 @@
 
   export let showPopup = false;
 
+  startClient();
   if (!$locale) {
     $locale = getCookie("locale") || "en";
-    startClient();
   }
 
   const updateVh = () => {
