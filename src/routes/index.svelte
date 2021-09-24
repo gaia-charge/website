@@ -1,8 +1,9 @@
 <script>
   import { onMount } from "svelte";
-  import { _, locale } from "svelte-i18n";
+  import { _, locale, isLoading } from "svelte-i18n";
   import ContactSubmitted from "./../components/ContactSubmitted.svelte";
-  import { getCookie } from "./../services/cookie.js";
+  import { getCookie } from "./../services/cookie";
+  import { startClient } from "../services/i18n";
 
   let whiteBackground = true;
   let activeContact = false;
@@ -47,6 +48,7 @@
   };
 
   onMount(async () => {
+    startClient();
     [...document.querySelectorAll('a[href^="#"]')].map(
       (x) => (x.href = document.location + new URL(x.href).hash)
     );
@@ -104,6 +106,7 @@
 </svelte:head>
 
 <svelte:window on:scroll={handleScrollY} />
+
 <svg style="display: none" fill="none" xmlns="http://www.w3.org/2000/svg">
   <symbol id="svg-cloud" viewBox="0 0 275 52">
     <path
@@ -121,6 +124,7 @@
   </symbol>
 </svg>
 
+{#if !$isLoading}
 <header class="header" class:whiteBackground={!whiteBackground}>
   <div class="container">
     <a href="/" class="header__link">
@@ -232,10 +236,11 @@
     </nav>
   </div>
 </header>
+{/if}
 
 <div on:scroll={handleScrollY} class="base-wrapper">
   <span id="scrollMenu" />
-
+  {#if !$isLoading}
   <section class="charging" id="charging">
     <Charging {stopAnimationCharcing} />
   </section>
@@ -267,6 +272,7 @@
 
     <Footer />
   </div>
+  {/if}
 </div>
 
 {#if showPopup}
@@ -311,7 +317,7 @@
   }
 
   .seam-1-2 {
-    background-image: url(seam_section_1_2.svg);
+    background-image: url(/seam_section_1_2.svg);
     background-size: cover;
     height: calc(53vh + 12vw);
     width: 100vw;
@@ -324,7 +330,7 @@
   }
 
   .seam-2-3 {
-    background-image: url(seam_section_2_3.svg);
+    background-image: url(/seam_section_2_3.svg);
     background-size: cover;
     z-index: 2 !important;
     height: calc(80vh + 10vw);
@@ -429,7 +435,7 @@
   .checkbtn span {
     width: 24px;
     height: 18px;
-    background: url(menu.svg) left top no-repeat;
+    background: url(/menu.svg) left top no-repeat;
     display: block;
   }
 
@@ -476,7 +482,7 @@
     }
 
     #check:checked ~ label > span {
-      background: url(exit_menu.svg) left top no-repeat;
+      background: url(/exit_menu.svg) left top no-repeat;
     }
 
     .nav__link {

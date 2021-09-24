@@ -42,44 +42,39 @@ export function startClient() {
     ...INIT_OPTIONS,
     initialLocale:
       getCookie("locale") ||
-      languageFromLocale(getLocaleFromNavigator()) ||
-      INIT_OPTIONS.fallbackLocale,
+      languageFromLocale(getLocaleFromNavigator() || INIT_OPTIONS.fallbackLocale)
   });
 }
 
 // init only for routes (urls with no extensions such as .js, .css, etc) and for service worker
 const DOCUMENT_REGEX = /(^([^.?#@]+)?([?#](.+)?)?|service-worker.*?\.html)$/;
 // initialize the i18n library in the server and returns its middleware
-export function i18nMiddleware() {
+export function i18nMiddleware(request) {
   // initialLocale will be set by the middleware
   init(INIT_OPTIONS);
 
-  return (req, res, next) => {
-    const isDocument = DOCUMENT_REGEX.test(req.originalUrl);
-    // get the initial locale only for a document request
-    if (!isDocument) {
-      next();
-      return;
-    }
-
-    let locale = getCookie("locale", req.headers.cookie);
-
-    // no cookie, let's get the first accepted language
-    if (locale == null) {
-      if (req.headers["accept-language"]) {
-        const headerLang = req.headers["accept-language"].split(",")[0].trim();
-        if (headerLang.length > 1) {
-          locale = languageFromLocale(headerLang);
-        }
-      } else {
-        locale = INIT_OPTIONS.initialLocale || INIT_OPTIONS.fallbackLocale;
-      }
-    }
-
-    if (locale != null && locale !== currentLocale) {
-      $locale.set(locale);
-    }
-
+  const isDocument = DOCUMENT_REGEX.test(request.originalUrl);
+  // get the initial locale only for a document request
+  if (!isDocument) {
     next();
-  };
+    return;
+  }
+
+  let locale = getCookie("locale", request.headers.cookie);
+
+  // no cookie, let's get the first accepted language
+  if (locale == null) {
+    if (request.headers["accept-language"]) {
+      const headerLang = request.headers["accept-language"].split(",")[0].trim();
+      if (headerLang.length > 1) {
+        locale = languageFromLocale(headerLang);
+      }
+    } else {
+      locale = INIT_OPTIONS.initialLocale || INIT_OPTIONS.fallbackLocale;
+    }
+  }
+
+  if (locale != null && locale !== currentLocale) {
+    $locale.set(locale);
+  }
 }

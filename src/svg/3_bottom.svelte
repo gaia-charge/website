@@ -1316,7 +1316,7 @@
   }
 
   .windturbine__elem.is-blades {
-    background-image: url(windturbine_blades.svg);
+    background-image: url(/windturbine_blades.svg);
   }
 
   .windturbine-1 .windturbine__elem.is-blades {
@@ -1328,12 +1328,12 @@
   }
 
   .windturbine__elem.is-inner {
-    background-image: url(windturbine_inner.svg);
+    background-image: url(/windturbine_inner.svg);
     animation: spin 16s linear infinite;
   }
 
   .windturbine__elem.is-outer {
-    background-image: url(windturbine_outer.svg);
+    background-image: url(/windturbine_outer.svg);
     animation: spin 20s linear infinite;
   }
 

@@ -2,7 +2,7 @@
 
 # Main website
 
-This is the code for the [main GGT website](https://gaiagreen.tech). It's build with [Svelte](https://svelte.dev/) and [Sapper](https://github.com/sveltejs/sapper).
+This is the code for the [main GGT website](https://gaiagreen.tech). It's build with [Svelte](https://svelte.dev/) and [SvelteKit](https://kit.svelte.dev/).
 
 ## Running the website locally
 
