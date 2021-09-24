@@ -1,0 +1,40 @@
+{
+    "subtitle": "Gaia Green Tech to",
+    "charging": {
+        "title1": "Dostępna",
+        "title2": "sieć ładowania",
+        "lead": "Ładuj swoje auto elektryczne gdy pracujesz, robisz zakupy lub spędzasz czas poza domem! Nie musisz się martwić stanem baterii."
+    },
+    "mobility": {
+        "title1": "Zrównoważona",
+        "title2": "mobilność",
+        "lead": "Wybierz najlepszy środek transportu dla Ciebie. Auto, rower, autobus czy nawet krótki spacer. Staramy się udogodnić każdą metodę."
+    },
+    "energy": {
+        "title1": "Czyste",
+        "title2": "źródłó energii",
+        "lead": "Całość naszej infrastruktury jest wspierana przez odnawialne źródła energii i ma na celu uzyskać ujemny ślad węglowy."
+    },
+    "contact": {
+        "title": "Skontaktuj się z nami!",
+        "lead": "Nie wahaj się do nas napisać lub zajrzeć na nasze media społecznościowe! Chętnie porozmawiamy!",
+        "phName": "Imię/nazwisko",
+        "phMessage": "Zostaw nam wiadomość",
+        "phEmail": "imie@domena.pl",
+        "button": "Wyślij wiadomość",
+        "errorName": "Podaj proszę imię lub nazwisko",
+        "errorEmail": "Podaj adres email",
+        "errorMessage": "Podaj treść wiadomości",
+        "errorFail": "Wystąpił błąd, spróbuj ponownie"
+    },
+    "header": {
+        "charging": "Ładowanie",
+        "mobility": "Mobilność",
+        "energy": "Energia",
+        "contact": "Kontakt"
+    },
+    "contactPopup": {
+        "title": "Dziękujemy!",
+        "lead": "Odezwiemy się do Ciebie najszybciej jak to możliwe. Dziękujemy za Twoją wiadomość."
+    }
+}
