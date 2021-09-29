@@ -14,9 +14,9 @@
 
   export let showPopup = false;
 
-  startClient();
+  const initialLocale = startClient();
   if (!$locale) {
-    $locale = getCookie("locale") || "en";
+    $locale = initialLocale;
   }
 
   const updateVh = () => {

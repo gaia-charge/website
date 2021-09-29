@@ -1,8 +1,15 @@
 <script>
-  import { _ } from "svelte-i18n";
+  import { locale, _ } from "svelte-i18n";
   import Header from "../components/Header.svelte";
   import BaseWrapper from "../components/BaseWrapper.svelte";
   import Footer from "../components/Footer.svelte";
+  import { onMount } from "svelte";
+  import { startClient } from "../services/i18n";
+
+  const initialLocale = startClient();
+  if (!$locale) {
+    $locale = initialLocale;
+  }
 
   const petrolPrice = 1.45;
   const dieselPrice = 1.333;
