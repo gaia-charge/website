@@ -230,6 +230,14 @@
           >
             VAL
           </a>
+          <a
+            href="/"
+            class="nav__link"
+            class:is-active={$locale == "pl" ? true : false}
+            on:click|preventDefault={() => changeLocale("pl")}
+          >
+            PL
+          </a>
         </li>
       </ul>
     </nav>

@@ -20,6 +20,7 @@ export let currentLocale = null;
 register("en", () => import("./messages/en.json"));
 register("es", () => import("./messages/es-ES.json"));
 register("val", () => import("./messages/cat-VAL.json"));
+register("pl", () => import("./messages/pl.json"));
 
 function languageFromLocale(locale) {
   return locale.split("-")[0];
