@@ -15,15 +15,32 @@
   const dieselPrice = 1.333;
   const electricityPrice = 0.35;
   const discountedElectricityPrice = 0.035;
+  let downloadUrl = "";
+
+  onMount(async () => {
+    console.log("onMount");
+    const corsProxy = "https://gaia-cors-anywhere.herokuapp.com/";
+    const latestReleaseUrl =
+      "https://github.com/gaia-green-tech/website/releases/latest";
+    const response = await fetch(`${corsProxy}${latestReleaseUrl}`, {
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    if (response.ok) {
+      const release = await response.json();
+      downloadUrl = `https://github.com/gaia-green-tech/website/releases/download/${release.tag_name}`;
+    }
+  });
 </script>
 
 <svelte:head>
   <title>{$_("ev-faq.head", { default: "EV FAQ" })} - Gaia Green Tech</title>
 </svelte:head>
 
-<Header />
+<Header whiteBackground={false} activeContact={false} />
 
-<BaseWrapper>
+<BaseWrapper onScroll={() => {}}>
   <div class="content">
     <div class="container">
       <p class="subtitle">
@@ -46,7 +63,8 @@
         </p>
       </div>
       <div>
-        <a href="" class="download">{$_("download", { default: "Download" })}</a
+        <a href="{downloadUrl}/ev-faq-{$locale}.pdf" class="download"
+          >{$_("download", { default: "Download" })}</a
         >
       </div>
       <div class="footnotes">
