@@ -39,14 +39,13 @@ $locale.subscribe((value) => {
 
 // initialize the i18n library in client
 export function startClient() {
-  const initialLocale = getCookie("locale") ||
-  languageFromLocale(
-    getLocaleFromNavigator() || INIT_OPTIONS.fallbackLocale
-  );
+  const initialLocale =
+    getCookie("locale") ||
+    languageFromLocale(getLocaleFromNavigator() || INIT_OPTIONS.fallbackLocale);
   $locale.set(initialLocale);
   init({
     ...INIT_OPTIONS,
-    initialLocale
+    initialLocale,
   });
   return initialLocale;
 }
