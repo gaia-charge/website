@@ -136,6 +136,16 @@ svg {
     margin-bottom: 1.5rem;
 }
 
+.title-small {
+    font-family: Inter;
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    color: #011625;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
 .lead {
     font-weight: normal;
     font-size: 1rem;
