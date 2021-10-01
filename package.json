@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.21.2",
-    "svelte-ackee": "^1.2.9",
+    "svelte-ackee": "^1.3.2",
     "svelte-i18n": "^3.3.12"
   },
   "devDependencies": {

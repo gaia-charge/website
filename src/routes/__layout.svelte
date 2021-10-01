@@ -21,18 +21,20 @@
   export let initialLocale;
   startClient(initialLocale);
 
-  useAckeeSapper(
-    beforeUpdate,
-    afterUpdate,
-    {
-      server: import.meta.env.VITE_ACKEE_SERVER,
-      domainId: import.meta.env.VITE_ACKEE_DOMAIN_ID,
-    },
-    {
-      ignoreLocalhost: false,
-      detailed: true,
-    }
-  );
+  if (typeof navigator !== "undefined") {
+    useAckeeSapper(
+      beforeUpdate,
+      afterUpdate,
+      {
+        server: import.meta.env.VITE_ACKEE_SERVER,
+        domainId: import.meta.env.VITE_ACKEE_DOMAIN_ID,
+      },
+      {
+        ignoreLocalhost: false,
+        detailed: true,
+      }
+    );
+  }
 </script>
 
 <main>
