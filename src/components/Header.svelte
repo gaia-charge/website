@@ -1,8 +1,8 @@
 <script>
   import { _, locale } from "svelte-i18n";
 
-  export let whiteBackground;
-  export let activeContact;
+  export let whiteBackground = false;
+  export let activeSection = "";
 
   let checkInput = false;
 
@@ -71,17 +71,32 @@
       </label>
       <ul>
         <li on:click={handleLiClick}>
-          <a id="-visibleCharging" href="/#charging" class="nav__link active">
+          <a
+            id="-visibleCharging"
+            href="/#charging"
+            class="nav__link"
+            class:active={activeSection === "charging"}
+          >
             {$_("header.charging", { default: "Charging" })}
           </a>
         </li>
         <li on:click={handleLiClick}>
-          <a id="-visibleMobility" href="/#mobility" class="nav__link">
+          <a
+            id="-visibleMobility"
+            href="/#mobility"
+            class="nav__link"
+            class:active={activeSection === "mobility"}
+          >
             {$_("header.mobility", { default: "Mobility" })}
           </a>
         </li>
         <li on:click={handleLiClick}>
-          <a id="-visibleEnergy" href="/#energy" class="nav__link">
+          <a
+            id="-visibleEnergy"
+            href="/#energy"
+            class="nav__link"
+            class:active={activeSection === "energy"}
+          >
             {$_("header.energy", { default: "Energy" })}
           </a>
         </li>
@@ -90,7 +105,7 @@
             id="-visibleContact"
             href="/#contact"
             class="nav__link is-contact"
-            class:is-contact-active={activeContact}
+            class:is-contact-active={activeSection === "contact"}
           >
             {$_("header.contact", { default: "Contact" })}
           </a>

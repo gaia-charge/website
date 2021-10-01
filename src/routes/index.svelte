@@ -5,7 +5,7 @@
 
   let initialized = false;
   let whiteBackground = true;
-  let activeContact = false;
+  let activeSection = "";
   let stopAnimationCharcing = false;
   let stopAnimationMobility = false;
   let stopAnimationEnergy = false;
@@ -30,14 +30,14 @@
       stopAnimationEnergy = true;
     });
 
-    if (id == "visibleCharging") stopAnimationCharcing = false;
-    else if (id == "visibleMobility") stopAnimationMobility = false;
-    else if (id == "visibleEnergy") stopAnimationEnergy = false;
+    if (id === "visibleCharging") stopAnimationCharcing = false;
+    else if (id === "visibleMobility") stopAnimationMobility = false;
+    else if (id === "visibleEnergy") stopAnimationEnergy = false;
 
-    if (id == "visibleContact") {
-      activeContact = true;
+    if (id === "visibleContact") {
+      activeSection = "contact";
     } else {
-      activeContact = false;
+      activeSection = "";
       document.getElementById(`-${id}`).classList.add("active");
     }
   };
@@ -114,7 +114,7 @@
 </svg>
 
 {#if !$isLoading}
-  <Header {whiteBackground} {activeContact} />
+  <Header {whiteBackground} {activeSection} />
   <BaseWrapper onScroll={handleScrollY}>
     <span id="scrollMenu" />
     <section class="charging" id="charging">

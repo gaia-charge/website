@@ -11,13 +11,14 @@
   let downloadUrl = "https://ggrn.link/ev-faq-pdf-";
 </script>
 
-
 <svelte:head>
-  <title>{$isLoading ? "" : $_("ev-faq.head", { default: "EV FAQ" })} - Gaia Green Tech</title>
+  <title
+    >{$isLoading ? "" : $_("ev-faq.head", { default: "EV FAQ" })} - Gaia Green Tech</title
+  >
 </svelte:head>
 
 {#if !$isLoading}
-  <Header whiteBackground={false} activeContact={false} />
+  <Header whiteBackground={false} activeSection="mobility" />
 
   <BaseWrapper onScroll={() => {}}>
     <div class="content">
@@ -53,7 +54,9 @@
           <div class="lead">
             <ol>
               <li>
-                <a href="https://ev-database.org/" target="_blank">EV Database</a>
+                <a href="https://ev-database.org/" target="_blank"
+                  >EV Database</a
+                >
               </li>
               <li>
                 <a
