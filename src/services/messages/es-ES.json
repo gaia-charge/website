@@ -36,5 +36,29 @@
     "contactPopup": {
         "title": "¡Gracias!",
         "lead": "Nuestro equipo se pondrá en contacto contigo tan pronto como nos sea posible. Gracias por tu mensaje."
-    }
+    },
+    "ev-faq": {
+        "head": "Preguntas frecuentes",
+        "subtitle": "Respuestas de Gaia Green Tech",
+        "title1": "Preguntas frecuentes",
+        "title2": "Sobre vehículos eléctricos",
+        "lead": "En nuestras interacciones diarias con personas interesadas en VEs, recibimos muchas preguntas. Hemos decidido recopilar las respuestas para todos en un flyer ordenado y visual",
+        "footnotes": {
+            "title": "Acotaciones",
+            "2a": "Según un <a href=\"{link}\" target=\"_blank\">estudio CAWI</a> el trayecto medio en coche en la UE es de unos 20km",
+            "2b": "Suponiendo una autonomía de 250km, necesitarías cargarlo en torno a cada dos semanas",
+            "2c": "Por supuesto depende de tu situación, pero  en promedio los trayectos de más de 300km son muy escasos.",
+            "2d": "<strong>El 40% de los conductores solo hace uno o dos viajes de más de 300km cada año</strong>, y solo el 20% los hacen tres o más veces",
+            "3a": "Piensa que, de todos modos, la carga se realiza cuando no utilizas el coche",
+            "3b": "Por ejemplo, dejas el coche por la noche, estás de compras o has parado en un viaje para utilizar el lavabo y tienes una parada para comer o tomar un café",
+            "3c": "No tendrías que esperar por cargar el coche",
+            "9a": "Los VEs son también más baratos de mantener. Al cabo de 5 años de propiedad, un <a href=\"{linkLeaf}\" target=\"_blank\">Nissan Leaf</a> es más de 500€ más barato de mantener y llevar al taller que un <a href=\"{linkGolf}\" target=\"_blank\">VW Golf</a>",
+            "9b": "Después de ese momento, el coste de mantener un VE permanece igual mientras que los costes de gasolina o diésel crecerían rápidamente"
+        },
+        "petrol-price": "Tomando como precio promedio {price}€ por litro",
+        "diesel-price": "Tomando como precio promedio {price}€ por litro",
+        "electricity-price": "Tomando como precio promedio {price}€ por kW",
+        "discounted-electricity-price": "Tomando como precio promedio {price}€ por kW cargando durante la noche con una tarifa específica para VEs"
+    },
+    "download": "Descargar"
 }

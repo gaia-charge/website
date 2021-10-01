@@ -36,5 +36,29 @@
     "contactPopup": {
         "title": "Dziękujemy!",
         "lead": "Odezwiemy się do Ciebie najszybciej jak to możliwe. Dziękujemy za Twoją wiadomość."
-    }
+    },
+    "ev-faq": {
+        "head": "FAQ aut elektrycznych",
+        "subtitle": "Gaia Green Tech odpowiada na",
+        "title1": "Najczęściej zadawane pytania",
+        "title2": "n.t. aut elektrycznych",
+        "lead": "Codziennie otrzymujemy pytania od osób zainteresowanych autami elektrycznymi. Postanowiliśmy je zebrać w formie czytelnej, wizualnej ulotki dla każdego.",
+        "footnotes": {
+            "title": "Przypisy",
+            "2a": "Wg. <a href=\"{link}\" target=\"_blank\">badania CAWI</a>, <strong>średnia dzienna odległość podróży aute w UE to ok. 20km</strong>",
+            "2b": "Zakładając zasięg 250km, auto wymagałoby ładowania co ok. dwa tygodnie",
+            "2c": "Oczywiście zależy to od indywidualnej sytuacji lecz zazwyczaj podróże powyżej 300km są bardzo rzadkie",
+            "2d": "<strong>40% kierowców robi podróże powyżej 300km tylko raz lub dwa razy do roku</strong> i tylko 20% kierowców robi je trzy lub więcej razy do roku",
+            "3a": "Zauważ, że ładowanie zazwyczaj odbywa się gdy i tak nie używasz auta",
+            "3b": "Np. stoi zaparkowane w nocy, gdy robisz zakupy lub trzeba było się zatrzymać aby skorzystać z toalety, rozprostować nogi lub coś przekąsić podczas dłuższej podróży",
+            "3c": "W żadnym momencie nie powinno się czekać aby auto się naładowało",
+            "9a": "Auta elektryczne są także tańsze w utrzymaniu. Przez 5 lat użytkowania,, <a href=\"{linkLeaf}\" target=\"_blank\">Nissan Leaf</a> jest o ponad 500€ tańszy w utrzymaniu w porównaniu do <a href=\"{linkGolf}\" target=\"_blank\">VW Golfa</a>",
+            "9b": "Po tym czasie, koszt utrzymania aua elektrycznego pozostanie na tym samym poziomie, gdy koszty naprawy i utrzymania auta spalinowego będą tylko rosły"
+        },
+        "petrol-price": "Zakładając średnią cenę {price}€ za litr",
+        "diesel-price": "Zakładając średnią cenę {price}€ za litr",
+        "electricity-price": "Zakładając średnią cenę {price}€ za kWh",
+        "discounted-electricity-price": "Zakładając średnią cenę {price}€ za kWh ładując w nocy z wykorzystaniem nocnej taryfy"
+    },
+    "download": "Pobierz"
 }
