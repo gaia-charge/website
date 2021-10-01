@@ -57,8 +57,8 @@
     },
     "petrol-price": "Assuming an average price of {price}€ per litre",
     "diesel-price": "Assuming an average price of {price}€ per litre",
-    "electricity-price": "Assuming an average price of {price}€ per kW",
-    "discounted-electricity-price": "Assuming an average price of {price}€ per kW when charging during the night with an EV specific tariff"
+    "electricity-price": "Assuming an average price of {price}€ per kWh",
+    "discounted-electricity-price": "Assuming an average price of {price}€ per kWh when charging during the night with an EV specific tariff"
   },
   "download": "Download"
 }

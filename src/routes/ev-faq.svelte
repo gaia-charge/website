@@ -116,14 +116,14 @@
               </li>
               <li>
                 {$_("ev-faq.electricity-price", {
-                  default: "Assuming an average price of {price}€ per kW",
+                  default: "Assuming an average price of {price}€ per kWh",
                   values: { price: electricityPrice },
                 })}
               </li>
               <li>
                 {$_("ev-faq.discounted-electricity-price", {
                   default:
-                    "Assuming an average price of {price}€ per kW when charging during the night with an EV specific tariff",
+                    "Assuming an average price of {price}€ per kWh when charging during the night with an EV specific tariff",
                   values: { price: discountedElectricityPrice },
                 })}
               </li>
