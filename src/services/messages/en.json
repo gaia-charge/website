@@ -1,40 +1,64 @@
 {
-    "header": {
-        "charging": "Charging",
-        "mobility": "Mobility",
-        "energy": "Energy",
-        "contact": "Contact"
+  "subtitle": "Gaia Green Tech is",
+  "charging": {
+    "title1": "Accessible",
+    "title2": "charging network",
+    "lead": "Charge your electric vehicle while working, shopping, or going out! There's no need to keep thinking about how much battery is left."
+  },
+  "contact": {
+    "title": "Let's connect!",
+    "lead": "Feel free to send us a message or check out our social media. We're happy to chat!",
+    "errorName": "Please enter your name",
+    "errorEmail": "Please enter a valid email",
+    "errorMessage": "Please enter the message",
+    "errorFail": "Something went wrong, please try again",
+    "phName": "Your name",
+    "phEmail": "user@domain.com",
+    "phMessage": "Leave us a message",
+    "button": "Send message"
+  },
+  "contactPopup": {
+    "title": "Thank you!",
+    "lead": "Our team will come back to you as soon as possible. Thank you for your message."
+  },
+  "energy": {
+    "title1": "Clean",
+    "title2": "energy supply",
+    "lead": "All of this infrastructure is supported by renewable energy sources and strives to be carbon negative."
+  },
+  "header": {
+    "charging": "Charging",
+    "mobility": "Mobility",
+    "energy": "Energy",
+    "contact": "Contact"
+  },
+  "mobility": {
+    "title1": "Sustainable",
+    "title2": "mobility",
+    "lead": "Pick the best mode of transport for you. A car, a bicycle, a bus, or even a short walk. We try to make it as convenient as possible."
+  },
+  "ev-faq": {
+    "head": "EV FAQ",
+    "subtitle": "Gaia Green Tech answers",
+    "title1": "Frequently asked questions",
+    "title2": "about electric vehicles",
+    "lead": "In our daily interactions with people interested in EVs, we receive a lot of questions. We decided to compile the answers into a neat, visual flyer for everyone.",
+    "footnotes": {
+      "title": "Footnotes",
+      "2a": "According to <a href=\"{link}\" target=\"_blank\">a CAWI study</a>, the <strong>average daily trip by car in the EU is about 20km</strong>",
+      "2b": "Assuming the 250km range, you would need to charge it about every 2 weeks",
+      "2c": "Of course this depends on your situation but on average trips over 300km are very rare",
+      "2d": "<strong>40% of drivers only do one or two trips over 300km a year</strong>, and just 20% do it three or more times",
+      "3a": "Note that the charge is usually done when you're not using the car anyway",
+      "3b": "I.e. it’s parked for the night, you’re out shopping or you stopped on a trip to use the restrooms and have a break with a meal or coffee",
+      "3c": "At no point you should wait for the car to charge",
+      "9a": "EVs are also cheaper to maintain. Over 5 years of ownership, <a href=\"{linkLeaf}\" target=\"_blank\">Nissan Leaf</a> is over 500€ cheaper to maintain and service than a <a href=\"{linkGolf}\" target=\"_blank\">VW Golf</a>",
+      "9b": "After that period of time, the cost to maintain an EV remains the same while the petrol and diesel costs grow rapidly"
     },
-    "subtitle": "Gaia Green Tech is",
-    "charging": {
-        "title1": "Accessible",
-        "title2": "charging network",
-        "lead": "Charge your electric vehicle while working, shopping, or going out! There's no need to keep thinking about how much battery is left."
-    },
-    "mobility": {
-        "title1": "Sustainable",
-        "title2": "mobility",
-        "lead": "Pick the best mode of transport for you. A car, a bicycle, a bus, or even a short walk. We try to make it as convenient as possible."
-    },
-    "energy": {
-        "title1": "Clean",
-        "title2": "energy supply",
-        "lead": "All of this infrastructure is supported by renewable energy sources and strives to be carbon negative."
-    },
-    "contact": {
-        "title": "Let's connect!",
-        "lead": "Feel free to send us a message or check out our social media. We're happy to chat!",
-        "phName": "Your name",
-        "phMessage": "Leave us a message",
-        "phEmail": "user@domain.com",
-        "button": "Send message",
-        "errorName": "Please enter your name",
-        "errorEmail": "Please enter a valid email",
-        "errorMessage": "Please enter the message",
-        "errorFail": "Something went wrong, please try again"
-    },
-    "contactPopup": {
-        "title": "Thank you!",
-        "lead": "Our team will come back to you as soon as possible. Thank you for your message."
-    }
+    "petrol-price": "Assuming an average price of {price}€ per litre",
+    "diesel-price": "Assuming an average price of {price}€ per litre",
+    "electricity-price": "Assuming an average price of {price}€ per kW",
+    "discounted-electricity-price": "Assuming an average price of {price}€ per kW when charging during the night with an EV specific tariff"
+  },
+  "download": "Download"
 }

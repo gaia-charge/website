@@ -10,7 +10,8 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "prettier": "prettier --write **/*.{js,md,svelte}"
+    "prettier": "prettier --write **/*.{js,md,svelte}",
+    "i18n:extract": "svelte-i18n extract 'src/**/*.svelte' > src/services/messages/en.json"
   },
   "dependencies": {
     "axios": "^0.21.2",

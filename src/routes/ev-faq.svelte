@@ -49,7 +49,7 @@
         </div>
         <div class="footnotes">
           <h3 class="title-small">
-            {$_("ev-faq.footnotes", { default: "Footnotes" })}
+            {$_("ev-faq.footnotes.title", { default: "Footnotes" })}
           </h3>
           <div class="lead">
             <ol>
@@ -59,18 +59,42 @@
                 >
               </li>
               <li>
-                <a
-                  href="https://cyberleninka.org/article/n/1435084.pdf"
-                  target="_blank"
-                  >Mobility data across the EU 28 member states: results from an
-                  extensive CAWI survey</a
-                >
+                {@html $_("ev-faq.footnotes.2a", {
+                  default:
+                    'According to <a href="{link}" target="_blank">a CAWI study</a>, the <strong>average daily trip by car in the EU is about 20km</strong>',
+                  values: {
+                    link: "https://cyberleninka.org/article/n/1435084.pdf",
+                  },
+                })}.
+                {@html $_("ev-faq.footnotes.2b", {
+                  default:
+                    "Assuming the 250km range, you would need to charge it about every 2 weeks",
+                })}.
+                {@html $_("ev-faq.footnotes.2c", {
+                  default:
+                    "Of course this depends on your situation but on average trips over 300km are very rare",
+                })}.
+                {@html $_("ev-faq.footnotes.2d", {
+                  default:
+                    "<strong>40% of drivers only do one or two trips over 300km a year</strong>, and just 20% do it three or more times",
+                })}.
               </li>
               <li>
                 <a
                   href="https://ev-database.org/car/1531/Volkswagen-ID3-Pro#charge-table"
                   target="_blank">Volkswagen ID.3 Pro - EV Database</a
-                >
+                >.
+                {$_("ev-faq.footnotes.3a", {
+                  default:
+                    "Note that the charge is usually done when you're not using the car anyway",
+                })}.
+                {$_("ev-faq.footnotes.3b", {
+                  default:
+                    "I.e. it’s parked for the night, you’re out shopping or you stopped on a trip to use the restrooms and have a break with a meal or coffee",
+                })}.
+                {$_("ev-faq.footnotes.3c", {
+                  default: "At no point you should wait for the car to charge",
+                })}.
               </li>
               <li>
                 <a
@@ -104,16 +128,20 @@
                 })}
               </li>
               <li>
-                <a
-                  href="https://www.edmunds.com/nissan/leaf/2021/cost-to-own/"
-                  target="_blank">2021 Nissan LEAF Cost to Own</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.edmunds.com/volkswagen/golf/2021/cost-to-own/"
-                  target="_blank">2021 Volkswagen Golf Cost to Own</a
-                >
+                {@html $_("ev-faq.footnotes.9a", {
+                  default:
+                    'EVs are also cheaper to maintain. Over 5 years of ownership, <a href="{linkLeaf}" target="_blank">Nissan Leaf</a> is over 500€ cheaper to maintain and service than a <a href="{linkGolf}" target="_blank">VW Golf</a>',
+                  values: {
+                    linkLeaf:
+                      "https://www.edmunds.com/nissan/leaf/2021/cost-to-own/",
+                    linkGolf:
+                      "https://www.edmunds.com/volkswagen/golf/2021/cost-to-own/",
+                  },
+                })}.
+                {$_("ev-faq.footnotes.9b", {
+                  default:
+                    "After that period of time, the cost to maintain an EV remains the same while the petrol and diesel costs grow rapidly",
+                })}.
               </li>
               <li>
                 <a
