@@ -10,7 +10,7 @@ import { setCookie, getCookie } from "./cookie.js";
 const INIT_OPTIONS = {
   fallbackLocale: "en",
   initialLocale: null,
-  loadingDelay: 200,
+  loadingDelay: 2000,
   formats: {},
   warnOnMissingMessages: false,
 };
@@ -38,49 +38,21 @@ $locale.subscribe((value) => {
 });
 
 // initialize the i18n library in client
-export function startClient() {
-  const initialLocale =
-    getCookie("locale") ||
-    languageFromLocale(getLocaleFromNavigator() || INIT_OPTIONS.fallbackLocale);
-  $locale.set(initialLocale);
-  init({
+export async function startClient(initialLocale) {
+  await init({
     ...INIT_OPTIONS,
     initialLocale,
   });
-  return initialLocale;
 }
 
-// init only for routes (urls with no extensions such as .js, .css, etc) and for service worker
-const DOCUMENT_REGEX = /(^([^.?#@]+)?([?#](.+)?)?|service-worker.*?\.html)$/;
-// initialize the i18n library in the server and returns its middleware
-export function i18nMiddleware(request) {
-  // initialLocale will be set by the middleware
-  init(INIT_OPTIONS);
-
-  const isDocument = DOCUMENT_REGEX.test(request.originalUrl);
-  // get the initial locale only for a document request
-  if (!isDocument) {
-    next();
-    return;
-  }
-
-  let locale = getCookie("locale", request.headers.cookie);
-
+// try to find the correct locale to use
+export function getInitialLocale() {
+  let locale = getCookie("locale");
   // no cookie, let's get the first accepted language
-  if (locale == null) {
-    if (request.headers["accept-language"]) {
-      const headerLang = request.headers["accept-language"]
-        .split(",")[0]
-        .trim();
-      if (headerLang.length > 1) {
-        locale = languageFromLocale(headerLang);
-      }
-    } else {
-      locale = INIT_OPTIONS.initialLocale || INIT_OPTIONS.fallbackLocale;
-    }
+  if (!locale) {
+    locale = languageFromLocale(
+      getLocaleFromNavigator() || INIT_OPTIONS.fallbackLocale
+    );
   }
-
-  if (locale != null && locale !== currentLocale) {
-    $locale.set(locale);
-  }
+  return locale;
 }

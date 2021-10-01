@@ -1,10 +1,9 @@
 <script>
-  import { onMount } from "svelte";
-  import { _, locale } from "svelte-i18n";
+  import { afterUpdate } from "svelte";
+  import { _, isLoading } from "svelte-i18n";
   import ContactSubmitted from "./../components/ContactSubmitted.svelte";
-  import { getCookie } from "./../services/cookie";
-  import { startClient } from "../services/i18n";
 
+  let initialized = false;
   let whiteBackground = true;
   let activeContact = false;
   let stopAnimationCharcing = false;
@@ -13,11 +12,6 @@
   let y;
 
   export let showPopup = false;
-
-  const initialLocale = startClient();
-  if (!$locale) {
-    $locale = initialLocale;
-  }
 
   const updateVh = () => {
     let vh = window.innerHeight * 0.01;
@@ -48,34 +42,37 @@
     }
   };
 
-  onMount(async () => {
-    // Update active section if the h2 is visible
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const id = entry.target.getAttribute("id");
+  afterUpdate(async () => {
+    if (!$isLoading && !initialized) {
+      // Update active section if the h2 is visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.getAttribute("id");
 
-        if (id == "scrollMenu") {
-          updateBackgroundHeader(entry.intersectionRatio);
-          return false;
-        }
+          if (id == "scrollMenu") {
+            updateBackgroundHeader(entry.intersectionRatio);
+            return false;
+          }
 
-        if (entry.intersectionRatio > 0 && document.getElementById(`-${id}`))
-          updateActiveSection(id);
+          if (entry.intersectionRatio > 0 && document.getElementById(`-${id}`))
+            updateActiveSection(id);
+        });
       });
-    });
 
-    [...document.querySelectorAll('a[href^="#"]')].map(
-      (x) => (x.href = document.location + new URL(x.href).hash)
-    );
+      [...document.querySelectorAll('a[href^="#"]')].map(
+        (x) => (x.href = document.location + new URL(x.href).hash)
+      );
 
-    // Track all sections
-    document.querySelectorAll("h2[id]").forEach((section) => {
-      observer.observe(section);
-    });
-    observer.observe(document.getElementById("scrollMenu"));
+      // Track all sections
+      document.querySelectorAll("h2[id]").forEach((section) => {
+        observer.observe(section);
+      });
+      observer.observe(document.getElementById("scrollMenu"));
 
-    updateVh();
-    window.addEventListener("resize", updateVh);
+      updateVh();
+      window.addEventListener("resize", updateVh);
+      initialized = true;
+    }
   });
 
   import Header from "../components/Header.svelte";
@@ -116,44 +113,46 @@
   </symbol>
 </svg>
 
-<Header {whiteBackground} {activeContact} />
-<BaseWrapper onScroll={handleScrollY}>
-  <span id="scrollMenu" />
-  <section class="charging" id="charging">
-    <Charging {stopAnimationCharcing} />
-  </section>
-
-  <section class="seam-1-2" />
-
-  <section class="mobility" id="mobility">
-    <Mobility {stopAnimationMobility} />
-  </section>
-
-  <section
-    id="seam-2-3"
-    class="seam-2-3"
-    style="transform: translate(0,{-y * 0.2}px)"
-  />
-
-  <div class="bottom">
-    <section style="z-index: 10 !important;" id="energy">
-      <Energy />
+{#if !$isLoading}
+  <Header {whiteBackground} {activeContact} />
+  <BaseWrapper onScroll={handleScrollY}>
+    <span id="scrollMenu" />
+    <section class="charging" id="charging">
+      <Charging {stopAnimationCharcing} />
     </section>
 
-    <section style="z-index:12;" id="contact">
-      <Contact bind:showPopup />
+    <section class="seam-1-2" />
+
+    <section class="mobility" id="mobility">
+      <Mobility {stopAnimationMobility} />
     </section>
 
-    <Bottom {stopAnimationEnergy} />
+    <section
+      id="seam-2-3"
+      class="seam-2-3"
+      style="transform: translate(0,{-y * 0.2}px)"
+    />
 
-    <div class="bg-green" />
+    <div class="bottom">
+      <section style="z-index: 10 !important;" id="energy">
+        <Energy />
+      </section>
 
-    <Footer />
-  </div>
-</BaseWrapper>
+      <section style="z-index:12;" id="contact">
+        <Contact bind:showPopup />
+      </section>
 
-{#if showPopup}
-  <ContactSubmitted bind:showPopup />
+      <Bottom {stopAnimationEnergy} />
+
+      <div class="bg-green" />
+
+      <Footer />
+    </div>
+  </BaseWrapper>
+
+  {#if showPopup}
+    <ContactSubmitted bind:showPopup />
+  {/if}
 {/if}
 
 <style>
