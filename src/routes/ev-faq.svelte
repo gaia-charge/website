@@ -42,7 +42,8 @@
             })}
           </p>
         </div>
-        <div>
+        <div class="preview">
+          <img src="/ev-faq-{$locale}.png" alt="EV FAQ" />
           <a href="{downloadUrl}{$locale}" class="download"
             >{$_("download", { default: "Download" })}</a
           >
@@ -185,6 +186,18 @@
     padding-top: 7em;
   }
 
+  .lead {
+    width: 100%;
+  }
+
+  .preview {
+    position: relative;
+  }
+
+  .preview img {
+    width: calc(100vw - 4rem);
+  }
+
   .download {
     display: inline-block;
     line-height: 1;
@@ -194,7 +207,10 @@
     color: #fff;
     text-decoration: none;
     text-align: center;
-    margin: 1em 0;
+    position: absolute;
+    left: calc(50% - 5rem);
+    top: 50%;
+    width: 10rem;
   }
 
   .footnotes {
@@ -229,6 +245,13 @@
   @media only screen and (max-width: 768px) {
     .content {
       padding-top: 5em;
+    }
+  }
+
+  @media only screen and (max-width: 380px) {
+    .preview img {
+      width: calc(100vw);
+      margin-left: -2rem;
     }
   }
 </style>
