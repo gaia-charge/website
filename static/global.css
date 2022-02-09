@@ -99,6 +99,10 @@ svg {
     flex: 0;
 }
 
+svg.no-flex {
+    flex: none;
+}
+
 .scene {
     height: 100vh;
     background: linear-gradient(0deg, #DAF9F9, #DAF9F9);

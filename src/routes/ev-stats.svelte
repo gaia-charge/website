@@ -1,12 +1,14 @@
 <script>
   import { locale, _, isLoading } from "svelte-i18n";
-  import { Card, Label, Headline } from "attractions";
-  import { Line, Doughnut, Bar } from 'svelte-chartjs/src/index';
+  import { Card, Headline, Loading } from "attractions";
+  import { Line, Bar } from 'svelte-chartjs/src/index';
   import Header from "../components/Header.svelte";
   import BaseWrapper from "../components/BaseWrapper.svelte";
   import Footer from "../components/Footer.svelte";
-import NetworkOrderDropdown from "../components/ev-stats/NetworkOrderDropdown.svelte";
-
+  import NetworkOrderDropdown from "../components/ev-stats/NetworkOrderDropdown.svelte";
+  import MaximumPowerChart from "../components/ev-stats/MaximumPowerChart.svelte";
+  import SocketTypesChart from "../components/ev-stats/SocketTypesChart.svelte";
+  import ChargerStatesChart from "../components/ev-stats/ChargerStatesChart.svelte";
   const formatPower = (power) => {
     const floatPower = parseFloat(power);
     if (floatPower > 7.4) {
@@ -84,6 +86,7 @@ import NetworkOrderDropdown from "../components/ev-stats/NetworkOrderDropdown.sv
           label: $_("ev-stats.locations", { default: "Locations" }),
           data: data.networks.map((r) => r[1].locations),
           backgroundColor: pieColors[0],
+          borderRadius: Number.MAX_VALUE,
           xAxisID: 'x',
           tooltip: {
             callbacks: {
@@ -95,6 +98,7 @@ import NetworkOrderDropdown from "../components/ev-stats/NetworkOrderDropdown.sv
           label: $_("ev-stats.connectors", { default: "Connectors" }),
           data: data.networks.map((r) => r[1].connectors),
           backgroundColor: pieColors[1],
+          borderRadius: Number.MAX_VALUE,
           xAxisID: 'x',
           tooltip: {
             callbacks: {
@@ -106,6 +110,7 @@ import NetworkOrderDropdown from "../components/ev-stats/NetworkOrderDropdown.sv
           label: $_("ev-stats.total-power", { default: "Total power" }),
           data: data.networks.map((r) => Math.round(r[1].power)),
           backgroundColor: pieColors[2],
+          borderRadius: Number.MAX_VALUE,
           xAxisID: 'x2',
           tooltip: {
             callbacks: {
@@ -124,7 +129,7 @@ import NetworkOrderDropdown from "../components/ev-stats/NetworkOrderDropdown.sv
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        display: true,
+        display: false,
         position: 'bottom',
         align: 'left',
         labels: {
@@ -137,14 +142,45 @@ import NetworkOrderDropdown from "../components/ev-stats/NetworkOrderDropdown.sv
   const networkChartOptions = Object.assign({
     indexAxis: 'y',
     scales: {
+      y: {
+        display: true,
+        ticks: {
+          autoSkip: false,
+          align: 'start',
+          crossAlign: 'far',
+          minRotation: 90,
+          labelOffset: 30,
+          font: {
+            size: 10
+          },
+          callback: function (value, index, ticks) {
+            const isSmall = window.matchMedia('(max-width: 576px)');
+            const label = this.getLabelForValue(value);
+            if (!isSmall) return label;
+            if (label === 'Fenie Energ\u00eda') return 'Fenie';
+            if (label === 'Repsol - IBIL') return 'Repsol';
+            if (label === 'Melib Mallorca') return 'Melib';
+            if (label === 'Ajuntament Barcelona') return 'Barcelona';
+            if (label === 'Municipality of Catalunya') return 'Catalunya';
+            if (label === 'El Corte Ingl\u00e9s') return 'C. Ingl\u00e9s';
+            if (label === '') return '';
+            if (label === '') return '';
+            if (label === '') return '';
+            if (label === '') return '';
+            if (label === '') return '';
+            return label;
+          }
+        }
+      },
       x: {
+        display: false,
         type: 'linear',
         position: 'top'
       },
-      x2: {
-        type: 'linear',
-        position: 'bottom'
-      },
+      // x2: {
+      //   type: 'linear',
+      //   position: 'bottom'
+      // },
     },
     interaction: {
       intersect: false,
@@ -181,11 +217,13 @@ import NetworkOrderDropdown from "../components/ev-stats/NetworkOrderDropdown.sv
         </h2>
         <div>
           {#await processData()}
-            <Card>
-              <Headline>isLoading...</Headline>
+            <Card style="padding: 2em 0;">
+              <div style="font-size: 4em;">
+                <Loading />
+              </div>
             </Card>
-          {:then data}    
-            <Card style="margin-bottom: 1.5em;">
+          {:then data}
+            <Card style="margin-bottom: 1.5em; scroll-snap-align: start;">
               <p class="subtitle">
                 <strong
                   >{$_("ev-stats.number-of-chargers-over-time", {
@@ -193,37 +231,13 @@ import NetworkOrderDropdown from "../components/ev-stats/NetworkOrderDropdown.sv
                   })}</strong>
               </p>
             </Card>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5em; height: 50vw;">
-              <Card style="width: calc(100% / 3 - 1em);">
-                <p class="subtitle">
-                  <strong
-                  >{$_("ev-stats.maximum-power", {
-                    default: "Maximum power",
-                    })}</strong>
-                </p>
-                <Doughnut data={data.max_power} options={chartOptions} />
-              </Card>
-              <Card style="width: calc(100% / 3 - 1em);">
-                <p class="subtitle">
-                  <strong
-                    >{$_("ev-stats.socket-types", {
-                      default: "Socket types",
-                    })}</strong>
-                </p>
-                <Doughnut data={data.connectors} options={chartOptions} />
-              </Card>
-              <Card style="width: calc(100% / 3 - 1em);">
-                <p class="subtitle">
-                  <strong
-                    >{$_("ev-stats.charger-states", {
-                      default: "Charger states",
-                    })}</strong>
-                </p>
-                <Doughnut data={data.states} options={chartOptions} />
-              </Card>
+            <div class="doughnuts">
+              <MaximumPowerChart data={data.max_power} />
+              <SocketTypesChart data={data.connectors} />
+              <ChargerStatesChart data={data.states} />
             </div>
-            <Card>
-              <div class="subtitle" style="height: 100vw;">
+            <Card style="scroll-snap-align: start;">
+              <div class="subtitle" style="height: 400vw;">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5em;">
                   <strong
                     >{$_("ev-stats.biggest-charging-networks", {
@@ -249,5 +263,11 @@ import NetworkOrderDropdown from "../components/ev-stats/NetworkOrderDropdown.sv
     min-height: calc(100% - 6.5rem);
     padding-bottom: 4em;
     padding-top: 7em;
+    scroll-snap-type: y mandatory;
+  }
+  .doughnuts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 </style>

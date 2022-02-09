@@ -1,7 +1,7 @@
 <script>
   import { _ } from "svelte-i18n";
   import { Dropdown, DropdownShell, Button } from "attractions";
-  import { ChevronDownIcon } from 'svelte-feather-icons';
+  import { ChevronDownIcon, BarChart2Icon } from 'svelte-feather-icons';
 
   export let orderNetworksBy;
   export let callback = () => {};
@@ -14,12 +14,13 @@
 </script>
 
 <DropdownShell let:toggle>
-  <Button outline small on:click={toggle}>
-    {$_("ev-stats.order-by", {
+  <Button outline small on:click={toggle} style="margin-top: -0.5em;">
+    <BarChart2Icon size="16" class="no-flex" />
+    <!-- {$_("ev-stats.order-by", {
       default: "Order by",
     })}
     {$_(`ev-stats.${orderNetworksBy}`).toLowerCase()}
-    <ChevronDownIcon size="24" class="ml dropdown-chevron" style="flex: none" />
+    <ChevronDownIcon size="24" class="ml dropdown-chevron no-flex" /> -->
   </Button>
   <Dropdown>
     {#each orders as order }
