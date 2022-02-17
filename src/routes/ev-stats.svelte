@@ -109,6 +109,13 @@
                 <NetworksChart data={data.networks} />
               </div>
             </Card>
+
+            <Card style="margin-top: 1.5em;">
+              <strong>{$_("ev-stats.note", { default: "Note" })}:</strong>
+              {$_("ev-stats.note-content1", { default: "all data and charts presented here are available under" })}
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Attribution 4.0 International (CC BY 4.0)</a>
+              {$_("ev-stats.note-content2", { default: "license. You are free to share and adapt them to your needs as long as you attribute Gaia Green Tech as the source. Feel free to link to this website and/or mention our Facebook/Instagram/Twitter pages." })}
+            </Card>
           {/await}
         </div>
       </div>

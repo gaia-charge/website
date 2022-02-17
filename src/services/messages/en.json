@@ -47,17 +47,20 @@
     "number-of-chargers": "Number of chargers",
     "total-power": "",
     "country": "Country",
+    "other": "Other",
     "maximum-power": "Maximum power",
     "by": "By",
     "locations": "Locations",
     "connectors": "Connectors",
-    "other": "Other",
     "socket-types": "Socket types",
     "head": "EV Charging Stats",
     "subtitle": "Gaia Green Tech presents",
     "title": "EV Charging Statistics",
     "number-of-chargers-over-time": "Number of chargers over time",
-    "biggest-charging-networks": "Biggest charging networks"
+    "biggest-charging-networks": "Biggest charging networks",
+    "note": "Note",
+    "note-content1": "all data and charts presented here are available under",
+    "note-content2": "license. You are free to share and adapt them to your needs as long as you attribute Gaia Green Tech as the source. Feel free to link to this website and/or mention our Facebook/Instagram/Twitter pages."
   },
   "countries": {
     "es": "Spain"

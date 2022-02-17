@@ -81,7 +81,10 @@
         "charger-states": "Stany ładowarek",
         "maximum-power": "Maksymalna moc",
         "other": "Inne",
-        "socket-types": "Typ gniazda"
+        "socket-types": "Typ gniazda",
+        "note": "Uwaga",
+        "note-content1": "wszystkie dane oraz wykresy widoczne na tej stronie, są dostępne pod licencją",
+        "note-content2": ". Możesz je publikować oraz modyfikować dla własnych potrzeb lecz musisz wskazać Gaia Green Tech jako źródło. Możesz także wspomnieć nasze konta na Facebooku, Instagramie lub Twitterze."
     },
     "countries": {
         "es": "Hiszpania"

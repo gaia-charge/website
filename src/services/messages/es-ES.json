@@ -72,7 +72,7 @@
         "subtitle": "Gaia Green Tech presenta",
         "title": "Estadísticas de red de recarga",
         "number-of-chargers-over-time": "Número de cargadores",
-        "biggest-charging-networks": "Las mayores redes",
+        "biggest-charging-networks": "Las mayores redes de recarga",
         "working": "Disponible",
         "in-use": "En uso",
         "not-working": "No funciona",
@@ -81,7 +81,10 @@
         "charger-states": "Estados de cargador",
         "maximum-power": "Potencia máxima",
         "other": "Otros",
-        "socket-types": "Tipos de enchufes"
+        "socket-types": "Tipos de enchufes",
+        "note": "Aviso",
+        "note-content1": "todos los datos y gráficos presentados aquí están disponibles en licencia",
+        "note-content2": ". Eres libre de compartirlos y adaptarlos a tus necesidades siempre que atribuyas a Gaia Green Tech como la fuente. Siéntase libre de enlazar a este sitio web y/o mencionar nuestras páginas de Facebook/Instagram/Twitter."
     },
     "countries": {
         "es": "España"

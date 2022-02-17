@@ -5,7 +5,7 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="footer__left">Gaia Green Tech &copy; 2021</div>
+    <div class="footer__left">Gaia Green Tech &copy; 2022</div>
     <div class="footer__right">
       <a
         href="https://www.facebook.com/GaiaGreenTechES"
