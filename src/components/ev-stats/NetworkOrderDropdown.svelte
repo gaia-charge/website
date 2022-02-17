@@ -1,16 +1,12 @@
 <script>
   import { _ } from "svelte-i18n";
   import { Dropdown, DropdownShell, Button } from "attractions";
-  import { ChevronDownIcon, BarChart2Icon } from 'svelte-feather-icons';
+  import { ChevronDownIcon, BarChart2Icon } from "svelte-feather-icons";
 
   export let orderNetworksBy;
   export let callback = () => {};
 
-  const orders = [
-    'connectors',
-    'locations',
-    'total-power'
-  ]
+  const orders = ["connectors", "locations", "total-power"];
 </script>
 
 <DropdownShell let:toggle>
@@ -23,13 +19,23 @@
     <ChevronDownIcon size="24" class="ml dropdown-chevron no-flex" /> -->
   </Button>
   <Dropdown>
-    {#each orders as order }
-      <Button on:click={() => {
-        callback(order);
-        toggle();
-      }}>
-        {$_(`ev-stats.${order}`)}
+    {#each orders as order}
+      <Button
+        on:click={() => {
+          callback(order);
+          toggle();
+        }}
+        style="width: 100%"
+      >
+        {$_("ev-stats.by", { default: "By" })}
+        {$_(`ev-stats.${order}`).toLowerCase()}
       </Button>
     {/each}
   </Dropdown>
 </DropdownShell>
+
+<style>
+  :global(.dropdown) {
+    width: 10rem;
+  }
+</style>

@@ -13,16 +13,23 @@
 
   let country = "es";
   let orderNetworksBy = "locations";
+  const cachedData = {};
 
   const setNetworkOrder = (newOrder) => {
     orderNetworksBy = newOrder;
   };
 
-  const fetchData = async () => {
-    const response = await fetch(
-      "https://stats.staging.gaiagreen.dev/stats/es/"
-    );
-    return response.json();
+  const fetchData = async (country, orderNetworksBy) => {
+    if (orderNetworksBy === "total-power") orderNetworksBy = "power";
+    const key = country + orderNetworksBy;
+    if (!cachedData[key]) {
+      const response = await fetch(
+        `https://stats.staging.gaiagreen.dev/stats/${country}/?sort_networks_by=${orderNetworksBy}`
+      );
+      const data = await response.json();
+      cachedData[key] = data;
+    }
+    return cachedData[key];
   };
 </script>
 
@@ -75,7 +82,10 @@
               <ChargerStatesChart data={data.states} />
             </div>
             <Card style="scroll-snap-align: start;">
-              <div class="subtitle" style="height: 400vw; padding-bottom: 1.5em;">
+              <div
+                class="subtitle"
+                style="height: 400vw; padding-bottom: 1.5em;"
+              >
                 <div
                   style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5em;"
                 >
