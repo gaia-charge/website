@@ -86,4 +86,4 @@
   };
 </script>
 
-<Line data={parsedData} options={chartOptions} />
+<Line data={parsedData} options={chartOptions} height="100" />
