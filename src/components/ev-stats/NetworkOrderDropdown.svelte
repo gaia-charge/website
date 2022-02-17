@@ -36,6 +36,6 @@
 
 <style>
   :global(.dropdown) {
-    width: 10rem;
+    width: 11rem;
   }
 </style>

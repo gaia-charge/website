@@ -59,7 +59,9 @@
     ),
     datasets: [
       {
-        label: $_("ev-stats.number-of-chargers", { default: "Number of chargers" }),
+        label: $_("ev-stats.number-of-chargers", {
+          default: "Number of chargers",
+        }),
         data: data.map((p) => p[0]),
         backgroundColor: chartColors[0],
         borderColor: chartColors[0],
@@ -73,7 +75,10 @@
         yAxisID: "power",
         tooltip: {
           callbacks: {
-            label: (item, a, b) => `${$_("ev-stats.total-power")}: ${formatPower(item.raw)}`,
+            label: (item, a, b) =>
+              `${$_("ev-stats.total-power", {
+                default: "Total power",
+              })}: ${formatPower(item.raw)}`,
           },
         },
       },

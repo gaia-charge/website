@@ -1,6 +1,7 @@
 <script>
+  import { _ } from "svelte-i18n";
   import DoughnutChartWithLegend from "./DoughnutChartWithLegend.svelte";
-  import { chartColors, formatPower } from "../../utils/charts";
+  import { chartColors } from "../../utils/charts";
 
   export let data;
 
@@ -17,12 +18,13 @@
   parsedData.labels = parsedData.labels.map((label) => {
     if (label === "Tesla Destination Charger") return "Tesla Destination";
     if (label === "Type 1 (SAE J1772)") return "Type 1";
+    if (label === "Other") return $_("ev-stats.other", { default: "Other" });
     return label;
   });
 </script>
 
 <DoughnutChartWithLegend
   name="socket-types"
-  title="Socket types"
+  title={$_("ev-stats.socket-types", { default: "Socket types" })}
   data={parsedData}
 />

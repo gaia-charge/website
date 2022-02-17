@@ -1,4 +1,5 @@
 <script>
+  import { _ } from "svelte-i18n";
   import DoughnutChartWithLegend from "./DoughnutChartWithLegend.svelte";
   import { chartColors, formatPower } from "../../utils/charts";
 
@@ -19,7 +20,10 @@
   };
 
   const parsedData = {
-    labels: data.map((r) => (r[0] === "Other" ? r[0] : `${formatPower(r[0])}`)),
+    labels: data.map((r) => {
+      if (r[0] === "Other") return $_("ev-stats.other", { default: "Other" });;
+      return `${formatPower(r[0])}`;
+    }),
     datasets: [
       {
         data: data.map((r) => r[1]),
@@ -31,7 +35,7 @@
 
 <DoughnutChartWithLegend
   name="maximum-power"
-  title="Maximum power"
+  title={$_("ev-stats.maximum-power", { default: "Maximum power" })}
   legendColumns={2}
   data={parsedData}
 />

@@ -37,6 +37,31 @@
     "title2": "mobility",
     "lead": "Pick the best mode of transport for you. A car, a bicycle, a bus, or even a short walk. We try to make it as convenient as possible."
   },
+  "ev-stats": {
+    "working": "Working",
+    "in-use": "In use",
+    "not-working": "Not working",
+    "reserved": "Reserved",
+    "unknown": "Unknown",
+    "charger-states": "Charger states",
+    "number-of-chargers": "Number of chargers",
+    "total-power": "",
+    "country": "Country",
+    "maximum-power": "Maximum power",
+    "by": "By",
+    "locations": "Locations",
+    "connectors": "Connectors",
+    "other": "Other",
+    "socket-types": "Socket types",
+    "head": "EV Charging Stats",
+    "subtitle": "Gaia Green Tech presents",
+    "title": "EV Charging Statistics",
+    "number-of-chargers-over-time": "Number of chargers over time",
+    "biggest-charging-networks": "Biggest charging networks"
+  },
+  "countries": {
+    "es": "Spain"
+  },
   "ev-faq": {
     "head": "EV FAQ",
     "subtitle": "Gaia Green Tech answers",
@@ -60,22 +85,5 @@
     "electricity-price": "Assuming an average price of {price}€ per kWh",
     "discounted-electricity-price": "Assuming an average price of {price}€ per kWh when charging during the night with an EV specific tariff"
   },
-  "download": "Download",
-  "ev-stats": {
-    "locations": "Locations",
-    "connectors": "Connectors",
-    "total-power": "Total power",
-    "head": "EV Charging Stats",
-    "subtitle": "Gaia Green Tech presents",
-    "title": "EV Charging Statistics",
-    "number-of-chargers-over-time": "Number of chargers over time",
-    "maximum-power": "Maximum power",
-    "socket-types": "Socket types",
-    "charger-states": "Charger states",
-    "biggest-charging-networks": "Biggest charging networks",
-    "order-by": "Order by"
-  },
-  "countries": {
-    "es": "Spain"
-  }
+  "download": "Download"
 }

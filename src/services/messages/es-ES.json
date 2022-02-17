@@ -60,5 +60,30 @@
         "electricity-price": "Tomando como precio promedio {price}€ por kW",
         "discounted-electricity-price": "Tomando como precio promedio {price}€ por kW cargando durante la noche con una tarifa específica para VEs"
     },
-    "download": "Descargar"
+    "download": "Descargar",
+    "ev-stats": {
+        "number-of-chargers": "Número de cargadores",
+        "total-power": "Potencia total",
+        "country": "País",
+        "by": "Por",
+        "locations": "Ubicaciones",
+        "connectors": "Conectores",
+        "head": "Estadísticas de recarga",
+        "subtitle": "Gaia Green Tech presenta",
+        "title": "Estadísticas de red de recarga",
+        "number-of-chargers-over-time": "Número de cargadores",
+        "biggest-charging-networks": "Las mayores redes",
+        "working": "Disponible",
+        "in-use": "En uso",
+        "not-working": "No funciona",
+        "reserved": "Reservado",
+        "unknown": "Desconocido",
+        "charger-states": "Estados de cargador",
+        "maximum-power": "Potencia máxima",
+        "other": "Otros",
+        "socket-types": "Tipos de enchufes"
+    },
+    "countries": {
+        "es": "España"
+    }
 }
