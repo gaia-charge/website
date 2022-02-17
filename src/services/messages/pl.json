@@ -60,5 +60,33 @@
         "electricity-price": "Zakładając średnią cenę {price}€ za kWh",
         "discounted-electricity-price": "Zakładając średnią cenę {price}€ za kWh ładując w nocy z wykorzystaniem nocnej taryfy"
     },
-    "download": "Pobierz"
+    "download": "Pobierz",
+    "ev-stats": {
+        "number-of-chargers": "Liczba ładowarek",
+        "total-power": "Moc łączna",
+        "country": "Kraj",
+        "by": "Po:",
+        "locations": "Lokalizacjach",
+        "connectors": "Złączach",
+        "head": "Przegląd sieci ładowania",
+        "subtitle": "Gaia Green Tech przedstawia",
+        "title": "Statystyki sieci ładowania",
+        "number-of-chargers-over-time": "Ilość ładowarek w ostatnim miesiącu",
+        "biggest-charging-networks": "Największe sieci ładowania",
+        "working": "Sprawne",
+        "in-use": "U użyciu",
+        "not-working": "Niesprawne",
+        "reserved": "Zarezerwowane",
+        "unknown": "Nieznane",
+        "charger-states": "Stany ładowarek",
+        "maximum-power": "Maksymalna moc",
+        "other": "Inne",
+        "socket-types": "Typ gniazda",
+        "note": "Uwaga",
+        "note-content1": "wszystkie dane oraz wykresy widoczne na tej stronie, są dostępne pod licencją",
+        "note-content2": ". Możesz je publikować oraz modyfikować dla własnych potrzeb lecz musisz wskazać Gaia Green Tech jako źródło. Możesz także wspomnieć nasze konta na Facebooku, Instagramie lub Twitterze."
+    },
+    "countries": {
+        "es": "Hiszpania"
+    }
 }
