@@ -8,7 +8,7 @@
   const countries = {
     es: "🇪🇸",
   };
-  $_("countries.es", { default: "Spain"})
+  $_("countries.es", { default: "Spain" });
 </script>
 
 <DropdownShell let:toggle>

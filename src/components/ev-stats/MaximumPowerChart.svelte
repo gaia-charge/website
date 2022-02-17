@@ -21,7 +21,7 @@
 
   const parsedData = {
     labels: data.map((r) => {
-      if (r[0] === "Other") return $_("ev-stats.other", { default: "Other" });;
+      if (r[0] === "Other") return $_("ev-stats.other", { default: "Other" });
       return `${formatPower(r[0])}`;
     }),
     datasets: [

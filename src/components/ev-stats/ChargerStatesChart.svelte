@@ -16,11 +16,15 @@
   };
 
   parsedData.labels = parsedData.labels.map((label) => {
-    if (label === "Working") return $_("ev-stats.working", { default: "Working" });
+    if (label === "Working")
+      return $_("ev-stats.working", { default: "Working" });
     if (label === "In use") return $_("ev-stats.in-use", { default: "In use" });
-    if (label === "No working connectors") return $_("ev-stats.not-working", { default: "Not working" });
-    if (label === "Reserved") return $_("ev-stats.reserved", { default: "Reserved" });
-    if (label === "Unknown") return $_("ev-stats.unknown", { default: "Unknown" });
+    if (label === "No working connectors")
+      return $_("ev-stats.not-working", { default: "Not working" });
+    if (label === "Reserved")
+      return $_("ev-stats.reserved", { default: "Reserved" });
+    if (label === "Unknown")
+      return $_("ev-stats.unknown", { default: "Unknown" });
     return label;
   });
 </script>
