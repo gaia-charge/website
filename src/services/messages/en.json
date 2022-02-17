@@ -67,13 +67,15 @@
     "total-power": "Total power",
     "head": "EV Charging Stats",
     "subtitle": "Gaia Green Tech presents",
-    "title1": "EV Charging Infrastructure",
-    "title2": "Statistics",
+    "title": "EV Charging Statistics",
     "number-of-chargers-over-time": "Number of chargers over time",
     "maximum-power": "Maximum power",
     "socket-types": "Socket types",
     "charger-states": "Charger states",
     "biggest-charging-networks": "Biggest charging networks",
     "order-by": "Order by"
+  },
+  "countries": {
+    "es": "Spain"
   }
 }

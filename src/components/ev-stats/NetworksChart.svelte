@@ -20,9 +20,9 @@
     if (label === "Municipality of Catalunya") return "Catalunya";
     if (label === "El Corte Ingl\u00e9s") return "C. Ingl\u00e9s";
     if (label === "Volkswagen Group Charging GmbH") return "Volkswagen";
-    if (label === "") return "";
-    if (label === "") return "";
-    if (label === "") return "";
+    if (label === "IONITY GmbH") return "Ionity";
+    if (label === "Dr. Ing. h.c. F. Porsche AG") return "Porsche";
+    if (label === "IBIL Gestor de Carga de VE S.A.") return "IBIL";
     if (label === "") return "";
     return label;
   }

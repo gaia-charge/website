@@ -1,5 +1,5 @@
 <script>
-  import { locale } from "svelte-i18n";
+  import { locale, _ } from "svelte-i18n";
   import { subDays, intlFormat } from "date-fns";
   import { Line } from "svelte-chartjs/src/index";
   import { chartColors, formatPower } from "../../utils/charts";
@@ -32,6 +32,11 @@
         display: false,
       },
     },
+    interaction: {
+      intersect: false,
+      axis: "xy",
+      mode: "index",
+    },
   };
 
   const dateLabels = [new Date()];
@@ -54,21 +59,21 @@
     ),
     datasets: [
       {
-        label: "Number of chargers",
+        label: $_("ev-stats.number-of-chargers", { default: "Number of chargers" }),
         data: data.map((p) => p[0]),
         backgroundColor: chartColors[0],
         borderColor: chartColors[0],
         yAxisID: "chargers",
       },
       {
-        label: "Total power",
+        label: $_("ev-stats.total-power"),
         data: data.map((p) => p[1]),
         backgroundColor: chartColors[2],
         borderColor: chartColors[2],
         yAxisID: "power",
         tooltip: {
           callbacks: {
-            label: (item) => `${formatPower(item.raw)}`,
+            label: (item, a, b) => `${$_("ev-stats.total-power")}: ${formatPower(item.raw)}`,
           },
         },
       },

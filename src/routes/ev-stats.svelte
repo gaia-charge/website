@@ -10,6 +10,7 @@
   import SocketTypesChart from "../components/ev-stats/SocketTypesChart.svelte";
   import ChargerStatesChart from "../components/ev-stats/ChargerStatesChart.svelte";
   import NetworksChart from "../components/ev-stats/NetworksChart.svelte";
+  import CountryDropdown from "../components/ev-stats/CountryDropdown.svelte";
 
   let country = "es";
   let orderNetworksBy = "locations";
@@ -17,6 +18,10 @@
 
   const setNetworkOrder = (newOrder) => {
     orderNetworksBy = newOrder;
+  };
+
+  const setCountry = (newCountry) => {
+    country = newCountry;
   };
 
   const fetchData = async (country, orderNetworksBy) => {
@@ -53,10 +58,12 @@
             })}</strong
           >
         </p>
-        <h2 class="title">
-          {$_("ev-stats.title1", { default: "EV Charging Infrastructure" })}<br
-          />
-          {$_("ev-stats.title2", { default: "Statistics" })}
+        <h2
+          class="title"
+          style="display: flex; justify-content: space-between; align-items: center;"
+        >
+          {$_("ev-stats.title", { default: "EV Charging Statistics" })}
+          <CountryDropdown callback={setCountry} selectedCountry={country} />
         </h2>
         <div>
           {#await fetchData(country, orderNetworksBy)}
@@ -67,14 +74,14 @@
             </Card>
           {:then data}
             <Card style="margin-bottom: 1.5em; scroll-snap-align: start;">
-              <p class="subtitle">
+              <div class="subtitle">
                 <strong
                   >{$_("ev-stats.number-of-chargers-over-time", {
                     default: "Number of chargers over time",
                   })}</strong
                 >
-                <ChargersOverviewChart data={data.overview} />
-              </p>
+              </div>
+              <ChargersOverviewChart data={data.overview} />
             </Card>
             <div class="doughnuts">
               <MaximumPowerChart data={data.max_power} />
