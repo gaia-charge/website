@@ -10,7 +10,6 @@
   import SocketTypesChart from "../components/ev-stats/SocketTypesChart.svelte";
   import ChargerStatesChart from "../components/ev-stats/ChargerStatesChart.svelte";
   import NetworksChart from "../components/ev-stats/NetworksChart.svelte";
-  import { chartColors, formatPower } from "../utils/charts";
 
   let country = "es";
   let orderNetworksBy = "locations";
@@ -53,7 +52,7 @@
           {$_("ev-stats.title2", { default: "Statistics" })}
         </h2>
         <div>
-          {#await fetchData()}
+          {#await fetchData(country, orderNetworksBy)}
             <Card style="padding: 2em 0;">
               <div style="font-size: 4em;">
                 <Loading />
@@ -76,7 +75,7 @@
               <ChargerStatesChart data={data.states} />
             </div>
             <Card style="scroll-snap-align: start;">
-              <div class="subtitle" style="height: 400vw;">
+              <div class="subtitle" style="height: 400vw; padding-bottom: 1.5em;">
                 <div
                   style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5em;"
                 >

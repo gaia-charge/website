@@ -1,7 +1,11 @@
 <script>
   import { _ } from "svelte-i18n";
   import { Bar } from "svelte-chartjs/src/index";
-  import { chartColors, sanitizeNetworkNames } from "../../utils/charts";
+  import {
+    chartColors,
+    sanitizeNetworkNames,
+    formatPower,
+  } from "../../utils/charts";
 
   export let data;
 
@@ -15,7 +19,7 @@
     if (label === "Ajuntament Barcelona") return "Barcelona";
     if (label === "Municipality of Catalunya") return "Catalunya";
     if (label === "El Corte Ingl\u00e9s") return "C. Ingl\u00e9s";
-    if (label === "") return "";
+    if (label === "Volkswagen Group Charging GmbH") return "Volkswagen";
     if (label === "") return "";
     if (label === "") return "";
     if (label === "") return "";
@@ -29,7 +33,7 @@
     plugins: {
       legend: {
         display: false,
-      },
+      }
     },
     indexAxis: "y",
     scales: {
@@ -47,15 +51,21 @@
           callback: labelCallback,
         },
       },
-      x: {
+      locations: {
         display: false,
         type: "linear",
         position: "top",
       },
-      // x2: {
-      //   type: 'linear',
-      //   position: 'bottom'
-      // },
+      connectors: {
+        display: false,
+        type: "linear",
+        position: "top",
+      },
+      power: {
+        display: false,
+        type: "linear",
+        position: "bottom",
+      },
     },
     interaction: {
       intersect: false,
@@ -72,7 +82,7 @@
         data: data.map((r) => r[1].locations),
         backgroundColor: chartColors[0],
         borderRadius: Number.MAX_VALUE,
-        xAxisID: "x",
+        xAxisID: "locations",
         tooltip: {
           callbacks: {
             label: (item) =>
@@ -85,7 +95,7 @@
         data: data.map((r) => r[1].connectors),
         backgroundColor: chartColors[1],
         borderRadius: Number.MAX_VALUE,
-        xAxisID: "x",
+        xAxisID: "connectors",
         tooltip: {
           callbacks: {
             label: (item) =>
@@ -98,11 +108,11 @@
         data: data.map((r) => Math.round(r[1].power)),
         backgroundColor: chartColors[2],
         borderRadius: Number.MAX_VALUE,
-        xAxisID: "x2",
+        xAxisID: "power",
         tooltip: {
           callbacks: {
             label: (item) =>
-              `${(item.raw / 1000).toFixed(2)}MW ${$_(
+              `${formatPower(item.raw)} ${$_(
                 "ev-stats.total-power"
               ).toLowerCase()}`,
           },

@@ -20,7 +20,7 @@
 
   const parsedData = {
     labels: data.map((r) =>
-      r[0] === "Other" ? r[0] : `${formatPower(r[0])}kW`
+      r[0] === "Other" ? r[0] : `${formatPower(r[0])}`
     ),
     datasets: [
       {
