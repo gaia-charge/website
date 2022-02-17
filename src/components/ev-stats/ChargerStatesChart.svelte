@@ -20,4 +20,8 @@
   });
 </script>
 
-<DoughnutChartWithLegend name="charger-states" title="Charger states" data={parsedData} />
+<DoughnutChartWithLegend
+  name="charger-states"
+  title="Charger states"
+  data={parsedData}
+/>

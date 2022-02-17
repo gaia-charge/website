@@ -19,7 +19,7 @@
       power: {
         display: false,
         type: "linear",
-        position: "left"
+        position: "left",
       },
       chargers: {
         display: false,
@@ -68,8 +68,7 @@
         yAxisID: "power",
         tooltip: {
           callbacks: {
-            label: (item) =>
-              `${formatPower(item.raw)}`,
+            label: (item) => `${formatPower(item.raw)}`,
           },
         },
       },

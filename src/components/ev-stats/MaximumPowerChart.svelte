@@ -19,9 +19,7 @@
   };
 
   const parsedData = {
-    labels: data.map((r) =>
-      r[0] === "Other" ? r[0] : `${formatPower(r[0])}`
-    ),
+    labels: data.map((r) => (r[0] === "Other" ? r[0] : `${formatPower(r[0])}`)),
     datasets: [
       {
         data: data.map((r) => r[1]),

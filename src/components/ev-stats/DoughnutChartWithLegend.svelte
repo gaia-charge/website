@@ -7,26 +7,29 @@
   export let title;
   export let data;
   export let legendColumns = 2;
-  const total = data.datasets[0].data.reduce((previous, current) => previous + current, 0);
+  const total = data.datasets[0].data.reduce(
+    (previous, current) => previous + current,
+    0
+  );
   const zipped = data.labels.map((label, i) => {
     return {
       label,
       value: data.datasets[0].data[i],
-      percent: data.datasets[0].data[i] / total * 100
-    }
+      percent: (data.datasets[0].data[i] / total) * 100,
+    };
   });
   const labelMapping = {
-    '350kW': 'ultra-rapid.svg',
-    '150kW': 'ultra-rapid.svg',
-    '100kW': 'rapid.svg',
-    '60kW': 'rapid.svg',
-    '50kW': 'rapid.svg',
-    '22kW': 'fast.svg',
-    '11kW': 'fast.svg',
-    '7.4kW': 'medium.svg',
-    '3.7kW': 'slow.svg',
-    '2.3kW': 'slow.svg',
-    'Other': ''
+    "350kW": "ultra-rapid.svg",
+    "150kW": "ultra-rapid.svg",
+    "100kW": "rapid.svg",
+    "60kW": "rapid.svg",
+    "50kW": "rapid.svg",
+    "22kW": "fast.svg",
+    "11kW": "fast.svg",
+    "7.4kW": "medium.svg",
+    "3.7kW": "slow.svg",
+    "2.3kW": "slow.svg",
+    Other: "",
   };
   const pieColors = [
     "#4C8C40",
@@ -39,7 +42,7 @@
     "#7A5DB0",
     "#7CA9FC",
     "#CFF783",
-    "#84F5F5"
+    "#84F5F5",
   ];
 </script>
 
@@ -47,22 +50,27 @@
   <Card style="height: 100%;">
     <p class="subtitle">
       <strong
-      >{$_(`ev-stats.${name}`, {
-        default: title,
-        })}</strong>
+        >{$_(`ev-stats.${name}`, {
+          default: title,
+        })}</strong
+      >
     </p>
     <div class="content">
       <div class="chart">
-        <DoughnutChart data={data} />
+        <DoughnutChart {data} />
       </div>
       <div class="legend">
-        {#each zipped as {label, percent}, i }
-          <span class="item"
-            style:width={`calc(${100/legendColumns}% - 5px)`}>
+        {#each zipped as { label, percent }, i}
+          <span
+            class="item"
+            style:width={`calc(${100 / legendColumns}% - 5px)`}
+          >
             <span class="label" style:background-color={pieColors[i]}>
               {label}
             </span>
-            <span>{percent > 1 ? Math.round(percent) : percent.toFixed(1)}%</span>
+            <span
+              >{percent > 1 ? Math.round(percent) : percent.toFixed(1)}%</span
+            >
           </span>
         {/each}
       </div>
@@ -98,7 +106,7 @@
   }
 
   /* iPad vertical */
-  @media only screen and (min-width: 576px){
+  @media only screen and (min-width: 576px) {
     .card {
       width: 100%;
       scroll-snap-align: start;
@@ -132,5 +140,4 @@
       font-size: 0.6em;
     }
   }
-
 </style>
