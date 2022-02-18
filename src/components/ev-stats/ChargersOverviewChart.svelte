@@ -30,7 +30,7 @@
         ticks: {
           callback: function (value) {
             if (!isSmallScreen) return this.getLabelForValue(value);
-            return `${(value / 1000).toFixed(1)}k`
+            return `${(value / 1000).toFixed(1)}k`;
           },
         },
       },

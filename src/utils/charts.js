@@ -13,7 +13,6 @@ export const chartColors = [
   "#CFF783",
   "#84F5F5",
   "#C0EFEC",
-
 ];
 
 export const formatPower = (power) => {
