@@ -73,7 +73,7 @@
               </div>
             </Card>
           {:then data}
-            <Card style="margin-bottom: 1.5em; scroll-snap-align: start;">
+            <Card class="number-of-chargers-over-time">
               <div class="subtitle">
                 <strong
                   >{$_("ev-stats.number-of-chargers-over-time", {
@@ -88,26 +88,23 @@
               <SocketTypesChart data={data.connectors} />
               <ChargerStatesChart data={data.states} />
             </div>
-            <Card style="scroll-snap-align: start;">
+            <Card class="biggest-charging-networks">
               <div
-                class="subtitle"
-                style="height: 400vw; padding-bottom: 1.5em;"
+                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5em;"
               >
-                <div
-                  style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5em;"
-                >
+                <p class="subtitle">
                   <strong
                     >{$_("ev-stats.biggest-charging-networks", {
                       default: "Biggest charging networks",
                     })}
                   </strong>
-                  <NetworkOrderDropdown
-                    callback={setNetworkOrder}
-                    {orderNetworksBy}
-                  />
-                </div>
-                <NetworksChart data={data.networks} />
+                </p>
+                <NetworkOrderDropdown
+                  callback={setNetworkOrder}
+                  {orderNetworksBy}
+                />
               </div>
+              <NetworksChart data={data.networks} {orderNetworksBy} />
             </Card>
 
             <Card style="margin-top: 1.5em;">
@@ -145,5 +142,31 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+  :global(.number-of-chargers-over-time) {
+    padding-bottom: 3em !important;
+    margin-bottom: 1.5em;
+    scroll-snap-align: start;
+    height: 25vh;
+  }
+  :global(.biggest-charging-networks) {
+    scroll-snap-align: start;
+    height: 200vh;
+    padding-bottom: 4.5em !important;
+  }
+  /* iPhone horizontal */
+  @media only screen and (min-width: 640px) and (max-height: 450px) {
+    :global(.number-of-chargers-over-time) {
+      height: 70vh;
+    }
+    :global(.biggest-charging-networks) {
+      height: 400vh;
+    }
+  }
+  /* Desktop / iPad horizontal */
+  @media only screen and (min-width: 992px) {
+    :global(.number-of-chargers-over-time) {
+      height: 50vh;
+    }
   }
 </style>
