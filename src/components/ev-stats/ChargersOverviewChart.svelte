@@ -5,8 +5,11 @@
   import { chartColors, formatPower } from "../../utils/charts";
 
   export let data;
+  const isSmallScreen = window.matchMedia("(max-width: 576px)").matches;
 
   const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       x: {
         ticks: {
@@ -22,9 +25,14 @@
         position: "left",
       },
       chargers: {
-        display: false,
         type: "linear",
         position: "right",
+        ticks: {
+          callback: function (value) {
+            if (!isSmallScreen) return this.getLabelForValue(value);
+            return `${(value / 1000).toFixed(1)}k`;
+          },
+        },
       },
     },
     plugins: {

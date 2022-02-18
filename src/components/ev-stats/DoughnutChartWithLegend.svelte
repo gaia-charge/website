@@ -2,6 +2,7 @@
   import { _ } from "svelte-i18n";
   import { Card } from "attractions";
   import DoughnutChart from "./DoughnutChart.svelte";
+  import { chartColors } from "../../utils/charts";
 
   export let name;
   export let title;
@@ -31,19 +32,6 @@
     "2.3kW": "slow.svg",
     Other: "",
   };
-  const pieColors = [
-    "#4C8C40",
-    "#F9B233",
-    "#9E2B2B",
-    "#548080",
-    "#89C47E",
-    "#C0EFEC",
-    "#214EA3",
-    "#7A5DB0",
-    "#7CA9FC",
-    "#CFF783",
-    "#84F5F5",
-  ];
 </script>
 
 <div class="card">
@@ -65,7 +53,7 @@
             class="item"
             style:width={`calc(${100 / legendColumns}% - 5px)`}
           >
-            <span class="label" style:background-color={pieColors[i]}>
+            <span class="label" style:background-color={chartColors[i]}>
               {label}
             </span>
             <span

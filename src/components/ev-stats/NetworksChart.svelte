@@ -8,8 +8,9 @@
   } from "../../utils/charts";
 
   export let data;
+  export let orderNetworksBy;
 
-  function labelCallback(value, index, ticks) {
+  function labelCallback(value) {
     const isSmall = window.matchMedia("(max-width: 576px)");
     const label = this.getLabelForValue(value);
     if (!isSmall) return label;
@@ -23,7 +24,7 @@
     if (label === "IONITY GmbH") return "Ionity";
     if (label === "Dr. Ing. h.c. F. Porsche AG") return "Porsche";
     if (label === "IBIL Gestor de Carga de VE S.A.") return "IBIL";
-    if (label === "") return "";
+    if (label === "Other") return $_("ev-stats.other", { default: "Other" });
     return label;
   }
 
@@ -52,19 +53,24 @@
         },
       },
       locations: {
-        display: false,
+        display: orderNetworksBy === "locations",
         type: "linear",
         position: "top",
       },
       connectors: {
-        display: false,
+        display: orderNetworksBy === "connectors",
         type: "linear",
         position: "top",
       },
       power: {
-        display: false,
+        display: orderNetworksBy === "total-power",
         type: "linear",
-        position: "bottom",
+        position: "top",
+        ticks: {
+          callback: function (value) {
+            return formatPower(value);
+          },
+        },
       },
     },
     interaction: {
@@ -75,7 +81,11 @@
   };
 
   const parsedData = {
-    labels: data.map((r) => sanitizeNetworkNames(r[0])),
+    labels: data.map((r) => {
+      const label = sanitizeNetworkNames(r[0]);
+      if (label === "Other") return $_("ev-stats.other", { default: "Other" });
+      return label;
+    }),
     datasets: [
       {
         label: $_("ev-stats.locations", { default: "Locations" }),

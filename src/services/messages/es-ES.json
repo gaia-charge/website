@@ -78,13 +78,13 @@
         "not-working": "No funciona",
         "reserved": "Reservado",
         "unknown": "Desconocido",
-        "charger-states": "Estados de cargador",
+        "charger-states": "Estado de cargador",
         "maximum-power": "Potencia máxima",
         "other": "Otros",
         "socket-types": "Tipos de enchufes",
         "note": "Aviso",
         "note-content1": "todos los datos y gráficos presentados aquí están disponibles en licencia",
-        "note-content2": ". Eres libre de compartirlos y adaptarlos a tus necesidades siempre que atribuyas a Gaia Green Tech como la fuente. Siéntase libre de enlazar a este sitio web y/o mencionar nuestras páginas de Facebook/Instagram/Twitter."
+        "note-content2": ". Eres libre de compartirlos y adaptarlos a tus necesidades siempre que atribuyas a Gaia Green Tech como la fuente. Tómate la libertad de enlazar a este sitio web y/o mencionar nuestras páginas de Facebook/Instagram/Twitter."
     },
     "countries": {
         "es": "España"

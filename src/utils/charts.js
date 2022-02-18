@@ -2,18 +2,24 @@ export const chartColors = [
   "#4C8C40",
   "#F9B233",
   "#9E2B2B",
+  "#006BA6",
+  "#0496FF",
+  "#D81159",
   "#548080",
-  "#C0EFEC",
   "#214EA3",
-  "#89C47E",
   "#7A5DB0",
   "#7CA9FC",
+  "#89C47E",
   "#CFF783",
   "#84F5F5",
+  "#C0EFEC",
 ];
 
 export const formatPower = (power) => {
   const floatPower = parseFloat(power);
+  if (floatPower < 1) {
+    return `${Math.floor(power * 1000)}W`;
+  }
   if (floatPower <= 7.4) {
     return `${power}kW`;
   }
