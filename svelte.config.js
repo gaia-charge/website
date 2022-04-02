@@ -1,6 +1,6 @@
 /** @type {import('@sveltejs/kit').Config} */
 
-import adapter from "@sveltejs/adapter-static";
+import adapter from "@sveltejs/adapter-netlify";
 import preprocess from "svelte-preprocess";
 import makeAttractionsImporter from "attractions/importer.js";
 
