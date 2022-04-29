@@ -4,10 +4,13 @@
   import BaseWrapper from "../components/BaseWrapper.svelte";
   import Footer from "../components/Footer.svelte";
 
-  const petrolPrice = 1.45;
-  const dieselPrice = 1.333;
-  const electricityPrice = 0.35;
-  const discountedElectricityPrice = 0.035;
+  // https://www.dieselogasolina.com/
+  const petrolPrice = 1.84;
+  const dieselPrice = 1.871;
+  // https://www.iberdrola.es/luz/plan-estable
+  const electricityPrice = 0.28;
+  // https://www.iberdrola.es/webclipb/iberdrola/smart-mobility/plan-vehiculo-electrico
+  const discountedElectricityPrice = 0.033;
   let downloadUrl = "https://ggrn.link/ev-faq-pdf-";
 </script>
 
