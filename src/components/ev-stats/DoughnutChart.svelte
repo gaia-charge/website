@@ -1,7 +1,6 @@
 <script>
-  import { Doughnut } from "svelte-chartjs";
-  import { Chart as ChartJS, Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale } from 'chart.js';
-  ChartJS.register(Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale);
+  import { Doughnut } from "@gaia-green-tech/svelte-chartjs/dist/index.cjs";
+  import 'chart.js/auto/auto.js';
 
   export let data;
   export let plugins = undefined;

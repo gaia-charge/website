@@ -1,9 +1,8 @@
 <script>
   import { locale, _ } from "svelte-i18n";
   import { subDays, intlFormat } from "date-fns";
-  import { Line } from "svelte-chartjs";
-  import { Chart as ChartJS, Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale } from 'chart.js';
-  ChartJS.register(Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale);
+  import { Line } from "@gaia-green-tech/svelte-chartjs/dist/index.cjs";
+  import 'chart.js/auto/auto.js';
   import { chartColors, formatPower } from "../../utils/charts";
 
   export let data;

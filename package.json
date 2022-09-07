@@ -14,11 +14,11 @@
     "i18n:extract": "svelte-i18n extract 'src/**/*.svelte' > src/services/messages/en.json"
   },
   "dependencies": {
+    "@gaia-green-tech/svelte-chartjs": "^2.1.2-rc.2",
     "@sentry/browser": "^6.13.3",
     "@sentry/tracing": "^6.13.3",
     "axios": "^0.21.2",
     "svelte-ackee": "^1.3.2",
-    "svelte-chartjs": "^2.1.1",
     "svelte-i18n": "^3.3.12"
   },
   "devDependencies": {
