@@ -2,7 +2,7 @@
   import { locale, _ } from "svelte-i18n";
   import { subDays, intlFormat } from "date-fns";
   import { Line } from "@gaia-green-tech/svelte-chartjs/dist/index.cjs";
-  import 'chart.js/auto/auto.js';
+  import "chart.js/auto/auto.js";
   import { chartColors, formatPower } from "../../utils/charts";
 
   export let data;

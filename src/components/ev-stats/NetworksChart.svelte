@@ -1,7 +1,7 @@
 <script>
   import { _ } from "svelte-i18n";
   import { Bar } from "@gaia-green-tech/svelte-chartjs/dist/index.cjs";
-  import 'chart.js/auto/auto.js';
+  import "chart.js/auto/auto.js";
   import {
     chartColors,
     sanitizeNetworkNames,

@@ -1,6 +1,6 @@
 <script>
   import { Doughnut } from "@gaia-green-tech/svelte-chartjs/dist/index.cjs";
-  import 'chart.js/auto/auto.js';
+  import "chart.js/auto/auto.js";
 
   export let data;
   export let plugins = undefined;
