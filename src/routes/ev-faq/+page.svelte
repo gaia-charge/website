@@ -1,8 +1,8 @@
 <script>
   import { locale, _, isLoading } from "svelte-i18n";
-  import Header from "../components/Header.svelte";
-  import BaseWrapper from "../components/BaseWrapper.svelte";
-  import Footer from "../components/Footer.svelte";
+  import Header from "../../components/Header.svelte";
+  import BaseWrapper from "../../components/BaseWrapper.svelte";
+  import Footer from "../../components/Footer.svelte";
 
   // https://www.dieselogasolina.com/
   const petrolPrice = 1.84;
