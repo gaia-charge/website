@@ -1,7 +1,9 @@
 <script>
   import { locale, _ } from "svelte-i18n";
   import { subDays, intlFormat } from "date-fns";
-  import { Line } from "svelte-chartjs/src/index";
+  import { Line } from "svelte-chartjs";
+  import { Chart as ChartJS, Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale } from 'chart.js';
+  ChartJS.register(Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale);
   import { chartColors, formatPower } from "../../utils/charts";
 
   export let data;

@@ -1,6 +1,8 @@
 <script>
   import { _ } from "svelte-i18n";
-  import { Bar } from "svelte-chartjs/src/index";
+  import { Bar } from "svelte-chartjs";
+  import { Chart as ChartJS, Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale } from 'chart.js';
+  ChartJS.register(Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale);
   import {
     chartColors,
     sanitizeNetworkNames,
