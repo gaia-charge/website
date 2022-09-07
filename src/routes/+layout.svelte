@@ -1,18 +1,3 @@
-<script context="module">
-  import { getInitialLocale } from "../services/i18n";
-  /**
-   * @type {import('@sveltejs/kit').Load}
-   */
-  export async function load() {
-    const initialLocale = getInitialLocale();
-    return {
-      props: {
-        initialLocale,
-      },
-    };
-  }
-</script>
-
 <script>
   import { afterUpdate, beforeUpdate } from "svelte";
   import { useAckeeSapper } from "svelte-ackee";
@@ -26,7 +11,10 @@
     tracesSampleRate: 1.0,
   });
 
-  export let initialLocale;
+  /** @type {import('./$types').PageData */
+  export let data;
+  let { initialLocale } = data;
+  $: ({ initialLocale } = data);
   startClient(initialLocale);
 
   if (typeof navigator !== "undefined") {
