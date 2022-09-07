@@ -1,16 +1,16 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
   import { Card, Loading } from "attractions";
-  import Header from "../components/Header.svelte";
-  import BaseWrapper from "../components/BaseWrapper.svelte";
-  import Footer from "../components/Footer.svelte";
-  import NetworkOrderDropdown from "../components/ev-stats/NetworkOrderDropdown.svelte";
-  import ChargersOverviewChart from "../components/ev-stats/ChargersOverviewChart.svelte";
-  import MaximumPowerChart from "../components/ev-stats/MaximumPowerChart.svelte";
-  import SocketTypesChart from "../components/ev-stats/SocketTypesChart.svelte";
-  import ChargerStatesChart from "../components/ev-stats/ChargerStatesChart.svelte";
-  import NetworksChart from "../components/ev-stats/NetworksChart.svelte";
-  import CountryDropdown from "../components/ev-stats/CountryDropdown.svelte";
+  import Header from "../../components/Header.svelte";
+  import BaseWrapper from "../../components/BaseWrapper.svelte";
+  import Footer from "../../components/Footer.svelte";
+  import NetworkOrderDropdown from "../../components/ev-stats/NetworkOrderDropdown.svelte";
+  import ChargersOverviewChart from "../../components/ev-stats/ChargersOverviewChart.svelte";
+  import MaximumPowerChart from "../../components/ev-stats/MaximumPowerChart.svelte";
+  import SocketTypesChart from "../../components/ev-stats/SocketTypesChart.svelte";
+  import ChargerStatesChart from "../../components/ev-stats/ChargerStatesChart.svelte";
+  import NetworksChart from "../../components/ev-stats/NetworksChart.svelte";
+  import CountryDropdown from "../../components/ev-stats/CountryDropdown.svelte";
 
   let country = "es";
   let orderNetworksBy = "locations";
