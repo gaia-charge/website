@@ -64,10 +64,9 @@
 
     try {
       const response = await axios.post(
-        "https://formsubmit.co/contact@gaiagreen.tech",
+        "https://formsubmit.co/ajax/contact@gaiagreen.tech",
         {
-          name: name,
-          email: email,
+          name: `${name} <${email}>`,
           message: message,
         },
         config
