@@ -1,0 +1,91 @@
+{
+  "subtitle": "Gaia Green Tech è",
+  "charging": {
+    "title1": "Rete di ricarica",
+    "title2": "accessibile",
+    "lead": "Ricerica la tua auto elettrica mentre lavori, fai shopping, o mentre sei fuori! Non c'è bisogno di pensare quanta batteria è rimasta!"
+  },
+  "contact": {
+    "title": "Connettiti con me!",
+    "lead": "Puoi contattarci tramite messaggi o sui nostri social. Siamo sempre felici di discutere con te!",
+    "errorName": "Per favore inserisci il tuo nome",
+    "errorEmail": "Per favore inserisci un indirizzo emailc orretto",
+    "errorMessage": "Per favore inserisci il messaggio",
+    "errorFail": "Qualcosa è andato storto. Riprova.",
+    "phName": "Il tuo nome",
+    "phEmail": "nome@dominio.com",
+    "phMessage": "Lasciaci un messaggio",
+    "button": "Invia messaggio"
+  },
+  "contactPopup": {
+    "title": "Grazie!",
+    "lead": "Il nostro team ti risponderà il prima possibile. Grazie per il messaggio!"
+  },
+  "energy": {
+    "title1": "Scorta di energia",
+    "title2": "pulita",
+    "lead": "Tutte le infrastrutture sono supportate da energie rinnovabili sforzandoti di non utilizzare carboni fossili."
+  },
+  "header": {
+    "charging": "Ricarica",
+    "mobility": "Mobilità",
+    "energy": "Energia",
+    "contact": "Contatti"
+  },
+  "mobility": {
+    "title1": "Mobilità",
+    "title2": "sostenibile",
+    "lead": "Scegli il mezzo di trasporto adatto a te. Una macchina, una bici, un bus oppure una camminata. Cerchiamo di rendere la tua scelta la più conveniente possibile."
+  },
+  "ev-stats": {
+    "working": "Lavoro",
+    "in-use": "In uso",
+    "not-working": "Non funzionante",
+    "reserved": "Riservato",
+    "unknown": "Sconosciuto",
+    "charger-states": "Stato delle stazioni di ricarica",
+    "number-of-chargers": "Numero di stazioni di ricarica",
+    "total-power": "Potenza totale",
+    "country": "Paese",
+    "other": "Altro",
+    "maximum-power": "Potenza massima",
+    "by": "Da",
+    "locations": "Luogo",
+    "connectors": "Connettori",
+    "socket-types": "Tipi dei socket",
+    "head": "EV Charging Stats",
+    "subtitle": "Gaia Green Tech presenta",
+    "title": "EV Charging Statistics",
+    "number-of-chargers-over-time": "Numero di stazioni di ricarica nel tempo",
+    "biggest-charging-networks": "Più grande rete di ricarica",
+    "note": "Note",
+    "note-content1": "Tutti i dati e grafici sono disponibili sotto",
+    "note-content2": "licenza. Sei libero di condividerli e adattarli come più ne hai bisogno nel mentre attribuisci Gaia Green come fonte. Sei libero di rimandare a questo sito o le nostre pagine Facebook/Instagram e Twitter."  },
+  "countries": {
+    "it": "Italy"
+  },
+  "ev-faq": {
+    "head": "EV FAQ",
+    "subtitle": "Risposte di Gaia Green Tech",
+    "title1": "Domande frequenti",
+    "title2": "Sui veicoli elettrici",
+    "lead": "Solitamente riceviamo un sacco di domande durante le interazioni con i nostri clienti. Abbiamo deciso di compilare una lista di risposta in un piccolo sunto per tutti",
+    "footnotes": {
+      "title": "Note",
+      "2a": "Secondo uno <a href=\"{link}\" target=\"_blank\">studio di CAWI</a>, il <strong>viaggio medio per una macchina è di 20km.</strong>",
+      "2b": "Prendendo un range di 250km, dovresti caricarla ogni 2 settimane.",
+      "2c": "Ovviamente dipende dalle situazioni, ma un viaggio di 300km non è mai intrapreso, tipicamente.",
+      "2d": "<strong>Il 40% deig guidatori fa viaggi più lunghi di 300km 2 volte l'anno</strong>, e solo il 20% lo fa tre volte l'anno.",
+      "3a": "Da notare che la ricarica viene fatta comunque quando tu non stai utilizzando la macchina.",
+      "3b": "Ad esempio. è parcheggiata durante la notte, stai facendo shopping oppure hai fatto una fermata per berti un caffè e riposare.",
+      "3c": "Non si deve mai aspettare che l'auto si ricarichi.",
+      "9a": "Le stazioni di ricarica EV sono anche più facili da mantenere. Più di 5 anni di proprietà, <a href=\"{linkLeaf}\" target=\"_blank\">Nissan Leaf</a> is più economicco di 500€ da mantenere rispetto ad un <a href=\"{linkGolf}\" target=\"_blank\">VW Golf</a>",
+      "9b": "Dopo questo periodo di tempo, il costo di mantenimento di un EV rimane lo stesso, mentre i costi della benzina e del diesel crescono rapidamente."
+    },
+    "petrol-price": "Ipotizzando un prezzo medio di {price}€ al litro.",
+    "diesel-price": "Ipotizzando un prezzo medio di {price}€ al litro",
+    "electricity-price": "Assumendo un prezzo medio di {price}€ per kWh",
+    "discounted-electricity-price": "Ipotizzando un prezzo medio di {price}€ per kWh quando si ricarica durante la notte con una tariffa specifica per EV"
+  },
+  "download": "Scarica"
+}

@@ -21,7 +21,8 @@
   import { Integrations } from "@sentry/tracing";
 
   Sentry.init({
-    dsn: "https://3e6147df857f4f798b79196e963e1895@o1035330.ingest.sentry.io/6002173",
+    dsn:
+      "https://3e6147df857f4f798b79196e963e1895@o1035330.ingest.sentry.io/6002173",
     integrations: [new Integrations.BrowserTracing()],
     tracesSampleRate: 1.0,
   });
