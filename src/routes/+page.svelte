@@ -11,7 +11,10 @@
   let stopAnimationEnergy = false;
   let y;
 
-  export let showPopup = false;
+  /** @type {import('./$types').PageData */
+  export let data;
+  let { showPopup } = data;
+  $: ({ showPopup } = data);
 
   const updateVh = () => {
     let vh = window.innerHeight * 0.01;
