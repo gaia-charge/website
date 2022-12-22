@@ -1,12 +1,26 @@
 <script>
   import { _ } from "svelte-i18n";
-  import { Bar } from "@gaia-green-tech/svelte-chartjs/dist/index.cjs";
-  import "chart.js/auto/auto.js";
+  import { Bar } from "svelte-chartjs";
   import {
     chartColors,
     sanitizeNetworkNames,
     formatPower,
   } from "../../utils/charts";
+
+  import {
+    Chart as ChartJS,
+    Tooltip,
+    BarElement,
+    LinearScale,
+    CategoryScale,
+  } from 'chart.js';
+
+  ChartJS.register(
+    Tooltip,
+    BarElement,
+    LinearScale,
+    CategoryScale
+  );
 
   export let data;
   export let orderNetworksBy;
@@ -25,6 +39,7 @@
     if (label === "IONITY GmbH") return "Ionity";
     if (label === "Dr. Ing. h.c. F. Porsche AG") return "Porsche";
     if (label === "IBIL Gestor de Carga de VE S.A.") return "IBIL";
+    if (label === "Wenea Mobile Energy | ES*WEN") return "Wenea";
     if (label === "Other") return $_("ev-stats.other", { default: "Other" });
     return label;
   }
