@@ -58,7 +58,7 @@
           <div class="lead">
             <ol>
               <li>
-                <a href="https://ev-database.org/" target="_blank"
+                <a href="https://ev-database.org/" target="_blank" rel="noreferrer"
                   >EV Database</a
                 >
               </li>
@@ -85,7 +85,7 @@
               </li>
               <li>
                 <a
-                  href="https://ev-database.org/car/1531/Volkswagen-ID3-Pro#charge-table"
+                  href="https://ev-database.org/car/1531/Volkswagen-ID3-Pro#charge-table" rel="noreferrer"
                   target="_blank">Volkswagen ID.3 Pro - EV Database</a
                 >.
                 {$_("ev-faq.footnotes.3a", {
@@ -102,7 +102,7 @@
               </li>
               <li>
                 <a
-                  href="https://www.honestjohn.co.uk/realmpg/volkswagen/golf-2013"
+                  href="https://www.honestjohn.co.uk/realmpg/volkswagen/golf-2013" rel="noreferrer"
                   target="_blank">Volkswagen Golf (2013-2020) real MPG</a
                 >
               </li>
@@ -150,26 +150,26 @@
               <li>
                 <a
                   href="https://www.youtube.com/watch?v=1oVrIHcdxjA"
-                  target="_blank">EV or Gas, What Pollutes More?</a
+                  target="_blank" rel="noreferrer">EV or Gas, What Pollutes More?</a
                 >
               </li>
               <li>
                 <a
                   href="https://www.carmagazine.co.uk/electric/how-long-do-electric-car-batteries-last/"
-                  target="_blank">How long do electric car batteries last?</a
+                  target="_blank" rel="noreferrer">How long do electric car batteries last?</a
                 >
               </li>
               <li>
                 <a
                   href="https://www.autonews.com/automakers-suppliers/nissan-looks-ways-use-long-lasting-ev-batteries"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                   >Nissan looks for ways to use long-lasting EV batteries</a
                 >
               </li>
               <li>
                 <a
                   href="https://www.automotivemanufacturingsolutions.com/evs/ev-battery-recycling-cost-and-components/41287.article"
-                  target="_blank">EV battery recycling: cost and components</a
+                  target="_blank" rel="noreferrer">EV battery recycling: cost and components</a
                 >
               </li>
             </ol>

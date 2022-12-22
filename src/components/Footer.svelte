@@ -10,6 +10,7 @@
       <a
         href="https://www.facebook.com/GaiaGreenTechES"
         target="_blank"
+        rel="noreferrer"
         class="footer__social"
       >
         <svg
@@ -31,6 +32,7 @@
         href="https://twitter.com/Gaia_Green_Tech"
         class="footer__social"
         target="_blank"
+        rel="noreferrer"
       >
         <svg
           class="footer__icon"
@@ -51,6 +53,7 @@
         href="https://www.instagram.com/gaiagreentechesp/"
         class="footer__social"
         target="_blank"
+        rel="noreferrer"
       >
         <svg
           class="footer__icon"

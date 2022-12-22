@@ -70,7 +70,7 @@
         <span />
       </label>
       <ul>
-        <li on:click={handleLiClick}>
+        <li on:click={handleLiClick} on:keypress={handleLiClick}>
           <a
             id="-visibleCharging"
             href="/#charging"
@@ -80,7 +80,7 @@
             {$_("header.charging", { default: "Charging" })}
           </a>
         </li>
-        <li on:click={handleLiClick}>
+        <li on:click={handleLiClick} on:keypress={handleLiClick}>
           <a
             id="-visibleMobility"
             href="/#mobility"
@@ -90,7 +90,7 @@
             {$_("header.mobility", { default: "Mobility" })}
           </a>
         </li>
-        <li on:click={handleLiClick}>
+        <li on:click={handleLiClick} on:keypress={handleLiClick}>
           <a
             id="-visibleEnergy"
             href="/#energy"
@@ -100,7 +100,7 @@
             {$_("header.energy", { default: "Energy" })}
           </a>
         </li>
-        <li on:click={handleLiClick}>
+        <li on:click={handleLiClick} on:keypress={handleLiClick}>
           <a
             id="-visibleContact"
             href="/#contact"
@@ -111,7 +111,7 @@
           </a>
         </li>
 
-        <li on:click={handleLiClick}>
+        <li on:click={handleLiClick} on:keypress={handleLiClick}>
           <a
             href="/"
             class="nav__link"
