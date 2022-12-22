@@ -11,7 +11,7 @@
     LinearScale,
     PointElement,
     CategoryScale,
-  } from 'chart.js';
+  } from "chart.js";
 
   ChartJS.register(
     Tooltip,

@@ -13,14 +13,9 @@
     BarElement,
     LinearScale,
     CategoryScale,
-  } from 'chart.js';
+  } from "chart.js";
 
-  ChartJS.register(
-    Tooltip,
-    BarElement,
-    LinearScale,
-    CategoryScale
-  );
+  ChartJS.register(Tooltip, BarElement, LinearScale, CategoryScale);
 
   export let data;
   export let orderNetworksBy;

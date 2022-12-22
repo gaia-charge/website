@@ -115,7 +115,8 @@
               })}
               <a
                 href="https://creativecommons.org/licenses/by/4.0/"
-                target="_blank" rel="noreferrer">Attribution 4.0 International (CC BY 4.0)</a
+                target="_blank"
+                rel="noreferrer">Attribution 4.0 International (CC BY 4.0)</a
               >
               {$_("ev-stats.note-content2", {
                 default:
