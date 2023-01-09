@@ -8,6 +8,32 @@
     <div class="footer__left">Gaia Green Tech &copy; 2022</div>
     <div class="footer__right">
       <a
+        href="https://www.linkedin.com/company/gaia-green-tech-es/"
+        target="_blank"
+        rel="noreferrer"
+        class="footer__social"
+      >
+        <svg
+          class="footer__icon"
+          fill="none"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="12" cy="12" r="12" fill="currentColor" />
+          <path
+            d="m 8.86482,6.1703406 c 0,0.74706 -0.5688,1.35162 -1.4583,1.35162 -0.85488,0 -1.4237397,-0.60456 -1.4061,-1.35162 -0.01764,-0.7833603 0.55116,-1.3703403 1.42314,-1.3703403 0.87246,0 1.42422,0.58698 1.44126,1.3703403 z M 6.07194,17.291461 V 8.5897206 H 8.77626 V 17.290861 H 6.07194 Z"
+            fill="#ffffff"
+          />
+          <path
+            d="m 10.94358,11.366761 c 0,-1.08534 -0.03576,-2.0106604 -0.07152,-2.7758404 h 2.349 l 0.12486,1.19208 h 0.0534 c 0.35592,-0.55176 1.24542,-1.38738 2.68674,-1.38738 1.77906,0 3.11364,1.1745 3.11364,3.7357804 v 5.1612 h -2.70438 v -4.82232 c 0,-1.12164 -0.39108,-1.88634 -1.36974,-1.88634 -0.7476,0 -1.19214,0.516 -1.3698,1.01388 -0.07152,0.17826 -0.10674,0.4269 -0.10674,0.67662 v 5.01816 h -2.70438 v -5.92584 z"
+            fill="#ffffff"
+          />
+        </svg>
+        <span class="sr-only">LinkedIn</span>
+      </a>
+      <a
         href="https://www.facebook.com/GaiaGreenTechES"
         target="_blank"
         rel="noreferrer"
