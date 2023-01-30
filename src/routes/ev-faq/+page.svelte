@@ -5,12 +5,14 @@
   import Footer from "../../components/Footer.svelte";
 
   // https://www.dieselogasolina.com/
-  const petrolPrice = 1.84;
-  const dieselPrice = 1.871;
+  const petrolPrice = 1.671;
+  const dieselPrice = 1.796;
   // https://www.iberdrola.es/luz/plan-estable
-  const electricityPrice = 0.28;
+  const electricityPrice = 0.20;
   // https://www.iberdrola.es/webclipb/iberdrola/smart-mobility/plan-vehiculo-electrico
-  const discountedElectricityPrice = 0.033;
+  const discountedElectricityPrice = 0.031657;
+
+  const updatedOn = '30/01/2022';
   let downloadUrl = "https://ggrn.link/ev-faq-pdf-";
 </script>
 
@@ -114,26 +116,26 @@
                 {$_("ev-faq.petrol-price", {
                   default: "Assuming an average price of {price}€ per litre",
                   values: { price: petrolPrice },
-                })}
+                })} [{updatedOn}]
               </li>
               <li>
                 {$_("ev-faq.diesel-price", {
                   default: "Assuming an average price of {price}€ per litre",
                   values: { price: dieselPrice },
-                })}
+                })} [{updatedOn}]
               </li>
               <li>
                 {$_("ev-faq.electricity-price", {
                   default: "Assuming an average price of {price}€ per kWh",
                   values: { price: electricityPrice },
-                })}
+                })} [{updatedOn}]
               </li>
               <li>
                 {$_("ev-faq.discounted-electricity-price", {
                   default:
                     "Assuming an average price of {price}€ per kWh when charging during the night with an EV specific tariff",
                   values: { price: discountedElectricityPrice },
-                })}
+                })} [{updatedOn}]
               </li>
               <li>
                 {@html $_("ev-faq.footnotes.9a", {
