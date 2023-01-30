@@ -5,7 +5,7 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="footer__left">Gaia Green Tech &copy; 2022</div>
+    <div class="footer__left">Gaia Green Tech &copy; 2023</div>
     <div class="footer__right">
       <a
         href="https://www.linkedin.com/company/gaia-green-tech-es/"
