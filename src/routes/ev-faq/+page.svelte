@@ -7,8 +7,8 @@
   // https://www.dieselogasolina.com/
   const petrolPrice = 1.671;
   const dieselPrice = 1.796;
-  // https://www.iberdrola.es/luz/plan-estable
-  const electricityPrice = 0.2;
+  // Average for 22kW from https://docs.google.com/spreadsheets/d/1fvMvEKxGC0pPVYib0rsgsMTmzox7Oz-GRjrfefLIjmg/edit#gid=824064001
+  const electricityPrice = 0.32;
   // https://www.iberdrola.es/webclipb/iberdrola/smart-mobility/plan-vehiculo-electrico
   const discountedElectricityPrice = 0.031657;
 
