@@ -8,11 +8,11 @@
   const petrolPrice = 1.671;
   const dieselPrice = 1.796;
   // https://www.iberdrola.es/luz/plan-estable
-  const electricityPrice = 0.20;
+  const electricityPrice = 0.2;
   // https://www.iberdrola.es/webclipb/iberdrola/smart-mobility/plan-vehiculo-electrico
   const discountedElectricityPrice = 0.031657;
 
-  const updatedOn = '30/01/2022';
+  const updatedOn = "30/01/2022";
   let downloadUrl = "https://ggrn.link/ev-faq-pdf-";
 </script>
 
