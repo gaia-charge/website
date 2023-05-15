@@ -35,6 +35,6 @@
 </script>
 
 <main>
-  <HubSpotTracking hubId="139602210" doNotTrack="true" />
+  <HubSpotTracking hubId="139602210" />
   <slot />
 </main>
