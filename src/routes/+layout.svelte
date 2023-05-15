@@ -4,6 +4,7 @@
   import { startClient } from "../services/i18n";
   import * as Sentry from "@sentry/browser";
   import { Integrations } from "@sentry/tracing";
+  import { HubSpotTracking } from '@beyonk/svelte-hubspot'
 
   Sentry.init({
     dsn: "https://3e6147df857f4f798b79196e963e1895@o1035330.ingest.sentry.io/6002173",
@@ -34,5 +35,6 @@
 </script>
 
 <main>
+  <HubSpotTracking hubId="139602210" doNotTrack="true" />
   <slot />
 </main>
