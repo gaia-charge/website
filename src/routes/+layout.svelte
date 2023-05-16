@@ -4,8 +4,8 @@
   import { startClient } from "../services/i18n";
   import * as Sentry from "@sentry/browser";
   import { Integrations } from "@sentry/tracing";
-  import '@beyonk/gdpr-cookie-consent-banner/style.css' // optional, you can also define your own styles
-  import { Banner as GdprBanner } from '@beyonk/gdpr-cookie-consent-banner'
+  import "@beyonk/gdpr-cookie-consent-banner/style.css"; // optional, you can also define your own styles
+  import { Banner as GdprBanner } from "@beyonk/gdpr-cookie-consent-banner";
   import { HubSpotTracking } from "@beyonk/svelte-hubspot";
 
   Sentry.init({
@@ -38,15 +38,23 @@
     );
   }
 
-  function initAnalytics () {
-    console.log('Consented to analytics');
+  function initAnalytics() {
+    console.log("Consented to analytics");
     consented = true;
     hubSpotTracking.loadChatWidget();
   }
 </script>
 
 <main>
-  <GdprBanner cookieName="consent" description="Stores the visitor's consent for analytics and tracking" on:analytics={initAnalytics} />
-  <HubSpotTracking hubId="139602210" doNotTrack={!consented} bind:this={hubSpotTracking} />
+  <GdprBanner
+    cookieName="consent"
+    description="Stores the visitor's consent for analytics and tracking"
+    on:analytics={initAnalytics}
+  />
+  <HubSpotTracking
+    hubId="139602210"
+    doNotTrack={!consented}
+    bind:this={hubSpotTracking}
+  />
   <slot />
 </main>
