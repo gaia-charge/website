@@ -15,12 +15,15 @@
   },
   "dependencies": {
     "@sentry/browser": "^7.71.0",
+    "@sentry/sveltekit": "^7.71.0",
     "@sentry/tracing": "^7.71.0",
     "axios": "^1.5.0",
     "svelte-i18n": "^3.7.4"
   },
   "devDependencies": {
-    "@sveltejs/adapter-netlify": "^1.0.0",
+    "@beyonk/gdpr-cookie-consent-banner": "^10.2.1",
+    "@beyonk/svelte-hubspot": "^0.5.0",
+    "@sveltejs/adapter-auto": "^2.1.0",
     "@sveltejs/kit": "^1.25.1",
     "autoprefixer": "^10.4.16",
     "npm-run-all": "^4.1.5",

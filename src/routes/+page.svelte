@@ -1,5 +1,6 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
+  import Nav from "../components/Nav.svelte";
 </script>
 
 <svelte:head>
@@ -8,9 +9,5 @@
 
 
 {#if !$isLoading}
-  Loaded
+  <Nav />
 {/if}
-
-<style>
-
-</style>
