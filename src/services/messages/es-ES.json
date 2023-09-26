@@ -1,5 +1,5 @@
 {
-    "subtitle": "Gaia Green Tech es",
+    "subtitle": "Gaia Charge es",
     "charging": {
         "title1": "Una red",
         "title2": "de carga accesible",
@@ -39,7 +39,7 @@
     },
     "ev-faq": {
         "head": "Preguntas frecuentes",
-        "subtitle": "Respuestas de Gaia Green Tech",
+        "subtitle": "Respuestas de Gaia Charge",
         "title1": "Preguntas frecuentes",
         "title2": "Sobre vehículos eléctricos",
         "lead": "En nuestras interacciones diarias con personas interesadas en VEs, recibimos muchas preguntas. Hemos decidido recopilar las respuestas para todos en un flyer ordenado y visual",
@@ -69,7 +69,7 @@
         "locations": "Ubicaciones",
         "connectors": "Conectores",
         "head": "Estadísticas de recarga",
-        "subtitle": "Gaia Green Tech presenta",
+        "subtitle": "Gaia Charge presenta",
         "title": "Estadísticas de red de recarga",
         "number-of-chargers-over-time": "Número de cargadores",
         "biggest-charging-networks": "Las mayores redes de recarga",
@@ -84,7 +84,7 @@
         "socket-types": "Tipos de enchufes",
         "note": "Aviso",
         "note-content1": "todos los datos y gráficos presentados aquí están disponibles en licencia",
-        "note-content2": ". Eres libre de compartirlos y adaptarlos a tus necesidades siempre que atribuyas a Gaia Green Tech como la fuente. Tómate la libertad de enlazar a este sitio web y/o mencionar nuestras páginas de Facebook/Instagram/Twitter."
+        "note-content2": ". Eres libre de compartirlos y adaptarlos a tus necesidades siempre que atribuyas a Gaia Charge como la fuente. Tómate la libertad de enlazar a este sitio web y/o mencionar nuestras páginas de Facebook/Instagram/Twitter."
     },
     "countries": {
         "es": "España"

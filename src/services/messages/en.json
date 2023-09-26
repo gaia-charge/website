@@ -1,5 +1,5 @@
 {
-  "subtitle": "Gaia Green Tech is",
+  "subtitle": "Gaia Charge is",
   "charging": {
     "title1": "Accessible",
     "title2": "charging network",
@@ -54,20 +54,20 @@
     "connectors": "Connectors",
     "socket-types": "Socket types",
     "head": "EV Charging Stats",
-    "subtitle": "Gaia Green Tech presents",
+    "subtitle": "Gaia Charge presents",
     "title": "EV Charging Statistics",
     "number-of-chargers-over-time": "Number of chargers over time",
     "biggest-charging-networks": "Biggest charging networks",
     "note": "Note",
     "note-content1": "all data and charts presented here are available under",
-    "note-content2": "license. You are free to share and adapt them to your needs as long as you attribute Gaia Green Tech as the source. Feel free to link to this website and/or mention our Facebook/Instagram/Twitter pages."
+    "note-content2": "license. You are free to share and adapt them to your needs as long as you attribute Gaia Charge as the source. Feel free to link to this website and/or mention our Facebook/Instagram/Twitter pages."
   },
   "countries": {
     "es": "Spain"
   },
   "ev-faq": {
     "head": "EV FAQ",
-    "subtitle": "Gaia Green Tech answers",
+    "subtitle": "Gaia Charge answers",
     "title1": "Frequently asked questions",
     "title2": "about electric vehicles",
     "lead": "In our daily interactions with people interested in EVs, we receive a lot of questions. We decided to compile the answers into a neat, visual flyer for everyone.",

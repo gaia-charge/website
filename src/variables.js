@@ -1,6 +1,8 @@
 export const variables = {
-  ackee: {
-    server: import.meta.env.VITE_ACKEE_SERVER,
-    domainId: import.meta.env.VITE_ACKEE_DOMAIN_ID,
+  hubspot: {
+    hubId: import.meta.env.VITE_HUBSPOT_HUB_ID,
+  },
+  sentry: {
+    dsn: import.meta.env.VITE_SENTRY_DSN,
   },
 };
