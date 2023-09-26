@@ -1,13 +1,8 @@
 <script>
+  import "../app.css";
+  import Analytics from "../components/Analytics.svelte";
   import { startClient } from "../services/i18n";
-  import * as Sentry from "@sentry/browser";
-  import { Integrations } from "@sentry/tracing";
-
-  Sentry.init({
-    dsn: import.meta.env.VITE_SENTRY_DSN,
-    integrations: [new Integrations.BrowserTracing()],
-    tracesSampleRate: 1.0,
-  });
+  import { _ } from "svelte-i18n";
 
   /** @type {import('./$types').PageData */
   export let data;
@@ -17,5 +12,6 @@
 </script>
 
 <main>
+  <Analytics
   <slot />
 </main>

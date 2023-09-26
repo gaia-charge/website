@@ -18,7 +18,7 @@
     "@sentry/sveltekit": "^7.71.0",
     "@sentry/tracing": "^7.71.0",
     "axios": "^1.5.0",
-    "svelte-i18n": "^3.7.4"
+    "svelte-i18n": "3.7.3"
   },
   "devDependencies": {
     "@beyonk/gdpr-cookie-consent-banner": "^10.2.1",
