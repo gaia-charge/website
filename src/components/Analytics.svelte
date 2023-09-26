@@ -3,6 +3,7 @@
   import "@beyonk/gdpr-cookie-consent-banner/style.css";
   import { Banner as GdprBanner } from "@beyonk/gdpr-cookie-consent-banner";
   import { HubSpotTracking } from "@beyonk/svelte-hubspot";
+  import { PlausibleAnalytics } from '@accuser/svelte-plausible-analytics';
 
   let hubSpotTracking;
   let enableAnalytics = false;
@@ -86,6 +87,10 @@
     }}
     on:analytics={initAnalytics}
     on:marketing={initMarketing}
+  />
+  <PlausibleAnalytics
+    enabled={enableAnalytics}
+    domain="gaiacharge.com"
   />
   <HubSpotTracking
     hubId={import.meta.env.VITE_HUBSPOT_HUB_ID}

@@ -21,6 +21,7 @@
     "svelte-i18n": "3.7.3"
   },
   "devDependencies": {
+    "@accuser/svelte-plausible-analytics": "^0.5.0",
     "@beyonk/gdpr-cookie-consent-banner": "^10.2.1",
     "@beyonk/svelte-hubspot": "^0.5.0",
     "@sveltejs/adapter-auto": "^2.1.0",
