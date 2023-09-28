@@ -1,0 +1,81 @@
+/*
+ * New Spirit
+ */
+@font-face {
+    font-family: 'New Spirit';
+    font-style: light;
+    font-weight: 300;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Light.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Light.woff) format("woff");
+}
+@font-face {
+    font-family: 'New Spirit';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Regular.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Regular.woff) format("woff");
+}
+@font-face {
+    font-family: 'New Spirit';
+    font-style: medium;
+    font-weight: 500;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Medium.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Medium.woff) format("woff");
+}
+@font-face {
+    font-family: 'New Spirit';
+    font-style: semibold;
+    font-weight: 600;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-SemiBold.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-SemiBold.woff) format("woff");
+}
+@font-face {
+    font-family: 'New Spirit';
+    font-style: bold;
+    font-weight: 800;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Bold.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Bold.woff) format("woff");
+}
+@font-face {
+    font-family: 'New Spirit';
+    font-style: black;
+    font-weight: 900;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Heavy.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Heavy.woff) format("woff");
+}
+
+/*
+ * Neue Haas Grotesk Display Pro
+ */
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-style: thin;
+    font-weight: 100;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaythin-webfont.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaythin-webfont.woff) format("woff");
+}
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-style: light;
+    font-weight: 300;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaylight-webfont.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaylight-webfont.woff) format("woff");
+}
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplayroman-webfont.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplayroman-webfont.woff) format("woff");
+}
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-style: medium;
+    font-weight: 500;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaymediu-webfont.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaymediu-webfont.woff) format("woff");
+}
+
+html, body {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+}

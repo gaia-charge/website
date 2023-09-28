@@ -1,7 +1,7 @@
 {
   "gdpr": {
-    "heading": "GDPR Notice",
-    "description": "Stores the visitor's consent for analytics and tracking",
+    "heading": "We value your privacy",
+    "description": "We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Confirm all\", you consent to our use of cookies.",
     "accept": "Confirm all",
     "reject": "Reject all",
     "settings": "Preferences",

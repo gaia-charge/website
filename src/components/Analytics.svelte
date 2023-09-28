@@ -29,10 +29,10 @@
     }}
     canRejectCookies={true}
     heading={$_("gdpr.heading", {
-      default: "GDPR Notice",
+      default: "We value your privacy",
     })}
     description={$_("gdpr.description", {
-      default: "Stores the visitor's consent for analytics and tracking",
+      default: "We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Confirm all\", you consent to our use of cookies.",
     })}
     acceptLabel={$_("gdpr.accept", {
       default: "Confirm all",
@@ -107,5 +107,31 @@
   }
   :global(.cookieConsent__Button) {
     border-radius: 80px;
+  }
+  :global(.cookieConsent__Title) {
+    font-family: theme(fontFamily.serif);
+    font-weight: 500;
+    font-size: 28px;
+  }
+  :global(.cookieConsent__Description) {
+    font-weight: 300;
+    font-size: 18px;
+  }
+  :global(.cookieConsentOperations__List) {
+    border-radius: 20px;
+  }
+  :global(.cookieConsentOperations__Item label::after) {
+    background: theme(colors.blue);
+  }
+  :global(.cookieConsent__Button--Close) {
+    background-color: theme(colors.blue);
+  }
+  @media only screen and (max-width: theme(screens.sm)) {
+    :global(.cookieConsent__Right) {
+      flex-direction: column;
+    }
+    :global(.cookieConsentOperations__List) {
+      border-radius: 0;
+    }
   }
 </style>
