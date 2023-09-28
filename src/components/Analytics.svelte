@@ -3,7 +3,7 @@
   import "@beyonk/gdpr-cookie-consent-banner/style.css";
   import { Banner as GdprBanner } from "@beyonk/gdpr-cookie-consent-banner";
   import { HubSpotTracking } from "@beyonk/svelte-hubspot";
-  import { PlausibleAnalytics } from '@accuser/svelte-plausible-analytics';
+  import { PlausibleAnalytics } from "@accuser/svelte-plausible-analytics";
 
   let hubSpotTracking;
   let enableAnalytics = false;
@@ -25,7 +25,7 @@
   <GdprBanner
     cookieName="consent"
     cookieConfig={{
-        domain: import.meta.env.VITE_GDPR_COOKIE_DOMAIN,
+      domain: import.meta.env.VITE_GDPR_COOKIE_DOMAIN,
     }}
     canRejectCookies={true}
     heading={$_("gdpr.heading", {
@@ -57,6 +57,7 @@
         description: $_("gdpr.choices.necessary.description", {
           default: "Used for cookie control. Can't be turned off.",
         }),
+        value: true,
       },
 
       tracking: {
@@ -66,6 +67,7 @@
         description: $_("gdpr.choices.tracking.description", {
           default: "Used for advertising purposes.",
         }),
+        value: true,
       },
       analytics: {
         label: $_("gdpr.choices.analytics.label", {
@@ -75,6 +77,7 @@
           default:
             "Used to control Plausible Analytics, a 3rd party tool to analyze website traffic.",
         }),
+        value: true,
       },
       marketing: {
         label: $_("gdpr.choices.marketing.label", {
@@ -83,18 +86,26 @@
         description: $_("gdpr.choices.marketing.description", {
           default: "Used for marketing data.",
         }),
+        value: true,
       },
     }}
     on:analytics={initAnalytics}
     on:marketing={initMarketing}
   />
-  <PlausibleAnalytics
-    enabled={enableAnalytics}
-    domain="gaiacharge.com"
-  />
+  <PlausibleAnalytics enabled={enableAnalytics} domain="gaiacharge.com" />
   <HubSpotTracking
     hubId={import.meta.env.VITE_HUBSPOT_HUB_ID}
     doNotTrack={!enableMarketing}
+    loadChatWidgetImmediately={false}
     bind:this={hubSpotTracking}
   />
 {/if}
+
+<style lang="postcss">
+  :global(.cookieConsentWrapper) {
+    background: theme(colors.blue);
+  }
+  :global(.cookieConsent__Button) {
+    border-radius: 80px;
+  }
+</style>
