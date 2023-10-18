@@ -12,6 +12,6 @@
 </script>
 
 <main>
-  <Analytics
+  <Analytics />
   <slot />
 </main>

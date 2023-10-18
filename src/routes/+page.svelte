@@ -1,13 +1,20 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
   import Nav from "../components/Nav.svelte";
+  import Hero from "../components/Hero.svelte";
+  import Partners from "../components/Partners.svelte";
 </script>
 
 <svelte:head>
   <title>Gaia Charge</title>
 </svelte:head>
 
+<Nav />
+<Hero />
+<Partners />
 
-{#if !$isLoading}
-  <Nav />
-{/if}
+<style lang="postcss">
+  :root {
+    --ratio: 1440 * 1vw * 100;
+  }
+</style>
