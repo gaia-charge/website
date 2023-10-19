@@ -15,7 +15,7 @@
     <div class="headline absolute z-50 text-center">
       <h1>
         Cargadores de vehículos eléctricos para tu negocio<br />
-        ¡sin inversión!
+        <em>¡sin inversión!</em>
       </h1>
       <a
         href="#contact"
@@ -33,12 +33,20 @@
     --ratio: 1440 * 1vw * 100;
   }
 
+  em {
+    font-style: normal;
+    /* border-bottom: 2px dashed theme("colors.green"); */
+    color: theme("colors.green");
+  }
+
   .w-full {
     height: calc(1020 / var(--ratio));
   }
+
   .illustration {
     top: 0;
   }
+
   .headline {
     padding-top: calc(179 / var(--ratio));
     padding-left: calc(380 / var(--ratio));
@@ -46,7 +54,7 @@
   }
 
   .headline h1 {
-    font-family: "New Spirit";
+    font-family: theme("fontFamily.serif");
     font-size: calc(52 / var(--ratio));
     font-weight: 500;
     line-height: calc(57 / var(--ratio));

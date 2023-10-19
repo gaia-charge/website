@@ -3,6 +3,7 @@
   import Nav from "../components/Nav.svelte";
   import Hero from "../components/Hero.svelte";
   import Partners from "../components/Partners.svelte";
+  import WhatWeDo from "../components/WhatWeDo.svelte";
 </script>
 
 <svelte:head>
@@ -12,6 +13,7 @@
 <Nav />
 <Hero />
 <Partners />
+<WhatWeDo />
 
 <style lang="postcss">
   :root {

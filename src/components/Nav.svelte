@@ -11,7 +11,7 @@
     <div>
       <a
         href="#contact"
-        class="contact text-green border-green border-2 rounded-full">Contacto</a
+        class="contact text-green border-green rounded-full">Contacto</a
       >
     </div>
   {/if}
@@ -42,7 +42,8 @@
   }
   .contact {
     font-size: calc(16 / var(--ratio));
-    padding: calc(15 / var(--ratio));
     font-weight: 400;
+    padding: calc(15 / var(--ratio));
+    border-width: calc(2 / var(--ratio));
   }
 </style>
