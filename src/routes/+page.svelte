@@ -4,6 +4,7 @@
   import Hero from "../components/Hero.svelte";
   import Partners from "../components/Partners.svelte";
   import WhatWeDo from "../components/WhatWeDo.svelte";
+  import Contact from "../components/Contact.svelte";
 </script>
 
 <svelte:head>
@@ -14,6 +15,7 @@
 <Hero />
 <Partners />
 <WhatWeDo />
+<Contact />
 
 <style lang="postcss">
   :root {

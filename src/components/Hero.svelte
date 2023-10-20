@@ -12,7 +12,7 @@
       class="illustration w-full absolute z-0"
       alt="Gaia Charge illustration"
     />
-    <div class="headline absolute z-50 text-center">
+    <div class="headline absolute z-40 text-center">
       <h1>
         Cargadores de vehículos eléctricos para tu negocio<br />
         <em>¡sin inversión!</em>
