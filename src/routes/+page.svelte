@@ -5,6 +5,7 @@
   import Partners from "../components/Partners.svelte";
   import WhatWeDo from "../components/WhatWeDo.svelte";
   import Contact from "../components/Contact.svelte";
+  import Guarantees from "../components/Guarantees.svelte";
 </script>
 
 <svelte:head>
@@ -16,6 +17,7 @@
 <Partners />
 <WhatWeDo />
 <Contact />
+<Guarantees />
 
 <style lang="postcss">
   :root {

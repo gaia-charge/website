@@ -1,8 +1,10 @@
+import { HUBSPOT_HUB_ID, SENTRY_DSN } from "$env/dynamic/private";
+
 export const variables = {
   hubspot: {
-    hubId: import.meta.env.VITE_HUBSPOT_HUB_ID,
+    hubId: HUBSPOT_HUB_ID,
   },
   sentry: {
-    dsn: import.meta.env.VITE_SENTRY_DSN,
+    dsn: SENTRY_DSN,
   },
 };

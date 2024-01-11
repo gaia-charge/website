@@ -1,0 +1,26 @@
+{
+    "CORSRules": [
+        {
+            "AllowedOrigins": [
+                "http://localhost:5173",
+                "https://gaiacharge.com",
+                "https://staging.gaiacharge.com",
+                "https://website-go7pwvgrd-gaia-charge.vercel.app"
+            ],
+            "AllowedHeaders": [
+                "*"
+            ],
+            "AllowedMethods": [
+                "GET",
+                "HEAD",
+                "POST",
+                "PUT",
+                "DELETE"
+            ],
+            "MaxAgeSeconds": 3000,
+            "ExposeHeaders": [
+                "Etag"
+            ]
+        }
+    ]
+}
