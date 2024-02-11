@@ -16,7 +16,6 @@
 <Hero />
 <Partners />
 <WhatWeDo />
-<Contact />
 <Guarantees />
 
 <style lang="postcss">
