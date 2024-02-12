@@ -24,4 +24,5 @@
   :root {
     --ratio: 1440 * 1vw * 100;
   }
+
 </style>

@@ -48,9 +48,6 @@
 </div>
 
 <style>
-	.w-full {
-    height: calc(1020 / var(--ratio));
-  }
   .title {
     font-family: theme("fontFamily.serif");
     font-size: calc(48 / var(--ratio));

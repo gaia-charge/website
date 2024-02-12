@@ -15,3 +15,9 @@
   <Analytics />
   <slot />
 </main>
+
+<style>
+   main {
+    position: relative;
+  }
+</style>
