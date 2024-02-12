@@ -27,6 +27,8 @@
 <style>
 	div.accordion {
 		margin: 1rem 0;
+    border-block-end: 1px solid #044348;
+    padding: 24px;
 	}
 	
 	div.header {
@@ -37,10 +39,16 @@
 	div.header .text {
 		flex: 1;
 		margin-right: 5px;
+    font-size: calc(18 / var(--ratio));
+    line-height: calc(28 / var(--ratio));
+    font-weight: 400;
 	}
 	
 	div.details {
 		background-color: #cecece;
 		padding:1rem;
+    font-size: calc(16 / var(--ratio));
+    line-height: calc(28 / var(--ratio));
+    font-weight: 400;
 	}
 </style>

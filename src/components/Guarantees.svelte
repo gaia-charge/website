@@ -3,6 +3,8 @@
   import Contact from "./Contact.svelte";
   import experience from "$lib/assets/svg/guarantees/great_experience.svg";
   import Guarantee from "./Guarantee.svelte";
+  import SliderContent from "./common/SliderContent.svelte";
+  import Accordion from "./common/Accordion.svelte";
   
 </script>
 
@@ -55,14 +57,37 @@
       />
     </div>
     <Contact />
-    <div>
-
+    <div class=" flex justify-items-center w-full mt-11 mb-11">
+      <SliderContent />
     </div>
     <h1 class="text-center">
       ¿Aún tienes<br/>alguna duda?
     </h1>
-    <div>
-      
+    <div class="accordion-container">
+      <Accordion>
+        <span slot="head">{$_("accordion.first.head", {
+          default: "First accordion",
+        })}</span>
+        <div slot="details">
+          <p>
+            {$_("accordion.first.details", {
+              default: "First Accordion details",
+            })}
+          </p>
+        </div>
+      </Accordion>
+      <Accordion>
+        <span slot="head">{$_("accordion.second.head", {
+          default: "Second accordion",
+        })}</span>
+        <div slot="details">
+          <p>
+            {$_("accordion.second.details", {
+              default: "Second Accordion details",
+            })}
+          </p>
+        </div>
+      </Accordion>
     </div>
   </div>
 {/if}
@@ -72,6 +97,14 @@
     --ratio: 1440 * 1vw * 100;
   }
 
+  .accordion-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 864px;
+    margin: auto;
+    margin-block-start: 40px;
+    margin-block-end: 40px;
+  }
   .scroll-snap-slider {
     display: flex;
     flex-wrap: nowrap;
