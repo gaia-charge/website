@@ -1,7 +1,7 @@
 import { sequence } from "@sveltejs/kit/hooks";
 import { handleErrorWithSentry, sentryHandle } from "@sentry/sveltekit";
 import * as Sentry from '@sentry/sveltekit';
-import { VITE_SENTRY_DSN } from "$env/dynamic/private";
+import { VITE_SENTRY_DSN } from "$env/static/private";
 
 Sentry.init({
   dsn: VITE_SENTRY_DSN,
