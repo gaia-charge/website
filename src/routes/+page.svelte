@@ -8,6 +8,7 @@
   import Guarantees from "../components/Guarantees.svelte";
   import Footer from "../components/Footer.svelte";
   import WhyYouNeedIt from "../components/WhyYouNeedIt.svelte";
+  import HowToStart from "../components/HowToStart.svelte";
 </script>
 
 <svelte:head>
@@ -18,6 +19,7 @@
 <Hero />
 <Partners />
 <WhyYouNeedIt/>
+<HowToStart/>
 <WhatWeDo />
 <Guarantees />
 <Footer />
