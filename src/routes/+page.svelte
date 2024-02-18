@@ -7,6 +7,7 @@
   import Contact from "../components/Contact.svelte";
   import Guarantees from "../components/Guarantees.svelte";
   import Footer from "../components/Footer.svelte";
+  import WhyYouNeedIt from "../components/WhyYouNeedIt.svelte";
 </script>
 
 <svelte:head>
@@ -16,6 +17,7 @@
 <Nav />
 <Hero />
 <Partners />
+<WhyYouNeedIt/>
 <WhatWeDo />
 <Guarantees />
 <Footer />
