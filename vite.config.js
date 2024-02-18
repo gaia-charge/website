@@ -4,7 +4,7 @@ import { sveltekit } from "@sveltejs/kit/vite";
 const config = {
   plugins: [sentrySvelteKit({
     sourceMapsUploadOptions: {
-      org: "gaia-green-tech",
+      org: "gaia-charge",
       project: "website"
     }
   }), sveltekit()]
