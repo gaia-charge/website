@@ -1,6 +1,7 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
   import arrow_right from "$lib/assets/svg/arrow_right.svg";
+  import Carousel from "./common/Carousel.svelte";
 </script>
 
 {#if !$isLoading}
@@ -12,7 +13,7 @@
   </div>
 
   <div class="slider">
-    
+    <Carousel/>
   </div>
 
   <div class="submit flex mx-auto">

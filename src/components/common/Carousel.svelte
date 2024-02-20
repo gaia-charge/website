@@ -1,6 +1,9 @@
 <script>
   import Siema from 'siema';
   import { onMount } from 'svelte';
+  import illustration from "$lib/assets/svg/header_illustration.svg";
+  import carousel from "$lib/assets/svg/carousel1.svg";
+
   
   let slider, prev, next, radioSlider
   let select = 0
@@ -35,11 +38,11 @@
   }) //end onMount
 const images = [
   {
-    url: "lib/assets/carousel1.svg",
+    url: carousel,
     description: "image1",
   },
   {
-    url: "lib/assets/carousel1.svg",
+    url: illustration,
     description: "image2",
   }
 ];
