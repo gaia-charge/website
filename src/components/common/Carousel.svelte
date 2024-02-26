@@ -13,7 +13,7 @@
               selector: '.siema',
               duration: 200,
               easing: 'ease-in-out',
-              perPage: 2,
+              perPage: 1,
               startIndex: 0,
               draggable: false,
               multipleDrag: false,
