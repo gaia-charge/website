@@ -9,6 +9,7 @@
   import Footer from "../components/Footer.svelte";
   import WhyYouNeedIt from "../components/WhyYouNeedIt.svelte";
   import HowToStart from "../components/HowToStart.svelte";
+  import WhatForYou from "../components/WhatForYou.svelte";
 </script>
 
 <svelte:head>
@@ -21,6 +22,7 @@
 <WhyYouNeedIt/>
 <HowToStart/>
 <WhatWeDo />
+<WhatForYou />
 <Guarantees />
 <Footer />
 
