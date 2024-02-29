@@ -106,7 +106,7 @@
   :global(.cookieConsentWrapper) {
     background: theme(colors.white);
     position: fixed;
-    max-width: 700px;
+    max-width: 600px;
     top: 40%;
     left: 10%;
     height: -webkit-fit-content;
@@ -115,12 +115,21 @@
     padding-block-start: 40px;
     padding-block-end: 40px;
     flex-direction: column;
+    display: flex;
+    gap: 21px;
   }
   :global(.cookieConsent__Button) {
     border-radius: 80px;
     border: 1px solid #044348;
     color: #044348;
+    margin-block-start: 24px;
+    margin-inline-start: 0px;
+    margin-inline-end: 8px;
   }
+  :global(.cookieConsent__Button[aria-label="Confirm all"]) {
+        background-color: #044348;
+        color: white;
+    }
   :global(.cookieConsent__Title) {
     font-family: theme(fontFamily.serif);
     font-weight: 500;
