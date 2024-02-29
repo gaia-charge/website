@@ -45,7 +45,6 @@
 	}
 	
 	div.details {
-		background-color: #cecece;
 		padding:1rem;
     font-size: calc(16 / var(--ratio));
     line-height: calc(28 / var(--ratio));

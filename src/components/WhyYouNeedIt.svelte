@@ -12,7 +12,7 @@
     })}</h1>
   </div>
 
-  <div class="slider">
+  <div class="slider relative mt-10 mb-4">
     <Carousel/>
   </div>
 
@@ -22,7 +22,7 @@
       class="contact ml-auto text-white bg-green border-green border-2 rounded-full flex items-center justify-between justify-end"
     >
     {$_("contact.cta", {
-      default: "Enviar",
+      default: "Contacto",
     })}
       <img src={arrow_right} class="inline-block" alt="Contacto" />
     </button>
@@ -38,7 +38,7 @@
   .container {
     width: calc(1280 / var(--ratio));
     margin-top: calc(33 / var(--ratio));
-    margin-bottom: calc(105 / var(--ratio));
+    margin-bottom: calc(32 / var(--ratio));
     padding: calc(65 / var(--ratio)) 0;
   }
 
@@ -49,8 +49,6 @@
     width: calc(191 / var(--ratio));
     margin-top: calc(30 / var(--ratio));
   }
-
-
   .submit {
     width: fit-content;
     display: flex;
