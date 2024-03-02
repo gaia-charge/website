@@ -26,15 +26,15 @@
       })}</p>
     </div>
     <div class="submit flex">
-      <button
-        type="submit"
-        class="contact ml-auto text-white bg-green border-green border-2 rounded-full flex items-center"
+      <a
+        href="#contact"
+        class="contact text-white bg-green border-green border-2 rounded-full mx-auto flex items-center justify-between"
       >
-      {$_("whatForYou.evidence.cta", {
+      {$_("contactBtn.cta", {
         default: "Contacto",
       })}
         <img src={arrow_right} class="inline-block" alt="Contacto" />
-      </button>
+      </a>
     </div>
   </div>
   <div class="for-you">

@@ -12,30 +12,30 @@
     </p>
   </div>
   <div class="w-1/2">
-    <form>
+    <form action="?/submit" method="POST">
       <div class="flex flex-row flex-col">
         <label for="firstname">Nombre</label>
-        <input type="text" id="firstname" placeholder="Nombre" />
+        <input type="text" name="firstname" id="firstname" placeholder="Nombre" />
       </div>
       <div class="flex flex-row flex-col">
         <label for="lastname">Apellidos</label>
-        <input type="text" id="lastname" placeholder="Apellidos" />
+        <input type="text" name="lastname" id="lastname" placeholder="Apellidos" />
       </div>
       <div class="flex flex-row flex-col">
         <label for="company">Nombre de la empresa</label>
-        <input type="text" id="company" placeholder="Nombre de la empresa" />
+        <input type="text" name="company" id="company" placeholder="Nombre de la empresa" />
       </div>
       <div class="flex flex-row flex-col">
         <label for="email">Correo electrónico</label>
-        <input type="email" id="email" placeholder="Correo electrónico" />
+        <input type="email" name="email" id="email" placeholder="Correo electrónico" />
       </div>
       <div class="flex flex-row flex-col">
         <label for="phone">Número de teléfono</label>
-        <input type="tel" id="phone" placeholder="Número de teléfono" />
+        <input type="tel" name="phone" id="phone" placeholder="Número de teléfono" />
       </div>
       <div class="flex flex-row flex-col">
         <label for="message">Mensaje</label>
-        <input type="text" id="message" placeholder="Mensaje" />
+        <input type="text" name="message" id="message" placeholder="Mensaje" />
       </div>
       <div class="submit flex">
         <button

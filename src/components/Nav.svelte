@@ -2,7 +2,6 @@
   import { locale, locales } from 'svelte-i18n'
   import { _, isLoading } from "svelte-i18n";
   import logo from "$lib/assets/svg/logo.svg";
-  import arrow from "$lib/assets/svg/ArrowAccordion.svg";
 </script>
 
 <nav class="fixed flex flex-row items-center justify-between z-50">
@@ -46,7 +45,9 @@
     <div>
       <a
         href="#contact"
-        class="contact text-green border-green rounded-full">Contacto</a
+        class="contact text-green border-green rounded-full">{$_("contactBtn.cta", {
+          default: "Contacto",
+        })}</a
       >
     </div>
     <div>

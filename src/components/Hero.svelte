@@ -14,14 +14,21 @@
     />
     <div class="headline absolute z-40 text-center">
       <h1>
-        Cargadores de vehículos eléctricos para tu negocio<br />
-        <em>¡sin inversión!</em>
+        {$_("hero.title", {
+          default: "Cargadores de vehículos eléctricos para tu negocio",
+        })}
+        <br />
+        <em>{$_("hero.subtitle", {
+          default: "¡sin inversión!",
+        })}</em>
       </h1>
       <a
         href="#contact"
         class="contact text-white bg-green border-green border-2 rounded-full mx-auto flex items-center justify-between"
       >
-        Contacto
+      {$_("contactBtn.cta", {
+        default: "Contacto",
+      })}
         <img src={arrow_right} class="inline-block" alt="Contacto" />
       </a>
     </div>

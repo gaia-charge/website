@@ -17,15 +17,15 @@
   </div>
 
   <div class="submit flex mx-auto">
-    <button
-      type="submit"
-      class="contact ml-auto text-white bg-green border-green border-2 rounded-full flex items-center justify-between justify-end"
-    >
-    {$_("contact.cta", {
-      default: "Contacto",
-    })}
-      <img src={arrow_right} class="inline-block" alt="Contacto" />
-    </button>
+    <a
+        href="#contact"
+        class="contact text-white bg-green border-green border-2 rounded-full mx-auto flex items-center justify-between"
+      >
+      {$_("contactBtn.cta", {
+        default: "Contacto",
+      })}
+        <img src={arrow_right} class="inline-block" alt="Contacto" />
+      </a>
   </div>
 </section>
 {/if}

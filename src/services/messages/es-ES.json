@@ -1,4 +1,18 @@
 {
+    "contactBtn":{
+        "cta":"Contacto"
+      },
+      "hero":{
+        "title":"Cargadores de vehículos eléctricos para tu negocio",
+        "subtitle":"¡sin inversión!"
+      },
+      "why":{
+        "title":"¿Por qué tu negocio necesita cargadores de VE?"
+      },
+      "howToStart":{
+        "title":"¿Cómo puedes empezar??",
+        "subtitle":"Puedes empezar llamando a tu electricista para que instale un cargador comprado en Amazon, pero eso sólo es una pieza de un ecosistema mucho más grande."
+      },
     "nav":{
         "need": "¿Por qué lo necesitas?",
         "start": "Cómo empezar",
