@@ -1,4 +1,11 @@
 {
+    "nav":{
+        "need": "¿Por qué lo necesitas?",
+        "start": "Cómo empezar",
+        "benefits": "Beneficios",
+        "ourService": "Nuestro servicio",
+        "guarantees": "Garantías"
+      },
     "subtitle": "Gaia Charge es",
     "charging": {
         "title1": "Una red",

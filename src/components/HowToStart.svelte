@@ -4,7 +4,7 @@
 </script>
 
 {#if !$isLoading}
-<section class="container mx-auto">
+<section class="container mx-auto" id="start">
   <div class="title text-center mx-auto">
     <h1>{$_("howToStart.title", {
       default: "¿Cómo puedes empezar??",

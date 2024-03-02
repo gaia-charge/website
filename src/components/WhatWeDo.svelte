@@ -14,7 +14,7 @@
 </script>
 
 {#if !$isLoading}
-<section class="root relative">
+<section class="root relative" id="benefits">
   <div class="title text-center mx-auto">
     <h1>¿Qué incluye nuestro servicio?</h1>
     <p>

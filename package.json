@@ -14,10 +14,12 @@
     "i18n:extract": "svelte-i18n extract 'src/**/*.svelte' > src/services/messages/en.json"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.5.4",
     "@sentry/browser": "^7.71.0",
     "@sentry/sveltekit": "^7.71.0",
     "@sentry/tracing": "^7.71.0",
     "axios": "^1.5.0",
+    "negotiator": "^0.6.3",
     "siema": "^1.5.1",
     "svelte-i18n": "3.7.3"
   },

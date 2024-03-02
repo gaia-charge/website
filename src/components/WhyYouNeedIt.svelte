@@ -5,7 +5,7 @@
 </script>
 
 {#if !$isLoading}
-<section class="container mx-auto">
+<section class="container mx-auto" id="need">
   <div class="title text-center mx-auto">
     <h1>{$_("why.title", {
       default: "¿Por qué tu negocio necesita cargadores de VE?",

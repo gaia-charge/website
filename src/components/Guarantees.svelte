@@ -9,7 +9,7 @@
 </script>
 
 {#if !$isLoading}
-  <div class="container mx-auto">
+  <section class="container mx-auto" id="guarantees">
     <h1 class="text-center">
       ¿Qué te garantizamos<br />al trabajar con Gaia?
     </h1>
@@ -89,7 +89,7 @@
         </div>
       </Accordion>
     </div>
-  </div>
+  </section>
 {/if}
 
 <style lang="postcss">

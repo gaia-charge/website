@@ -1,4 +1,11 @@
 {
+  "nav":{
+    "need": "Why you need it",
+    "start": "How to start",
+    "benefits": "Benefits",
+    "ourService": "Our service",
+    "guarantees": "Guarantees"
+  },
   "gdpr": {
     "heading": "We value your privacy",
     "description": "We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Confirm all\", you consent to our use of cookies.",
