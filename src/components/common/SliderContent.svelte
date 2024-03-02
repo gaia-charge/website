@@ -6,9 +6,9 @@
   import contents from "./../../services/contents"
 
   let indexDisplay = 0;
-  let lenghtContents = contents.length;
-	const handleClickRight = () => { console.log(index, lenghtContents); indexDisplay = indexDisplay+1 };
-  const handleClickLeft = () => { index > 0 && index-- };
+  let lenghtContents = contents.length -1;
+	const handleClickRight = () => { indexDisplay < lenghtContents && indexDisplay++ };
+  const handleClickLeft = () => { indexDisplay > 0 && indexDisplay-- };
   $: showContents = contents;
 </script>
 
@@ -26,8 +26,8 @@
       </div>
     {/if}
   {/each}
-  <div class=" mt-4">
-    <button on:click={handleClickLeft} >
+  <div class=" mt-14 h-full ">
+    <button on:click={handleClickLeft} class=" mr-11">
       <img src={directionLeft} class="arrow" alt="Open/Close" />
     </button>
     <button on:click|preventDefault={handleClickRight}>
@@ -52,6 +52,7 @@
     grid-template-rows: 60% 5% 5% 30%;
     justify-items: center;
     gap: 5px;
+    margin-block-end: 52px;
 	}
 	
 	.text {
@@ -59,6 +60,8 @@
     line-height: calc(40 / var(--ratio));;
     font-weight: 400;
     text-align: center;
+    min-height: 160px;
+    max-width: 900px;
 	}
 	
 </style>

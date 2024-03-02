@@ -2,7 +2,15 @@
   export let open = false;
 	import { slide } from 'svelte/transition';
   import arrow from "$lib/assets/svg/ArrowAccordion.svg";
-	const handleClick = () => open = !open
+
+	let arrowBind;
+	const handleClick = () => {
+		open = !open
+		open?
+			arrowBind.style.transform = "rotate(180deg)"
+			:
+			arrowBind.style.transform = "rotate(0deg)"
+	}
 </script>
 
 <div class="accordion">
@@ -12,7 +20,7 @@
 		</div>
 		
 		<button on:click={handleClick} >
-			<img src={arrow} class="arrow" alt="Open/Close" />
+			<img id="arrow-accordion" src={arrow} alt="Open/Close" bind:this={arrowBind}/>
 		</button>
 	</div>
 	
