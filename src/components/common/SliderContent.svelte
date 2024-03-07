@@ -1,6 +1,6 @@
 <script>
-  export let open = false;
-	import { slide } from 'svelte/transition';
+  import { _, isLoading } from "svelte-i18n";
+	import { fade } from 'svelte/transition';
   import directionLeft from "$lib/assets/svg/guarantees/DirectionButtonLeft.svg";
   import directionRight from "$lib/assets/svg/guarantees/DirectionButtonRight.svg";
   import contents from "./../../services/contents"
@@ -15,14 +15,20 @@
 <div class="slider_content">
   {#each contents as item, index}
     {#if index === indexDisplay}
-      <div class="text">
-        {item.description}
+      <div class="tex">
+        {$_(`sliderContent.${item}.description`, {
+          default: "Why you need it",
+        })}
       </div>
       <div class="name">
-        {item.name}
+        {$_(`sliderContent.${item}.name`, {
+          default: "Why you need it",
+        })}
       </div>
       <div class="who">
-        {item.who} {index}
+        {$_(`sliderContent.${item}.who`, {
+          default: "Why you need it",
+        })}
       </div>
     {/if}
   {/each}

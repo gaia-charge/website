@@ -20,6 +20,65 @@
     "title":"¿Cómo puedes empezar??",
     "subtitle":"Puedes empezar llamando a tu electricista para que instale un cargador comprado en Amazon, pero eso sólo es una pieza de un ecosistema mucho más grande."
   },
+  "contact":{
+    "title":"Estamos aquí para ayudar a que tu negocio crezca",
+    "subtitle":"Rellena este formulario y uno de nuestros expertos se pondrá en contacto contigo en la mayor brevedad posible.",
+    "name":"Nombre",
+    "lastname":"Apellidos",
+    "company":"Nombre de la empresa",
+    "email":"Correo electrónico",
+    "phone":"Número de teléfono",
+    "message":"Mensaje",
+    "cta":"Enviar",
+    "thankYouMsg":"Thank you for contacting us. We will respond to you shortly",
+    "msgError":"There was an error, please retry later"
+  },
+  "sliderContent":{
+    "one":{
+      "description":"“Gaia Green Tech hizo que el proceso de instalación de un cargador de vehículos eléctricos para nuestros compañeros de trabajo fuera extremadamente fácil. Sólo pagamos una cuota mensual y nos olvidamos. Todo quedó resuelto.”",
+      "name":"Miracle Martinez",
+      "who":"Generador Coworking"
+    },
+    "two":{
+      "description":"“Other content to display lorem ipsus”",
+      "name":"Miracle Martinez",
+      "who":"Generador Coworking"
+    }
+  },
+  "guarantees":{
+    "title":"",
+    "question":"",
+    "one":{
+      "title":"",
+      "description":""
+    },
+    "two":{
+      "title":"",
+      "description":""
+    },
+    "three":{
+      "title":"",
+      "description":""
+    },
+    "four":{
+      "title":"",
+      "description":""
+    },
+    "five":{
+      "title":"",
+      "description":""
+    },
+    "accordion":{
+      "first":{
+        "head":"",
+        "details":""
+      },
+      "second":{
+        "head":"",
+        "details":""
+      }
+    }
+  },
   "gdpr": {
     "heading": "We value your privacy",
     "description": "We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Confirm all\", you consent to our use of cookies.",

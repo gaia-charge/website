@@ -10,6 +10,21 @@
   import WhyYouNeedIt from "../../components/WhyYouNeedIt.svelte";
   import HowToStart from "../../components/HowToStart.svelte";
   import WhatForYou from "../../components/WhatForYou.svelte";
+  import { onMount } from 'svelte';
+
+
+  export let form;
+  //let contactStatus = form?.contactStatus;
+  $: contactStatus = form?.contactStatus;
+
+  onMount(() => {
+		console.log('the component has mounted');
+    setTimeout(() => {
+        const element = document.getElementById("contact");
+        if( contactStatus ) element.scrollIntoView();
+      }, 500);
+    
+	});
 </script>
 
 <svelte:head>
@@ -23,7 +38,7 @@
 <HowToStart/>
 <WhatWeDo />
 <WhatForYou />
-<Guarantees />
+<Guarantees contactStatus={contactStatus} />
 <Footer />
 
 <style lang="postcss">

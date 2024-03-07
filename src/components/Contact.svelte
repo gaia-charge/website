@@ -1,54 +1,96 @@
 <script>
+   import { _, isLoading } from "svelte-i18n";
   import arrow_right from "$lib/assets/svg/arrow_right.svg";
+
+  export let contactStatus;
 </script>
 
+{#if !$isLoading}
 <div id="contact"></div>
 <div class="contact bg-medium-blue text-white flex flex-row">
-  <div class="info w-1/2">
-    <h2>Estamos aquí para ayudar a que tu negocio crezca</h2>
-    <p>
-      Rellena este formulario y uno de nuestros expertos se pondrá en contacto
-      contigo en la mayor brevedad posible.
-    </p>
+  {#if contactStatus}
+  <div class="info w-full">
+    <h2>
+      {#if contactStatus !== 'error'}
+        {$_("contact.thankYouMsg", {
+          default: "Thank you for contacting us. We will respond to you shortly",
+        })}
+      {:else}
+        {$_("contact.msgError", {
+          default: "There was an error, please retry later",
+        })}
+      {/if}
+    </h2>
   </div>
-  <div class="w-1/2">
-    <form action="?/submit" method="POST">
-      <div class="flex flex-row flex-col">
-        <label for="firstname">Nombre</label>
-        <input type="text" name="firstname" id="firstname" placeholder="Nombre" />
-      </div>
-      <div class="flex flex-row flex-col">
-        <label for="lastname">Apellidos</label>
-        <input type="text" name="lastname" id="lastname" placeholder="Apellidos" />
-      </div>
-      <div class="flex flex-row flex-col">
-        <label for="company">Nombre de la empresa</label>
-        <input type="text" name="company" id="company" placeholder="Nombre de la empresa" />
-      </div>
-      <div class="flex flex-row flex-col">
-        <label for="email">Correo electrónico</label>
-        <input type="email" name="email" id="email" placeholder="Correo electrónico" />
-      </div>
-      <div class="flex flex-row flex-col">
-        <label for="phone">Número de teléfono</label>
-        <input type="tel" name="phone" id="phone" placeholder="Número de teléfono" />
-      </div>
-      <div class="flex flex-row flex-col">
-        <label for="message">Mensaje</label>
-        <input type="text" name="message" id="message" placeholder="Mensaje" />
-      </div>
-      <div class="submit flex">
-        <button
-          type="submit"
-          class="contact ml-auto text-white bg-green border-green border-2 rounded-full flex items-center justify-between justify-end"
-        >
-          Enviar
-          <img src={arrow_right} class="inline-block" alt="Contacto" />
-        </button>
-      </div>
-    </form>
-  </div>
+  {:else}
+    <div class="info w-1/2">
+      <h2>
+        {$_("contact.title", {
+          default: "Estamos aquí para ayudar a que tu negocio crezca",
+        })}
+        </h2>
+      <p>
+        {$_("contact.subtitle", {
+          default: "Rellena este formulario y uno de nuestros expertos se pondrá en contacto contigo en la mayor brevedad posible.",
+        })}
+        
+      </p>
+    </div>
+    <div class="w-1/2">
+      <form action="?/submit" method="POST">
+        <div class="flex flex-row flex-col">
+          <label for="firstname">{$_("contact.name", {
+            default: "Nombre",
+          })}</label>
+          <input type="text" name="firstname" id="firstname" placeholder="Nombre" />
+        </div>
+        <div class="flex flex-row flex-col">
+          <label for="lastname">{$_("contact.lastname", {
+            default: "Apellidos",
+          })}</label>
+          <input type="text" name="lastname" id="lastname" placeholder="Apellidos" />
+        </div>
+        <div class="flex flex-row flex-col">
+          <label for="company">{$_("contact.company", {
+            default: "Nombre de la empresa",
+          })}</label>
+          <input type="text" name="company" id="company" placeholder="Nombre de la empresa" />
+        </div>
+        <div class="flex flex-row flex-col">
+          <label for="email">{$_("contact.email", {
+            default: "Correo electrónico",
+          })}</label>
+          <input type="email" name="email" id="email" placeholder="Correo electrónico" />
+        </div>
+        <div class="flex flex-row flex-col">
+          <label for="phone">{$_("contact.phone", {
+            default: "Número de teléfono",
+          })}</label>
+          <input type="tel" name="phone" id="phone" placeholder="Número de teléfono" />
+        </div>
+        <div class="flex flex-row flex-col">
+          <label for="message">{$_("contact.message", {
+            default: "Mensaje",
+          })}</label>
+          <input type="text" name="message" id="message" placeholder="Mensaje" />
+        </div>
+        <div class="submit flex">
+          <button
+            type="submit"
+            class="contact ml-auto text-white bg-green border-green border-2 rounded-full flex items-center justify-between justify-end"
+          >
+          {$_("contact.cta", {
+            default: "Enviar",
+          })}
+            
+            <img src={arrow_right} class="inline-block" alt="Contacto" />
+          </button>
+        </div>
+      </form>
+    </div>
+  {/if}
 </div>
+{/if}
 
 <style lang="postcss">
   :root {
@@ -59,6 +101,7 @@
     /* Offset the fixed nav */
     margin-top: calc(-110 / var(--ratio));
     height: calc(110 / var(--ratio));
+    
   }
 
   .contact {

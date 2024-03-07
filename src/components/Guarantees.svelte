@@ -6,83 +6,90 @@
   import SliderContent from "./common/SliderContent.svelte";
   import Accordion from "./common/Accordion.svelte";
   
+  export let contactStatus;
 </script>
 
 {#if !$isLoading}
   <section class="container mx-auto" id="guarantees">
-    <h1 class="text-center">
-      ¿Qué te garantizamos<br />al trabajar con Gaia?
+    <h1 class="text-center whitespace-pre-line">
+      
+      {$_("guarantees.title", {
+        default: "¿Qué te garantizamos\nal trabajar con Gaia?",
+      })}
     </h1>
 
     <div class="scroll-snap-slider">
       <Guarantee image={experience} 
-        title={$_("nav.need", {
+        title={$_("guarantees.one.title", {
           default: "Why you need it",
         })}
-        description={$_("nav.need", {
-          default: "Why you need it",
-        })}
-      />
-      <Guarantee image={experience} 
-        title={$_("nav.need", {
-          default: "Why you need it",
-        })}
-        description={$_("nav.need", {
+        description={$_("guarantees.one.description", {
           default: "Why you need it",
         })}
       />
       <Guarantee image={experience} 
-        title={$_("nav.need", {
-          default: "Why you need it",
-        })}
-        description={$_("nav.need", {
-          default: "Why you need it",
-        })}
+      title={$_("guarantees.two.title", {
+        default: "Why you need it",
+      })}
+      description={$_("guarantees.two.description", {
+        default: "Why you need it",
+      })}
       />
       <Guarantee image={experience} 
-        title={$_("nav.need", {
-          default: "Why you need it",
-        })}
-        description={$_("nav.need", {
-          default: "Why you need it",
-        })}
+      title={$_("guarantees.three.title", {
+        default: "Why you need it",
+      })}
+      description={$_("guarantees.three.description", {
+        default: "Why you need it",
+      })}
       />
       <Guarantee image={experience} 
-        title={$_("nav.need", {
-          default: "Why you need it",
-        })}
-        description={$_("nav.need", {
-          default: "Why you need it",
-        })}
+      title={$_("guarantees.four.title", {
+        default: "Why you need it",
+      })}
+      description={$_("guarantees.four.description", {
+        default: "Why you need it",
+      })}
+      />
+      <Guarantee image={experience} 
+      title={$_("guarantees.five.title", {
+        default: "Why you need it",
+      })}
+      description={$_("guarantees.five.description", {
+        default: "Why you need it",
+      })}
       />
     </div>
-    <Contact />
+    <Contact contactStatus={contactStatus}/>
     <div class=" flex justify-items-center w-full mt-11 mb-11">
       <SliderContent />
     </div>
-    <h1 class="text-center">
-      ¿Aún tienes<br/>alguna duda?
+    <h1 class="text-center whitespace-pre-line">
+      {$_("guarantees.question", {
+        default: "¿Aún tienes\nalguna duda?",
+      })}
+      
     </h1>
     <div class="accordion-container">
       <Accordion>
-        <span slot="head">{$_("accordion.first.head", {
+        <span slot="head">{$_("guarantees.accordion.first.head", {
           default: "First accordion",
         })}</span>
         <div slot="details">
           <p>
-            {$_("accordion.first.details", {
+            {$_("guarantees.accordion.first.details", {
               default: "First Accordion details",
             })}
           </p>
         </div>
       </Accordion>
       <Accordion>
-        <span slot="head">{$_("accordion.second.head", {
+        <span slot="head">{$_("guarantees.accordion.second.head", {
           default: "Second accordion",
         })}</span>
         <div slot="details">
           <p>
-            {$_("accordion.second.details", {
+            {$_("guarantees.accordion.second.details", {
               default: "Second Accordion details",
             })}
           </p>
