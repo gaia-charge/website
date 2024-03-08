@@ -40,7 +40,7 @@
   <div class="for-you">
     <div class="container">
       <div class="title text-center mx-auto mb-10">
-        <h1>{$_("whatWeDo.title", {
+        <h1>{$_("whatForYou.title", {
           default: "¿Por qué te beneficias al trabajar con Gaia?",
         })}</h1>
       </div>
@@ -48,12 +48,12 @@
         <!-- 1 Card -->
         <div class="card">
           <div class="title">
-            <h3>{$_("whatWeDo.card1.title1", {
+            <h3>{$_("whatForYou.card1.title1", {
               default: "Haz foco",
             })}</h3></div>
           <div class="title flex gap-2 items-center">
             <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
-            <h3>{$_("whatWeDo.card1.title2", {
+            <h3>{$_("whatForYou.card1.title2", {
               default: "en tu negocio",
             })}</h3></div>
           <p class=" mt-6">{$_("whatWeDo.card1.description", {
@@ -63,12 +63,12 @@
         <!-- 2 Card -->
         <div class="card">
           <div class="title">
-            <h3>{$_("whatWeDo.card1.title1", {
+            <h3>{$_("whatForYou.card1.title1", {
               default: "Haz foco",
             })}</h3></div>
           <div class="title flex gap-2 items-center">
             <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
-            <h3>{$_("whatWeDo.card1.title2", {
+            <h3>{$_("whatForYou.card1.title2", {
               default: "en tu negocio",
             })}</h3></div>
           <p class=" mt-6">{$_("whatWeDo.card1.description", {
@@ -78,12 +78,12 @@
         <!-- 3 Card -->
         <div class="card">
           <div class="title">
-            <h3>{$_("whatWeDo.card1.title1", {
+            <h3>{$_("whatForYou.card1.title1", {
               default: "Haz foco",
             })}</h3></div>
           <div class="title flex gap-2 items-center">
             <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
-            <h3>{$_("whatWeDo.card1.title2", {
+            <h3>{$_("whatForYou.card1.title2", {
               default: "en tu negocio",
             })}</h3></div>
           <p class=" mt-6">{$_("whatWeDo.card1.description", {
@@ -93,30 +93,30 @@
         <!-- 4 Card -->
         <div class="card">
           <div class="title">
-            <h3>{$_("whatWeDo.card1.title1", {
+            <h3>{$_("whatForYou.card1.title1", {
               default: "Haz foco",
             })}</h3></div>
           <div class="title flex gap-2 items-center">
             <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
-            <h3>{$_("whatWeDo.card1.title2", {
+            <h3>{$_("whatForYou.card1.title2", {
               default: "en tu negocio",
             })}</h3></div>
-          <p class=" mt-6">{$_("whatWeDo.card1.description", {
+          <p class=" mt-6">{$_("whatForYou.card1.description", {
             default: "Porque al no tener que ocuparte de nada mientras trabajemos juntos, puedes seguir haciendo foco en tu negocio",
           })}</p>
         </div>
         <!-- 5 Card -->
         <div class="card">
           <div class="title">
-            <h3>{$_("whatWeDo.card1.title1", {
+            <h3>{$_("whatForYou.card1.title1", {
               default: "Haz foco",
             })}</h3></div>
           <div class="title flex gap-2 items-center">
             <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
-            <h3>{$_("whatWeDo.card1.title2", {
+            <h3>{$_("whatForYou.card1.title2", {
               default: "en tu negocio",
             })}</h3></div>
-          <p class=" mt-6">{$_("whatWeDo.card1.description", {
+          <p class=" mt-6">{$_("whatForYou.card1.description", {
             default: "Porque al no tener que ocuparte de nada mientras trabajemos juntos, puedes seguir haciendo foco en tu negocio",
           })}</p>
         </div>

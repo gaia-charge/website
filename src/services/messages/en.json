@@ -79,6 +79,65 @@
       }
     }
   },
+  "whatForYou":{
+    "evidence":{
+      "uptitle":"",
+      "title":"",
+      "p1":"",
+      "p2":"",
+      "p3":""
+    },
+    "title":"",
+    "card1":{
+      "title1":"",
+      "title2":"",
+      "description":""
+    },
+    "card2":{
+      "title1":"",
+      "title2":"",
+      "description":""
+    },
+    "card3":{
+      "title1":"",
+      "title2":"",
+      "description":""
+    },
+    "card4":{
+      "title1":"",
+      "title2":"",
+      "description":""
+    },
+    "card5":{
+      "title1":"",
+      "title2":"",
+      "description":""
+    }
+  },
+  "whatWeDo":{
+    "title":"",
+    "description":"",
+    "planning":{
+      "title":"",
+      "description":""
+    },
+    "installation":{
+      "title":"",
+      "description":""
+    },
+    "monitoring":{
+      "title":"",
+      "description":""
+    },
+    "maintenance":{
+      "title":"",
+      "description":""
+    },
+    "payments":{
+      "title":"",
+      "description":""
+    }
+  },
   "gdpr": {
     "heading": "We value your privacy",
     "description": "We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Confirm all\", you consent to our use of cookies.",

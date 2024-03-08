@@ -15,22 +15,31 @@
 
 {#if !$isLoading}
 <section class="root relative" id="benefits">
-  <div class="title text-center mx-auto">
-    <h1>¿Qué incluye nuestro servicio?</h1>
+  <div class="title text-center mx-auto whitespace-pre-line">
+    <h1>
+      {$_("whatWeDo.title", {
+        default: "¿Qué incluye nuestro servicio?",
+      })}</h1>
     <p>
-      Nosotros nos encargamos de todo, lo que nos convierte en el <em
-        >único proveedor</em
-      > de recarga de VE que necesitas.
+      {$_("whatWeDo.description", {
+        default: " Nosotros nos encargamos de todo, lo que nos convierte en el\n <em>único proveedor</em> \nde recarga de VE que necesitas.",
+      })}
+     
     </p>
   </div>
 
-  <div class="planning">
+  <div class="planning whitespace-pre-line">
     <img src={planning} class="absolute" alt="Planeamos" />
     <div class="description absolute">
-      <h3>Planeamos</h3>
+      <h3>
+        {$_("whatWeDo.planning.title", {
+          default: "Planeamos",
+        })}</h3>
       <p>
-        Preparamos todos los proyectos y la documentación necesaria. Todo de
-        acuerdo con las leyes locales.
+        {$_("whatWeDo.planning.description", {
+          default: "Preparamos todos los proyectos y la documentación necesaria. Todo de\nacuerdo con las leyes locales.",
+        })}
+        
       </p>
     </div>
   </div>
@@ -38,11 +47,16 @@
   <img src={line1} class="line1 absolute" alt="Linea" />
 
   <div class="installation">
-    <div class="description absolute">
-      <h3>Instalamos</h3>
+    <div class="description absolute whitespace-pre-line">
+      <h3>
+        {$_("whatWeDo.installation.title", {
+          default: "Instalamos",
+        })}</h3>
       <p>
-        Cubrimos todos los costes de la instalación y los equipos de recarga
-        necesarios.
+        {$_("whatWeDo.installation.description", {
+          default: "Cubrimos todos los costes de la instalación y los equipos de recarga\nnecesarios.",
+        })}
+        
       </p>
     </div>
     <img src={installation} class="absolute" alt="Instalamos" />
@@ -52,11 +66,16 @@
 
   <div class="monitoring">
     <img src={monitoring} class="absolute" alt="Monitorizamos" />
-    <div class="description absolute">
-      <h3>Monitorizamos</h3>
+    <div class="description absolute whitespace-pre-line">
+      <h3>
+        {$_("whatWeDo.monitoring.title", {
+          default: "Monitorizamos",
+        })}</h3>
       <p>
-        Una vez que los cargadores están operativos, los monitoreamos los 365
-        días del año, las 24 hs y enviamos personal cuando surge algún problema.
+        {$_("whatWeDo.monitoring.description", {
+          default: "Una vez que los cargadores están operativos, los monitoreamos los 365\ndías del año, las 24 hs y enviamos personal cuando surge algún problema.",
+        })}
+        
       </p>
     </div>
   </div>
@@ -65,12 +84,15 @@
 
   <div class="maintenance">
     <img src={maintenance} class="absolute" alt="Mantenemos" />
-    <div class="description absolute">
-      <h3>Mantenemos</h3>
+    <div class="description absolute whitespace-pre-line">
+      <h3>
+        {$_("whatWeDo.maintenance.title", {
+          default: "Mantenemos",
+        })}</h3>
       <p>
-        Nos aseguramos de que los cargadores estén disponibles y visibles en las
-        principales aplicaciones de navegación y de que estén actualizados ante
-        cualquier nueva legislación.
+        {$_("whatWeDo.maintenance.description", {
+          default: "Nos aseguramos de que los cargadores estén disponibles y visibles en las\nprincipales aplicaciones de navegación y de que estén actualizados ante\ncualquier nueva legislación.",
+        })}
       </p>
     </div>
   </div>
@@ -79,11 +101,15 @@
 
   <div class="payments">
     <img src={payments} class="absolute" alt="Facturamos" />
-    <div class="description absolute">
-      <h3>Facturamos</h3>
+    <div class="description absolute whitespace-pre-line">
+      <h3>{$_("whatWeDo.payments.title", {
+        default: "Facturamos",
+      })}
+      </h3>
       <p>
-        Nos aseguramos de que a los usuarios se les cobra correctamente y de que
-        sus ingresos lleguen a tiempo.
+        {$_("whatWeDo.payments.description", {
+          default: "Nos aseguramos de que a los usuarios se les cobra correctamente y de que\nsus ingresos lleguen a tiempo.",
+        })}
       </p>
     </div>
   </div>
