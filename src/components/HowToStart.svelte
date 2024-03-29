@@ -34,7 +34,7 @@
   .container {
     width: calc(1280 / var(--ratio));
     margin-top: calc(33 / var(--ratio));
-    margin-bottom: calc(105 / var(--ratio));
+    margin-bottom: calc(160 / var(--ratio));
     padding: calc(65 / var(--ratio)) 0;
   }
 

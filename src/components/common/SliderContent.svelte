@@ -15,7 +15,7 @@
 <div class="slider_content">
   {#each contents as item, index}
     {#if index === indexDisplay}
-      <div class="tex">
+      <div class="text">
         {$_(`sliderContent.${item}.description`, {
           default: "Why you need it",
         })}

@@ -5,7 +5,7 @@
 </script>
 
 {#if !$isLoading}
-<section id="ourService">
+<section  class=" mt-6" id="ourService">
   <div class="section-evidence bg-medium-blue text-white flex flex-col">
     <div><p>{$_("whatForYou.evidence.uptitle", {
       default: "Cobramos una tarifa fija mensual por cargador",
@@ -143,10 +143,11 @@
   }
 
   .card p {
-    font-family: theme("fontFamily.serif");
+    font-family: "Neue Haas Grotesk Display Pro";
     font-size: calc(18 / var(--ratio));
     line-height: calc(28 / var(--ratio));
     font-weight: 400;
+    color: #6C6C6C;
   }
 
   .for-you{

@@ -148,8 +148,9 @@
     background: theme(colors.white);
   }
   :global(.cookieConsent__Button--Close) {
-    background-color: theme(colors.blue);
-  }
+    background-color: #0D2823;
+    color: white;
+  } 
 
   @media only screen and (max-width: theme(screens.sm)) {
     :global(.cookieConsent__Right) {
