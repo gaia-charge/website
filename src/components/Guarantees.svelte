@@ -5,8 +5,28 @@
   import Guarantee from "./Guarantee.svelte";
   import SliderContent from "./common/SliderContent.svelte";
   import Accordion from "./common/Accordion.svelte";
+  import arrow from "$lib/assets/svg/arrow.svg";
   
   export let contactStatus;
+
+  let indexSlide = 0;
+  export function left () {
+    
+    if(indexSlide > 0){
+      indexSlide--;
+      const w = document.getElementById('guarantee-slider').offsetWidth / 5;
+      document.getElementById('guarantee-slider').scrollLeft -= w;
+    }
+	}
+	
+	export function right () {
+    if(indexSlide < 4){
+      indexSlide++;
+      const w = document.getElementById('guarantee-slider').offsetWidth / 5;
+      document.getElementById('guarantee-slider').scrollLeft += w;
+    }
+	}
+
 </script>
 
 {#if !$isLoading}
@@ -18,49 +38,59 @@
       })}
     </h1>
 
-    <div class="scroll-snap-slider">
-      <Guarantee image={experience} 
-        title={$_("guarantees.one.title", {
-          default: "Why you need it",
-        })}
-        description={$_("guarantees.one.description", {
-          default: "Why you need it",
-        })}
-      />
-      <Guarantee image={experience} 
-      title={$_("guarantees.two.title", {
-        default: "Why you need it",
-      })}
-      description={$_("guarantees.two.description", {
-        default: "Why you need it",
-      })}
-      />
-      <Guarantee image={experience} 
-      title={$_("guarantees.three.title", {
-        default: "Why you need it",
-      })}
-      description={$_("guarantees.three.description", {
-        default: "Why you need it",
-      })}
-      />
-      <Guarantee image={experience} 
-      title={$_("guarantees.four.title", {
-        default: "Why you need it",
-      })}
-      description={$_("guarantees.four.description", {
-        default: "Why you need it",
-      })}
-      />
-      <Guarantee image={experience} 
-      title={$_("guarantees.five.title", {
-        default: "Why you need it",
-      })}
-      description={$_("guarantees.five.description", {
-        default: "Why you need it",
-      })}
-      />
+    <div class="relative pl-4 pr-4">
+      <div class="relative scroll-snap-slider" id="guarantee-slider">
+        <Guarantee image={experience} 
+          title={$_("guarantees.one.title", {
+            default: "Why you need it",
+          })}
+          description={$_("guarantees.one.description", {
+            default: "Why you need it",
+          })}
+        />
+        <Guarantee image={experience} 
+          title={$_("guarantees.two.title", {
+            default: "Why you need it",
+          })}
+          description={$_("guarantees.two.description", {
+            default: "Why you need it",
+          })}
+        />
+        <Guarantee image={experience} 
+          title={$_("guarantees.three.title", {
+            default: "Why you need it",
+          })}
+          description={$_("guarantees.three.description", {
+            default: "Why you need it",
+          })}
+        />
+        <Guarantee image={experience} 
+          title={$_("guarantees.four.title", {
+            default: "Why you need it",
+          })}
+          description={$_("guarantees.four.description", {
+            default: "Why you need it",
+          })}
+        />
+        <Guarantee image={experience} 
+          title={$_("guarantees.five.title", {
+            default: "Why you need it",
+          })}
+          description={$_("guarantees.five.description", {
+            default: "Why you need it",
+          })}
+        />
+
+      </div>
+      <button class="rounded left" on:click={left} aria-label="left">
+        <img src={arrow} class="inline-block rotate-180" alt="Contacto" />
+      </button>
+      <button class="rounded right" on:click={right} aria-label="right">
+        <img src={arrow} class="inline-block" alt="Contacto" />
+      </button>
     </div>
     <Contact contactStatus={contactStatus}/>
+
     <div class=" flex justify-items-center w-full mt-11 mb-11">
       <SliderContent />
     </div>
@@ -103,6 +133,24 @@
   :root {
     --ratio: 1440 * 1vw * 100;
   }
+
+  .rounded{
+      top: calc( 50% - 24px );
+      position: absolute;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      width: calc(48 / var(--ratio));
+      height: calc(48 / var(--ratio));
+      border-radius: 50%;
+    }
+    .right{
+      right: -1%
+    }
+    .left{
+      left: -1%
+    }
 
   .accordion-container {
     display: flex;

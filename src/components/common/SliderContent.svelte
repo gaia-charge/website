@@ -68,6 +68,7 @@
     text-align: center;
     min-height: 160px;
     max-width: 900px;
+    height: 300px;
 	}
 	
 </style>

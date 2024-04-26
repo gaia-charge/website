@@ -14,12 +14,12 @@
 </script>
 
 <div class="accordion">
-	<div class="header">
+	<div class="header" on:click={handleClick} on:keypress={handleClick} tabindex="0" role="button" aria-pressed="false">
 		<div class="text">
 			<slot name="head"></slot>	
 		</div>
 		
-		<button on:click={handleClick} >
+		<button >
 			<img id="arrow-accordion" src={arrow} alt="Open/Close" bind:this={arrowBind}/>
 		</button>
 	</div>
@@ -42,6 +42,7 @@
 	div.header {
 		display:flex;
 		width:100%;
+		cursor: pointer;
 	}
 	
 	div.header .text {

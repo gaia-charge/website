@@ -5,7 +5,7 @@
 </script>
 
 {#if !$isLoading}
-<section  class=" mt-6" id="ourService">
+<section  class="root mt-6" id="ourService">
   <div class="section-evidence bg-medium-blue text-white flex flex-col">
     <div><p>{$_("whatForYou.evidence.uptitle", {
       default: "Cobramos una tarifa fija mensual por cargador",
@@ -132,14 +132,18 @@
     --ratio: 1440 * 1vw * 100;
   }
 
+  .root{
+    scroll-margin-block-start: 10rem;
+  }
+
   .card{
     max-width: 280px;
   }
   .card .title h3 {
-    font-family: theme("fontFamily.serif");
+    font-family: "Neue Haas Grotesk Display Pro";
     font-size: calc(32 / var(--ratio));
     line-height: calc(40 / var(--ratio));
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .card p {

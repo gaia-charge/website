@@ -76,18 +76,15 @@ const images = [
 </script>
 
   <div class="siema">
-  {#each images as src, imageIndex (src)}
-    <div class="slider">
-        <img src={src.url} alt={src.description} width={1000} height={600} />
-    </div>
-  {/each}
-
-	
-   
+    {#each images as src, imageIndex (src)}
+      <div class="slider">
+          <img src={src.url} alt={src.description} width="98%" height={600} />
+      </div>
+    {/each}
   </div>
   <ul class="">
 		{#each {length: totalDots} as _, i}
-		<li on:click={() => go(i*currentPerPage)} on:keypress={() => go(i*currentPerPage)} class={ isDotActive(i) ? "active" : ""} ></li>
+		  <li on:click={() => go(i*currentPerPage)} on:keypress={() => go(i*currentPerPage)} class={ isDotActive(i) ? "active" : ""} ></li>
 		{/each}
 	</ul>
   <button class="rounded left" on:click={left} aria-label="left">

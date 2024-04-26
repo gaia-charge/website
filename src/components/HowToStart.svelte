@@ -52,5 +52,11 @@
     line-height: calc(56 / var(--ratio));
     font-weight: 400;
   }
+  .title p {
+    font-size: calc(18 / var(--ratio));
+    line-height: calc(28 / var(--ratio));
+    padding: calc(20 / var(--ratio));
+    font-weight: 300;
+  }
 
 </style>

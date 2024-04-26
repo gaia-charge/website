@@ -20,9 +20,9 @@
       {$_("whatWeDo.title", {
         default: "¿Qué incluye nuestro servicio?",
       })}</h1>
-    <p>
+    <p class="whitespace-pre-line">
       {$_("whatWeDo.description", {
-        default: " Nosotros nos encargamos de todo, lo que nos convierte en el\n <em>único proveedor</em> \nde recarga de VE que necesitas.",
+        default: " Nosotros nos encargamos de todo, lo que nos convierte en el\n único proveedor \nde recarga de VE que necesitas.",
       })}
      
     </p>
@@ -131,7 +131,7 @@
     height: calc(1520 / var(--ratio));
     margin-top: calc(50 / var(--ratio));
     margin-bottom: calc(32 / var(--ratio));
-    scroll-margin-block-start: 8rem;
+    scroll-margin-block-start: 10rem;
   }
 
   .title {
