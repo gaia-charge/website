@@ -133,7 +133,7 @@
   }
 
   .root{
-    scroll-margin-block-start: 10rem;
+    scroll-margin-block-start: calc(160 / var(--ratio));
   }
 
   .card{

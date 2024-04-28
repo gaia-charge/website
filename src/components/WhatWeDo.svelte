@@ -131,7 +131,7 @@
     height: calc(1520 / var(--ratio));
     margin-top: calc(50 / var(--ratio));
     margin-bottom: calc(32 / var(--ratio));
-    scroll-margin-block-start: 10rem;
+    scroll-margin-block-start: calc(160 / var(--ratio));
   }
 
   .title {
