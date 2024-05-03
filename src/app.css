@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 body {
-    background: theme(colors.gray);
-    overflow-x: hidden;
+  background: theme(colors.gray);
+  overflow-x: hidden;
 }
 
 section {
-    scroll-margin-block-start: 6rem;
+  scroll-margin-block-start: 6rem;
 }

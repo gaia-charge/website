@@ -10,121 +10,122 @@
   import maintenance from "$lib/assets/svg/maintenance.svg";
   import line4 from "$lib/assets/svg/line4.svg";
   import payments from "$lib/assets/svg/payments.svg";
-  import arrow_right from "$lib/assets/svg/arrow_right.svg";
 </script>
 
 {#if !$isLoading}
-<section class="root relative" id="benefits">
-  <div class="title text-center mx-auto whitespace-pre-line">
-    <h1>
-      {$_("whatWeDo.title", {
-        default: "¿Qué incluye nuestro servicio?",
-      })}</h1>
-    <p class="whitespace-pre-line">
-      {$_("whatWeDo.description", {
-        default: " Nosotros nos encargamos de todo, lo que nos convierte en el\n único proveedor \nde recarga de VE que necesitas.",
-      })}
-     
-    </p>
-  </div>
-
-  <div class="planning whitespace-pre-line">
-    <img src={planning} class="absolute" alt="Planeamos" />
-    <div class="description absolute">
-      <h3>
-        {$_("whatWeDo.planning.title", {
-          default: "Planeamos",
-        })}</h3>
-      <p>
-        {$_("whatWeDo.planning.description", {
-          default: "Preparamos todos los proyectos y la documentación necesaria. Todo de\nacuerdo con las leyes locales.",
+  <section class="root relative" id="ourService">
+    <div class="title text-center mx-auto whitespace-pre-line">
+      <h1>
+        {@html $_("whatWeDo.title", {
+          default: "How is our service <em>different</em>?",
         })}
-        
-      </p>
-    </div>
-  </div>
-
-  <img src={line1} class="line1 absolute" alt="Linea" />
-
-  <div class="installation">
-    <div class="description absolute whitespace-pre-line">
-      <h3>
-        {$_("whatWeDo.installation.title", {
-          default: "Instalamos",
-        })}</h3>
-      <p>
-        {$_("whatWeDo.installation.description", {
-          default: "Cubrimos todos los costes de la instalación y los equipos de recarga\nnecesarios.",
-        })}
-        
-      </p>
-    </div>
-    <img src={installation} class="absolute" alt="Instalamos" />
-  </div>
-
-  <img src={line2} class="line2 absolute" alt="Linea" />
-
-  <div class="monitoring">
-    <img src={monitoring} class="absolute" alt="Monitorizamos" />
-    <div class="description absolute whitespace-pre-line">
-      <h3>
-        {$_("whatWeDo.monitoring.title", {
-          default: "Monitorizamos",
-        })}</h3>
-      <p>
-        {$_("whatWeDo.monitoring.description", {
-          default: "Una vez que los cargadores están operativos, los monitoreamos los 365\ndías del año, las 24 hs y enviamos personal cuando surge algún problema.",
-        })}
-        
-      </p>
-    </div>
-  </div>
-
-  <img src={line3} class="line3 absolute" alt="Linea" />
-
-  <div class="maintenance">
-    <img src={maintenance} class="absolute" alt="Mantenemos" />
-    <div class="description absolute whitespace-pre-line">
-      <h3>
-        {$_("whatWeDo.maintenance.title", {
-          default: "Mantenemos",
-        })}</h3>
-      <p>
-        {$_("whatWeDo.maintenance.description", {
-          default: "Nos aseguramos de que los cargadores estén disponibles y visibles en las\nprincipales aplicaciones de navegación y de que estén actualizados ante\ncualquier nueva legislación.",
+      </h1>
+      <p class="whitespace-pre-line">
+        {@html $_("whatWeDo.description", {
+          default:
+            "Simply put: <em>we take care of everything</em>. We are the single provider of EV charging solutions you need.",
         })}
       </p>
     </div>
-  </div>
 
-  <img src={line4} class="line4 absolute" alt="Linea" />
-
-  <div class="payments">
-    <img src={payments} class="absolute" alt="Facturamos" />
-    <div class="description absolute whitespace-pre-line">
-      <h3>{$_("whatWeDo.payments.title", {
-        default: "Facturamos",
-      })}
-      </h3>
-      <p>
-        {$_("whatWeDo.payments.description", {
-          default: "Nos aseguramos de que a los usuarios se les cobra correctamente y de que\nsus ingresos lleguen a tiempo.",
-        })}
-      </p>
+    <div class="planning whitespace-pre-line">
+      <img src={planning} class="absolute" alt="Planeamos" />
+      <div class="description absolute">
+        <h3>
+          {$_("whatWeDo.planning.title", {
+            default: "Planeamos",
+          })}
+        </h3>
+        <p>
+          {$_("whatWeDo.planning.description", {
+            default:
+              "Preparamos todos los proyectos y la documentación necesaria. Todo de\nacuerdo con las leyes locales.",
+          })}
+        </p>
+      </div>
     </div>
-  </div>
-  
-</section>
 
+    <img src={line1} class="line1 absolute" alt="Linea" />
+
+    <div class="installation">
+      <div class="description absolute whitespace-pre-line">
+        <h3>
+          {$_("whatWeDo.installation.title", {
+            default: "Instalamos",
+          })}
+        </h3>
+        <p>
+          {$_("whatWeDo.installation.description", {
+            default:
+              "Cubrimos todos los costes de la instalación y los equipos de recarga\nnecesarios.",
+          })}
+        </p>
+      </div>
+      <img src={installation} class="absolute" alt="Instalamos" />
+    </div>
+
+    <img src={line2} class="line2 absolute" alt="Linea" />
+
+    <div class="monitoring">
+      <img src={monitoring} class="absolute" alt="Monitorizamos" />
+      <div class="description absolute whitespace-pre-line">
+        <h3>
+          {$_("whatWeDo.monitoring.title", {
+            default: "Monitorizamos",
+          })}
+        </h3>
+        <p>
+          {$_("whatWeDo.monitoring.description", {
+            default:
+              "Una vez que los cargadores están operativos, los monitoreamos los 365\ndías del año, las 24 hs y enviamos personal cuando surge algún problema.",
+          })}
+        </p>
+      </div>
+    </div>
+
+    <img src={line3} class="line3 absolute" alt="Linea" />
+
+    <div class="maintenance">
+      <img src={maintenance} class="absolute" alt="Mantenemos" />
+      <div class="description absolute whitespace-pre-line">
+        <h3>
+          {$_("whatWeDo.maintenance.title", {
+            default: "Mantenemos",
+          })}
+        </h3>
+        <p>
+          {$_("whatWeDo.maintenance.description", {
+            default:
+              "Nos aseguramos de que los cargadores estén disponibles y visibles en las\nprincipales aplicaciones de navegación y de que estén actualizados ante\ncualquier nueva legislación.",
+          })}
+        </p>
+      </div>
+    </div>
+
+    <img src={line4} class="line4 absolute" alt="Linea" />
+
+    <div class="payments">
+      <img src={payments} class="absolute" alt="Facturamos" />
+      <div class="description absolute whitespace-pre-line">
+        <h3>
+          {$_("whatWeDo.payments.title", {
+            default: "Facturamos",
+          })}
+        </h3>
+        <p>
+          {$_("whatWeDo.payments.description", {
+            default:
+              "Nos aseguramos de que a los usuarios se les cobra correctamente y de que\nsus ingresos lleguen a tiempo.",
+          })}
+        </p>
+      </div>
+    </div>
+  </section>
 {/if}
 
 <style lang="postcss">
   :root {
     --ratio: 1440 * 1vw * 100;
-  }
-  em {
-    font-style: normal;
-    border-bottom: 2px solid theme("colors.green");
   }
 
   .root {

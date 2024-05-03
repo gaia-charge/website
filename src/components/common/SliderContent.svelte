@@ -17,17 +17,17 @@
     {#if index === indexDisplay}
       <div class="text">
         {$_(`sliderContent.${item}.description`, {
-          default: "Why you need it",
+          default: "Quote",
         })}
       </div>
       <div class="name">
         {$_(`sliderContent.${item}.name`, {
-          default: "Why you need it",
+          default: "Person",
         })}
       </div>
       <div class="who">
         {$_(`sliderContent.${item}.who`, {
-          default: "Why you need it",
+          default: "Associacion",
         })}
       </div>
     {/if}

@@ -1,149 +1,10 @@
 {
-  "contactBtn":{
-    "cta":"Contacto"
-  },
-  "nav":{
-    "need": "Why you need it",
-    "start": "How to start",
-    "benefits": "Benefits",
-    "ourService": "Our service",
-    "guarantees": "Guarantees"
-  },
-  "hero":{
-    "title":"Cargadores de vehículos eléctricos para tu negocio",
-    "subtitle":"¡sin inversión!"
-  },
-  "why":{
-    "title":"¿Por qué tu negocio necesita cargadores de VE?"
-  },
-  "howToStart":{
-    "title":"¿Cómo puedes empezar??",
-    "subtitle":"Puedes empezar llamando a tu electricista para que instale un cargador comprado en Amazon, pero eso sólo es una pieza de un ecosistema mucho más grande."
-  },
-  "contact":{
-    "title":"Estamos aquí para ayudar a que tu negocio crezca",
-    "subtitle":"Rellena este formulario y uno de nuestros expertos se pondrá en contacto contigo en la mayor brevedad posible.",
-    "name":"Nombre",
-    "lastname":"Apellidos",
-    "company":"Nombre de la empresa",
-    "email":"Correo electrónico",
-    "phone":"Número de teléfono",
-    "message":"Mensaje",
-    "cta":"Enviar",
-    "thankYouMsg":"Thank you for contacting us. We will respond to you shortly",
-    "msgError":"There was an error, please retry later"
-  },
-  "sliderContent":{
-    "one":{
-      "description":"“Gaia Green Tech hizo que el proceso de instalación de un cargador de vehículos eléctricos para nuestros compañeros de trabajo fuera extremadamente fácil. Sólo pagamos una cuota mensual y nos olvidamos. Todo quedó resuelto.”",
-      "name":"Miracle Martinez",
-      "who":"Generador Coworking"
-    },
-    "two":{
-      "description":"“Other content to display lorem ipsus”",
-      "name":"Miracle Martinez",
-      "who":"Generador Coworking"
-    }
-  },
-  "guarantees":{
-    "title":"",
-    "question":"",
-    "one":{
-      "title":"",
-      "description":""
-    },
-    "two":{
-      "title":"",
-      "description":""
-    },
-    "three":{
-      "title":"",
-      "description":""
-    },
-    "four":{
-      "title":"",
-      "description":""
-    },
-    "five":{
-      "title":"",
-      "description":""
-    },
-    "accordion":{
-      "first":{
-        "head":"",
-        "details":""
-      },
-      "second":{
-        "head":"",
-        "details":""
-      }
-    }
-  },
-  "whatForYou":{
-    "evidence":{
-      "uptitle":"",
-      "title":"",
-      "p1":"",
-      "p2":"",
-      "p3":""
-    },
-    "title":"",
-    "card1":{
-      "title1":"",
-      "title2":"",
-      "description":""
-    },
-    "card2":{
-      "title1":"",
-      "title2":"",
-      "description":""
-    },
-    "card3":{
-      "title1":"",
-      "title2":"",
-      "description":""
-    },
-    "card4":{
-      "title1":"",
-      "title2":"",
-      "description":""
-    },
-    "card5":{
-      "title1":"",
-      "title2":"",
-      "description":""
-    }
-  },
-  "whatWeDo":{
-    "title":"",
-    "description":"",
-    "planning":{
-      "title":"",
-      "description":""
-    },
-    "installation":{
-      "title":"",
-      "description":""
-    },
-    "monitoring":{
-      "title":"",
-      "description":""
-    },
-    "maintenance":{
-      "title":"",
-      "description":""
-    },
-    "payments":{
-      "title":"",
-      "description":""
-    }
-  },
   "gdpr": {
     "heading": "We value your privacy",
     "description": "We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Confirm all\", you consent to our use of cookies.",
-    "accept": "Confirm all",
+    "accept": "Accept all",
     "reject": "Reject all",
-    "settings": "Preferences",
+    "settings": "Customize",
     "close": "Close window",
     "edit": "Edit settings",
     "choices": {
@@ -164,6 +25,142 @@
         "description": "Used for marketing data."
       }
     }
+  },
+  "whatForYou": {
+    "title": "¿Por qué te beneficias al trabajar con Gaia?",
+    "card1": {
+      "title1": "Haz foco",
+      "title2": "en tu negocio",
+      "description": "Porque al no tener que ocuparte de nada mientras trabajemos juntos, puedes seguir haciendo foco en tu negocio"
+    },
+    "evidence": {
+      "uptitle": "Cobramos una tarifa fija mensual por cargador",
+      "title": "¡Para que sólo te centres en tu negocio!",
+      "p1": "Sin inversión inicial",
+      "p2": "Tú eliges si quieres ofrecer carga gratuita o de pago",
+      "p3": "Sin letra pequeña"
+    }
+  },
+  "whatWeDo": {
+    "card1": {
+      "description": "Porque al no tener que ocuparte de nada mientras trabajemos juntos, puedes seguir haciendo foco en tu negocio"
+    },
+    "title": "How is our service <em>different</em>?",
+    "description": "Simply put: <em>we take care of everything</em>. We are the single provider of EV charging solutions you need.",
+    "planning": {
+      "title": "Planeamos",
+      "description": "Preparamos todos los proyectos y la documentación necesaria. Todo de\nacuerdo con las leyes locales."
+    },
+    "installation": {
+      "title": "Instalamos",
+      "description": "Cubrimos todos los costes de la instalación y los equipos de recarga\nnecesarios."
+    },
+    "monitoring": {
+      "title": "Monitorizamos",
+      "description": "Una vez que los cargadores están operativos, los monitoreamos los 365\ndías del año, las 24 hs y enviamos personal cuando surge algún problema."
+    },
+    "maintenance": {
+      "title": "Mantenemos",
+      "description": "Nos aseguramos de que los cargadores estén disponibles y visibles en las\nprincipales aplicaciones de navegación y de que estén actualizados ante\ncualquier nueva legislación."
+    },
+    "payments": {
+      "title": "Facturamos",
+      "description": "Nos aseguramos de que a los usuarios se les cobra correctamente y de que\nsus ingresos lleguen a tiempo."
+    }
+  },
+  "contact": {
+    "thankYouMsg": "Thank you for contacting us. We will respond to you shortly",
+    "msgError": "There was an error, please retry later",
+    "title": "We are here for you",
+    "subtitle": "Leave us your contact details and we will get in touch with you as soon as possible.",
+    "name": "First name",
+    "lastname": "Last name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone number",
+    "message": "Message",
+    "cta": "Send message"
+  },
+  "guarantees": {
+    "question": "¿Aún tienes\nalguna duda?",
+    "accordion": {
+      "first": {
+        "head": "First accordion",
+        "details": "First Accordion details"
+      },
+      "second": {
+        "head": "Second accordion",
+        "details": "Second Accordion details"
+      }
+    },
+    "title": "Gaia Charge guarantees:",
+    "great_experience": {
+      "title": "Great driver experience",
+      "description": "Happy drivers come back and recommend good locations to others."
+    },
+    "business_partner": {
+      "title": "Business partnership",
+      "description": "We won't run away after the installation. We are here to grow with you."
+    },
+    "maintenance": {
+      "title": "Maintenance",
+      "description": "We take care not only of the hardware but also of the software maintenance."
+    },
+    "payment": {
+      "title": "Payments",
+      "description": "However you choose to receive payments, we will make it happen securily and on time."
+    },
+    "support": {
+      "title": "Support",
+      "description": "In case of any issues or questions, the drivers will come directly to us."
+    },
+    "visibility": {
+      "title": "Visibility",
+      "description": "We will make sure that your location is visible on all the platforms, bringing even more customers."
+    },
+    "information": {
+      "title": "Information",
+      "description": "We will share all the insights you need to make the right decisions."
+    },
+    "energy_saving": {
+      "title": "Energy saving",
+      "description": "All our charging points are designed to utilize the excess energy contracted and generated with renewables."
+    },
+    "eu_quality": {
+      "title": "EU quality standards",
+      "description": "All our products are manufactured and certified with the highest EU quality standards."
+    }
+  },
+  "footer": {
+    "title": "Follow us on"
+  },
+  "socials": {
+    "linkedin": "https://ggrn.link/linkedin-es",
+    "instagram": "https://ggrn.link/instagram-es",
+    "mastodon": "https://ggrn.link/mastodon-es",
+    "facebook": "https://ggrn.link/facebook-es"
+  },
+  "hero": {
+    "title": "A single EV charging solution",
+    "subtitle": "you can trust"
+  },
+  "contactBtn": {
+    "cta": "Contact us"
+  },
+  "howToStart": {
+    "title": "How can you get started?",
+    "subtitle": "You <em>could</em> call your electrician to install a basic EV charger from Amazon, but in reality<br/><em>the installation is just the first step</em> to a very complex ecosystem.",
+    "alt": "Example aspects to keep in mind"
+  },
+  "nav": {
+    "need": "Why you need it",
+    "start": "How to start",
+    "ourService": "Our service",
+    "benefits": "Benefits",
+    "guarantees": "Guarantees"
+  },
+  "why": {
+    "title": "Why does your business need EV charging?"
   },
   "privacy-policy": {
     "title": "Privacy Policy"

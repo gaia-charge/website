@@ -5,29 +5,37 @@
 </script>
 
 {#if !$isLoading}
-<section class="container mx-auto" id="need">
-  <div class="title text-center mx-auto">
-    <h1>{$_("why.title", {
-      default: "¿Por qué tu negocio necesita cargadores de VE?",
-    })}</h1>
-  </div>
+  <section class="container mx-auto" id="need">
+    <div class="title text-center mx-auto">
+      <h1>
+        {$_("why.title", {
+          default: "Why does your business need EV charging?",
+        })}
+      </h1>
+    </div>
 
-  <div class="slider relative mt-10 mb-4">
-    <Carousel/>
-  </div>
+    <div class="slider relative mt-10 mb-4">
+      <Carousel />
+    </div>
 
-  <div class="submit flex mx-auto">
-    <a
+    <div class="submit flex mx-auto">
+      <a
         href="#contact"
         class="contact text-white bg-green border-green border-2 rounded-full mx-auto flex items-center justify-between"
       >
-      {$_("contactBtn.cta", {
-        default: "Contacto",
-      })}
-        <img src={arrow_right} class="inline-block" alt="Contacto" />
+        {$_("contactBtn.cta", {
+          default: "Contact us",
+        })}
+        <img
+          src={arrow_right}
+          class="inline-block"
+          alt={$_("contactBtn.cta", {
+            default: "Contact us",
+          })}
+        />
       </a>
-  </div>
-</section>
+    </div>
+  </section>
 {/if}
 
 <style lang="postcss">
@@ -67,5 +75,4 @@
     line-height: calc(56 / var(--ratio));
     font-weight: 400;
   }
-
 </style>

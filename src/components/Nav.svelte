@@ -1,5 +1,5 @@
 <script>
-  import { locale, locales } from 'svelte-i18n'
+  import { locale, locales } from "svelte-i18n";
   import { _, isLoading } from "svelte-i18n";
   import logo from "$lib/assets/svg/logo.svg";
 </script>
@@ -10,49 +10,42 @@
       <a href="/"><img src={logo} class="logo" alt="Gaia Charge logo" /></a>
     </div>
     <div class=" flex justify-center gap-4">
-      <a
-        href="#need"
-        class="navigation">{$_("nav.need", {
+      <a href="#need" class="navigation"
+        >{$_("nav.need", {
           default: "Why you need it",
         })}</a
       >
-      <a
-        href="#start"
-        class="navigation">{$_("nav.start", {
+      <a href="#start" class="navigation"
+        >{$_("nav.start", {
           default: "How to start",
         })}</a
       >
-      <a
-        href="#benefits"
-        class="navigation">{$_("nav.benefits", {
-          default: "Benefits",
-        })}</a
-      >
-      <a
-        href="#ourService"
-        class="navigation">{$_("nav.ourService", {
+      <a href="#ourService" class="navigation"
+        >{$_("nav.ourService", {
           default: "Our service",
         })}</a
       >
-      <a
-        href="#guarantees"
-        class="navigation">{$_("nav.guarantees", {
+      <a href="#benefits" class="navigation"
+        >{$_("nav.benefits", {
+          default: "Benefits",
+        })}</a
+      >
+      <a href="#guarantees" class="navigation"
+        >{$_("nav.guarantees", {
           default: "Guarantees",
         })}</a
       >
-      
     </div>
     <div>
-      <a
-        href="#contact"
-        class="contact text-green border-green rounded-full">{$_("contactBtn.cta", {
-          default: "Contacto",
+      <a href="#contact" class="contact text-green border-green rounded-full"
+        >{$_("contactBtn.cta", {
+          default: "Contact",
         })}</a
       >
     </div>
     <div>
       <p class=" w-12">
-        <select class="select w-full"  bind:value={$locale}>
+        <select class="select w-full" bind:value={$locale}>
           {#each $locales as locale}
             <option value={locale}>{locale}</option>
           {/each}
@@ -67,10 +60,10 @@
     --ratio: 1440 * 1vw * 100;
   }
   select:focus-visible {
-  outline: none;
-}
+    outline: none;
+  }
 
-  .select{
+  .select {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: transparent;

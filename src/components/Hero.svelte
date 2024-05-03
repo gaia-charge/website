@@ -15,21 +15,29 @@
     <div class="headline absolute z-40 text-center">
       <h1>
         {$_("hero.title", {
-          default: "Cargadores de vehículos eléctricos para tu negocio",
+          default: "A single EV charging solution",
         })}
         <br />
-        <em>{$_("hero.subtitle", {
-          default: "¡sin inversión!",
-        })}</em>
+        <em
+          >{$_("hero.subtitle", {
+            default: "you can trust",
+          })}</em
+        >
       </h1>
       <a
         href="#contact"
         class="contact text-white bg-green border-green border-2 rounded-full mx-auto flex items-center justify-between"
       >
-      {$_("contactBtn.cta", {
-        default: "Contacto",
-      })}
-        <img src={arrow_right} class="inline-block" alt="Contacto" />
+        {$_("contactBtn.cta", {
+          default: "Contact us",
+        })}
+        <img
+          src={arrow_right}
+          class="inline-block"
+          alt={$_("contactBtn.cta", {
+            default: "Contact us",
+          })}
+        />
       </a>
     </div>
   </div>
@@ -38,12 +46,6 @@
 <style lang="postcss">
   :root {
     --ratio: 1440 * 1vw * 100;
-  }
-
-  em {
-    font-style: normal;
-    /* border-bottom: 2px dashed theme("colors.green"); */
-    color: theme("colors.green");
   }
 
   .w-full {

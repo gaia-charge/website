@@ -1,86 +1,137 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
-  import Contact from "./Contact.svelte";
-  import experience from "$lib/assets/svg/guarantees/great_experience.svg";
+
+  import great_experience from "$lib/assets/svg/guarantees/great_experience.svg";
+  import business_partner from "$lib/assets/svg/guarantees/business_partner.svg";
+  import maintenance from "$lib/assets/svg/guarantees/maintenance.svg";
+  import payment from "$lib/assets/svg/guarantees/payment.svg";
+  import support from "$lib/assets/svg/guarantees/support.svg";
+  import visibility from "$lib/assets/svg/guarantees/visibility.svg";
+  import information from "$lib/assets/svg/guarantees/information.svg";
+  import energy_saving from "$lib/assets/svg/guarantees/energy_saving.svg";
+  import eu_quality from "$lib/assets/svg/guarantees/eu_quality.svg";
+
   import Guarantee from "./Guarantee.svelte";
-  import SliderContent from "./common/SliderContent.svelte";
-  import Accordion from "./common/Accordion.svelte";
   import arrow from "$lib/assets/svg/arrow.svg";
-  
-  export let contactStatus;
 
   let indexSlide = 0;
-  export function left () {
-    
-    if(indexSlide > 0){
+  export function left() {
+    if (indexSlide > 0) {
       indexSlide--;
-      const w = document.getElementById('guarantee-slider').offsetWidth / 5;
-      document.getElementById('guarantee-slider').scrollLeft -= w;
+      const w = document.getElementById("guarantee-slider").offsetWidth / 5;
+      document.getElementById("guarantee-slider").scrollLeft -= w;
     }
-	}
-	
-	export function right () {
-    if(indexSlide < 4){
-      indexSlide++;
-      const w = document.getElementById('guarantee-slider').offsetWidth / 5;
-      document.getElementById('guarantee-slider').scrollLeft += w;
-    }
-	}
+  }
 
+  export function right() {
+    if (indexSlide < 4) {
+      indexSlide++;
+      const w = document.getElementById("guarantee-slider").offsetWidth / 5;
+      document.getElementById("guarantee-slider").scrollLeft += w;
+    }
+  }
 </script>
 
 {#if !$isLoading}
   <section class="container mx-auto" id="guarantees">
     <h1 class="text-center whitespace-pre-line">
-      
       {$_("guarantees.title", {
-        default: "¿Qué te garantizamos\nal trabajar con Gaia?",
+        default: "Gaia Charge guarantees:",
       })}
     </h1>
 
     <div class="relative pl-4 pr-4">
       <div class="relative scroll-snap-slider" id="guarantee-slider">
-        <Guarantee image={experience} 
-          title={$_("guarantees.one.title", {
-            default: "Why you need it",
+        <Guarantee
+          image={great_experience}
+          title={$_("guarantees.great_experience.title", {
+            default: "Great driver experience",
           })}
-          description={$_("guarantees.one.description", {
-            default: "Why you need it",
-          })}
-        />
-        <Guarantee image={experience} 
-          title={$_("guarantees.two.title", {
-            default: "Why you need it",
-          })}
-          description={$_("guarantees.two.description", {
-            default: "Why you need it",
+          description={$_("guarantees.great_experience.description", {
+            default:
+              "Happy drivers come back and recommend good locations to others.",
           })}
         />
-        <Guarantee image={experience} 
-          title={$_("guarantees.three.title", {
-            default: "Why you need it",
+        <Guarantee
+          image={business_partner}
+          title={$_("guarantees.business_partner.title", {
+            default: "Business partnership",
           })}
-          description={$_("guarantees.three.description", {
-            default: "Why you need it",
-          })}
-        />
-        <Guarantee image={experience} 
-          title={$_("guarantees.four.title", {
-            default: "Why you need it",
-          })}
-          description={$_("guarantees.four.description", {
-            default: "Why you need it",
+          description={$_("guarantees.business_partner.description", {
+            default:
+              "We won't run away after the installation. We are here to grow with you.",
           })}
         />
-        <Guarantee image={experience} 
-          title={$_("guarantees.five.title", {
-            default: "Why you need it",
+        <Guarantee
+          image={maintenance}
+          title={$_("guarantees.maintenance.title", {
+            default: "Maintenance",
           })}
-          description={$_("guarantees.five.description", {
-            default: "Why you need it",
+          description={$_("guarantees.maintenance.description", {
+            default:
+              "We take care not only of the hardware but also of the software maintenance.",
           })}
         />
-
+        <Guarantee
+          image={payment}
+          title={$_("guarantees.payment.title", {
+            default: "Payments",
+          })}
+          description={$_("guarantees.payment.description", {
+            default:
+              "However you choose to receive payments, we will make it happen securily and on time.",
+          })}
+        />
+        <Guarantee
+          image={support}
+          title={$_("guarantees.support.title", {
+            default: "Support",
+          })}
+          description={$_("guarantees.support.description", {
+            default:
+              "In case of any issues or questions, the drivers will come directly to us.",
+          })}
+        />
+        <Guarantee
+          image={visibility}
+          title={$_("guarantees.visibility.title", {
+            default: "Visibility",
+          })}
+          description={$_("guarantees.visibility.description", {
+            default:
+              "We will make sure that your location is visible on all the platforms, bringing even more customers.",
+          })}
+        />
+        <Guarantee
+          image={information}
+          title={$_("guarantees.information.title", {
+            default: "Information",
+          })}
+          description={$_("guarantees.information.description", {
+            default:
+              "We will share all the insights you need to make the right decisions.",
+          })}
+        />
+        <Guarantee
+          image={energy_saving}
+          title={$_("guarantees.energy_saving.title", {
+            default: "Energy saving",
+          })}
+          description={$_("guarantees.energy_saving.description", {
+            default:
+              "All our charging points are designed to utilize the excess energy contracted and generated with renewables.",
+          })}
+        />
+        <Guarantee
+          image={eu_quality}
+          title={$_("guarantees.eu_quality.title", {
+            default: "EU quality standards",
+          })}
+          description={$_("guarantees.eu_quality.description", {
+            default:
+              "All our products are manufactured and certified with the highest EU quality standards.",
+          })}
+        />
       </div>
       <button class="rounded left" on:click={left} aria-label="left">
         <img src={arrow} class="inline-block rotate-180" alt="Contacto" />
@@ -88,43 +139,6 @@
       <button class="rounded right" on:click={right} aria-label="right">
         <img src={arrow} class="inline-block" alt="Contacto" />
       </button>
-    </div>
-    <Contact contactStatus={contactStatus}/>
-
-    <div class=" flex justify-items-center w-full mt-11 mb-11">
-      <SliderContent />
-    </div>
-    <h1 class="text-center whitespace-pre-line">
-      {$_("guarantees.question", {
-        default: "¿Aún tienes\nalguna duda?",
-      })}
-      
-    </h1>
-    <div class="accordion-container">
-      <Accordion>
-        <span slot="head">{$_("guarantees.accordion.first.head", {
-          default: "First accordion",
-        })}</span>
-        <div slot="details">
-          <p>
-            {$_("guarantees.accordion.first.details", {
-              default: "First Accordion details",
-            })}
-          </p>
-        </div>
-      </Accordion>
-      <Accordion>
-        <span slot="head">{$_("guarantees.accordion.second.head", {
-          default: "Second accordion",
-        })}</span>
-        <div slot="details">
-          <p>
-            {$_("guarantees.accordion.second.details", {
-              default: "Second Accordion details",
-            })}
-          </p>
-        </div>
-      </Accordion>
     </div>
   </section>
 {/if}
@@ -134,32 +148,24 @@
     --ratio: 1440 * 1vw * 100;
   }
 
-  .rounded{
-      top: calc( 50% - 24px );
-      position: absolute;
-      display:flex;
-      align-items: center;
-      justify-content: center;
-      background-color: white;
-      width: calc(48 / var(--ratio));
-      height: calc(48 / var(--ratio));
-      border-radius: 50%;
-    }
-    .right{
-      right: -1%
-    }
-    .left{
-      left: -1%
-    }
-
-  .accordion-container {
+  .rounded {
+    top: calc(50% - 24px);
+    position: absolute;
     display: flex;
-    flex-direction: column;
-    max-width: 864px;
-    margin: auto;
-    margin-block-start: 40px;
-    margin-block-end: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: calc(48 / var(--ratio));
+    height: calc(48 / var(--ratio));
+    border-radius: 50%;
   }
+  .right {
+    right: -1%;
+  }
+  .left {
+    left: -1%;
+  }
+
   .scroll-snap-slider {
     display: flex;
     flex-wrap: nowrap;
@@ -172,15 +178,15 @@
     gap: 20px;
     margin-block-end: 55px;
     margin-block-start: calc(22 / var(--ratio));
-}
-.scroll-snap-slider:not(.-show-scroll-bar) {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
+  }
+  .scroll-snap-slider:not(.-show-scroll-bar) {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 
-.scroll-snap-slider:not(.-show-scroll-bar)::-webkit-scrollbar {
-  display: none;
-}
+  .scroll-snap-slider:not(.-show-scroll-bar)::-webkit-scrollbar {
+    display: none;
+  }
 
   .container {
     width: calc(1280 / var(--ratio));

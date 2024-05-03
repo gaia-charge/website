@@ -4,26 +4,31 @@
 </script>
 
 {#if !$isLoading}
-<section class="container mx-auto" id="start">
-  <div class="title text-center mx-auto">
-    <h1>{$_("howToStart.title", {
-      default: "¿Cómo puedes empezar??",
-    })}</h1>
-    <p>
-      {$_("howToStart.subtitle", {
-        default: "Puedes empezar llamando a tu electricista para que instale un cargador comprado en Amazon, pero eso sólo es una pieza de un ecosistema mucho más grande.",
-      })}
-    </p>
-  </div>
+  <section class="container mx-auto" id="start">
+    <div class="title text-center mx-auto">
+      <h1>
+        {$_("howToStart.title", {
+          default: "How can you get started?",
+        })}
+      </h1>
+      <p>
+        {@html $_("howToStart.subtitle", {
+          default:
+            "You <em>could</em> call your electrician to install a basic EV charger from Amazon, but in reality<br/><em>the installation is just the first step</em> to a very complex ecosystem.",
+        })}
+      </p>
+    </div>
 
-  <div class=" flex items-center justify-center mt-12">
-    <img
-      src={cloud}
-      class="image"
-      alt="Gaia Charge illustration"
-    />
-  </div>
-</section>
+    <div class=" flex items-center justify-center mt-12">
+      <img
+        src={cloud}
+        class="image"
+        alt={$_("howToStart.alt", {
+          default: "Example aspects to keep in mind",
+        })}
+      />
+    </div>
+  </section>
 {/if}
 
 <style lang="postcss">
@@ -58,5 +63,4 @@
     padding: calc(20 / var(--ratio));
     font-weight: 300;
   }
-
 </style>
