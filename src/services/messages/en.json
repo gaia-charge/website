@@ -69,8 +69,8 @@
     }
   },
   "contact": {
-    "thankYouMsg": "Thank you for contacting us. We will respond to you shortly",
-    "msgError": "There was an error, please retry later",
+    "thankYouMsg": "Thank you for contacting us. \n We will respond to you shortly",
+    "msgError": "There was an error. \n Please retry later",
     "title": "We are here for you",
     "subtitle": "Leave us your contact details and we will get in touch with you as soon as possible.",
     "name": "First name",

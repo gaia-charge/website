@@ -23,7 +23,7 @@
     console.log("the component has mounted");
     setTimeout(() => {
       const element = document.getElementById("contact");
-      if (contactStatus) element.scrollIntoView();
+      if (contactStatus) element.scrollIntoView({ behavior: "instant" });
     }, 500);
   });
 </script>

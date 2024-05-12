@@ -1,24 +1,41 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
   import arrow_right from "$lib/assets/svg/arrow_right.svg";
+  import schema from "./../schema"
 
   export let contactStatus;
+
+  let values = {};
+  let errors = {};
+  let formBind;
+
+  const verify = async () => {
+    try {
+      await schema.validate(values, { abortEarly: false });
+      errors = {};
+      formBind.submit();
+    } catch (err) {
+      errors = err.inner.reduce((acc, err) => {
+        return { ...acc, [err.path]: err.message };
+      }, {});
+    }
+  }
 </script>
 
 {#if !$isLoading}
   <div id="contact"></div>
   <div class="contact bg-medium-blue text-white flex flex-row">
     {#if contactStatus}
-      <div class="info w-full">
-        <h2>
+      <div class=" flex p-0 info w-full h-96 whitespace-pre-line ">
+        <h2 class="whitespace-pre-line m-auto">
           {#if contactStatus !== "error"}
             {$_("contact.thankYouMsg", {
               default:
-                "Thank you for contacting us. We will respond to you shortly",
+                "Thank you for contacting us.\nWe will respond to you shortly",
             })}
           {:else}
             {$_("contact.msgError", {
-              default: "There was an error, please retry later",
+              default: "There was an error.\n Please retry later",
             })}
           {/if}
         </h2>
@@ -38,7 +55,7 @@
         </p>
       </div>
       <div class="w-1/2">
-        <form action="?/submit" method="POST">
+        <form bind:this={formBind} action="?/submit" method="POST" on:submit|preventDefault={verify}>
           <div class="flex flex-row flex-col">
             <label for="firstname"
               >{$_("contact.name", {
@@ -49,8 +66,12 @@
               type="text"
               name="firstname"
               id="firstname"
+              bind:value={values.firstname}
               placeholder="First name"
             />
+            {#if errors.firstname}
+              <span class="error">{errors.firstname}</span>
+            {/if}
           </div>
           <div class="flex flex-row flex-col">
             <label for="lastname"
@@ -62,8 +83,12 @@
               type="text"
               name="lastname"
               id="lastname"
+              bind:value={values.lastname}
               placeholder="Last name"
             />
+            {#if errors.lastname}
+              <span class="error">{errors.lastname}</span>
+            {/if}
           </div>
           <div class="flex flex-row flex-col">
             <label for="company"
@@ -75,8 +100,12 @@
               type="text"
               name="company"
               id="company"
+              bind:value={values.company}
               placeholder="Company"
             />
+            {#if errors.company}
+              <span class="error">{errors.company}</span>
+            {/if}
           </div>
           <div class="flex flex-row flex-col">
             <label for="email"
@@ -84,7 +113,10 @@
                 default: "Email",
               })}</label
             >
-            <input type="email" name="email" id="email" placeholder="Email" />
+            <input type="email" bind:value={values.email} name="email" id="email" placeholder="Email" />
+            {#if errors.email}
+              <span class="error">{errors.email}</span>
+            {/if}
           </div>
           <div class="flex flex-row flex-col">
             <label for="phone"
@@ -96,8 +128,12 @@
               type="tel"
               name="phone"
               id="phone"
+              bind:value={values.phone}
               placeholder="Phone number"
             />
+            {#if errors.phone}
+              <span class="error">{errors.phone}</span>
+            {/if}
           </div>
           <div class="flex flex-row flex-col">
             <label for="message"
@@ -109,8 +145,12 @@
               type="text"
               name="message"
               id="message"
+              bind:value={values.message}
               placeholder="Message"
             />
+            {#if errors.message}
+              <span class="error">{errors.message}</span>
+            {/if}
           </div>
           <div class="submit flex">
             <button
@@ -194,5 +234,10 @@
   }
   button[type="submit"] img {
     width: calc(16 / var(--ratio));
+  }
+  .error {
+    display: block;
+    font-size: 12px;
+    color: red;
   }
 </style>

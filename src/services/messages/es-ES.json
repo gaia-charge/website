@@ -49,6 +49,8 @@
         "lead": "Toda la infraestructura está suministrada por fuentes de energía renovable y nos esforzamos por conseguir una huella de carbono negativa."
     },
     "contact": {
+        "thankYouMsg": "Thank you for contacting us. \n We will respond to you shortly",
+        "msgError": "There was an error. \n Please retry later",
         "title": "¡Conectemos!",
         "lead": "Déjanos un mensaje o echa un vistazo a nuestras redes sociales. ¡Estaremos encantados de charlar!",
         "phName": "Nombre",

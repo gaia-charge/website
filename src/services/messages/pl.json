@@ -16,6 +16,8 @@
         "lead": "Całość naszej infrastruktury jest wspierana przez odnawialne źródła energii i ma na celu uzyskanie ujemnego śladu węglowego."
     },
     "contact": {
+        "thankYouMsg": "Thank you for contacting us. \n We will respond to you shortly",
+        "msgError": "There was an error. \n Please retry later",
         "title": "Skontaktuj się z nami!",
         "lead": "Nie wahaj się do nas napisać lub zajrzeć na nasze media społecznościowe! Chętnie porozmawiamy!",
         "phName": "Imię/nazwisko",

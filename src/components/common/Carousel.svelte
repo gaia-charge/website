@@ -25,7 +25,7 @@
       draggable: false,
       multipleDrag: false,
       threshold: 20,
-      loop: false,
+      loop: true,
       rtl: false,
       onInit: () => {},
       onChange: () => {},

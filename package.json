@@ -21,7 +21,8 @@
     "axios": "^1.5.0",
     "negotiator": "^0.6.3",
     "siema": "^1.5.1",
-    "svelte-i18n": "3.7.3"
+    "svelte-i18n": "3.7.3",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@accuser/svelte-plausible-analytics": "^0.5.0",
