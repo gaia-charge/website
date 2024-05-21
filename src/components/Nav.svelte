@@ -2,16 +2,30 @@
   import { locale, locales } from "svelte-i18n";
   import { _, isLoading } from "svelte-i18n";
   import logo from "$lib/assets/svg/logo.svg";
+  import menuMobile from "$lib/assets/svg/mobile-menu.svg";
+  import SideBar from './menu/SideBar.svelte';
+    import Hamburger from './menu/Hamburger.svelte';
+
+  export let sidebar = false
+
 </script>
+
+
 
 <nav class="fixed flex flex-row items-center justify-between z-50">
   {#if !$isLoading}
+  <SideBar bind:open={sidebar}/>
     <div>
       <a href="/"><img src={logo} class="logo" alt="Gaia Charge logo" /></a>
     </div>
-    <div class=" flex justify-center gap-4">
-      <a href="#need" class="navigation"
-        >{$_("nav.need", {
+    <div class="flex md:hidden">
+      <!-- <a href="/"><img src={menuMobile} class="menu" alt="Mobile Menu" /></a> -->
+      <Hamburger bind:open={sidebar}/>
+    </div>
+    <div class=" hidden md:flex justify-center gap-4">
+      <a
+        href="#need"
+        class="navigation">{$_("nav.need", {
           default: "Why you need it",
         })}</a
       >
@@ -36,14 +50,15 @@
         })}</a
       >
     </div>
-    <div>
-      <a href="#contact" class="contact text-green border-green rounded-full"
-        >{$_("contactBtn.cta", {
-          default: "Contact",
+    <div class=" hidden md:flex">
+      <a
+        href="#contact"
+        class="contact text-green border-green rounded-full">{$_("contactBtn.cta", {
+          default: "Contacto",
         })}</a
       >
     </div>
-    <div>
+    <div class=" hidden md:flex">
       <p class=" w-12">
         <select class="select w-full" bind:value={$locale}>
           {#each $locales as locale}
@@ -100,6 +115,9 @@
   }
   .logo {
     width: calc(105 / var(--ratio));
+  }
+  .menu {
+    width: calc(55 / var(--ratio));
   }
   .contact {
     font-size: calc(16 / var(--ratio));
