@@ -2,16 +2,21 @@
   import { _, isLoading } from "svelte-i18n";
 
   import illustration from "$lib/assets/svg/header_illustration.svg";
+  import headerMobile from "$lib/assets/svg/header_mobile.svg";
   import arrow_right from "$lib/assets/svg/arrow_right.svg";
 </script>
 
 {#if !$isLoading}
   <div class="w-full">
+  <picture>
+    <source media="(min-width: 431px)" srcset={illustration}>
     <img
-      src={illustration}
-      class="illustration w-full absolute z-0"
+      src={headerMobile}
+      class=" w-full absolute z-0"
       alt="Gaia Charge illustration"
     />
+  </picture>
+    
     <div class="headline absolute z-40 text-center">
       <h1>
         {$_("hero.title", {
@@ -80,4 +85,15 @@
   .headline .contact img {
     width: calc(16 / var(--ratio));
   }
+
+  @media only screen and (max-width: 431px) {
+  .w-full {
+    height: 100vh;
+  }
+  .headline {
+    padding-top: 125px;
+    padding-left: calc(200 / var(--ratio));
+    padding-right: calc(200 / var(--ratio));
+  }
+}
 </style>
