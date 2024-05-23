@@ -1,6 +1,7 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
   import cloud from "$lib/assets/svg/Cloud.svg";
+  import cloudMobile from "$lib/assets/svg/cloudMobile.svg";
 </script>
 
 {#if !$isLoading}
@@ -20,13 +21,18 @@
     </div>
 
     <div class=" flex items-center justify-center mt-12">
+
+    <picture>
+     <source media="(min-width: 431px)" srcset={cloud}>
       <img
-        src={cloud}
+        src={cloudMobile}
         class="image"
         alt={$_("howToStart.alt", {
           default: "Example aspects to keep in mind",
         })}
       />
+  </picture>
+      
     </div>
   </section>
 {/if}
@@ -63,4 +69,14 @@
     padding: calc(20 / var(--ratio));
     font-weight: 300;
   }
+  @media only screen and (max-width: 431px) {
+  .image {
+    width: 110%;
+    max-width: 110%;
+  }
+
+  .title {
+    width: 90%;
+  }
+}
 </style>

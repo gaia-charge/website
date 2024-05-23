@@ -1,22 +1,26 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
   import footer from "$lib/assets/svg/footer/footer.svg";
+  import footerMobile from "$lib/assets/svg/footer/footermobile.svg";
 </script>
 
 {#if !$isLoading}
   <div class="w-full relative">
-    <img
-      src={footer}
-      class="illustration w-full absolute z-0"
-      alt="Gaia Charge illustration"
-    />
+    <picture>
+      <source media="(min-width: 431px)" srcset={footer}>
+      <img
+        src={footerMobile}
+        class="illustration w-full absolute z-0"
+        alt="Gaia Charge illustration"
+      />
+    </picture>
     <div class="headline absolute z-40 text-center w-full">
       <h1 class="title text-center">
         {$_("footer.title", {
           default: "Follow us on",
         })}
       </h1>
-      <div class=" flex justify-center gap-4">
+      <div class=" flex justify-center gap-4 column">
         <a
           href={$_("socials.linkedin", {
             default: "https://ggrn.link/linkedin-es",
@@ -66,4 +70,21 @@
     color: white;
     text-transform: uppercase;
   }
+   @media only screen and (max-width: 431px) {
+    .headline {
+      padding-top: 125px;
+      padding-left: calc(200 / var(--ratio));
+      padding-right: calc(200 / var(--ratio));
+    }
+    .socials {
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 400;
+    }
+    .column{
+      flex-direction: column;
+      gap: 35px;
+      margin-block-start: 35px;
+    }
+}
 </style>

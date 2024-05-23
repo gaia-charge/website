@@ -2,6 +2,7 @@
   import Siema from "siema";
   import { onMount } from "svelte";
   import carousel from "$lib/assets/svg/carousel1.svg";
+  import carouselMobile from "$lib/assets/svg/carouselMobile.svg";
   import arrow from "$lib/assets/svg/arrow.svg";
 
   let slider, prev, next, radioSlider;
@@ -73,10 +74,26 @@
       description: "image2",
     },
   ];
+  const imagesMobile = [
+    {
+      url: carouselMobile,
+      description: "image"
+    },
+    {
+      url: carouselMobile,
+      description: "image2"
+    }
+  ];
+
+  $: innerWidth = 0
+  const imageToUse = innerWidth > 430 ? images : imagesMobile;
+  
 </script>
 
+<svelte:window bind:innerWidth />
+
 <div class="siema">
-  {#each images as src, imageIndex (src)}
+  {#each imageToUse as src, imageIndex (src)}
     <div class="slider">
       <img src={src.url} alt={src.description} width="98%" height={600} />
     </div>
