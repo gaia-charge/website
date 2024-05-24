@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <img src={line1} class="line1 absolute" alt="Linea" />
+    <img src={line1} class="line1 absolute left-road_1" alt="Linea" />
 
     <div class="installation">
       <div class="description absolute whitespace-pre-line">
@@ -64,7 +64,7 @@
       <img src={installation} class="absolute" alt="Instalamos" />
     </div>
 
-    <img src={line2} class="line2 absolute" alt="Linea" />
+    <img src={line2} class="line2 absolute right-road_1" alt="Linea" />
 
     <div class="monitoring">
       <img src={monitoring} class="absolute" alt="Monitorizamos" />
@@ -83,7 +83,7 @@
       </div>
     </div>
 
-    <img src={line3} class="line3 absolute" alt="Linea" />
+    <img src={line3} class="line3 absolute left-road_3" alt="Linea" />
 
     <div class="maintenance">
       <img src={maintenance} class="absolute" alt="Mantenemos" />
@@ -258,4 +258,63 @@
     left: calc(340 / var(--ratio));
     width: calc(227 / var(--ratio));
   }
+
+  @media only screen and (max-width: 431px) {
+  .title {
+    width: 80%;
+  }
+  img {
+    position: static;
+    width: 80% !important;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+  .description{
+    position: static;
+    width: 80% !important;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+  .root {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .description {
+    background-color: transparent;
+    padding: calc(30 / var(--ratio));
+    border-radius: calc(30 / var(--ratio));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 50% !important;
+  }
+  .description h3 {
+    font-size: 18px;
+    line-height: 28px;
+    color: #0D2823;
+  }
+
+  .description p {
+    font-size: 14px !important;
+    line-height: 24px !important;
+    color: #6C6C6C;
+    text-align: center;
+  }
+  .installation {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .left-road_1 {
+            transform: rotate(-100deg) translateY(-145%) scale(0.8);
+  }
+  .left-road_3 {
+    transform: rotate(-100deg) translateY(-177%) scale(0.8) translateX(65px);
+  }
+  .right-road_1 {
+        transform: rotate(115deg) translateY(-42%);
+  }
+}
 </style>

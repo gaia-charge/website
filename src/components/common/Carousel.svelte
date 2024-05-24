@@ -52,6 +52,7 @@
     return select === dotIndex;
   }
 
+
   export function left() {
     slider.prev();
   }
@@ -86,14 +87,15 @@
   ];
 
   $: innerWidth = 0
-  const imageToUse = innerWidth > 430 ? images : imagesMobile;
+  console.log('GRANDEZZA',innerWidth)
+  $: imageToUse = innerWidth > 430 ? images : imagesMobile;
   
 </script>
 
 <svelte:window bind:innerWidth />
 
 <div class="siema">
-  {#each imageToUse as src, imageIndex (src)}
+  {#each images as src, imageIndex (src)}
     <div class="slider">
       <img src={src.url} alt={src.description} width="98%" height={600} />
     </div>
@@ -105,7 +107,7 @@
       on:click={() => go(i * currentPerPage)}
       on:keypress={() => go(i * currentPerPage)}
       class={isDotActive(i) ? "active" : ""}
-    ></li>
+    >Inner Width: {innerWidth}</li>
   {/each}
 </ul>
 <button class="rounded left shadow" on:click={left} aria-label="left">

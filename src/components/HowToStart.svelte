@@ -78,5 +78,8 @@
   .title {
     width: 90%;
   }
+  .container {
+    width: 90%;
+  }
 }
 </style>
