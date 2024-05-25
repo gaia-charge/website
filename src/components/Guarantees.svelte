@@ -44,6 +44,7 @@
     const w = document.getElementById("guarantee-slider").scrollWidth / numberOfSlide
     const to = (index - indexByDot) * w;
     document.getElementById("guarantee-slider").scrollLeft += to;
+    indexByDot = index;
   }
 
 </script>
@@ -242,9 +243,6 @@
     background-color: #dbdbdb;
     height: 12px;
     width: 12px;
-  }
-  ul li:hover {
-    background-color: #6c6c6c;
   }
   ul li.active {
     background-color: #6c6c6c;

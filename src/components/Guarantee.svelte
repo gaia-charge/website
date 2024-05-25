@@ -35,4 +35,25 @@
     border-radius: 20px;
     scroll-snap-align: start;
   }
+  @media only screen and (max-width: 431px) {
+    .card {
+      padding-inline-start: 32px;
+    }
+    .image {
+    height: 150px;
+    margin-inline-end: 49%;
+  }
+  .title {
+    font-size: 21px;
+    line-height: 28px;
+    color: #0D2823;
+    margin-block-end: 16px;
+  }
+  .sub-title {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    width: 70%;
+  }
+}
 </style>
