@@ -14,7 +14,7 @@
   import Guarantee from "./Guarantee.svelte";
   import arrow from "$lib/assets/svg/arrow.svg";
 
-  let indexSlide = 0;
+  $: indexSlide = 0;
   const numberOfSlide = 9; // IMPORTANT -- refer always to the number of guarantees
   export function left() {
     if (indexSlide > 0) {
@@ -23,14 +23,26 @@
       document.getElementById("guarantee-slider").scrollLeft -= w;
     }
   }
-
   export function right() {
-    if (indexSlide < 9) {
+    if (indexSlide < numberOfSlide) {
       indexSlide++;
       const w = document.getElementById("guarantee-slider").offsetWidth / 6;
       document.getElementById("guarantee-slider").scrollLeft += w;
     }
   }
+  let carousel; 
+  $: indexByDot = 0;
+  export const checkPosition = (position) => {
+    if( position === 0 )
+      indexByDot = 0;
+    else {
+      const w = document.getElementById("guarantee-slider").scrollWidth / numberOfSlide;
+      indexByDot = Math.floor(position / w);
+      console.log( document.getElementById("guarantee-slider").scrollWidth, position, w, indexByDot)
+    }
+    
+  }
+
 </script>
 
 {#if !$isLoading}
@@ -42,7 +54,8 @@
     </h1>
 
     <div class="relative pl-4 pr-4">
-      <div class="relative scroll-snap-slider w-auto" id="guarantee-slider">
+      <div  bind:this={carousel} 
+      on:scroll={()=>checkPosition(carousel.scrollLeft)} class="relative scroll-snap-slider w-auto mobile-view" id="guarantee-slider">
         <Guarantee
           image={great_experience}
           title={$_("guarantees.great_experience.title", {
@@ -134,16 +147,17 @@
           })}
         />
       </div>
-      <button class="rounded left " on:click={left} aria-label="left">
+      <button class="rounded left shadow" on:click={left} aria-label="left">
         <img src={arrow} class="inline-block rotate-180 w-[14px] mr-1" alt="Contacto" />
       </button>
-      <button class="rounded right ml-1" on:click={right} aria-label="right">
+      <button class="rounded right ml-1 shadow" on:click={right} aria-label="right">
         <img src={arrow} class="inline-block w-[14px] ml-1" alt="Contacto" />
       </button>
     </div>
-    <ul class="">
+    <ul class="visible">
     {#each { length: numberOfSlide } as _, i}
       <li
+        class={indexByDot === i ? "active" : ""}
       ></li>
     {/each}
 </ul>
@@ -212,7 +226,6 @@
 
   ul {
     list-style-type: none;
-    position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -232,10 +245,19 @@
   ul li.active {
     background-color: #6c6c6c;
   }
+  .visible {
+    display: none;
+  }
   @media only screen and (max-width: 431px) {
   .rounded {
     display: none;
   }
-
+  .visible {
+    display: flex !important;
+  }
+  .mobile-view {
+    display: grid;
+    grid-template-columns: repeat(9, 100%);
+  }
 }
 </style>
