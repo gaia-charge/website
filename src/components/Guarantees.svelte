@@ -38,9 +38,12 @@
     else {
       const w = document.getElementById("guarantee-slider").scrollWidth / numberOfSlide;
       indexByDot = Math.floor(position / w);
-      console.log( document.getElementById("guarantee-slider").scrollWidth, position, w, indexByDot)
     }
-    
+  }
+  export const goTo = (index) => {
+    const w = document.getElementById("guarantee-slider").scrollWidth / numberOfSlide
+    const to = (index - indexByDot) * w;
+    document.getElementById("guarantee-slider").scrollLeft += to;
   }
 
 </script>
@@ -158,6 +161,7 @@
     {#each { length: numberOfSlide } as _, i}
       <li
         class={indexByDot === i ? "active" : ""}
+        on:click={() => goTo(i)}
       ></li>
     {/each}
 </ul>
