@@ -165,7 +165,7 @@
         on:click={() => goTo(i)}
       ></li>
     {/each}
-</ul>
+    </ul>
   </section>
 {/if}
 
