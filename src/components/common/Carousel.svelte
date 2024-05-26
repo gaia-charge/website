@@ -94,22 +94,26 @@
 
 <svelte:window bind:innerWidth />
 
-<div class="siema">
-  {#each images as src, imageIndex (src)}
-    <div class="slider">
-      <img src={src.url} alt={src.description} width="98%" height={600} />
-    </div>
-  {/each}
-</div>
+
+  <div class="siema">
+    {#each images as src, imageIndex (src)}
+      <div class="slider">
+        <img src={src.url} alt={src.description} width="98%" height={600} />
+      </div>
+    {/each}
+  </div>
+
+
 <ul class="">
   {#each { length: totalDots } as _, i}
     <li
       on:click={() => go(i * currentPerPage)}
       on:keypress={() => go(i * currentPerPage)}
       class={isDotActive(i) ? "active" : ""}
-    >Inner Width: {innerWidth}</li>
+    ></li>
   {/each}
 </ul>
+
 <button class="rounded left shadow" on:click={left} aria-label="left">
   <img src={arrow} class="inline-block rotate-180" alt="Previous" />
 </button>
@@ -158,9 +162,6 @@
     background-color: #dbdbdb;
     height: 12px;
     width: 12px;
-  }
-  ul li:hover {
-    background-color: #6c6c6c;
   }
   ul li.active {
     background-color: #6c6c6c;

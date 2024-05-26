@@ -102,7 +102,7 @@
       </div>
     </div>
 
-    <img src={line4} class="line4 absolute" alt="Linea" />
+    <img src={line4} class="line4 absolute right-road_4" alt="Linea" />
 
     <div class="payments">
       <img src={payments} class="absolute" alt="Facturamos" />
@@ -268,13 +268,12 @@
   }
   img {
     position: static;
-    width: 80% !important;
+    width: 70% !important;
     margin-inline-start: auto;
     margin-inline-end: auto;
   }
   .description{
     position: static;
-    width: 80% !important;
     margin-inline-start: auto;
     margin-inline-end: auto;
   }
@@ -291,8 +290,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    width: 50% !important;
+    gap: 4px;
+    padding: 0;
+    width: 70% !important;
+    margin-block-start: -20px;
   }
   .description h3 {
     font-size: 18px;
@@ -311,13 +312,16 @@
     flex-direction: column-reverse;
   }
   .left-road_1 {
-            transform: rotate(-100deg) translateY(-145%) scale(0.8);
+            transform: rotate(-106deg) translateY(-167%) scale(0.7) scaleY(1.5);
   }
   .left-road_3 {
-    transform: rotate(-100deg) translateY(-177%) scale(0.8) translateX(65px);
+    transform: rotate(-95deg) translateY(-125px) scale(.7) scaleY(1.5);
   }
   .right-road_1 {
-        transform: rotate(115deg) translateY(-42%);
+        transform: rotate(125deg) translateY(-25%) scale(.7) translateX(-87px) scaleY(1.5);
+  }
+  .right-road_4 {
+    transform: rotate(97deg) translateY(-128px) scale(.7) scaleY(1.5);
   }
 }
 </style>

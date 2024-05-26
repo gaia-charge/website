@@ -4,7 +4,8 @@
 </script>
 
 {#if !$isLoading}
-  <section
+<section>
+  <div
     class="root mt-6 section-evidence bg-medium-blue text-white flex flex-col"
   >
     <div>
@@ -19,7 +20,7 @@
         default: "¡Para que sólo te centres en tu negocio!",
       })}
     </h2>
-    <div class="flex flex-row gap-8 items-center">
+    <div class="flex flex-row gap-8 items-center what-for-m">
       <p>
         {$_("whatForYou.evidence.p1", {
           default: "Sin inversión inicial",
@@ -49,7 +50,8 @@
         <img src={arrow_right} class="inline-block" alt="Contacto" />
       </a>
     </div>
-  </section>
+  </div>
+</section>
 {/if}
 
 <style lang="postcss">
@@ -102,4 +104,18 @@
     max-width: 390px;
     text-align: center;
   }
+  @media only screen and (max-width: 431px) {
+  section {
+    background-color: white;
+    padding-block-start: 32px;
+    padding-block-end: 32px;
+  }
+  .what-for-m {
+    flex-direction: column;
+  }
+  .section-evidence .divider {
+    border-block: 1px solid #65d45c;
+    border-inline: none;
+  }
+}
 </style>

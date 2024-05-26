@@ -72,7 +72,7 @@
   @media only screen and (max-width: 431px) {
   .image {
     width: 110%;
-    max-width: 110%;
+    transform: scale(1.15);
   }
 
   .title {
