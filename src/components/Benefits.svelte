@@ -164,5 +164,8 @@
     display: grid;
     grid-template-columns: repeat(5, 100%);
   }
+  section {
+      scroll-margin-block-start: 8rem !important;
+    }
 }
 </style>

@@ -12,13 +12,13 @@
 
 
 
-<nav class="fixed flex flex-row items-center justify-between z-50">
+<nav class="fixed flex flex-row items-center justify-between z-50" class:sidebar>
   {#if !$isLoading}
   <SideBar bind:open={sidebar}/>
-    <div>
+    <div class="mobile-view_p logo-container">
       <a href="/"><img src={logo} class="logo" alt="Gaia Charge logo" /></a>
     </div>
-    <div class="flex md:hidden">
+    <div class="flex md:hidden mobile-view_p" >
       <!-- <a href="/"><img src={menuMobile} class="menu" alt="Mobile Menu" /></a> -->
       <Hamburger bind:open={sidebar}/>
     </div>
@@ -125,4 +125,25 @@
     padding: calc(15 / var(--ratio));
     border-width: calc(2 / var(--ratio));
   }
+  @media only screen and (max-width: 431px) {
+  .logo {
+    width: 87px;
+    
+  }
+  nav {
+    padding-block-start: 16px;
+    padding-right: 0 !important;
+  }
+  .mobile-view_p {
+    padding-block-start: 16px;
+    z-index: 1;
+  }
+  .sidebar {
+    padding-right: 0;
+  }
+  .sidebar .logo-container {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+}
 </style>

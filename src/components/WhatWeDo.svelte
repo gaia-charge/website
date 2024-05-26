@@ -260,6 +260,9 @@
   }
 
   @media only screen and (max-width: 431px) {
+    section {
+      scroll-margin-block-start: 8rem !important;
+    }
   .title {
     width: 80%;
   }

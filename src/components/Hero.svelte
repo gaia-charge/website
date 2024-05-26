@@ -91,7 +91,7 @@
     height: 100vh;
   }
   .headline {
-    padding-top: 125px;
+    padding-top: 45%;
     padding-left: calc(200 / var(--ratio));
     padding-right: calc(200 / var(--ratio));
   }
