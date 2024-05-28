@@ -87,10 +87,13 @@
     display: none;
   }
   .mobile{
-    display: block;
+    display: flex;
   }
   .title {
     width: 90%;
+  }
+  .container{
+    width: 100vw;
   }
 }
 </style>

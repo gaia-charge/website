@@ -19,14 +19,14 @@
   export function left() {
     if (indexSlide > 0) {
       indexSlide--;
-      const w = document.getElementById("guarantee-slider").offsetWidth / 6;
+      const w = document.getElementById("guarantee-slider").offsetWidth / 5;
       document.getElementById("guarantee-slider").scrollLeft -= w;
     }
   }
   export function right() {
     if (indexSlide < numberOfSlide) {
       indexSlide++;
-      const w = document.getElementById("guarantee-slider").offsetWidth / 6;
+      const w = document.getElementById("guarantee-slider").offsetWidth / 5;
       document.getElementById("guarantee-slider").scrollLeft += w;
     }
   }

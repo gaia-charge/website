@@ -14,37 +14,39 @@
     }
   ];
 
-  $: indexSlide = 0;
-  const numberOfSlide = imagesMobile.length; // IMPORTANT -- refer always to the number of guarantees
+  $: indexSlideCarousel = 0;
+  const numberOfSlideCarousel = imagesMobile.length; // IMPORTANT -- refer always to the number of guarantees
   export function left() {
-    if (indexSlide > 0) {
-      indexSlide--;
-      const w = document.getElementById("guarantee-slider").offsetWidth / 6;
-      document.getElementById("guarantee-slider").scrollLeft -= w;
+    if (indexSlideCarousel > 0) {
+      indexSlideCarousel--;
+      const w = document.getElementById("carousel-mobile-slider").offsetWidth / 6;
+      document.getElementById("carousel-mobile-slider").scrollLeft -= w;
     }
   }
   export function right() {
-    if (indexSlide < numberOfSlide) {
-      indexSlide++;
-      const w = document.getElementById("guarantee-slider").offsetWidth / 6;
-      document.getElementById("guarantee-slider").scrollLeft += w;
+    if (indexSlideCarousel < numberOfSlideCarousel) {
+      indexSlideCarousel++;
+      const w = document.getElementById("carousel-mobile-slider").offsetWidth / 6;
+      document.getElementById("carousel-mobile-slider").scrollLeft += w;
     }
   }
   let carousel; 
-  $: indexByDot = 0;
+  $: indexByDotCarousel = 0;
   export const checkPosition = (position) => {
     if( position === 0 )
-      indexByDot = 0;
+      indexByDotCarousel = 0;
     else {
-      const w = document.getElementById("guarantee-slider").scrollWidth / numberOfSlide;
-      indexByDot = Math.floor(position / w);
+      const containerW = document.getElementById("carousel-mobile-slider").offsetWidth * numberOfSlideCarousel;
+      //const w = document.getElementById("carousel-mobile-slider").scrollWidth / numberOfSlideCarousel;
+      const w = containerW / numberOfSlideCarousel;
+      indexByDotCarousel = Math.floor(position / w);
     }
   }
   export const goTo = (index) => {
-    const w = document.getElementById("guarantee-slider").scrollWidth / numberOfSlide
-    const to = (index - indexByDot) * w;
-    document.getElementById("guarantee-slider").scrollLeft += to;
-    indexByDot = index;
+    const w = document.getElementById("carousel-mobile-slider").scrollWidth / numberOfSlideCarousel
+    const to = (index - indexByDotCarousel) * w;
+    document.getElementById("carousel-mobile-slider").scrollLeft += to;
+    indexByDotCarousel = index;
   }
 
 </script>
@@ -52,9 +54,9 @@
 {#if !$isLoading}
   <section class="container mx-auto" id="guarantees">
     
-    <div class="relative pl-4 pr-4">
+    <div class="relative pl-4">
       <div  bind:this={carousel} 
-        on:scroll={()=>checkPosition(carousel.scrollLeft)} class="relative scroll-snap-slider w-auto mobile-view" id="guarantee-slider">
+        on:scroll={()=>checkPosition(carousel.scrollLeft)} class="relative scroll-snap-slider w-auto mobile-view" id="carousel-mobile-slider">
        {#each imagesMobile as src, imageIndex (src)}
         <div class="card">
           <img src={src.url} alt={src.description} width="98%" height={600} />
@@ -69,9 +71,9 @@
       </button>
     </div>
     <ul class="visible">
-    {#each { length: numberOfSlide } as _, i}
+    {#each { length: numberOfSlideCarousel } as _, i}
       <li
-        class={indexByDot === i ? "active" : ""}
+        class={indexByDotCarousel === i ? "active" : ""}
         on:click={() => goTo(i)}
       ></li>
     {/each}
@@ -85,6 +87,7 @@
   }
   .card{
     scroll-snap-align: start;
+    width: auto;
   }
 
   .rounded {
@@ -173,6 +176,9 @@
   .mobile-view {
     display: grid;
     grid-template-columns: repeat(9, 100%);
+  }
+  .container{
+    width: auto;
   }
 }
 </style>
