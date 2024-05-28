@@ -41,7 +41,7 @@
         </h2>
       </div>
     {:else}
-      <div class="info w-1/2">
+      <div class="info w-1/2 mt-6">
         <h2>
           {$_("contact.title", {
             default: "We are here for you",
@@ -54,7 +54,7 @@
           })}
         </p>
       </div>
-      <div class="w-1/2">
+      <div class="w-1/2 form-elements">
         <form bind:this={formBind} action="?/submit" method="POST" on:submit|preventDefault={verify}>
           <div class="flex flex-row flex-col">
             <label for="firstname"
@@ -152,7 +152,7 @@
               <span class="error">{errors.message}</span>
             {/if}
           </div>
-          <div class="submit flex">
+          <div class="submit flex mb-6">
             <button
               type="submit"
               class="contact ml-auto text-white bg-green border-green border-2 rounded-full flex items-center justify-between justify-end"
@@ -239,5 +239,53 @@
     display: block;
     font-size: 12px;
     color: red;
+  }
+  @media only screen and (max-width: 431px) {
+    .contact{
+      width: 100% !important;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-block-start: 24px !important;
+      padding-block-end: 24px !important;
+    }
+    .info {
+      padding-left: 0;
+      width: 100%;
+    }
+    .info h2 {
+      font-size: 39px;
+      line-height: 48px;
+    }
+    label {
+      font-size: 14px;
+      line-height: 24px;;
+      margin-bottom: calc(14 / var(--ratio));
+      font-weight: 400;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 24px;
+      padding-left: calc(30 / var(--ratio));
+    }
+    .submit {
+      width: 60%;
+      margin-inline-start: auto;
+    }
+    button[type="submit"]{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .form-elements{
+      width: 100%;
+    }
   }
 </style>

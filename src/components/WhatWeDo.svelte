@@ -315,10 +315,10 @@
             transform: rotate(-106deg) translateY(-167%) scale(0.7) scaleY(1.5);
   }
   .left-road_3 {
-    transform: rotate(-95deg) translateY(-125px) scale(.7) scaleY(1.5);
+    transform: rotate(-100deg) translateY(-146px) translateX(-9%) scale(.7) scaleY(1.5)
   }
   .right-road_1 {
-        transform: rotate(125deg) translateY(-25%) scale(.7) translateX(-87px) scaleY(1.5);
+        transform: rotate(125deg) translateY(-42%) scale(.7) translateX(-70px) scaleY(1.5);
   }
   .right-road_4 {
     transform: rotate(97deg) translateY(-128px) scale(.7) scaleY(1.5);

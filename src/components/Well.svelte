@@ -8,7 +8,7 @@
   <div
     class="root mt-6 section-evidence bg-medium-blue text-white flex flex-col"
   >
-    <div>
+    <div class="w-[50%]">
       <p>
         {$_("whatForYou.evidence.uptitle", {
           default: "Cobramos una tarifa fija mensual por cargador",
@@ -26,6 +26,7 @@
           default: "Sin inversión inicial",
         })}
       </p>
+      <hr/>
       <span class="divider px-8 pr-8"
         ><p>
           {$_("whatForYou.evidence.p2", {
@@ -33,6 +34,7 @@
           })}
         </p></span
       >
+      <hr/>
       <p>
         {$_("whatForYou.evidence.p3", {
           default: "Sin letra pequeña",
@@ -59,6 +61,9 @@
     --ratio: 1440 * 1vw * 100;
   }
 
+  hr{
+    display: none;
+  }
   .root {
     scroll-margin-block-start: calc(160 / var(--ratio));
   }
@@ -105,6 +110,12 @@
     text-align: center;
   }
   @media only screen and (max-width: 431px) {
+  .section-evidence h2 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36px;
+    width: 90%;
+  }
   section {
     background-color: white;
     padding-block-start: 32px;
@@ -114,8 +125,17 @@
     flex-direction: column;
   }
   .section-evidence .divider {
-    border-block: 1px solid #65d45c;
     border-inline: none;
+  }
+  hr{
+    display: block;
+    color: theme("colors.green");
+    width: 30%;
+  }
+  .section-evidence {
+    gap: 16px;
+    padding-block-start: 48px;
+    padding-block-end: 48px;
   }
 }
 </style>
