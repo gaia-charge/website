@@ -8,7 +8,7 @@
   <div
     class="root mt-6 section-evidence bg-medium-blue text-white flex flex-col"
   >
-    <div class="w-[50%]">
+    <div class="what">
       <p>
         {$_("whatForYou.evidence.uptitle", {
           default: "Cobramos una tarifa fija mensual por cargador",
@@ -136,6 +136,9 @@
     gap: 16px;
     padding-block-start: 48px;
     padding-block-end: 48px;
+  }
+  .what {
+    width: 50%;
   }
 }
 </style>

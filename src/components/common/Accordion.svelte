@@ -59,4 +59,17 @@
     line-height: calc(28 / var(--ratio));
     font-weight: 400;
 	}
+	@media only screen and (max-width: 431px) {
+  div.header .text {
+    font-size: 18px;
+    line-height: 28px;
+	}
+	div.details {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+		color: #6C6C6C;
+	}
+  
+}
 </style>

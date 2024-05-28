@@ -4,6 +4,12 @@
   import SliderContent from "./common/SliderContent.svelte";
 </script>
 
-<div class=" flex justify-items-center w-full mt-11 mb-11">
+<div class="content flex justify-items-center mt-11 mb-11">
   <SliderContent />
 </div>
+
+<style>
+.content{
+  width: 100;
+}
+</style>

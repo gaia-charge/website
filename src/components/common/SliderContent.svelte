@@ -17,7 +17,7 @@
     {#if index === indexDisplay}
       <div class="text">
         {$_(`sliderContent.${item}.description`, {
-          default: "Quote",
+          default: "“Gaia Green Tech hizo que el proceso de instalación de un cargador de vehículos eléctricos para nuestros compañeros de trabajo fuera extremadamente fácil. Sólo pagamos una cuota mensual y nos olvidamos. Todo quedó resuelto.”",
         })}
       </div>
       <div class="name">
@@ -40,6 +40,13 @@
       <img src={directionRight} class="arrow" alt="Open/Close" />
     </button>
   </div>
+  <ul class="visible">
+    {#each { length: contents.length } as _, i}
+      <li
+        class={indexDisplay === i ? "active" : ""}
+      ></li>
+    {/each}
+  </ul>
   
 	
 	<!-- {#if open}
@@ -70,5 +77,42 @@
     max-width: 900px;
     height: 300px;
 	}
+  .visible {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: -30px;
+    padding: 0;
+    margin-block-start: 32px;
+  }
+  ul li {
+    margin: 6px;
+    border-radius: 100%;
+    background-color: #dbdbdb;
+    height: 12px;
+    width: 12px;
+  }
+  ul li.active {
+    background-color: #6c6c6c;
+  }
+@media only screen and (max-width: 431px) {
+  .text {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    text-align: center;
+    min-height: 160px;
+    height: 200px;
+    width: 90%;
+	}
+  .visible {
+    display: flex !important;
+  }
+  
+}
 	
 </style>

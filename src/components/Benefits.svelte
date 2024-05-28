@@ -167,5 +167,8 @@
   section {
       scroll-margin-block-start: 8rem !important;
     }
+  .root {
+    margin-top: 0;
+  }
 }
 </style>

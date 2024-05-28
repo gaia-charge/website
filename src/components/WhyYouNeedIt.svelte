@@ -2,6 +2,7 @@
   import { _, isLoading } from "svelte-i18n";
   import arrow_right from "$lib/assets/svg/arrow_right.svg";
   import Carousel from "./common/Carousel.svelte";
+  import CarouselMobile from "./common/CarouselMobile.svelte";
 </script>
 
 {#if !$isLoading}
@@ -14,8 +15,11 @@
       </h1>
     </div>
 
-    <div class="slider relative mt-10 mb-4">
+    <div class="desktop slider relative mt-10 mb-4">
       <Carousel />
+    </div>
+    <div class="mobile slider relative mt-10 mb-4">
+      <CarouselMobile />
     </div>
 
     <div class="submit flex mx-auto">
@@ -42,7 +46,12 @@
   :root {
     --ratio: 1440 * 1vw * 100;
   }
-
+  .desktop{
+    display: block;
+  }
+  .mobile{
+    display: none;
+  }
   .container {
     width: calc(1280 / var(--ratio));
     margin-top: calc(33 / var(--ratio));
@@ -64,15 +73,24 @@
     justify-items: center;
     justify-content: center;
   }
-
   .title {
     width: calc(700 / var(--ratio));
   }
-
   .title h1 {
     font-family: theme("fontFamily.serif");
     font-size: calc(48 / var(--ratio));
     line-height: calc(56 / var(--ratio));
     font-weight: 400;
   }
+  @media only screen and (max-width: 431px) {
+    .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+  .title {
+    width: 90%;
+  }
+}
 </style>

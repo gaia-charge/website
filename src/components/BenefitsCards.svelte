@@ -184,6 +184,7 @@
     border-radius: 20px;
     max-width: none;
     padding: 24px 42px;
+    scroll-snap-align: start;
   }
   .card .title h3 {
     font-size: 32px;
