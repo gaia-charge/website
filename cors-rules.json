@@ -3,9 +3,13 @@
         {
             "AllowedOrigins": [
                 "http://localhost:5173",
+                "http://localhost:8000",
                 "https://gaiacharge.com",
                 "https://staging.gaiacharge.com",
-                "https://website-go7pwvgrd-gaia-charge.vercel.app"
+                "https://partner.gaiacharge.com",
+                "https://partner.staging.gaiagreen.dev",
+                "https://website-go7pwvgrd-gaia-charge.vercel.app",
+                "https://41ce7c90fae7.ngrok.app"
             ],
             "AllowedHeaders": [
                 "*"
