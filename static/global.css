@@ -1,268 +1,81 @@
-/* NORMALIZE */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-
-/* FONTS */
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
-@import url('https://rsms.me/inter/inter.css');
-
-html,
-body {
-    scroll-behavior: smooth;
-    height: 100%;
+/*
+ * New Spirit
+ */
+@font-face {
+    font-family: 'New Spirit';
+    font-style: light;
+    font-weight: 300;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Light.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Light.woff) format("woff");
 }
-
-body {
-    margin: 0;
-    font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
-    color: #333;
+@font-face {
+    font-family: 'New Spirit';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Regular.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Regular.woff) format("woff");
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@font-face {
+    font-family: 'New Spirit';
+    font-style: medium;
+    font-weight: 500;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Medium.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Medium.woff) format("woff");
 }
-
-/* Global Keyframes */
-@keyframes fadeout {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
+@font-face {
+    font-family: 'New Spirit';
+    font-style: semibold;
+    font-weight: 600;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-SemiBold.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-SemiBold.woff) format("woff");
 }
-
-@keyframes leaf-1 {
-    to {
-        transform: translate(10px, -5px);
-    }
+@font-face {
+    font-family: 'New Spirit';
+    font-style: bold;
+    font-weight: 800;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Bold.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Bold.woff) format("woff");
 }
-
-@keyframes leaf-2 {
-    to {
-        transform: translate(15px, 0);
-    }
-}
-
-@keyframes leaf-3 {
-    to {
-        transform: translate(10px, 5px);
-    }
-}
-
-@keyframes dash {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes vehicle {
-    100% {
-        transform: translateY(-1px);
-    }
-
-    50% {
-        transform: translateY(0);
-    }
-
-    0% {
-        transform: translateY(-1px);
-    }
+@font-face {
+    font-family: 'New Spirit';
+    font-style: black;
+    font-weight: 900;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Heavy.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/NewSpirit-Heavy.woff) format("woff");
 }
 
 /*
-    Screen readers mixin taken from Bootstrap
-    https://github.com/twbs/bootstrap/blob/master/scss/mixins/_screen-reader.scss
-*/
-.sr-only {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important; /* Fix for https://github.com/twbs/bootstrap/issues/25686 */
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
+ * Neue Haas Grotesk Display Pro
+ */
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-style: thin;
+    font-weight: 100;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaythin-webfont.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaythin-webfont.woff) format("woff");
+}
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-style: light;
+    font-weight: 300;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaylight-webfont.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaylight-webfont.woff) format("woff");
+}
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplayroman-webfont.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplayroman-webfont.woff) format("woff");
+}
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-style: medium;
+    font-weight: 500;
+    src: url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaymediu-webfont.woff2) format("woff2"),
+        url(https://gaia-fonts.s3.fr-par.scw.cloud/neuehaasdisplaymediu-webfont.woff) format("woff");
 }
 
-section {
-    display: block;
-}
-
-svg {
-    display: block;
-    height: auto;
-    flex: 0;
-}
-
-svg.no-flex {
-    flex: none;
-}
-
-.scene {
-    height: 100vh;
-    background: linear-gradient(0deg, #DAF9F9, #DAF9F9);
-    position: relative;
-    overflow: hidden;
-}
-
-.container {
-    width: 100%;
-    max-width: 92rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin: 0 auto;
-}
-
-.subtitle {
-    font-family: Inter;
-    font-weight: 800;
-    font-size: .875rem;
-    line-height: 1.2;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-    color: #4C8C40;
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-.title {
-    font-family: Inter;
-    font-weight: 800;
-    font-size: 3rem;
-    line-height: 1.15;
-    color: #011625;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-}
-
-.title-small {
-    font-family: Inter;
-    font-weight: 800;
-    font-size: 1.5rem;
-    line-height: 1.15;
-    color: #011625;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-}
-
-.lead {
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #1E2624;
-    opacity: 0.8;
-    width: 25rem;
-    max-width: 100%;
-}
-.kill-animation{
-    /* animation:none !important;
-    display:none; */
-    animation-play-state: paused !important;
-  }
-/* Medium devices (landscape tablets,) */
-@media only screen and (max-width: 1064px){
-    .subtitle {
-        font-size: .775rem;
-        margin-bottom: .8rem;
-    }
-    
-    .title {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-    
-    .lead {
-        font-size: .9rem;
-        line-height: 1.5;
-    }
-}
-
-/* Medium devices (portrait tablets and large phones,) */
-@media only screen and (max-width: 864px){
-    .subtitle {
-        font-size: .775rem;
-    }
-    
-    .title {
-        font-size: 2rem;
-        margin-bottom: .9rem;
-        line-height: 1;
-    }
-    
-    .lead {
-        font-size: .8rem;
-        line-height: 1.3;
-    }
-}
-
-.lead p:last-child {
-    margin-bottom: 0;
-}
-
-/* CLOUDS & BIRDS in the sky */
-.clouds {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-}
-
-.cloud {
-    position: absolute;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-.bird {
-    width: 2rem;
-    height: auto;
-    position: absolute;
-    opacity: .8;
-}
-
-/* TEXT */
-.text {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-@media only screen and (max-width: 768px) {
-    .title{
-        font-size: 34px;
-        line-height: 126%;
-    }
-    .lead{
-        font-size: 14px;
-        line-height: 160%;
-        color: #1E2624;
-        opacity: 0.8;
-    }
-    .container{
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-@media only screen and (max-width: 350px) and (max-height: 570px) {
-    .title{
-        font-size: 30px;
-        line-height: 116%;
-    }
-    .lead{
-        font-size: 12px;
-        line-height: 140%;
-        color: #1E2624;
-        opacity: 0.8;
-    }
-    .container{
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
+html, body {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
 }

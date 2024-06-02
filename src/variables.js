@@ -1,6 +1,10 @@
+import { HUBSPOT_HUB_ID, SENTRY_DSN } from "$env/dynamic/private";
+
 export const variables = {
-  ackee: {
-    server: import.meta.env.VITE_ACKEE_SERVER,
-    domainId: import.meta.env.VITE_ACKEE_DOMAIN_ID,
+  hubspot: {
+    hubId: HUBSPOT_HUB_ID,
+  },
+  sentry: {
+    dsn: SENTRY_DSN,
   },
 };

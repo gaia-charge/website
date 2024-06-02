@@ -1,5 +1,5 @@
 {
-    "subtitle": "Gaia Green Tech és",
+    "subtitle": "Gaia Charge és",
     "charging": {
         "title1": "Una xarxa",
         "title2": "de càrrega accessible",
@@ -16,6 +16,8 @@
         "lead": "Tota la infraestructura és suministrada per fonts d’energia renovables i ens esforcem per conseguir una petjada de carboni negativa."
     },
     "contact": {
+        "thankYouMsg": "Thank you for contacting us. \n We will respond to you shortly",
+        "msgError": "There was an error. \n Please retry later",
         "title": "Connectem!",
         "lead": "Deixa’ns un missatge o visita les nostres xarxes socials. Estarem encantats de parlar!",
         "phName": "El teu nom",

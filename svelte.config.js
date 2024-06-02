@@ -1,19 +1,12 @@
 /** @type {import('@sveltejs/kit').Config} */
 
-import adapter from "@sveltejs/adapter-netlify";
-import preprocess from "svelte-preprocess";
-import makeAttractionsImporter from "attractions/importer.js";
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 const config = {
-  preprocess: preprocess({
-    scss: {
-      importer: makeAttractionsImporter({
-        themeFile: "static/attractions-theme.scss",
-      }),
-    },
-  }),
   kit: {
-    adapter: adapter(),
+    adapter: adapter()
   },
+  preprocess: vitePreprocess()
 };
 export default config;
