@@ -60,7 +60,6 @@ export const actions = {
         body: JSON.stringify({ fields }),
       }
     );
-    console.log(response);
     // const url = new URL(
     //   `https://api.hubapi.com/forms/v2/forms/${env.HUBSPOT_FORM_ID}`
     // );
@@ -74,7 +73,6 @@ export const actions = {
 
     // const response = await fetch(requestHS);
     const result = await response.json();
-    console.log(JSON.stringify(result, null, 2));
     let contactStatus = "thank-you";
 
     if (result.status > 201) {
