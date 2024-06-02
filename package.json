@@ -15,21 +15,22 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
-    "@sentry/browser": "^7.71.0",
-    "@sentry/sveltekit": "^7.71.0",
+    "@sentry/browser": "^8.7.0",
+    "@sentry/sveltekit": "^8.7.0",
     "@sentry/tracing": "^7.71.0",
     "axios": "^1.5.0",
     "negotiator": "^0.6.3",
     "siema": "^1.5.1",
-    "svelte-i18n": "3.7.3",
+    "svelte-i18n": "^4.0.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {
-    "@accuser/svelte-plausible-analytics": "^0.5.0",
+    "@accuser/svelte-plausible-analytics": "^1.0.0",
     "@beyonk/gdpr-cookie-consent-banner": "^10.2.1",
     "@beyonk/svelte-hubspot": "^0.5.0",
-    "@sveltejs/adapter-auto": "^2.1.0",
-    "@sveltejs/kit": "^1.25.1",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "autoprefixer": "^10.4.16",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.30",
@@ -38,7 +39,7 @@
     "svelte": "^4.2.1",
     "svelte-preprocess": "^5.0.4",
     "tailwindcss": "^3.3.3",
-    "vite": "^4.4.9"
+    "vite": "^5.0.0"
   },
   "browserslist": [
     "> 1%",

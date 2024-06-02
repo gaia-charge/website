@@ -14,5 +14,5 @@ export const load = async ({cookies, request}) => {
 		[...supportedLocales],
 		defaultLocale
 	)
-	throw redirect(307, '/'+res);
+	redirect(307, '/'+res);
 }
