@@ -27,50 +27,73 @@
     }
   },
   "whatForYou": {
-    "title": "¿Por qué te beneficias al trabajar con Gaia?",
+    "title": "What are your benefits when working with Gaia?",
     "card1": {
-      "title1": "Haz foco",
-      "title2": "en tu negocio",
-      "description": "Porque al no tener que ocuparte de nada mientras trabajemos juntos, puedes seguir haciendo foco en tu negocio"
+      "title1": "You focus on",
+      "title2": "your business"
+    },
+    "card2": {
+      "title1": "You don't need to",
+      "title2": "invest anything"
+    },
+    "card3": {
+      "title1": "You keep the",
+      "title2": "control"
+    },
+    "card4": {
+      "title1": "You are ready for",
+      "title2": "the future",
+      "description": "Electromobility market is evolving very fast. We make sure you are always up to date with the latest technology."
+    },
+    "card5": {
+      "title1": "You are the",
+      "title2": "leader",
+      "description": "Getting ahead of the competition is not easy. We make sure you are always one step ahead."
     },
     "evidence": {
-      "uptitle": "Cobramos una tarifa fija mensual por cargador",
-      "title": "¡Para que sólo te centres en tu negocio!",
-      "p1": "Sin inversión inicial",
-      "p2": "Tú eliges si quieres ofrecer carga gratuita o de pago",
-      "p3": "Sin letra pequeña"
+      "uptitle": "We are not just another installer",
+      "title": "Contact us and see the difference our service makes",
+      "p1": "Free consultation",
+      "p2": "Tailor-made solution",
+      "p3": "No fine print"
     }
   },
   "whatWeDo": {
     "card1": {
-      "description": "Porque al no tener que ocuparte de nada mientras trabajemos juntos, puedes seguir haciendo foco en tu negocio"
+      "description": "We take care of everything and we're resolving any issue before it reaches you."
+    },
+    "card2": {
+      "description": "Our flexible renting model turns all CAPEX into OPEX and allows you to have the best technology without any upfront investment."
+    },
+    "card3": {
+      "description": "You decide on pricing, location, branding, and everything else important to you. We just make sure everything is working as it should."
     },
     "title": "How is our service <em>different</em>?",
     "description": "Simply put: <em>we take care of everything</em>. We are the single provider of EV charging solutions you need.",
     "planning": {
-      "title": "Planeamos",
-      "description": "Preparamos todos los proyectos y la documentación necesaria. Todo de\nacuerdo con las leyes locales."
+      "title": "Planning",
+      "description": "We prepare all necessary projects and documentation. All in accordance with local laws."
     },
     "installation": {
-      "title": "Instalamos",
-      "description": "Cubrimos todos los costes de la instalación y los equipos de recarga\nnecesarios."
+      "title": "Installation",
+      "description": "We do the complete installation, including integration with existing wiring."
     },
     "monitoring": {
-      "title": "Monitorizamos",
-      "description": "Una vez que los cargadores están operativos, los monitoreamos los 365\ndías del año, las 24 hs y enviamos personal cuando surge algún problema."
+      "title": "Monitoring",
+      "description": "Once the charge points are operational, we monitor them 365 days a year, 24/7 and send personnel before any problems arise."
     },
     "maintenance": {
-      "title": "Mantenemos",
-      "description": "Nos aseguramos de que los cargadores estén disponibles y visibles en las\nprincipales aplicaciones de navegación y de que estén actualizados ante\ncualquier nueva legislación."
+      "title": "Maintenance",
+      "description": "We ensure that chargers are available and visible in all major shipping applications and that they are up to date with any new legislation."
     },
     "payments": {
-      "title": "Facturamos",
-      "description": "Nos aseguramos de que a los usuarios se les cobra correctamente y de que\nsus ingresos lleguen a tiempo."
+      "title": "Payments",
+      "description": "We ensure that users are charged correctly and that their revenues arrive to you on time."
     }
   },
   "contact": {
-    "thankYouMsg": "Thank you for contacting us. \n We will respond to you shortly",
-    "msgError": "There was an error. \n Please retry later",
+    "thankYouMsg": "Thank you for contacting us.\nWe will respond to you shortly",
+    "msgError": "There was an error.\n Please retry later",
     "title": "We are here for you",
     "subtitle": "Leave us your contact details and we will get in touch with you as soon as possible.",
     "name": "First name",
@@ -159,22 +182,29 @@
     "benefits": "Benefits",
     "guarantees": "Guarantees"
   },
-  "sliderContent":{
-    "one":{
-      "description":"“Gaia Green Tech hizo que el proceso de instalación de un cargador de vehículos eléctricos para nuestros compañeros de trabajo fuera extremadamente fácil. Sólo pagamos una cuota mensual y nos olvidamos. Todo quedó resuelto.”",
-      "name":"Miracle Martinez",
-      "who":"Generador Coworking"
-    },
-    "two":{
-      "description":"“Other content to display lorem ipsus”",
-      "name":"Miracle Martinez",
-      "who":"Generador Coworking"
-    }
-  },
   "why": {
     "title": "Why does your business need EV charging?"
   },
-  "privacy-policy": {
+  "accordion": {
+    "toggle": "Toggle"
+  },
+  "carousel": {
+    "evSales": {
+      "header": "Because the sales of electric vehicles keep increasing",
+      "description": "Sales of EV already surpassed those of Diesel and the best selling car of the world is an EV."
+    },
+    "greatCustomers": {
+      "header": "Because the EV drivers make for great customers",
+      "description": "On average they are more welthy, spend more and are more loyal."
+    },
+    "fleetSavings": {
+      "header": "Because switching your fleet to EVs can save you money",
+      "description": "Running costs of EVs are fraction of the price of combustion vehicles."
+    },
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "privacyPolicy": {
     "title": "Privacy Policy"
   }
 }

@@ -29,17 +29,21 @@
     </div>
 
     <div class="planning whitespace-pre-line">
-      <img src={planning} class="absolute" alt="Planeamos" />
+      <img
+        src={planning}
+        class="absolute"
+        alt={$_("whatWeDo.planning.title", {
+          default: "Planning",
+        })}
+      />
       <div class="description absolute">
         <h3>
-          {$_("whatWeDo.planning.title", {
-            default: "Planeamos",
-          })}
+          {$_("whatWeDo.planning.title")}
         </h3>
         <p>
           {$_("whatWeDo.planning.description", {
             default:
-              "Preparamos todos los proyectos y la documentación necesaria. Todo de\nacuerdo con las leyes locales.",
+              "We prepare all necessary projects and documentation. All in accordance with local laws.",
           })}
         </p>
       </div>
@@ -51,33 +55,41 @@
       <div class="description absolute whitespace-pre-line">
         <h3>
           {$_("whatWeDo.installation.title", {
-            default: "Instalamos",
+            default: "Installation",
           })}
         </h3>
         <p>
           {$_("whatWeDo.installation.description", {
             default:
-              "Cubrimos todos los costes de la instalación y los equipos de recarga\nnecesarios.",
+              "We do the complete installation, including integration with existing wiring.",
           })}
         </p>
       </div>
-      <img src={installation} class="absolute" alt="Instalamos" />
+      <img
+        src={installation}
+        class="absolute"
+        alt={$_("whatWeDo.installation.title")}
+      />
     </div>
 
     <img src={line2} class="line2 absolute right-road_1" alt="Linea" />
 
     <div class="monitoring">
-      <img src={monitoring} class="absolute" alt="Monitorizamos" />
+      <img
+        src={monitoring}
+        class="absolute"
+        alt={$_("whatWeDo.monitoring.title", {
+          default: "Monitoring",
+        })}
+      />
       <div class="description absolute whitespace-pre-line">
         <h3>
-          {$_("whatWeDo.monitoring.title", {
-            default: "Monitorizamos",
-          })}
+          {$_("whatWeDo.monitoring.title")}
         </h3>
         <p>
           {$_("whatWeDo.monitoring.description", {
             default:
-              "Una vez que los cargadores están operativos, los monitoreamos los 365\ndías del año, las 24 hs y enviamos personal cuando surge algún problema.",
+              "Once the charge points are operational, we monitor them 365 days a year, 24/7 and send personnel before any problems arise.",
           })}
         </p>
       </div>
@@ -86,17 +98,17 @@
     <img src={line3} class="line3 absolute left-road_3" alt="Linea" />
 
     <div class="maintenance">
-      <img src={maintenance} class="absolute" alt="Mantenemos" />
+      <img src={maintenance} class="absolute" alt={$_("whatWeDo.maintenance.title", {
+        default: "Maintenance",
+      })} />
       <div class="description absolute whitespace-pre-line">
         <h3>
-          {$_("whatWeDo.maintenance.title", {
-            default: "Mantenemos",
-          })}
+          {$_("whatWeDo.maintenance.title")}
         </h3>
         <p>
           {$_("whatWeDo.maintenance.description", {
             default:
-              "Nos aseguramos de que los cargadores estén disponibles y visibles en las\nprincipales aplicaciones de navegación y de que estén actualizados ante\ncualquier nueva legislación.",
+              "We ensure that chargers are available and visible in all major shipping applications and that they are up to date with any new legislation.",
           })}
         </p>
       </div>
@@ -105,17 +117,17 @@
     <img src={line4} class="line4 absolute right-road_4" alt="Linea" />
 
     <div class="payments">
-      <img src={payments} class="absolute" alt="Facturamos" />
+      <img src={payments} class="absolute" alt={$_("whatWeDo.payments.title", {
+        default: "Payments",
+      })} />
       <div class="description absolute whitespace-pre-line">
         <h3>
-          {$_("whatWeDo.payments.title", {
-            default: "Facturamos",
-          })}
+          {$_("whatWeDo.payments.title")}
         </h3>
         <p>
           {$_("whatWeDo.payments.description", {
             default:
-              "Nos aseguramos de que a los usuarios se les cobra correctamente y de que\nsus ingresos lleguen a tiempo.",
+              "We ensure that users are charged correctly and that their revenues arrive to you on time.",
           })}
         </p>
       </div>
@@ -263,65 +275,67 @@
     section {
       scroll-margin-block-start: 8rem !important;
     }
-  .title {
-    width: 80%;
-  }
-  img {
-    position: static;
-    width: 70% !important;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-  }
-  .description{
-    position: static;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-  }
-  .root {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  .description {
-    background-color: transparent;
-    padding: calc(30 / var(--ratio));
-    border-radius: calc(30 / var(--ratio));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    padding: 0;
-    width: 70% !important;
-    margin-block-start: -20px;
-  }
-  .description h3 {
-    font-size: 18px;
-    line-height: 28px;
-    color: #0D2823;
-  }
+    .title {
+      width: 80%;
+    }
+    img {
+      position: static;
+      width: 70% !important;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+    }
+    .description {
+      position: static;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+    }
+    .root {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .description {
+      background-color: transparent;
+      padding: calc(30 / var(--ratio));
+      border-radius: calc(30 / var(--ratio));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 0;
+      width: 70% !important;
+      margin-block-start: -20px;
+    }
+    .description h3 {
+      font-size: 18px;
+      line-height: 28px;
+      color: #0d2823;
+    }
 
-  .description p {
-    font-size: 14px !important;
-    line-height: 24px !important;
-    color: #6C6C6C;
-    text-align: center;
+    .description p {
+      font-size: 14px !important;
+      line-height: 24px !important;
+      color: #6c6c6c;
+      text-align: center;
+    }
+    .installation {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .left-road_1 {
+      transform: rotate(-106deg) translateY(-167%) scale(0.7) scaleY(1.5);
+    }
+    .left-road_3 {
+      transform: rotate(-100deg) translateY(-146px) translateX(-9%) scale(0.7)
+        scaleY(1.5);
+    }
+    .right-road_1 {
+      transform: rotate(125deg) translateY(-42%) scale(0.7) translateX(-70px)
+        scaleY(1.5);
+    }
+    .right-road_4 {
+      transform: rotate(97deg) translateY(-128px) scale(0.7) scaleY(1.5);
+    }
   }
-  .installation {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .left-road_1 {
-            transform: rotate(-106deg) translateY(-167%) scale(0.7) scaleY(1.5);
-  }
-  .left-road_3 {
-    transform: rotate(-100deg) translateY(-146px) translateX(-9%) scale(.7) scaleY(1.5)
-  }
-  .right-road_1 {
-        transform: rotate(125deg) translateY(-42%) scale(.7) translateX(-70px) scaleY(1.5);
-  }
-  .right-road_4 {
-    transform: rotate(97deg) translateY(-128px) scale(.7) scaleY(1.5);
-  }
-}
 </style>

@@ -1,9 +1,11 @@
 <script>
   import Siema from "siema";
   import { onMount } from "svelte";
-  import carousel from "$lib/assets/svg/carousel1.svg";
-  import carouselMobile from "$lib/assets/svg/carouselMobile.svg";
+  import evsales from "$lib/assets/svg/evsales.svg";
+  import great_customers from "$lib/assets/svg/great_customers.svg";
+  import fleet_savings from "$lib/assets/svg/fleet_savings.svg";
   import arrow from "$lib/assets/svg/arrow.svg";
+  import { _, isLoading } from "svelte-i18n";
 
   let slider, prev, next, radioSlider;
   //let select = 0;
@@ -52,7 +54,6 @@
     return select === dotIndex;
   }
 
-
   export function left() {
     slider.prev();
   }
@@ -67,64 +68,103 @@
 
   const images = [
     {
-      url: carousel,
-      description: "image1",
+      url: evsales,
+      header: $_("carousel.evSales.header", {
+        default: "Because the sales of electric vehicles keep increasing",
+      }),
+      description: $_("carousel.evSales.description", {
+        default:
+          "Sales of EV already surpassed those of Diesel and the best selling car of the world is an EV.",
+      }),
     },
     {
-      url: carousel,
-      description: "image2",
+      url: great_customers,
+      header: $_("carousel.greatCustomers.header", {
+        default: "Because the EV drivers make for great customers",
+      }),
+      description: $_("carousel.greatCustomers.description", {
+        default:
+          "On average they are more welthy, spend more and are more loyal.",
+      }),
+    },
+    {
+      url: fleet_savings,
+      header: $_("carousel.fleetSavings.header", {
+        default: "Because switching your fleet to EVs can save you money",
+      }),
+      description: $_("carousel.fleetSavings.description", {
+        default:
+          "Running costs of EVs are fraction of the price of combustion vehicles.",
+      }),
     },
   ];
-  const imagesMobile = [
-    {
-      url: carouselMobile,
-      description: "image"
-    },
-    {
-      url: carouselMobile,
-      description: "image2"
-    }
-  ];
-
-  $: innerWidth = 0
-  console.log('GRANDEZZA',innerWidth)
-  $: imageToUse = innerWidth > 430 ? images : imagesMobile;
-  
 </script>
 
-<svelte:window bind:innerWidth />
-
-
+{#if !$isLoading}
   <div class="siema">
     {#each images as src, imageIndex (src)}
       <div class="slider">
+        <h3>{src.header}</h3>
         <img src={src.url} alt={src.description} width="98%" height={600} />
+        <p>
+          {src.description}
+        </p>
       </div>
     {/each}
   </div>
 
+  <ul class="">
+    {#each { length: totalDots } as e, i}
+      <li
+        on:click={() => go(i * currentPerPage)}
+        on:keypress={() => go(i * currentPerPage)}
+        class={isDotActive(i) ? "active" : ""}
+      ></li>
+    {/each}
+  </ul>
 
-<ul class="">
-  {#each { length: totalDots } as _, i}
-    <li
-      on:click={() => go(i * currentPerPage)}
-      on:keypress={() => go(i * currentPerPage)}
-      class={isDotActive(i) ? "active" : ""}
-    ></li>
-  {/each}
-</ul>
-
-<button class="rounded left shadow" on:click={left} aria-label="left">
-  <img src={arrow} class="inline-block rotate-180" alt="Previous" />
-</button>
-<button class="rounded right shadow" on:click={right} aria-label="right">
-  <img src={arrow} class="inline-block" alt="Next" />
-</button>
+  <button class="rounded left shadow" on:click={left} aria-label="left">
+    <img
+      src={arrow}
+      class="inline-block rotate-180"
+      alt={$_("carousel.previous", {
+        default: "Previous",
+      })}
+    />
+  </button>
+  <button class="rounded right shadow" on:click={right} aria-label="right">
+    <img
+      src={arrow}
+      class="inline-block"
+      alt={$_("carousel.next", {
+        default: "Next",
+      })}
+    />
+  </button>
+{/if}
 
 <style lang="postcss">
   :root {
     --ratio: 1440 * 1vw * 100;
   }
+  .slider {
+    background-color: white;
+    border-radius: calc(20 / var(--ratio));
+    padding: calc(95 / var(--ratio));
+    margin-left: calc(50 / var(--ratio));
+    margin-right: calc(70 / var(--ratio));
+  }
+  .slider h3 {
+    font-size: calc(32 / var(--ratio));
+    line-height: calc(40 / var(--ratio));
+    padding-bottom: calc(40 / var(--ratio));
+  }
+  .slider p {
+    font-size: calc(24 / var(--ratio));
+    line-height: calc(34 / var(--ratio));
+    padding-top: calc(40 / var(--ratio));
+  }
+
   .rounded {
     top: calc(50% - 24px);
     position: absolute;

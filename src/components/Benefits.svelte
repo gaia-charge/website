@@ -43,7 +43,7 @@
         <div class="title text-center mx-auto mb-10">
           <h1>
             {$_("whatForYou.title", {
-              default: "¿Por qué te beneficias al trabajar con Gaia?",
+              default: "What are your benefits when working with Gaia?",
             })}
           </h1>
         </div>

@@ -43,7 +43,6 @@
 <Guarantees />
 <Contact {contactStatus} />
 <Testimonials />
-<FAQ />
 <Footer />
 
 <style lang="postcss">

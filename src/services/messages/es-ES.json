@@ -1,127 +1,210 @@
 {
-    "contactBtn":{
-        "cta":"Contacto"
+  "gdpr": {
+    "heading": "Tu privacidad nos importa",
+    "description": "Utilizamos cookies para mejorar tu experiencia de navegación, publicar anuncios o contenidos personalizados y analizar nuestro tráfico. Al hacer clic en \"Aceptar todo\", aceptas el uso que hacemos de las cookies.",
+    "accept": "Aceptar todo",
+    "reject": "Rechazar todo",
+    "settings": "Personalizar",
+    "close": "Cerrar",
+    "edit": "Adjustes",
+    "choices": {
+      "necessary": {
+        "label": "Cookies necesarios",
+        "description": "Se utiliza para controlar las cookies. No se puede desactivar."
       },
-      "hero":{
-        "title":"Cargadores de vehículos eléctricos para tu negocio",
-        "subtitle":"¡sin inversión!"
+      "tracking": {
+        "label": "Cookies de seguimiento",
+        "description": "Se utiliza con fines publicitarios."
       },
-      "why":{
-        "title":"¿Por qué tu negocio necesita cargadores de VE?"
+      "analytics": {
+        "label": "Cookies de analítica",
+        "description": "Se utiliza para controlar Plausible Analytics, una herramienta de terceros para analizar el tráfico del sitio web."
       },
-      "howToStart":{
-        "title":"¿Cómo puedes empezar??",
-        "subtitle":"Puedes empezar llamando a tu electricista para que instale un cargador comprado en Amazon, pero eso sólo es una pieza de un ecosistema mucho más grande."
-      },
-    "nav":{
-        "need": "¿Por qué lo necesitas?",
-        "start": "Cómo empezar",
-        "benefits": "Beneficios",
-        "ourService": "Nuestro servicio",
-        "guarantees": "Garantías"
-      },
-      "sliderContent":{
-        "one":{
-          "description":"“Gaia Green Tech hizo que el proceso de instalación de un cargador de vehículos eléctricos para nuestros compañeros de trabajo fuera extremadamente fácil. Sólo pagamos una cuota mensual y nos olvidamos. Todo quedó resuelto.”",
-          "name":"Miracle Martinez",
-          "who":"Generador Coworking"
-        },
-        "two":{
-          "description":"“Other content to display lorem ipsus”",
-          "name":"Miracle Martinez",
-          "who":"Generador Coworking"
-        }
-      },
-    "subtitle": "Gaia Charge es",
-    "charging": {
-        "title1": "Una red",
-        "title2": "de carga accesible",
-        "lead": "Carga tu coche eléctrico durante el trabajo, la compra o mientras sales por la ciudad. No te preocuparás del estado de la carga de tu batería."
-    },
-    "mobility": {
-        "title1": "Movilidad",
-        "title2": "sostenible",
-        "lead": "Usa el transporte que te resulte más cómodo. El coche, la bicicleta, el autobús o a pie. Te lo ponemos lo más fácil posible"
-    },
-    "energy": {
-        "title1": "Fuente",
-        "title2": "de energía limpia",
-        "lead": "Toda la infraestructura está suministrada por fuentes de energía renovable y nos esforzamos por conseguir una huella de carbono negativa."
-    },
-    "contact": {
-        "thankYouMsg": "Thank you for contacting us. \n We will respond to you shortly",
-        "msgError": "There was an error. \n Please retry later",
-        "title": "¡Conectemos!",
-        "lead": "Déjanos un mensaje o echa un vistazo a nuestras redes sociales. ¡Estaremos encantados de charlar!",
-        "phName": "Nombre",
-        "phMessage": "Déjanos un mensaje",
-        "phEmail": "mi@correo.es",
-        "button": "Enviar",
-        "errorName": "Por favor, introduce tu nombre",
-        "errorEmail": "Por favor, introduce un e-mail válido",
-        "errorMessage": "Por favor, introduce tu mensaje",
-        "errorFail": "Ha habido un error, por favor inténtalo de nuevo"
-    },
-    "header": {
-        "charging": "Carga",
-        "mobility": "Movilidad",
-        "energy": "Energía",
-        "contact": "Contacto"
-    },
-    "contactPopup": {
-        "title": "¡Gracias!",
-        "lead": "Nuestro equipo se pondrá en contacto contigo tan pronto como nos sea posible. Gracias por tu mensaje."
-    },
-    "ev-faq": {
-        "head": "Preguntas frecuentes",
-        "subtitle": "Respuestas de Gaia Charge",
-        "title1": "Preguntas frecuentes",
-        "title2": "Sobre vehículos eléctricos",
-        "lead": "En nuestras interacciones diarias con personas interesadas en VEs, recibimos muchas preguntas. Hemos decidido recopilar las respuestas para todos en un flyer ordenado y visual",
-        "footnotes": {
-            "title": "Acotaciones",
-            "2a": "Según un <a href=\"{link}\" target=\"_blank\">estudio CAWI</a> el trayecto medio en coche en la UE es de unos 20km",
-            "2b": "Suponiendo una autonomía de 250km, necesitarías cargarlo en torno a cada dos semanas",
-            "2c": "Por supuesto depende de tu situación, pero  en promedio los trayectos de más de 300km son muy escasos.",
-            "2d": "<strong>El 40% de los conductores solo hace uno o dos viajes de más de 300km cada año</strong>, y solo el 20% los hacen tres o más veces",
-            "3a": "Piensa que, de todos modos, la carga se realiza cuando no utilizas el coche",
-            "3b": "Por ejemplo, dejas el coche por la noche, estás de compras o has parado en un viaje para utilizar el lavabo y tienes una parada para comer o tomar un café",
-            "3c": "No tendrías que esperar por cargar el coche",
-            "9a": "Los VEs son también más baratos de mantener. Al cabo de 5 años de propiedad, un <a href=\"{linkLeaf}\" target=\"_blank\">Nissan Leaf</a> es más de 500€ más barato de mantener y llevar al taller que un <a href=\"{linkGolf}\" target=\"_blank\">VW Golf</a>",
-            "9b": "Después de ese momento, el coste de mantener un VE permanece igual mientras que los costes de gasolina o diésel crecerían rápidamente"
-        },
-        "petrol-price": "Tomando como precio promedio {price}€ por litro",
-        "diesel-price": "Tomando como precio promedio {price}€ por litro",
-        "electricity-price": "Tomando como precio promedio {price}€ por kW",
-        "discounted-electricity-price": "Tomando como precio promedio {price}€ por kW cargando durante la noche con una tarifa específica para VEs"
-    },
-    "download": "Descargar",
-    "ev-stats": {
-        "number-of-chargers": "Número de cargadores",
-        "total-power": "Potencia total",
-        "country": "País",
-        "by": "Por",
-        "locations": "Ubicaciones",
-        "connectors": "Conectores",
-        "head": "Estadísticas de recarga",
-        "subtitle": "Gaia Charge presenta",
-        "title": "Estadísticas de red de recarga",
-        "number-of-chargers-over-time": "Número de cargadores",
-        "biggest-charging-networks": "Las mayores redes de recarga",
-        "working": "Disponible",
-        "in-use": "En uso",
-        "not-working": "No funciona",
-        "reserved": "Reservado",
-        "unknown": "Desconocido",
-        "charger-states": "Estado de cargador",
-        "maximum-power": "Potencia máxima",
-        "other": "Otros",
-        "socket-types": "Tipos de enchufes",
-        "note": "Aviso",
-        "note-content1": "todos los datos y gráficos presentados aquí están disponibles en licencia",
-        "note-content2": ". Eres libre de compartirlos y adaptarlos a tus necesidades siempre que atribuyas a Gaia Charge como la fuente. Tómate la libertad de enlazar a este sitio web y/o mencionar nuestras páginas de Facebook/Instagram/Twitter."
-    },
-    "countries": {
-        "es": "España"
+      "marketing": {
+        "label": "Cookies de marketing",
+        "description": "Se utiliza para datos de marketing."
+      }
     }
+  },
+  "whatForYou": {
+    "title": "¿Por qué te beneficias al trabajar con Gaia?",
+    "card1": {
+      "title1": "Haz foco en",
+      "title2": "tu negocio"
+    },
+    "card2": {
+      "title1": "No inviertes",
+      "title2": "nada"
+    },
+    "card3": {
+      "title1": "Mantienes el",
+      "title2": "control"
+    },
+    "card4": {
+      "title1": "Estás preparado para",
+      "title2": "el futuro",
+      "description": "El mercado de la electromovilidad evoluciona muy rápido. Nos aseguramos de que siempre estés al día de las últimas tecnologías."
+    },
+    "card5": {
+      "title1": "Tú eres",
+      "title2": "el líder",
+      "description": "Adelantarse a la competencia no es fácil. Nosotros nos aseguramos de que siempre vayas un paso por delante."
+    },
+    "evidence": {
+      "uptitle": "No somos un instalador más",
+      "title": "Contáctenos y compruebe la diferencia que marca nuestro servicio",
+      "p1": "Consulta gratuita",
+      "p2": "Solución a medida",
+      "p3": "Sin letra pequeña"
+    }
+  },
+  "whatWeDo": {
+    "card1": {
+      "description": "Nos ocupamos de todo y resolvemos cualquier problema antes de que le llegue a ti."
+    },
+    "card2": {
+      "description": "Nuestro modelo de renting flexible convierte todos los CAPEX en OPEX y te permite disponer de la mejor tecnología sin ninguna inversión inicial."
+    },
+    "card3": {
+      "description": "Tu decides el precio, la ubicación, la imagen de marca y todo lo que sea importante para ti. Nosotros nos aseguramos de que todo funcione como debería."
+    },
+    "title": "¿En qué se <em>diferencia</em> nuestro servicio?",
+    "description": "En pocas palabras: <em>nos ocupamos de todo</em>. Somos el único proveedor de soluciones de recarga de VE que necesitas.",
+    "planning": {
+      "title": "Planear",
+      "description": "Preparamos todos los planos y la documentación necesaria. Todo de acuerdo con las leyes locales."
+    },
+    "installation": {
+      "title": "Instalar",
+      "description": "Realizamos la instalación completa, incluida la integración con el cableado existente."
+    },
+    "monitoring": {
+      "title": "Monitorear",
+      "description": "Una vez los cargadores están operativos, los monitoreamos los 365 días del año, las 24 hs y enviamos personal antes cuando surge algún problema."
+    },
+    "maintenance": {
+      "title": "Mantener",
+      "description": "Nos aseguramos de que los cargadores estén DISPONIBLES Y VISIBLES en las principales apps de navegación y de que estén ACTUALIZADOS ante cualquier nueva legislación."
+    },
+    "payments": {
+      "title": "Facturar",
+      "description": "Nos aseguramos de que a los usuarios se les cobra correctamente y de que SUS INGRESOS lleguen a tiempo."
+    }
+  },
+  "contact": {
+    "thankYouMsg": "Gracias por ponerse en contacto con nosotros.\nTe responderemos en breve.",
+    "msgError": "Se ha producido un error.\nVuelve a intentarlo más tarde",
+    "title": "Estamos aquí<br />para ti",
+    "subtitle": "Déjanos tus datos y nos pondremos en contacto contigo lo antes posible.",
+    "name": "Nombre",
+    "lastname": "Apellidos",
+    "company": "Empresa",
+    "email": "Email",
+    "phone": "Teléfono",
+    "message": "Comentarios",
+    "cta": "Enviar"
+  },
+  "guarantees": {
+    "question": "¿Aún tienes\nalguna duda?",
+    "accordion": {
+      "first": {
+        "head": "",
+        "details": ""
+      },
+      "second": {
+        "head": "",
+        "details": ""
+      }
+    },
+    "title": "Gaia Charge te garantiza:",
+    "great_experience": {
+      "title": "Buena experiencia del conductor",
+      "description": "Conductores contentos que vuelven y recomiendan buenos lugares a otros."
+    },
+    "business_partner": {
+      "title": "Colaboración empresarial",
+      "description": "No nos escaparemos después de la instalación. Estamos aquí para crecer contigo."
+    },
+    "maintenance": {
+      "title": "Mantenimiento",
+      "description": "No sólo nos ocupamos del hardware, sino también del mantenimiento del software."
+    },
+    "payment": {
+      "title": "Cobro de pagos",
+      "description": "Sea cual sea la forma que elijas para recibir los pagos, lo haremos de forma segura y puntual."
+    },
+    "support": {
+      "title": "Soporte",
+      "description": "En caso de cualquier problema o pregunta, los conductores se dirigirán directamente a nosotros."
+    },
+    "visibility": {
+      "title": "Visibilidad",
+      "description": "Nos aseguraremos de que tu ubicación sea visible en todas las plataformas, atrayendo aún más clientes."
+    },
+    "information": {
+      "title": "Información",
+      "description": "Compartiremos todas las ideas que necesites para tomar las decisiones correctas."
+    },
+    "energy_saving": {
+      "title": "Ahorro de energía",
+      "description": "Todos nuestros puntos de recarga están diseñados para utilizar el exceso de energía contratada y generada con renovables."
+    },
+    "eu_quality": {
+      "title": "Normas de calidad de la UE",
+      "description": "Todos nuestros productos se fabrican y certifican con las normas de calidad más estrictas de la UE."
+    }
+  },
+  "footer": {
+    "title": "Síguenos en"
+  },
+  "socials": {
+    "linkedin": "https://ggrn.link/linkedin-es",
+    "instagram": "https://ggrn.link/instagram-es",
+    "mastodon": "https://ggrn.link/mastodon-es",
+    "facebook": "https://ggrn.link/facebook-es"
+  },
+  "hero": {
+    "title": "Una única solución de recarga de VE",
+    "subtitle": "puedes confiar"
+  },
+  "contactBtn": {
+    "cta": "Contacto"
+  },
+  "howToStart": {
+    "title": "¿Cómo puedes empezar?",
+    "subtitle": "<em>Podrías</em> llamar a tu electricista para que te instale un cargador básico de Amazon, pero en realidad la <em>instalación es sólo el primer paso</em> de un ecosistema muy complejo.",
+    "alt": "Ejemplos de aspectos a tener en cuenta"
+  },
+  "nav": {
+    "need": "Por qué lo necesitas",
+    "start": "Cómo empezar",
+    "ourService": "Nuestro servicio",
+    "benefits": "Beneficios",
+    "guarantees": "Garantías"
+  },
+  "why": {
+    "title": "¿Por qué tu empresa necesita recarga de VE?"
+  },
+  "accordion": {
+    "toggle": "Alternar"
+  },
+  "carousel": {
+    "evSales": {
+      "header": "Porque las ventas de vehículos eléctricos siguen aumentando",
+      "description": "Las ventas de VE ya han superado a las de Diesel y el coche más vendido del mundo es un VE."
+    },
+    "greatCustomers": {
+      "header": "Porque los conductores de VE son muy buenos clientes",
+      "description": "Por término medio, tienen más bienestar, gastan más y son más leales."
+    },
+    "fleetSavings": {
+      "header": "Porque cambiar tu flota a VE puede ahorrarte dinero",
+      "description": "Los costes de funcionamiento de los VE son una fracción del precio de los vehículos de combustión."
+    },
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "privacyPolicy": {
+    "title": "Política de privacidad"
+  }
 }

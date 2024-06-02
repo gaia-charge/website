@@ -43,7 +43,7 @@
     {:else}
       <div class="info w-1/2 mt-6">
         <h2>
-          {$_("contact.title", {
+          {@html $_("contact.title", {
             default: "We are here for you",
           })}
         </h2>
@@ -67,7 +67,7 @@
               name="firstname"
               id="firstname"
               bind:value={values.firstname}
-              placeholder="First name"
+              placeholder={$_("contact.name")}
             />
             {#if errors.firstname}
               <span class="error">{errors.firstname}</span>
@@ -84,7 +84,7 @@
               name="lastname"
               id="lastname"
               bind:value={values.lastname}
-              placeholder="Last name"
+              placeholder={$_("contact.lastname")}
             />
             {#if errors.lastname}
               <span class="error">{errors.lastname}</span>
@@ -101,7 +101,7 @@
               name="company"
               id="company"
               bind:value={values.company}
-              placeholder="Company"
+              placeholder={$_("contact.company")}
             />
             {#if errors.company}
               <span class="error">{errors.company}</span>
@@ -113,7 +113,7 @@
                 default: "Email",
               })}</label
             >
-            <input type="email" bind:value={values.email} name="email" id="email" placeholder="Email" />
+            <input type="email" bind:value={values.email} name="email" id="email" placeholder={$_("contact.email")} />
             {#if errors.email}
               <span class="error">{errors.email}</span>
             {/if}
@@ -129,7 +129,7 @@
               name="phone"
               id="phone"
               bind:value={values.phone}
-              placeholder="Phone number"
+              placeholder={$_("contact.phone")}
             />
             {#if errors.phone}
               <span class="error">{errors.phone}</span>
@@ -146,7 +146,7 @@
               name="message"
               id="message"
               bind:value={values.message}
-              placeholder="Message"
+              placeholder={$_("contact.message")}
             />
             {#if errors.message}
               <span class="error">{errors.message}</span>

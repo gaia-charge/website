@@ -6,7 +6,7 @@
   <title
     >{$isLoading
       ? ""
-      : $_("privacy-policy.title", { default: "Privacy Policy" })} - Gaia Charge</title
+      : $_("privacyPolicy.title", { default: "Privacy Policy" })} - Gaia Charge</title
   >
 </svelte:head>
 
@@ -20,7 +20,7 @@
         class="title"
         style="display: flex; justify-content: space-between; align-items: center;"
       >
-        {$_("privacy-policy.title", { default: "Privacy Policy" })}
+        {$_("privacyPolicy.title")}
       </h2>
       <div>
         <div style="padding: 2em;">

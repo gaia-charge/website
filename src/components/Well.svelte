@@ -11,33 +11,33 @@
     <div class="what">
       <p>
         {$_("whatForYou.evidence.uptitle", {
-          default: "Cobramos una tarifa fija mensual por cargador",
+          default: "We are not just another installer",
         })}
       </p>
     </div>
     <h2>
       {$_("whatForYou.evidence.title", {
-        default: "¡Para que sólo te centres en tu negocio!",
+        default: "Contact us and see the difference our service makes",
       })}
     </h2>
     <div class="flex flex-row gap-8 items-center what-for-m">
       <p>
         {$_("whatForYou.evidence.p1", {
-          default: "Sin inversión inicial",
+          default: "Free consultation",
         })}
       </p>
       <hr/>
       <span class="divider px-8 pr-8"
         ><p>
           {$_("whatForYou.evidence.p2", {
-            default: "Tú eliges si quieres ofrecer carga gratuita o de pago",
+            default: "Tailor-made solution",
           })}
         </p></span
       >
       <hr/>
       <p>
         {$_("whatForYou.evidence.p3", {
-          default: "Sin letra pequeña",
+          default: "No fine print",
         })}
       </p>
     </div>
@@ -106,7 +106,7 @@
     font-weight: 300;
     line-height: calc(56 / var(--ratio));
     color: theme("colors.green");
-    max-width: 390px;
+    max-width: 400px;
     text-align: center;
   }
   @media only screen and (max-width: 431px) {

@@ -1,82 +1,134 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
-  import carouselMobile from "$lib/assets/svg/carouselMobile.svg";
+
+  import evsales from "$lib/assets/svg/evsales.svg";
+  import great_customers from "$lib/assets/svg/great_customers.svg";
+  import fleet_savings from "$lib/assets/svg/fleet_savings.svg";
   import arrow from "$lib/assets/svg/arrow.svg";
 
-   const imagesMobile = [
+  const images = [
     {
-      url: carouselMobile,
-      description: "image"
+      url: evsales,
+      header: $_("carousel.evSales.header", {
+        default: "Because the sales of electric vehicles keep increasing",
+      }),
+      description: $_("carousel.evSales.description", {
+        default:
+          "Sales of EV already surpassed those of Diesel and the best selling car of the world is an EV.",
+      }),
     },
     {
-      url: carouselMobile,
-      description: "image2"
-    }
+      url: great_customers,
+      header: $_("carousel.greatCustomers.header", {
+        default: "Because the EV drivers make for great customers",
+      }),
+      description: $_("carousel.greatCustomers.description", {
+        default:
+          "On average they are more welthy, spend more and are more loyal.",
+      }),
+    },
+    {
+      url: fleet_savings,
+      header: $_("carousel.fleetSavings.header", {
+        default: "Because switching your fleet to EVs can save you money",
+      }),
+      description: $_("carousel.fleetSavings.description", {
+        default:
+          "Running costs of EVs are fraction of the price of combustion vehicles.",
+      }),
+    },
   ];
 
   $: indexSlideCarousel = 0;
-  const numberOfSlideCarousel = imagesMobile.length; // IMPORTANT -- refer always to the number of guarantees
+  const numberOfSlideCarousel = images.length; // IMPORTANT -- refer always to the number of guarantees
   export function left() {
     if (indexSlideCarousel > 0) {
       indexSlideCarousel--;
-      const w = document.getElementById("carousel-mobile-slider").offsetWidth / 6;
+      const w =
+        document.getElementById("carousel-mobile-slider").offsetWidth / 6;
       document.getElementById("carousel-mobile-slider").scrollLeft -= w;
     }
   }
   export function right() {
     if (indexSlideCarousel < numberOfSlideCarousel) {
       indexSlideCarousel++;
-      const w = document.getElementById("carousel-mobile-slider").offsetWidth / 6;
+      const w =
+        document.getElementById("carousel-mobile-slider").offsetWidth / 6;
       document.getElementById("carousel-mobile-slider").scrollLeft += w;
     }
   }
-  let carousel; 
+  let carousel;
   $: indexByDotCarousel = 0;
   export const checkPosition = (position) => {
-    if( position === 0 )
-      indexByDotCarousel = 0;
+    if (position === 0) indexByDotCarousel = 0;
     else {
-      const containerW = document.getElementById("carousel-mobile-slider").offsetWidth * numberOfSlideCarousel;
+      const containerW =
+        document.getElementById("carousel-mobile-slider").offsetWidth *
+        numberOfSlideCarousel;
       //const w = document.getElementById("carousel-mobile-slider").scrollWidth / numberOfSlideCarousel;
       const w = containerW / numberOfSlideCarousel;
       indexByDotCarousel = Math.floor(position / w);
     }
-  }
+  };
   export const goTo = (index) => {
-    const w = document.getElementById("carousel-mobile-slider").scrollWidth / numberOfSlideCarousel
+    const w =
+      document.getElementById("carousel-mobile-slider").scrollWidth /
+      numberOfSlideCarousel;
     const to = (index - indexByDotCarousel) * w;
     document.getElementById("carousel-mobile-slider").scrollLeft += to;
     indexByDotCarousel = index;
-  }
-
+  };
 </script>
 
 {#if !$isLoading}
   <section class="container mx-auto" id="guarantees">
-    
     <div class="relative pl-4">
-      <div  bind:this={carousel} 
-        on:scroll={()=>checkPosition(carousel.scrollLeft)} class="relative scroll-snap-slider w-auto mobile-view" id="carousel-mobile-slider">
-       {#each imagesMobile as src, imageIndex (src)}
-        <div class="card">
-          <img src={src.url} alt={src.description} width="98%" height={600} />
-        </div>
-      {/each}
+      <div
+        bind:this={carousel}
+        on:scroll={() => checkPosition(carousel.scrollLeft)}
+        class="relative scroll-snap-slider w-auto mobile-view"
+        id="carousel-mobile-slider"
+      >
+        {#each images as src, imageIndex (src)}
+          <div class="card">
+            <h3>{src.header}</h3>
+            <img src={src.url} alt={src.header} width="98%" height={600} />
+            <p>
+              {src.description}
+            </p>
+          </div>
+        {/each}
       </div>
       <button class="rounded left shadow" on:click={left} aria-label="left">
-        <img src={arrow} class="inline-block rotate-180 w-[14px] mr-1" alt="Contacto" />
+        <img
+          src={arrow}
+          class="inline-block rotate-180 w-[14px] mr-1"
+          alt={$_("carousel.previous", {
+            default: "Previous",
+          })}
+        />
       </button>
-      <button class="rounded right ml-1 shadow" on:click={right} aria-label="right">
-        <img src={arrow} class="inline-block w-[14px] ml-1" alt="Contacto" />
+      <button
+        class="rounded right ml-1 shadow"
+        on:click={right}
+        aria-label="right"
+      >
+        <img
+          src={arrow}
+          class="inline-block w-[14px] ml-1"
+          alt={$_("carousel.next", {
+            default: "Next",
+          })}
+        />
       </button>
     </div>
     <ul class="visible">
-    {#each { length: numberOfSlideCarousel } as _, i}
-      <li
-        class={indexByDotCarousel === i ? "active" : ""}
-        on:click={() => goTo(i)}
-      ></li>
-    {/each}
+      {#each { length: numberOfSlideCarousel } as _, i}
+        <li
+          class={indexByDotCarousel === i ? "active" : ""}
+          on:click={() => goTo(i)}
+        ></li>
+      {/each}
     </ul>
   </section>
 {/if}
@@ -85,9 +137,24 @@
   :root {
     --ratio: 1440 * 1vw * 100;
   }
-  .card{
+  .card {
     scroll-snap-align: start;
-    width: auto;
+    width: calc(100vw - 30px);
+    background-color: white;
+    border-radius: calc(20 / var(--ratio));
+    padding: calc(95 / var(--ratio));
+    margin-left: calc(50 / var(--ratio));
+    margin-right: calc(70 / var(--ratio));
+  }
+  .card h3 {
+    font-size: calc(64 / var(--ratio)) !important;
+    line-height: calc(90 / var(--ratio));
+    padding-bottom: calc(40 / var(--ratio));
+  }
+  .card p {
+    font-size: calc(50 / var(--ratio)) !important;
+    line-height: calc(70 / var(--ratio));
+    padding-top: calc(40 / var(--ratio));
   }
 
   .rounded {
@@ -167,18 +234,18 @@
     display: none;
   }
   @media only screen and (max-width: 431px) {
-  .rounded {
-    display: none;
+    .rounded {
+      display: none;
+    }
+    .visible {
+      display: flex !important;
+    }
+    .mobile-view {
+      display: grid;
+      grid-template-columns: repeat(9, 100%);
+    }
+    .container {
+      width: auto;
+    }
   }
-  .visible {
-    display: flex !important;
-  }
-  .mobile-view {
-    display: grid;
-    grid-template-columns: repeat(9, 100%);
-  }
-  .container{
-    width: auto;
-  }
-}
 </style>

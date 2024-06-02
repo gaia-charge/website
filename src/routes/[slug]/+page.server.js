@@ -23,7 +23,7 @@ import { env } from '$env/dynamic/private'
 import {match} from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 
-const supportedLocales = ['en','es', 'pl'];
+const supportedLocales = ['en','es'];
 const defaultLocale = 'en';
 
 /** @type {import('./$types').LayoutServerLoad} */

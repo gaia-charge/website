@@ -10,7 +10,7 @@
     <div class="title">
       <h3>
         {$_("whatForYou.card1.title1", {
-          default: "Haz foco",
+          default: "You focus on",
         })}
       </h3>
     </div>
@@ -18,18 +18,18 @@
       <img
         src={green_arrow_right}
         class="inline-block fill-green"
-        alt="To"
+        alt="Arrow"
       />
       <h3>
         {$_("whatForYou.card1.title2", {
-          default: "en tu negocio",
+          default: "your business",
         })}
       </h3>
     </div>
     <p class=" mt-6">
       {$_("whatWeDo.card1.description", {
         default:
-          "Porque al no tener que ocuparte de nada mientras trabajemos juntos, puedes seguir haciendo foco en tu negocio",
+          "We take care of everything and we're resolving any issue before it reaches you.",
       })}
     </p>
   </div>
@@ -37,8 +37,8 @@
   <div class="card">
     <div class="title">
       <h3>
-        {$_("whatForYou.card1.title1", {
-          default: "Haz foco",
+        {$_("whatForYou.card2.title1", {
+          default: "You don't need to",
         })}
       </h3>
     </div>
@@ -49,15 +49,15 @@
         alt="To"
       />
       <h3>
-        {$_("whatForYou.card1.title2", {
-          default: "en tu negocio",
+        {$_("whatForYou.card2.title2", {
+          default: "invest anything",
         })}
       </h3>
     </div>
     <p class=" mt-6">
-      {$_("whatWeDo.card1.description", {
+      {$_("whatWeDo.card2.description", {
         default:
-          "Porque al no tener que ocuparte de nada mientras trabajemos juntos, puedes seguir haciendo foco en tu negocio",
+          "Our flexible renting model turns all CAPEX into OPEX and allows you to have the best technology without any upfront investment.",
       })}
     </p>
   </div>
@@ -65,8 +65,8 @@
   <div class="card">
     <div class="title">
       <h3>
-        {$_("whatForYou.card1.title1", {
-          default: "Haz foco",
+        {$_("whatForYou.card3.title1", {
+          default: "You keep the",
         })}
       </h3>
     </div>
@@ -77,15 +77,15 @@
         alt="To"
       />
       <h3>
-        {$_("whatForYou.card1.title2", {
-          default: "en tu negocio",
+        {$_("whatForYou.card3.title2", {
+          default: "control",
         })}
       </h3>
     </div>
     <p class=" mt-6">
-      {$_("whatWeDo.card1.description", {
+      {$_("whatWeDo.card3.description", {
         default:
-          "Porque al no tener que ocuparte de nada mientras trabajemos juntos, puedes seguir haciendo foco en tu negocio",
+          "You decide on pricing, location, branding, and everything else important to you. We just make sure everything is working as it should.",
       })}
     </p>
   </div>
@@ -93,8 +93,8 @@
   <div class="card">
     <div class="title">
       <h3>
-        {$_("whatForYou.card1.title1", {
-          default: "Haz foco",
+        {$_("whatForYou.card4.title1", {
+          default: "You are ready for",
         })}
       </h3>
     </div>
@@ -105,15 +105,15 @@
         alt="To"
       />
       <h3>
-        {$_("whatForYou.card1.title2", {
-          default: "en tu negocio",
+        {$_("whatForYou.card4.title2", {
+          default: "the future",
         })}
       </h3>
     </div>
     <p class=" mt-6">
-      {$_("whatForYou.card1.description", {
+      {$_("whatForYou.card4.description", {
         default:
-          "Porque al no tener que ocuparte de nada mientras trabajemos juntos, puedes seguir haciendo foco en tu negocio",
+          "Electromobility market is evolving very fast. We make sure you are always up to date with the latest technology.",
       })}
     </p>
   </div>
@@ -121,8 +121,8 @@
   <div class="card">
     <div class="title">
       <h3>
-        {$_("whatForYou.card1.title1", {
-          default: "Haz foco",
+        {$_("whatForYou.card5.title1", {
+          default: "You are the",
         })}
       </h3>
     </div>
@@ -133,15 +133,15 @@
         alt="To"
       />
       <h3>
-        {$_("whatForYou.card1.title2", {
-          default: "en tu negocio",
+        {$_("whatForYou.card5.title2", {
+          default: "leader",
         })}
       </h3>
     </div>
     <p class=" mt-6">
-      {$_("whatForYou.card1.description", {
+      {$_("whatForYou.card5.description", {
         default:
-          "Porque al no tener que ocuparte de nada mientras trabajemos juntos, puedes seguir haciendo foco en tu negocio",
+          "Getting ahead of the competition is not easy. We make sure you are always one step ahead.",
       })}
     </p>
   </div>
@@ -156,7 +156,7 @@
   }
   .card .title h3 {
     font-family: "Neue Haas Grotesk Display Pro";
-    font-size: calc(32 / var(--ratio));
+    font-size: calc(30 / var(--ratio));
     line-height: calc(40 / var(--ratio));
     font-weight: 400;
   }

@@ -1,14 +1,18 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
-	import { fade } from 'svelte/transition';
+  import { fade } from "svelte/transition";
   import directionLeft from "$lib/assets/svg/guarantees/DirectionButtonLeft.svg";
   import directionRight from "$lib/assets/svg/guarantees/DirectionButtonRight.svg";
-  import contents from "./../../services/contents"
+  import contents from "./../../services/contents";
 
   let indexDisplay = 0;
-  let lenghtContents = contents.length -1;
-	const handleClickRight = () => { indexDisplay < lenghtContents && indexDisplay++ };
-  const handleClickLeft = () => { indexDisplay > 0 && indexDisplay-- };
+  let lenghtContents = contents.length - 1;
+  const handleClickRight = () => {
+    indexDisplay < lenghtContents && indexDisplay++;
+  };
+  const handleClickLeft = () => {
+    indexDisplay > 0 && indexDisplay--;
+  };
   $: showContents = contents;
 </script>
 
@@ -17,39 +21,49 @@
     {#if index === indexDisplay}
       <div class="text">
         {$_(`sliderContent.${item}.description`, {
-          default: "“Gaia Green Tech hizo que el proceso de instalación de un cargador de vehículos eléctricos para nuestros compañeros de trabajo fuera extremadamente fácil. Sólo pagamos una cuota mensual y nos olvidamos. Todo quedó resuelto.”",
+          default:
+            "Gaia Charge made the process of installing an electric vehicle charger for our co-workers extremely easy. We just pay a monthly fee and forget about everything. It was all taken care of.",
         })}
       </div>
       <div class="name">
         {$_(`sliderContent.${item}.name`, {
-          default: "Person",
+          default: "Miracle Martinez",
         })}
       </div>
       <div class="who">
         {$_(`sliderContent.${item}.who`, {
-          default: "Associacion",
+          default: "Generador Coworking",
         })}
       </div>
     {/if}
   {/each}
-  <div class=" mt-14 h-full ">
+  <div class=" mt-14 h-full">
     <button on:click={handleClickLeft} class=" mr-11">
-      <img src={directionLeft} class="arrow" alt="Open/Close" />
+      <img
+        src={directionLeft}
+        class="arrow"
+        alt={$_("carousel.previous", {
+          default: "Previous",
+        })}
+      />
     </button>
     <button on:click|preventDefault={handleClickRight}>
-      <img src={directionRight} class="arrow" alt="Open/Close" />
+      <img
+        src={directionRight}
+        class="arrow"
+        alt={$_("carousel.next", {
+          default: "Next",
+        })}
+      />
     </button>
   </div>
   <ul class="visible">
     {#each { length: contents.length } as _, i}
-      <li
-        class={indexDisplay === i ? "active" : ""}
-      ></li>
+      <li class={indexDisplay === i ? "active" : ""}></li>
     {/each}
   </ul>
-  
-	
-	<!-- {#if open}
+
+  <!-- {#if open}
 	<div class="details" transition:slide>
 		<slot name="details">
 		</slot>
@@ -58,25 +72,25 @@
 </div>
 
 <style>
-	.slider_content {
+  .slider_content {
     margin: auto;
-		max-width: 900px;
+    max-width: 900px;
     display: grid;
     grid-template-rows: 60% 5% 5% 30%;
     justify-items: center;
     gap: 5px;
     margin-block-end: 52px;
-	}
-	
-	.text {
+  }
+
+  .text {
     font-size: calc(32 / var(--ratio));
-    line-height: calc(40 / var(--ratio));;
+    line-height: calc(40 / var(--ratio));
     font-weight: 400;
     text-align: center;
     min-height: 160px;
     max-width: 900px;
     height: 300px;
-	}
+  }
   .visible {
     display: none;
   }
@@ -99,20 +113,18 @@
   ul li.active {
     background-color: #6c6c6c;
   }
-@media only screen and (max-width: 431px) {
-  .text {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 400;
-    text-align: center;
-    min-height: 160px;
-    height: 200px;
-    width: 90%;
-	}
-  .visible {
-    display: flex !important;
+  @media only screen and (max-width: 431px) {
+    .text {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 400;
+      text-align: center;
+      min-height: 160px;
+      height: 200px;
+      width: 90%;
+    }
+    .visible {
+      display: flex !important;
+    }
   }
-  
-}
-	
 </style>
