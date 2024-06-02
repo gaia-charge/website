@@ -1,4 +1,3 @@
-import { handleErrorWithSentry, Replay } from "@sentry/sveltekit";
 import * as Sentry from '@sentry/sveltekit';
 
 Sentry.init({
@@ -13,9 +12,11 @@ Sentry.init({
   // sessions when an error occurs.
   replaysOnErrorSampleRate: 1.0,
   
-  // If you don't want to use Session Replay, just remove the line below:
-  integrations: [new Replay()],
+  integrations: [
+    Sentry.replayIntegration({
+      // Additional SDK configuration goes in here, for example:
+      maskAllText: true,
+      blockAllMedia: true,
+    }),
+  ],
 });
-
-// If you have a custom error handler, pass it to `handleErrorWithSentry`
-export const handleError = handleErrorWithSentry();
