@@ -1,5 +1,5 @@
 <script>
-  import "../global.css";
+  import "@/styles/global.css";
 
   import { _, isLoading } from "svelte-i18n";
   import Nav from "../components/Nav.svelte";
@@ -23,6 +23,7 @@
 
   onMount(() => {
     console.log("the component has mounted");
+
     setTimeout(() => {
       const element = document.getElementById("contact");
       if (contactStatus) element.scrollIntoView({ behavior: "instant" });
