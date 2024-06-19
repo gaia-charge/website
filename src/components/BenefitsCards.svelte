@@ -4,7 +4,6 @@
 </script>
 
 {#if !$isLoading}
-
   <!-- 1 Card -->
   <div class="card">
     <div class="title">
@@ -43,11 +42,7 @@
       </h3>
     </div>
     <div class="title flex gap-2 items-center">
-      <img
-        src={green_arrow_right}
-        class="inline-block fill-green"
-        alt="To"
-      />
+      <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
       <h3>
         {$_("whatForYou.card2.title2", {
           default: "invest anything",
@@ -71,11 +66,7 @@
       </h3>
     </div>
     <div class="title flex gap-2 items-center">
-      <img
-        src={green_arrow_right}
-        class="inline-block fill-green"
-        alt="To"
-      />
+      <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
       <h3>
         {$_("whatForYou.card3.title2", {
           default: "control",
@@ -99,11 +90,7 @@
       </h3>
     </div>
     <div class="title flex gap-2 items-center">
-      <img
-        src={green_arrow_right}
-        class="inline-block fill-green"
-        alt="To"
-      />
+      <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
       <h3>
         {$_("whatForYou.card4.title2", {
           default: "the future",
@@ -127,11 +114,7 @@
       </h3>
     </div>
     <div class="title flex gap-2 items-center">
-      <img
-        src={green_arrow_right}
-        class="inline-block fill-green"
-        alt="To"
-      />
+      <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
       <h3>
         {$_("whatForYou.card5.title2", {
           default: "leader",
@@ -179,22 +162,21 @@
     .mobile {
       display: block;
     }
-  .card {
-    background-color: #F1EEEC;
-    border-radius: 20px;
-    max-width: none;
-    padding: 24px 42px;
-    scroll-snap-align: start;
-  }
-  .card .title h3 {
-    font-size: 32px;
-    line-height: 40px;
-  }
+    .card {
+      background-color: #f1eeec;
+      border-radius: 20px;
+      max-width: none;
+      padding: 24px 42px;
+      scroll-snap-align: start;
+    }
+    .card .title h3 {
+      font-size: 32px;
+      line-height: 40px;
+    }
 
-  .card p {
-    font-size: 18px;
-    line-height: 28px;
-    
+    .card p {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
-}
 </style>

@@ -3,29 +3,28 @@
   import { _, isLoading } from "svelte-i18n";
   import logo from "$lib/assets/svg/logo.svg";
   import menuMobile from "$lib/assets/svg/mobile-menu.svg";
-  import SideBar from './menu/SideBar.svelte';
-    import Hamburger from './menu/Hamburger.svelte';
+  import SideBar from "./menu/SideBar.svelte";
+  import Hamburger from "./menu/Hamburger.svelte";
 
-  export let sidebar = false
-
+  export let sidebar = false;
 </script>
 
-
-
-<nav class="fixed flex flex-row items-center justify-between z-50" class:sidebar>
+<nav
+  class="fixed flex flex-row items-center justify-between z-50"
+  class:sidebar
+>
   {#if !$isLoading}
-  <SideBar bind:open={sidebar}/>
+    <SideBar bind:open={sidebar} />
     <div class="mobile-view_p logo-container">
       <a href="/"><img src={logo} class="logo" alt="Gaia Charge logo" /></a>
     </div>
-    <div class="flex md:hidden mobile-view_p" >
+    <div class="flex md:hidden mobile-view_p">
       <!-- <a href="/"><img src={menuMobile} class="menu" alt="Mobile Menu" /></a> -->
-      <Hamburger bind:open={sidebar}/>
+      <Hamburger bind:open={sidebar} />
     </div>
     <div class=" hidden md:flex justify-center gap-4">
-      <a
-        href="#need"
-        class="navigation">{$_("nav.need", {
+      <a href="#need" class="navigation"
+        >{$_("nav.need", {
           default: "Why you need it",
         })}</a
       >
@@ -51,9 +50,8 @@
       >
     </div>
     <div class=" hidden md:flex">
-      <a
-        href="#contact"
-        class="contact text-green border-green rounded-full">{$_("contactBtn.cta", {
+      <a href="#contact" class="contact text-green border-green rounded-full"
+        >{$_("contactBtn.cta", {
           default: "Contacto",
         })}</a
       >
@@ -126,24 +124,23 @@
     border-width: calc(2 / var(--ratio));
   }
   @media only screen and (max-width: 431px) {
-  .logo {
-    width: 87px;
-    
+    .logo {
+      width: 87px;
+    }
+    nav {
+      padding-block-start: 16px;
+      padding-right: 0 !important;
+    }
+    .mobile-view_p {
+      padding-block-start: 16px;
+      z-index: 1;
+    }
+    .sidebar {
+      padding-right: 0;
+    }
+    .sidebar .logo-container {
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+    }
   }
-  nav {
-    padding-block-start: 16px;
-    padding-right: 0 !important;
-  }
-  .mobile-view_p {
-    padding-block-start: 16px;
-    z-index: 1;
-  }
-  .sidebar {
-    padding-right: 0;
-  }
-  .sidebar .logo-container {
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-  }
-}
 </style>

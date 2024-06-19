@@ -14,7 +14,7 @@ self.addEventListener("install", (event) => {
       .then((cache) => cache.addAll(to_cache))
       .then(() => {
         self.skipWaiting();
-      })
+      }),
   );
 });
 
@@ -27,7 +27,7 @@ self.addEventListener("activate", (event) => {
       }
 
       self.clients.claim();
-    })
+    }),
   );
 });
 
@@ -80,6 +80,6 @@ self.addEventListener("fetch", (event) => {
 
         throw err;
       }
-    })
+    }),
   );
 });
