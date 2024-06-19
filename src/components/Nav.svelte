@@ -2,12 +2,11 @@
   import { locale, locales } from "svelte-i18n";
   import { _, isLoading } from "svelte-i18n";
   import logo from "$lib/assets/svg/logo.svg";
-  import menuMobile from "$lib/assets/svg/mobile-menu.svg";
+
   import SideBar from "./menu/SideBar.svelte";
   import Hamburger from "./menu/Hamburger.svelte";
 
   export let sidebar = false;
-  export let showMobileMenu = false;
 </script>
 
 <nav
@@ -20,10 +19,6 @@
       <a href="/"><img src={logo} class="logo" alt="Gaia Charge logo" /></a>
     </div>
     <div class="flex md:hidden mobile-view_p">
-      {#if showMobileMenu}
-        <a href="/"><img src={menuMobile} class="menu" alt="Mobile Menu" /></a>
-      {/if}
-
       <Hamburger bind:open={sidebar} />
     </div>
     <div class="hidden md:flex justify-center gap-4">
@@ -117,10 +112,6 @@
   .logo {
     width: calc(105 / var(--ratio));
     min-width: 87px;
-  }
-
-  .menu {
-    width: calc(55 / var(--ratio));
   }
 
   .contact {
