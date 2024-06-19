@@ -7,12 +7,12 @@
 </script>
 
 {#if !$isLoading}
-  <div class="w-full">
+  <div class="h-full">
     <picture>
       <source media="(min-width: 431px)" srcset={illustration} />
       <img
         src={headerMobile}
-        class=" w-full absolute z-0"
+        class="h-full absolute z-0"
         alt="Gaia Charge illustration"
       />
     </picture>
@@ -49,16 +49,8 @@
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
-  .w-full {
+  .h-full {
     height: calc(1020 / var(--ratio));
-  }
-
-  .illustration {
-    top: 0;
   }
 
   .headline {
@@ -87,7 +79,7 @@
   }
 
   @media only screen and (max-width: 431px) {
-    .w-full {
+    .h-full {
       height: 100vh;
     }
     .headline {
