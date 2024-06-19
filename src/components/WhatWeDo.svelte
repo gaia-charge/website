@@ -98,9 +98,13 @@
     <img src={line3} class="line3 absolute left-road_3" alt="Linea" />
 
     <div class="maintenance">
-      <img src={maintenance} class="absolute" alt={$_("whatWeDo.maintenance.title", {
-        default: "Maintenance",
-      })} />
+      <img
+        src={maintenance}
+        class="absolute"
+        alt={$_("whatWeDo.maintenance.title", {
+          default: "Maintenance",
+        })}
+      />
       <div class="description absolute whitespace-pre-line">
         <h3>
           {$_("whatWeDo.maintenance.title")}
@@ -117,9 +121,13 @@
     <img src={line4} class="line4 absolute right-road_4" alt="Linea" />
 
     <div class="payments">
-      <img src={payments} class="absolute" alt={$_("whatWeDo.payments.title", {
-        default: "Payments",
-      })} />
+      <img
+        src={payments}
+        class="absolute"
+        alt={$_("whatWeDo.payments.title", {
+          default: "Payments",
+        })}
+      />
       <div class="description absolute whitespace-pre-line">
         <h3>
           {$_("whatWeDo.payments.title")}

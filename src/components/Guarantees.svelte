@@ -30,23 +30,23 @@
       document.getElementById("guarantee-slider").scrollLeft += w;
     }
   }
-  let carousel; 
+  let carousel;
   $: indexByDot = 0;
   export const checkPosition = (position) => {
-    if( position === 0 )
-      indexByDot = 0;
+    if (position === 0) indexByDot = 0;
     else {
-      const w = document.getElementById("guarantee-slider").scrollWidth / numberOfSlide;
+      const w =
+        document.getElementById("guarantee-slider").scrollWidth / numberOfSlide;
       indexByDot = Math.floor(position / w);
     }
-  }
+  };
   export const goTo = (index) => {
-    const w = document.getElementById("guarantee-slider").scrollWidth / numberOfSlide
+    const w =
+      document.getElementById("guarantee-slider").scrollWidth / numberOfSlide;
     const to = (index - indexByDot) * w;
     document.getElementById("guarantee-slider").scrollLeft += to;
     indexByDot = index;
-  }
-
+  };
 </script>
 
 {#if !$isLoading}
@@ -58,8 +58,12 @@
     </h1>
 
     <div class="relative pl-4 pr-4">
-      <div  bind:this={carousel} 
-      on:scroll={()=>checkPosition(carousel.scrollLeft)} class="relative scroll-snap-slider w-auto mobile-view" id="guarantee-slider">
+      <div
+        bind:this={carousel}
+        on:scroll={() => checkPosition(carousel.scrollLeft)}
+        class="relative scroll-snap-slider w-auto mobile-view"
+        id="guarantee-slider"
+      >
         <Guarantee
           image={great_experience}
           title={$_("guarantees.great_experience.title", {
@@ -152,19 +156,27 @@
         />
       </div>
       <button class="rounded left shadow" on:click={left} aria-label="left">
-        <img src={arrow} class="inline-block rotate-180 w-[14px] mr-1" alt="Contacto" />
+        <img
+          src={arrow}
+          class="inline-block rotate-180 w-[14px] mr-1"
+          alt="Contacto"
+        />
       </button>
-      <button class="rounded right ml-1 shadow" on:click={right} aria-label="right">
+      <button
+        class="rounded right ml-1 shadow"
+        on:click={right}
+        aria-label="right"
+      >
         <img src={arrow} class="inline-block w-[14px] ml-1" alt="Contacto" />
       </button>
     </div>
     <ul class="visible">
-    {#each { length: numberOfSlide } as _, i}
-      <li
-        class={indexByDot === i ? "active" : ""}
-        on:click={() => goTo(i)}
-      ></li>
-    {/each}
+      {#each { length: numberOfSlide } as _, i}
+        <li
+          class={indexByDot === i ? "active" : ""}
+          on:click={() => goTo(i)}
+        ></li>
+      {/each}
     </ul>
   </section>
 {/if}
@@ -251,15 +263,15 @@
     display: none;
   }
   @media only screen and (max-width: 431px) {
-  .rounded {
-    display: none;
+    .rounded {
+      display: none;
+    }
+    .visible {
+      display: flex !important;
+    }
+    .mobile-view {
+      display: grid;
+      grid-template-columns: repeat(9, 100%);
+    }
   }
-  .visible {
-    display: flex !important;
-  }
-  .mobile-view {
-    display: grid;
-    grid-template-columns: repeat(9, 100%);
-  }
-}
 </style>

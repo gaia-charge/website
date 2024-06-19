@@ -18,22 +18,25 @@
       document.getElementById("benefits-slider").scrollLeft += w;
     }
   }
-  let carousel; 
+  let carousel;
   $: indexByDotBenefits = 0;
   export const checkPosition = (position) => {
-    if( position === 0 )
-      indexByDotBenefits = 0;
+    if (position === 0) indexByDotBenefits = 0;
     else {
-      const w = document.getElementById("benefits-slider").scrollWidth / numberOfSlideBenefits;
+      const w =
+        document.getElementById("benefits-slider").scrollWidth /
+        numberOfSlideBenefits;
       indexByDotBenefits = Math.floor(position / w);
     }
-  }
+  };
   export const goTo = (index) => {
-    const w = document.getElementById("benefits-slider").scrollWidth / numberOfSlideBenefits
+    const w =
+      document.getElementById("benefits-slider").scrollWidth /
+      numberOfSlideBenefits;
     const to = (index - indexByDotBenefits) * w;
     document.getElementById("benefits-slider").scrollLeft += to;
     indexByDotBenefits = index;
-  }
+  };
 </script>
 
 {#if !$isLoading}
@@ -51,9 +54,12 @@
           <BenefitsCards />
         </div>
         <div class="relative pl-4 pr-4 mobile">
-          <div  bind:this={carousel} 
-            on:scroll={()=>checkPosition(carousel.scrollLeft)} 
-            class="mobile relative scroll-snap-slider w-auto mobile-view" id="benefits-slider">
+          <div
+            bind:this={carousel}
+            on:scroll={() => checkPosition(carousel.scrollLeft)}
+            class="mobile relative scroll-snap-slider w-auto mobile-view"
+            id="benefits-slider"
+          >
             <BenefitsCards />
           </div>
         </div>
@@ -64,7 +70,7 @@
               on:click={() => goTo(i)}
             ></li>
           {/each}
-          </ul>
+        </ul>
       </div>
     </div>
   </section>
@@ -136,39 +142,39 @@
       width: 100%;
     }
     .for-you .container {
-    max-width: 90%;
-  }
- 
-  .scroll-snap-slider {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: normal;
-    overflow-x: auto;
-    padding-inline: 0;
-    scroll-behavior: smooth;
-    scroll-snap-stop: always;
-    scroll-snap-type: x mandatory;
-    gap: 20px;
-    margin-block-end: 55px;
-    margin-block-start: calc(22 / var(--ratio));
-  }
-  .scroll-snap-slider:not(.-show-scroll-bar) {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+      max-width: 90%;
+    }
 
-  .scroll-snap-slider:not(.-show-scroll-bar)::-webkit-scrollbar {
-    display: none;
-  }
-  .mobile-view {
-    display: grid;
-    grid-template-columns: repeat(5, 100%);
-  }
-  section {
+    .scroll-snap-slider {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: normal;
+      overflow-x: auto;
+      padding-inline: 0;
+      scroll-behavior: smooth;
+      scroll-snap-stop: always;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      margin-block-end: 55px;
+      margin-block-start: calc(22 / var(--ratio));
+    }
+    .scroll-snap-slider:not(.-show-scroll-bar) {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .scroll-snap-slider:not(.-show-scroll-bar)::-webkit-scrollbar {
+      display: none;
+    }
+    .mobile-view {
+      display: grid;
+      grid-template-columns: repeat(5, 100%);
+    }
+    section {
       scroll-margin-block-start: 8rem !important;
     }
-  .root {
-    margin-top: 0;
+    .root {
+      margin-top: 0;
+    }
   }
-}
 </style>

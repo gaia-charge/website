@@ -9,7 +9,7 @@
 </div>
 
 <style>
-.content{
-  width: 100;
-}
+  .content {
+    width: 100;
+  }
 </style>

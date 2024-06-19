@@ -46,10 +46,10 @@
   :root {
     --ratio: 1440 * 1vw * 100;
   }
-  .desktop{
+  .desktop {
     display: block;
   }
-  .mobile{
+  .mobile {
     display: none;
   }
   .container {
@@ -83,17 +83,17 @@
     font-weight: 400;
   }
   @media only screen and (max-width: 431px) {
-    .desktop{
-    display: none;
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: flex;
+    }
+    .title {
+      width: 90%;
+    }
+    .container {
+      width: 100vw;
+    }
   }
-  .mobile{
-    display: flex;
-  }
-  .title {
-    width: 90%;
-  }
-  .container{
-    width: 100vw;
-  }
-}
 </style>

@@ -21,18 +21,16 @@
     </div>
 
     <div class=" flex items-center justify-center mt-12">
-
-    <picture>
-     <source media="(min-width: 431px)" srcset={cloud}>
-      <img
-        src={cloudMobile}
-        class="image"
-        alt={$_("howToStart.alt", {
-          default: "Example aspects to keep in mind",
-        })}
-      />
-  </picture>
-      
+      <picture>
+        <source media="(min-width: 431px)" srcset={cloud} />
+        <img
+          src={cloudMobile}
+          class="image"
+          alt={$_("howToStart.alt", {
+            default: "Example aspects to keep in mind",
+          })}
+        />
+      </picture>
     </div>
   </section>
 {/if}
@@ -70,16 +68,16 @@
     font-weight: 300;
   }
   @media only screen and (max-width: 431px) {
-  .image {
-    width: 110%;
-    transform: scale(1.15);
-  }
+    .image {
+      width: 110%;
+      transform: scale(1.15);
+    }
 
-  .title {
-    width: 90%;
+    .title {
+      width: 90%;
+    }
+    .container {
+      width: 90%;
+    }
   }
-  .container {
-    width: 90%;
-  }
-}
 </style>

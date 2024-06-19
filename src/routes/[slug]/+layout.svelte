@@ -17,7 +17,7 @@
 </main>
 
 <style>
-   main {
+  main {
     position: relative;
   }
 </style>

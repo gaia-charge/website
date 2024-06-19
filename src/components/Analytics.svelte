@@ -19,7 +19,6 @@
     enableMarketing = true;
     hubSpotTracking.loadChatWidget();
   }
-  
 </script>
 
 {#if !$isLoading}
@@ -33,7 +32,8 @@
       default: "We value your privacy",
     })}
     description={$_("gdpr.description", {
-      default: "We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Confirm all\", you consent to our use of cookies.",
+      default:
+        'We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Confirm all", you consent to our use of cookies.',
     })}
     acceptLabel={$_("gdpr.accept", {
       default: "Accept all",
@@ -127,19 +127,19 @@
     margin-inline-end: 8px;
   }
   :global(.cookieConsent__Button[aria-label="Confirm all"]) {
-        background-color: #044348;
-        color: white;
-    }
+    background-color: #044348;
+    color: white;
+  }
   :global(.cookieConsent__Title) {
     font-family: theme(fontFamily.serif);
     font-weight: 500;
     font-size: 28px;
-    color: #0D2823;
+    color: #0d2823;
   }
   :global(.cookieConsent__Description) {
     font-weight: 300;
     font-size: 18px;
-    color: #0D2823;
+    color: #0d2823;
   }
   :global(.cookieConsentOperations__List) {
     border-radius: 20px;
@@ -148,9 +148,9 @@
     background: theme(colors.white);
   }
   :global(.cookieConsent__Button--Close) {
-    background-color: #0D2823;
+    background-color: #0d2823;
     color: white;
-  } 
+  }
 
   @media only screen and (max-width: theme(screens.sm)) {
     :global(.cookieConsent__Right) {

@@ -36,9 +36,7 @@
 </script>
 
 <svelte:head>
-  <script
-    src="//js.hsforms.net/forms/embed/v2.js"
-  ></script>
+  <script src="//js.hsforms.net/forms/embed/v2.js"></script>
 </svelte:head>
 
 <div id={targetElementID} class="base-hubspot-form" />
