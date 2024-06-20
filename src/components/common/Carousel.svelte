@@ -9,7 +9,7 @@
 
   let slider, prev, next, radioSlider;
   //let select = 0;
-  export let dots = true;
+  // export let dots = true;
   let currentIndex = 0;
   $: select = 0;
   $: pips = slider ? slider.innerElements : [];
@@ -32,38 +32,31 @@
       rtl: false,
       onInit: () => {},
       onChange: () => {},
-    }); //end Siema constructor
+    });
+    //end Siema constructor
     prev = () => {
       slider.prev();
       if (select > 0) {
         select--;
+      } else {
+        select = totalDots - 1;
       }
     };
+
     next = () => {
       slider.next();
-      if (select >= 0) {
+
+      if (select < totalDots - 1) {
         select++;
+      } else {
+        select = 0;
       }
     };
-  }); //end onMount
-
-  export function isDotActive(dotIndex) {
-    // if (currentIndex < 0) currentIndex = pips.length + currentIndex;
-    // return currentIndex >= dotIndex*currentPerPage && currentIndex < (dotIndex*currentPerPage)+currentPerPage
-    console.log(select, dotIndex);
-    return select === dotIndex;
-  }
-
-  export function left() {
-    slider.prev();
-  }
-
-  export function right() {
-    slider.next();
-  }
+  });
 
   export function go(index) {
     slider.goTo(index);
+    select = index;
   }
 
   const images = [
@@ -113,17 +106,20 @@
     {/each}
   </div>
 
-  <ul class="">
+  <div class="dots dots--visible">
     {#each { length: totalDots } as e, i}
-      <li
-        on:click={() => go(i * currentPerPage)}
-        on:keypress={() => go(i * currentPerPage)}
-        class={isDotActive(i) ? "active" : ""}
-      ></li>
+      <button
+        type="button"
+        class="dots__button"
+        class:active={select === i}
+        on:click={() => go(i)}
+      >
+        <span class="sr-only">{i}</span>
+      </button>
     {/each}
-  </ul>
+  </div>
 
-  <button class="rounded left shadow" on:click={left} aria-label="left">
+  <button class="rounded left shadow" on:click={prev} aria-label="left">
     <img
       src={arrow}
       class="inline-block rotate-180"
@@ -132,7 +128,7 @@
       })}
     />
   </button>
-  <button class="rounded right shadow" on:click={right} aria-label="right">
+  <button class="rounded right shadow" on:click={next} aria-label="right">
     <img
       src={arrow}
       class="inline-block"
@@ -144,9 +140,6 @@
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
   .slider {
     background-color: white;
     border-radius: calc(20 / var(--ratio));
@@ -187,23 +180,7 @@
     left: -1%;
   }
 
-  ul {
-    list-style-type: none;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: -30px;
-    padding: 0;
-  }
-  ul li {
-    margin: 6px;
-    border-radius: 100%;
-    background-color: #dbdbdb;
-    height: 12px;
-    width: 12px;
-  }
-  ul li.active {
-    background-color: #6c6c6c;
+  .dots--visible {
+    margin-block-start: calc(40 / var(--ratio));
   }
 </style>

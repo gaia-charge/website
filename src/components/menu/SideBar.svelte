@@ -17,7 +17,7 @@
             class="menu-lang"
             class:active={loc === $locale}
             on:click={() => ($locale = loc)}
-            >
+          >
             {loc}
           </button>
         {/each}
@@ -81,7 +81,7 @@
     text-align: center;
     text-transform: uppercase;
     border-block-end: 1px solid transparent;
-    transition: all .2s;
+    transition: all 0.2s;
 
     &.active {
       color: theme(colors.green);
