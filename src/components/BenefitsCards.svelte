@@ -131,12 +131,10 @@
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
   .card {
     max-width: 280px;
   }
+
   .card .title h3 {
     font-family: "Neue Haas Grotesk Display Pro";
     font-size: calc(30 / var(--ratio));
@@ -152,16 +150,7 @@
     color: #6c6c6c;
   }
 
-  .mobile {
-    display: none;
-  }
   @media only screen and (max-width: 431px) {
-    .no-mobile {
-      display: none;
-    }
-    .mobile {
-      display: block;
-    }
     .card {
       background-color: #f1eeec;
       border-radius: 20px;
@@ -169,6 +158,7 @@
       padding: 24px 42px;
       scroll-snap-align: start;
     }
+
     .card .title h3 {
       font-size: 32px;
       line-height: 40px;

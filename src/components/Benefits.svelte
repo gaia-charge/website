@@ -63,75 +63,86 @@
             <BenefitsCards />
           </div>
         </div>
-        <ul class="visible">
+        <div class="for-you__dots">
           {#each { length: numberOfSlideBenefits } as _, i}
-            <li
+            <button
+              type="button"
               class={indexByDotBenefits === i ? "active" : ""}
               on:click={() => goTo(i)}
-            ></li>
+            />
           {/each}
-        </ul>
+        </div>
       </div>
     </div>
   </section>
 {/if}
 
-<style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
+<style lang="scss">
   .root {
     scroll-margin-block-start: calc(160 / var(--ratio));
   }
+
   .for-you {
     background-color: white;
-  }
-  .for-you .container {
-    max-width: calc(1008 / var(--ratio));
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    padding-block-start: calc(32 / var(--ratio));
-    padding-block-end: calc(53 / var(--ratio));
-  }
-  .for-you .title {
-    width: calc(540 / var(--ratio));
+
+    > .container {
+      max-width: calc(1008 / var(--ratio));
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      padding-block-start: calc(32 / var(--ratio));
+      padding-block-end: calc(53 / var(--ratio));
+
+      padding-block: clamp(2rem, calc(53 / var(--ratio)), 5rem);
+    }
+
+    .title {
+      width: calc(540 / var(--ratio));
+    }
+
+    h1 {
+      font-family: theme("fontFamily.serif");
+      font-size: calc(48 / var(--ratio));
+      line-height: calc(56 / var(--ratio));
+      font-weight: 400;
+    }
   }
 
-  .for-you .title h1 {
-    font-family: theme("fontFamily.serif");
-    font-size: calc(48 / var(--ratio));
-    line-height: calc(56 / var(--ratio));
-    font-weight: 400;
-  }
   .mobile {
     display: none;
   }
-  .visible {
+
+  .for-you__dots {
     display: none;
-  }
-  ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: -30px;
-    padding: 0;
-  }
-  ul li {
-    margin: 6px;
-    border-radius: 100%;
-    background-color: #dbdbdb;
-    height: 12px;
-    width: 12px;
-  }
-  ul li.active {
-    background-color: #6c6c6c;
-  }
-  @media only screen and (max-width: 431px) {
-    .visible {
-      display: flex !important;
+
+    @media only screen and (max-width: 431px) {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      margin-top: -30px;
+      padding: 0;
     }
+
+    button {
+      appearance: none;
+      border-radius: 100%;
+      background-color: #dbdbdb;
+      height: 12px;
+      width: 12px;
+      transition: background-color .2s;
+
+      &:hover,
+      &:active {
+        background-color: #999;
+      }
+
+      &.active {
+        background-color: #6c6c6c;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 431px) {
     .no-mobile {
       display: none;
     }
