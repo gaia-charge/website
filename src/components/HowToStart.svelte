@@ -36,10 +36,6 @@
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
   .container {
     width: calc(1280 / var(--ratio));
     margin-top: calc(33 / var(--ratio));

@@ -45,10 +45,6 @@
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
   .accordion-container {
     display: flex;
     flex-direction: column;

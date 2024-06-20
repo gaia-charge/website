@@ -182,10 +182,6 @@
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
   #contact {
     /* Offset the fixed nav */
     margin-top: calc(-110 / var(--ratio));
