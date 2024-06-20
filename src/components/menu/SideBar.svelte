@@ -12,12 +12,14 @@
     <nav class="p-12 text-xl flex flex-col justify-center items-center gap-5">
       <div class="flex gap-5 mb-11">
         {#each $locales as loc}
-          <p
-            class={loc === $locale ? "active" : ""}
+          <button
+            type="text"
+            class="menu-lang"
+            class:active={loc === $locale}
             on:click={() => ($locale = loc)}
-          >
+            >
             {loc}
-          </p>
+          </button>
         {/each}
       </div>
 
@@ -51,30 +53,40 @@
 </aside>
 
 <style>
-  .active {
-    color: #65d45c;
-    border-bottom: 1px solid #65d45c;
-  }
   aside {
     left: -101%;
     transition: left 0.3s ease-in-out;
   }
+
   nav {
-    font-family: New Spirit;
     margin-block-start: 20%;
-    font-size: 28px;
-    line-height: 44px;
-    font-weight: 600;
+    line-height: 1.6;
     color: white;
+
+    a {
+      font-family: theme(fontFamily.serif);
+      font-size: 1.75rem;
+      font-weight: 600;
+    }
   }
+
   .open {
     left: 0;
   }
-  p {
-    font-family: Neue Haas Grotesk Display Pro;
-    font-size: 28px !important;
+
+  .menu-lang {
+    font-family: theme(fontFamily.sans);
+    font-size: 1.125rem;
     font-weight: 400;
-    line-height: 32px !important;
     text-align: center;
+    text-transform: uppercase;
+    border-block-end: 1px solid transparent;
+    transition: all .2s;
+
+    &.active {
+      color: theme(colors.green);
+      font-weight: 700;
+      border-block-end-color: currentColor;
+    }
   }
 </style>
