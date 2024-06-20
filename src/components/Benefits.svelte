@@ -1,4 +1,6 @@
 <script>
+  import '@/styles/dots.scss';
+
   import { _, isLoading } from "svelte-i18n";
   import BenefitsCards from "./BenefitsCards.svelte";
 
@@ -63,13 +65,16 @@
             <BenefitsCards />
           </div>
         </div>
-        <div class="for-you__dots">
+        <div class="dots">
           {#each { length: numberOfSlideBenefits } as _, i}
             <button
               type="button"
-              class={indexByDotBenefits === i ? "active" : ""}
+              class="dots__button"
+              class:active={indexByDotBenefits === i}
               on:click={() => goTo(i)}
-            />
+            >
+              <span class="sr-only">{i}</span>
+            </button>
           {/each}
         </div>
       </div>
@@ -109,37 +114,6 @@
 
   .mobile {
     display: none;
-  }
-
-  .for-you__dots {
-    display: none;
-
-    @media only screen and (max-width: 431px) {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      width: 100%;
-      margin-top: -30px;
-      padding: 0;
-    }
-
-    button {
-      appearance: none;
-      border-radius: 100%;
-      background-color: #dbdbdb;
-      height: 12px;
-      width: 12px;
-      transition: background-color .2s;
-
-      &:hover,
-      &:active {
-        background-color: #999;
-      }
-
-      &.active {
-        background-color: #6c6c6c;
-      }
-    }
   }
 
   @media only screen and (max-width: 431px) {
