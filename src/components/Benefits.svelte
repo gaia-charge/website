@@ -80,7 +80,7 @@
   </section>
 {/if}
 
-<style lang="scss">
+<style lang="postcss">
   .root {
     scroll-margin-block-start: calc(160 / var(--ratio));
   }

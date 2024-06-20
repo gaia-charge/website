@@ -186,7 +186,7 @@
   </section>
 {/if}
 
-<style lang="scss">
+<style lang="postcss">
   .rounded {
     top: calc(50% - 24px);
     position: absolute;
