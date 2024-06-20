@@ -1,5 +1,6 @@
 <script>
-  import "../app.css";
+  import "@/app.css";
+
   import Analytics from "../components/Analytics.svelte";
   import { startClient } from "../services/i18n";
   import { _ } from "svelte-i18n";
