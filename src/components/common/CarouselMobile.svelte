@@ -212,14 +212,6 @@
     padding: calc(65 / var(--ratio)) 0;
   }
 
-  h1 {
-    font-family: theme("fontFamily.serif");
-    font-size: calc(48 / var(--ratio));
-    font-weight: 300;
-    line-height: calc(56 / var(--ratio));
-    padding: calc(15 / var(--ratio));
-  }
-
   @media only screen and (max-width: 431px) {
     .rounded {
       display: none;
