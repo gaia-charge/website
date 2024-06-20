@@ -1,30 +1,34 @@
 .dots {
   display: none;
 
-  @media only screen and (max-width: 431px) {
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+
+  &.dots--visible {
     display: flex;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
-    margin-top: -30px;
-    padding: 0;
   }
 
-  &__button {
-    appearance: none;
-    border-radius: 100%;
-    background-color: #dbdbdb;
-    height: 12px;
-    width: 12px;
-    transition: background-color .2s;
+  @media only screen and (max-width: 431px) {
+    display: flex;
+  }
+}
 
-    &:hover,
-    &:active {
-      background-color: #999;
-    }
+.dots__button {
+  appearance: none;
+  border-radius: 100%;
+  background-color: #dbdbdb;
+  height: 12px;
+  width: 12px;
+  transition: background-color .2s;
 
-    &.active {
-      background-color: #6c6c6c;
-    }
+  &:hover,
+  &:active {
+    background-color: #999;
+  }
+
+  &.active {
+    background-color: #6c6c6c;
   }
 }
