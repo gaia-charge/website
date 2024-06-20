@@ -1,6 +1,4 @@
 <script>
-  import "@/styles/global.css";
-
   import { _, isLoading } from "svelte-i18n";
   import Nav from "../../components/Nav.svelte";
   import Hero from "../../components/Hero.svelte";

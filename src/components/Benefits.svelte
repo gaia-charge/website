@@ -1,6 +1,4 @@
 <script>
-  import '@/styles/dots.scss';
-
   import { _, isLoading } from "svelte-i18n";
   import BenefitsCards from "./BenefitsCards.svelte";
 

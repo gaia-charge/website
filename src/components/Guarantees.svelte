@@ -1,5 +1,4 @@
 <script>
-  import '@/styles/dots.scss';
   import { _, isLoading } from "svelte-i18n";
 
   import great_experience from "$lib/assets/svg/guarantees/great_experience.svg";
