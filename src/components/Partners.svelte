@@ -30,13 +30,10 @@
 </ul>
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
   ul {
     padding: calc(80 / var(--ratio)) calc(140 / var(--ratio));
   }
+
   li img {
     max-height: calc(45 / var(--ratio));
     max-width: calc(180 / var(--ratio));

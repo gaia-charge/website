@@ -144,10 +144,6 @@
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
   .root {
     height: calc(1520 / var(--ratio));
     margin-top: calc(50 / var(--ratio));

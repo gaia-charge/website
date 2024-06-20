@@ -57,13 +57,10 @@
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
   hr {
     display: none;
   }
+
   .root {
     scroll-margin-block-start: calc(160 / var(--ratio));
   }
