@@ -1,4 +1,5 @@
 <script>
+  import '@/styles/dots.scss';
   import { _, isLoading } from "svelte-i18n";
 
   import great_experience from "$lib/assets/svg/guarantees/great_experience.svg";
@@ -170,22 +171,23 @@
         <img src={arrow} class="inline-block w-[14px] ml-1" alt="Contacto" />
       </button>
     </div>
-    <ul class="visible">
+
+    <div class="dots">
       {#each { length: numberOfSlide } as _, i}
-        <li
-          class={indexByDot === i ? "active" : ""}
+        <button
+          type="button"
+          class="dots__button"
+          class:active={indexByDot === i}
           on:click={() => goTo(i)}
-        ></li>
+        >
+          <span class="sr-only">{i}</span>
+        </button>
       {/each}
-    </ul>
+    </div>
   </section>
 {/if}
 
-<style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
+<style lang="scss">
   .rounded {
     top: calc(50% - 24px);
     position: absolute;
@@ -241,34 +243,11 @@
     padding: calc(15 / var(--ratio));
   }
 
-  ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: -30px;
-    padding: 0;
-  }
-  ul li {
-    margin: 6px;
-    border-radius: 100%;
-    background-color: #dbdbdb;
-    height: 12px;
-    width: 12px;
-  }
-  ul li.active {
-    background-color: #6c6c6c;
-  }
-  .visible {
-    display: none;
-  }
   @media only screen and (max-width: 431px) {
     .rounded {
       display: none;
     }
-    .visible {
-      display: flex !important;
-    }
+
     .mobile-view {
       display: grid;
       grid-template-columns: repeat(9, 100%);

@@ -82,6 +82,7 @@
     .h-full {
       height: 100vh;
     }
+
     .headline {
       padding-top: 45%;
       padding-left: calc(200 / var(--ratio));
