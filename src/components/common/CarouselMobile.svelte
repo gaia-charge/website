@@ -45,7 +45,8 @@
     if (indexSlideCarousel > 0) {
       indexSlideCarousel--;
       const w =
-        document.getElementById("carousel-mobile-slider").offsetWidth / 6;
+        document.getElementById("carousel-mobile-slider").offsetWidth /
+        numberOfSlideCarousel;
       document.getElementById("carousel-mobile-slider").scrollLeft -= w;
     }
   }
@@ -53,12 +54,14 @@
     if (indexSlideCarousel < numberOfSlideCarousel) {
       indexSlideCarousel++;
       const w =
-        document.getElementById("carousel-mobile-slider").offsetWidth / 6;
+        document.getElementById("carousel-mobile-slider").offsetWidth /
+        numberOfSlideCarousel;
       document.getElementById("carousel-mobile-slider").scrollLeft += w;
     }
   }
   let carousel;
   $: indexByDotCarousel = 0;
+
   export const checkPosition = (position) => {
     if (position === 0) indexByDotCarousel = 0;
     else {
@@ -70,13 +73,15 @@
       indexByDotCarousel = Math.floor(position / w);
     }
   };
+
   export const goTo = (index) => {
-    const w =
-      document.getElementById("carousel-mobile-slider").scrollWidth /
+    const containerW =
+      document.getElementById("carousel-mobile-slider").offsetWidth *
       numberOfSlideCarousel;
+    const w = containerW / numberOfSlideCarousel;
     const to = (index - indexByDotCarousel) * w;
+
     document.getElementById("carousel-mobile-slider").scrollLeft += to;
-    indexByDotCarousel = index;
   };
 </script>
 
@@ -122,21 +127,23 @@
         />
       </button>
     </div>
-    <ul class="visible">
+
+    <div class="dots">
       {#each { length: numberOfSlideCarousel } as _, i}
-        <li
-          class={indexByDotCarousel === i ? "active" : ""}
+        <button
+          type="button"
+          class="dots__button"
+          class:active={indexByDotCarousel === i}
           on:click={() => goTo(i)}
-        ></li>
+        >
+          <span class="sr-only">{i}</span>
+        </button>
       {/each}
-    </ul>
+    </div>
   </section>
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
   .card {
     scroll-snap-align: start;
     width: calc(100vw - 30px);
@@ -181,6 +188,7 @@
     justify-content: normal;
     overflow-x: auto;
     padding-inline: 0;
+
     scroll-behavior: smooth;
     scroll-snap-stop: always;
     scroll-snap-type: x mandatory;
@@ -204,48 +212,18 @@
     padding: calc(65 / var(--ratio)) 0;
   }
 
-  h1 {
-    font-family: theme("fontFamily.serif");
-    font-size: calc(48 / var(--ratio));
-    font-weight: 300;
-    line-height: calc(56 / var(--ratio));
-    padding: calc(15 / var(--ratio));
-  }
-
-  ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: -30px;
-    padding: 0;
-  }
-  ul li {
-    margin: 6px;
-    border-radius: 100%;
-    background-color: #dbdbdb;
-    height: 12px;
-    width: 12px;
-  }
-  ul li.active {
-    background-color: #6c6c6c;
-  }
-  .visible {
-    display: none;
-  }
   @media only screen and (max-width: 431px) {
     .rounded {
       display: none;
     }
-    .visible {
-      display: flex !important;
-    }
+
     .mobile-view {
       display: grid;
       grid-template-columns: repeat(9, 100%);
     }
     .container {
       width: auto;
+      max-width: 100%;
     }
   }
 </style>

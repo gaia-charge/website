@@ -4,7 +4,6 @@
 </script>
 
 {#if !$isLoading}
-
   <!-- 1 Card -->
   <div class="card">
     <div class="title">
@@ -43,11 +42,7 @@
       </h3>
     </div>
     <div class="title flex gap-2 items-center">
-      <img
-        src={green_arrow_right}
-        class="inline-block fill-green"
-        alt="To"
-      />
+      <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
       <h3>
         {$_("whatForYou.card2.title2", {
           default: "invest anything",
@@ -71,11 +66,7 @@
       </h3>
     </div>
     <div class="title flex gap-2 items-center">
-      <img
-        src={green_arrow_right}
-        class="inline-block fill-green"
-        alt="To"
-      />
+      <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
       <h3>
         {$_("whatForYou.card3.title2", {
           default: "control",
@@ -99,11 +90,7 @@
       </h3>
     </div>
     <div class="title flex gap-2 items-center">
-      <img
-        src={green_arrow_right}
-        class="inline-block fill-green"
-        alt="To"
-      />
+      <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
       <h3>
         {$_("whatForYou.card4.title2", {
           default: "the future",
@@ -127,11 +114,7 @@
       </h3>
     </div>
     <div class="title flex gap-2 items-center">
-      <img
-        src={green_arrow_right}
-        class="inline-block fill-green"
-        alt="To"
-      />
+      <img src={green_arrow_right} class="inline-block fill-green" alt="To" />
       <h3>
         {$_("whatForYou.card5.title2", {
           default: "leader",
@@ -148,12 +131,10 @@
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
   .card {
     max-width: 280px;
   }
+
   .card .title h3 {
     font-family: "Neue Haas Grotesk Display Pro";
     font-size: calc(30 / var(--ratio));
@@ -169,32 +150,23 @@
     color: #6c6c6c;
   }
 
-  .mobile {
-    display: none;
-  }
   @media only screen and (max-width: 431px) {
-    .no-mobile {
-      display: none;
+    .card {
+      background-color: #f1eeec;
+      border-radius: 20px;
+      max-width: none;
+      padding: 24px 42px;
+      scroll-snap-align: start;
     }
-    .mobile {
-      display: block;
-    }
-  .card {
-    background-color: #F1EEEC;
-    border-radius: 20px;
-    max-width: none;
-    padding: 24px 42px;
-    scroll-snap-align: start;
-  }
-  .card .title h3 {
-    font-size: 32px;
-    line-height: 40px;
-  }
 
-  .card p {
-    font-size: 18px;
-    line-height: 28px;
-    
+    .card .title h3 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    .card p {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
-}
 </style>

@@ -7,16 +7,16 @@
 </script>
 
 {#if !$isLoading}
-  <div class="w-full">
-  <picture>
-    <source media="(min-width: 431px)" srcset={illustration}>
-    <img
-      src={headerMobile}
-      class=" w-full absolute z-0"
-      alt="Gaia Charge illustration"
-    />
-  </picture>
-    
+  <div class="h-full">
+    <picture>
+      <source media="(min-width: 431px)" srcset={illustration} />
+      <img
+        src={headerMobile}
+        class="h-full absolute z-0"
+        alt="Gaia Charge illustration"
+      />
+    </picture>
+
     <div class="headline absolute z-40 text-center">
       <h1>
         {$_("hero.title", {
@@ -49,16 +49,8 @@
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
-  .w-full {
+  .h-full {
     height: calc(1020 / var(--ratio));
-  }
-
-  .illustration {
-    top: 0;
   }
 
   .headline {
@@ -87,13 +79,14 @@
   }
 
   @media only screen and (max-width: 431px) {
-  .w-full {
-    height: 100vh;
+    .h-full {
+      height: 100vh;
+    }
+
+    .headline {
+      padding-top: 45%;
+      padding-left: calc(200 / var(--ratio));
+      padding-right: calc(200 / var(--ratio));
+    }
   }
-  .headline {
-    padding-top: 45%;
-    padding-left: calc(200 / var(--ratio));
-    padding-right: calc(200 / var(--ratio));
-  }
-}
 </style>

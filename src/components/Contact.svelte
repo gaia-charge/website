@@ -1,7 +1,7 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
   import arrow_right from "$lib/assets/svg/arrow_right.svg";
-  import schema from "./../schema"
+  import schema from "./../schema";
 
   export let contactStatus;
 
@@ -19,14 +19,14 @@
         return { ...acc, [err.path]: err.message };
       }, {});
     }
-  }
+  };
 </script>
 
 {#if !$isLoading}
   <div id="contact"></div>
   <div class="contact bg-medium-blue text-white flex flex-row">
     {#if contactStatus}
-      <div class=" flex p-0 info w-full h-96 whitespace-pre-line ">
+      <div class=" flex p-0 info w-full h-96 whitespace-pre-line">
         <h2 class="whitespace-pre-line m-auto">
           {#if contactStatus !== "error"}
             {$_("contact.thankYouMsg", {
@@ -55,7 +55,12 @@
         </p>
       </div>
       <div class="w-1/2 form-elements">
-        <form bind:this={formBind} action="?/submit" method="POST" on:submit|preventDefault={verify}>
+        <form
+          bind:this={formBind}
+          action="?/submit"
+          method="POST"
+          on:submit|preventDefault={verify}
+        >
           <div class="flex flex-row flex-col">
             <label for="firstname"
               >{$_("contact.name", {
@@ -113,7 +118,13 @@
                 default: "Email",
               })}</label
             >
-            <input type="email" bind:value={values.email} name="email" id="email" placeholder={$_("contact.email")} />
+            <input
+              type="email"
+              bind:value={values.email}
+              name="email"
+              id="email"
+              placeholder={$_("contact.email")}
+            />
             {#if errors.email}
               <span class="error">{errors.email}</span>
             {/if}
@@ -171,10 +182,6 @@
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
   #contact {
     /* Offset the fixed nav */
     margin-top: calc(-110 / var(--ratio));
@@ -241,7 +248,7 @@
     color: red;
   }
   @media only screen and (max-width: 431px) {
-    .contact{
+    .contact {
       width: 100% !important;
       height: auto;
       display: flex;
@@ -260,7 +267,7 @@
     }
     label {
       font-size: 14px;
-      line-height: 24px;;
+      line-height: 24px;
       margin-bottom: calc(14 / var(--ratio));
       font-weight: 400;
     }
@@ -278,13 +285,13 @@
       width: 60%;
       margin-inline-start: auto;
     }
-    button[type="submit"]{
+    button[type="submit"] {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
     }
-    .form-elements{
+    .form-elements {
       width: 100%;
     }
   }

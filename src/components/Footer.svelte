@@ -7,7 +7,7 @@
 {#if !$isLoading}
   <div class="w-full relative">
     <picture>
-      <source media="(min-width: 431px)" srcset={footer}>
+      <source media="(min-width: 431px)" srcset={footer} />
       <img
         src={footerMobile}
         class="illustration w-full absolute z-0"
@@ -70,7 +70,7 @@
     color: white;
     text-transform: uppercase;
   }
-   @media only screen and (max-width: 431px) {
+  @media only screen and (max-width: 431px) {
     .headline {
       padding-top: 125px;
       padding-left: calc(200 / var(--ratio));
@@ -81,10 +81,10 @@
       line-height: 28px;
       font-weight: 400;
     }
-    .column{
+    .column {
       flex-direction: column;
       gap: 35px;
       margin-block-start: 35px;
     }
-}
+  }
 </style>

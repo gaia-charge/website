@@ -4,66 +4,63 @@
 </script>
 
 {#if !$isLoading}
-<section>
-  <div
-    class="root mt-6 section-evidence bg-medium-blue text-white flex flex-col"
-  >
-    <div class="what">
-      <p>
-        {$_("whatForYou.evidence.uptitle", {
-          default: "We are not just another installer",
-        })}
-      </p>
-    </div>
-    <h2>
-      {$_("whatForYou.evidence.title", {
-        default: "Contact us and see the difference our service makes",
-      })}
-    </h2>
-    <div class="flex flex-row gap-8 items-center what-for-m">
-      <p>
-        {$_("whatForYou.evidence.p1", {
-          default: "Free consultation",
-        })}
-      </p>
-      <hr/>
-      <span class="divider px-8 pr-8"
-        ><p>
-          {$_("whatForYou.evidence.p2", {
-            default: "Tailor-made solution",
+  <section>
+    <div
+      class="root mt-6 section-evidence bg-medium-blue text-white flex flex-col"
+    >
+      <div class="what">
+        <p>
+          {$_("whatForYou.evidence.uptitle", {
+            default: "We are not just another installer",
           })}
-        </p></span
-      >
-      <hr/>
-      <p>
-        {$_("whatForYou.evidence.p3", {
-          default: "No fine print",
+        </p>
+      </div>
+      <h2>
+        {$_("whatForYou.evidence.title", {
+          default: "Contact us and see the difference our service makes",
         })}
-      </p>
+      </h2>
+      <div class="flex flex-row gap-8 items-center what-for-m">
+        <p>
+          {$_("whatForYou.evidence.p1", {
+            default: "Free consultation",
+          })}
+        </p>
+        <hr />
+        <span class="divider px-8 pr-8"
+          ><p>
+            {$_("whatForYou.evidence.p2", {
+              default: "Tailor-made solution",
+            })}
+          </p></span
+        >
+        <hr />
+        <p>
+          {$_("whatForYou.evidence.p3", {
+            default: "No fine print",
+          })}
+        </p>
+      </div>
+      <div class="submit flex">
+        <a
+          href="#contact"
+          class="contact text-white bg-green border-green border-2 rounded-full mx-auto flex items-center justify-between"
+        >
+          {$_("contactBtn.cta", {
+            default: "Contacto",
+          })}
+          <img src={arrow_right} class="inline-block" alt="Contacto" />
+        </a>
+      </div>
     </div>
-    <div class="submit flex">
-      <a
-        href="#contact"
-        class="contact text-white bg-green border-green border-2 rounded-full mx-auto flex items-center justify-between"
-      >
-        {$_("contactBtn.cta", {
-          default: "Contacto",
-        })}
-        <img src={arrow_right} class="inline-block" alt="Contacto" />
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 {/if}
 
 <style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-
-  hr{
+  hr {
     display: none;
   }
+
   .root {
     scroll-margin-block-start: calc(160 / var(--ratio));
   }
@@ -110,35 +107,35 @@
     text-align: center;
   }
   @media only screen and (max-width: 431px) {
-  .section-evidence h2 {
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 36px;
-    width: 90%;
+    .section-evidence h2 {
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 36px;
+      width: 90%;
+    }
+    section {
+      background-color: white;
+      padding-block-start: 32px;
+      padding-block-end: 32px;
+    }
+    .what-for-m {
+      flex-direction: column;
+    }
+    .section-evidence .divider {
+      border-inline: none;
+    }
+    hr {
+      display: block;
+      color: theme("colors.green");
+      width: 30%;
+    }
+    .section-evidence {
+      gap: 16px;
+      padding-block-start: 48px;
+      padding-block-end: 48px;
+    }
+    .what {
+      width: 50%;
+    }
   }
-  section {
-    background-color: white;
-    padding-block-start: 32px;
-    padding-block-end: 32px;
-  }
-  .what-for-m {
-    flex-direction: column;
-  }
-  .section-evidence .divider {
-    border-inline: none;
-  }
-  hr{
-    display: block;
-    color: theme("colors.green");
-    width: 30%;
-  }
-  .section-evidence {
-    gap: 16px;
-    padding-block-start: 48px;
-    padding-block-end: 48px;
-  }
-  .what {
-    width: 50%;
-  }
-}
 </style>

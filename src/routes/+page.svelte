@@ -21,6 +21,7 @@
 
   onMount(() => {
     console.log("the component has mounted");
+
     setTimeout(() => {
       const element = document.getElementById("contact");
       if (contactStatus) element.scrollIntoView({ behavior: "instant" });
@@ -44,34 +45,3 @@
 <Contact {contactStatus} />
 <Testimonials />
 <Footer />
-
-<style lang="postcss">
-  :root {
-    --ratio: 1440 * 1vw * 100;
-  }
-  :global(html) {
-    scroll-behavior: smooth;
-  }
-
-  :global(em) {
-    font-style: normal;
-    position: relative;
-  }
-
-  :global(em::before) {
-    display: inline-block;
-    height: calc(4 / var(--ratio));
-    width: 100%;
-    background: theme("colors.green");
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: calc(2 / var(--ratio));
-    z-index: -1;
-  }
-
-  :global(h1 em::before) {
-    height: calc(8 / var(--ratio));
-    bottom: calc(8 / var(--ratio));
-  }
-</style>
