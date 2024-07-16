@@ -1,5 +1,9 @@
 <script>
   import "@/app.css";
+  import 'aos/dist/aos.css';
+
+  import AOS from "aos";
+  import { onMount } from "svelte";
 
   import Analytics from "../components/Analytics.svelte";
   import { startClient } from "../services/i18n";
@@ -10,6 +14,10 @@
   let { initialLocale } = data;
   $: ({ initialLocale } = data);
   startClient(initialLocale);
+
+  onMount(() => {
+    AOS.init();
+  })
 </script>
 
 <main>
