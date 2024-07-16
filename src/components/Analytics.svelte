@@ -1,10 +1,8 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
   import GdprBanner from "@beyonk/gdpr-cookie-consent-banner";
-  import { HubSpotTracking } from "@beyonk/svelte-hubspot";
   import { PlausibleAnalytics } from "@accuser/svelte-plausible-analytics";
 
-  let hubSpotTracking;
   let enableAnalytics = false;
   let enableMarketing = false;
 
@@ -16,7 +14,6 @@
   function initMarketing() {
     console.log("Consented to marketing");
     enableMarketing = true;
-    hubSpotTracking.loadChatWidget();
   }
 </script>
 
@@ -93,11 +90,4 @@
   />
 
   <PlausibleAnalytics enabled={enableAnalytics} domain="gaiacharge.com" />
-
-  <HubSpotTracking
-    hubId={import.meta.env.VITE_HUBSPOT_HUB_ID}
-    doNotTrack={!enableMarketing}
-    loadChatWidgetImmediately={false}
-    bind:this={hubSpotTracking}
-  />
 {/if}

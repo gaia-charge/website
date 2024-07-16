@@ -28,7 +28,6 @@
   "devDependencies": {
     "@accuser/svelte-plausible-analytics": "^1.0.0",
     "@beyonk/gdpr-cookie-consent-banner": "^12.1.4",
-    "@beyonk/svelte-hubspot": "^0.5.0",
     "@sveltejs/adapter-auto": "^3.0.0",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
