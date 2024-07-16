@@ -18,6 +18,7 @@
     "@sentry/browser": "^8.7.0",
     "@sentry/sveltekit": "^8.7.0",
     "@sentry/tracing": "^7.71.0",
+    "aos": "^2.3.4",
     "axios": "^1.5.0",
     "negotiator": "^0.6.3",
     "siema": "^1.5.1",
