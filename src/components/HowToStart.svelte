@@ -17,8 +17,8 @@
     { text: "Rotación de certificados" },
     { text: "Viabilidad técnica" },
     { text: "Monitoreo de estado", style: "large" },
-    { text: "Cambios de legislación" }
-  ]
+    { text: "Cambios de legislación" },
+  ];
 
   const min = -12;
   const max = 12;
@@ -50,12 +50,12 @@
           class="cards__wrap {item.style || ''}"
           data-aos="fade-down"
           data-aos-delay={i * 100}
-          >
+        >
           <div
             class="cards__item"
             style="--rotate: {getRandomAngle()}deg"
             tabindex="0"
-            >
+          >
             {item.text}
           </div>
         </div>
@@ -107,7 +107,7 @@
   }
 
   .cards {
-    max-width: calc(1024 / var(--ratio));;
+    max-width: calc(1024 / var(--ratio));
     margin: 4rem auto;
 
     display: flex;
@@ -122,7 +122,7 @@
       /* filter: blur(1px); */
 
       color: #666;
-      background-color: #F1EEEC;
+      background-color: #f1eeec;
     }
   }
 
@@ -137,7 +137,6 @@
   }
 
   .cards__wrap.large .cards__item {
-
     @media (min-width: 600px) {
       padding: 1.25em 1.75em;
     }
@@ -161,12 +160,12 @@
     align-items: center;
     justify-content: center;
     border-radius: 3rem;
-    margin: 0 -.5em;
+    margin: 0 -0.5em;
     flex: 1 1 auto;
     z-index: 1;
     position: relative;
     transform: rotate(var(--rotate)) scale(var(--scale));
-    transition: all .2s;
+    transition: all 0.2s;
   }
 
   .cards__item:hover,

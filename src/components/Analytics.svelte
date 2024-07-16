@@ -1,7 +1,6 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
-  import "@beyonk/gdpr-cookie-consent-banner/style.css";
-  import { Banner as GdprBanner } from "@beyonk/gdpr-cookie-consent-banner";
+  import GdprBanner from "@beyonk/gdpr-cookie-consent-banner";
   import { HubSpotTracking } from "@beyonk/svelte-hubspot";
   import { PlausibleAnalytics } from "@accuser/svelte-plausible-analytics";
 
@@ -60,7 +59,6 @@
         }),
         value: true,
       },
-
       tracking: {
         label: $_("gdpr.choices.tracking.label", {
           default: "Tracking cookies",
@@ -93,7 +91,9 @@
     on:analytics={initAnalytics}
     on:marketing={initMarketing}
   />
+
   <PlausibleAnalytics enabled={enableAnalytics} domain="gaiacharge.com" />
+
   <HubSpotTracking
     hubId={import.meta.env.VITE_HUBSPOT_HUB_ID}
     doNotTrack={!enableMarketing}
