@@ -54,8 +54,7 @@
           <div
             class="cards__item"
             style="--rotate: {getRandomAngle()}deg"
-            tabindex="0"
-          >
+           >
             {$_(`howToStart.list.${item.text}`, {
               default: item.textDefault,
             })}
@@ -156,7 +155,6 @@
     text-align: center;
     padding: 1em 1.5em;
     min-height: 3em;
-    /* width: 100%; */
     max-width: 20rem;
     display: inline-flex;
     align-items: center;
@@ -168,6 +166,7 @@
     position: relative;
     transform: rotate(var(--rotate)) scale(var(--scale));
     transition: all 0.2s;
+    will-change: transform;
   }
 
   .cards__item:hover,
