@@ -4,20 +4,20 @@
   import cloudMobile from "$lib/assets/svg/cloudMobile.svg";
 
   export let list = [
-    { text: "Informes de uso" },
-    { text: "Mejoreas del equipamientro", style: "large" },
-    { text: "Actuzaliaciones" },
-    { text: "Conexión a la red" },
-    { text: "Consultoría de negocios" },
-    { text: "Preparación del proyecto" },
-    { text: "Facturación" },
-    { text: "Señalización" },
-    { text: "Integraciones con sistemas propios", style: "large" },
-    { text: "Mantenimiento Preventivo" },
-    { text: "Rotación de certificados" },
-    { text: "Viabilidad técnica" },
-    { text: "Monitoreo de estado", style: "large" },
-    { text: "Cambios de legislación" },
+    { text: 'hts01', textDefault: "Informes de uso" },
+    { text: 'hts02', textDefault: "Mejoreas del equipamientro", style: "large" },
+    { text: 'hts03', textDefault: "Actuzaliaciones" },
+    { text: 'hts04', textDefault: "Conexión a la red" },
+    { text: 'hts05', textDefault: "Consultoría de negocios" },
+    { text: 'hts06', textDefault: "Preparación del proyecto" },
+    { text: 'hts07', textDefault: "Facturación" },
+    { text: 'hts08', textDefault: "Señalización" },
+    { text: 'hts09', textDefault: "Integraciones con sistemas propios", style: "large" },
+    { text: 'hts10', textDefault: "Mantenimiento Preventivo" },
+    { text: 'hts11', textDefault: "Rotación de certificados" },
+    { text: 'hts12', textDefault: "Viabilidad técnica" },
+    { text: 'hts13', textDefault: "Monitoreo de estado", style: "large" },
+    { text: 'hts14', textDefault: "Cambios de legislación" },
   ];
 
   const min = -12;
@@ -56,7 +56,9 @@
             style="--rotate: {getRandomAngle()}deg"
             tabindex="0"
           >
-            {item.text}
+            {$_(`howToStart.list.${item.text}`, {
+              default: item.textDefault,
+            })}
           </div>
         </div>
       {/each}

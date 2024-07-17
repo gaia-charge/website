@@ -173,7 +173,23 @@
   "howToStart": {
     "title": "How can you get started?",
     "subtitle": "You <em>could</em> call your electrician to install a basic EV charger from Amazon, but in reality<br/><em>the installation is just the first step</em> to a very complex ecosystem.",
-    "alt": "Example aspects to keep in mind"
+    "alt": "Example aspects to keep in mind",
+    "list": {
+      "hts01": "(en)Informes de uso",
+      "hts02": "(en)Mejoreas del equipamientro",
+      "hts03": "(en)Actuzaliaciones",
+      "hts04": "(en)Conexión a la red",
+      "hts05": "(en)Consultoría de negocios",
+      "hts06": "(en)Preparación del proyecto",
+      "hts07": "(en)Facturación",
+      "hts08": "(en)Señalización",
+      "hts09": "(en)Integraciones con sistemas propios",
+      "hts10": "(en)Mantenimiento Preventivo",
+      "hts11": "(en)Rotación de certificados",
+      "hts12": "(en)Viabilidad técnica",
+      "hts13": "(en)Monitoreo de estado",
+      "hts14": "(en)Cambios de legislación"
+    }
   },
   "nav": {
     "need": "Why you need it",
@@ -206,5 +222,17 @@
   },
   "privacyPolicy": {
     "title": "Privacy Policy"
+  },
+  "sliderContent": {
+    "one": {
+      "description": "1Description",
+      "name": "1Name",
+      "who": "1Who"
+    },
+    "two": {
+      "description": "2Description",
+      "name": "2Name",
+      "who": "2Who"
+    }
   }
 }

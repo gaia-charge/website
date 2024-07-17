@@ -59,32 +59,29 @@
     select = index;
   }
 
-  const images = [
+  let images = [
     {
+      id: 'evSales',
       url: evsales,
-      header: $_("carousel.evSales.header", {
-        default: "Because the sales of electric vehicles keep increasing",
-      }),
+      header: "Because the sales of electric vehicles keep increasing",
       description: $_("carousel.evSales.description", {
         default:
           "Sales of EV already surpassed those of Diesel and the best selling car of the world is an EV.",
       }),
     },
     {
+      id: 'greatCustomers',
       url: great_customers,
-      header: $_("carousel.greatCustomers.header", {
-        default: "Because the EV drivers make for great customers",
-      }),
+      header: "Because the EV drivers make for great customers",
       description: $_("carousel.greatCustomers.description", {
         default:
           "On average they are more welthy, spend more and are more loyal.",
       }),
     },
     {
+      id: 'fleetSavings',
       url: fleet_savings,
-      header: $_("carousel.fleetSavings.header", {
-        default: "Because switching your fleet to EVs can save you money",
-      }),
+      header: "Because switching your fleet to EVs can save you money",
       description: $_("carousel.fleetSavings.description", {
         default:
           "Running costs of EVs are fraction of the price of combustion vehicles.",
@@ -97,10 +94,21 @@
   <div class="siema">
     {#each images as src, imageIndex (src)}
       <div class="slider">
-        <h3>{src.header}</h3>
-        <img src={src.url} alt={src.description} width="98%" height={600} />
+        <h3>
+          {$_(`carousel.${src.id}.header`, {
+            default: src.header,
+          })}
+        </h3>
+        <img
+          src={src.url}
+          alt={ $_(`carousel.${src.id}.description`, {
+            default: src.description,
+          }) }
+        />
         <p>
-          {src.description}
+          {$_(`carousel.${src.id}.description`, {
+            default: src.description,
+          })}
         </p>
       </div>
     {/each}

@@ -173,7 +173,23 @@
   "howToStart": {
     "title": "¿Cómo puedes empezar?",
     "subtitle": "<em>Podrías</em> llamar a tu electricista para que te instale un cargador básico de Amazon, pero en realidad la <em>instalación es sólo el primer paso</em> de un ecosistema muy complejo.",
-    "alt": "Ejemplos de aspectos a tener en cuenta"
+    "alt": "Ejemplos de aspectos a tener en cuenta",
+    "list": {
+      "hts01": "Informes de uso",
+      "hts02": "Mejoreas del equipamientro",
+      "hts03": "Actuzaliaciones",
+      "hts04": "Conexión a la red",
+      "hts05": "Consultoría de negocios",
+      "hts06": "Preparación del proyecto",
+      "hts07": "Facturación",
+      "hts08": "Señalización",
+      "hts09": "Integraciones con sistemas propios",
+      "hts10": "Mantenimiento Preventivo",
+      "hts11": "Rotación de certificados",
+      "hts12": "Viabilidad técnica",
+      "hts13": "Monitoreo de estado",
+      "hts14": "Cambios de legislación"
+    }
   },
   "nav": {
     "need": "Por qué lo necesitas",
@@ -206,5 +222,17 @@
   },
   "privacyPolicy": {
     "title": "Política de privacidad"
+  },
+  "sliderContent": {
+    "one": {
+      "description": "1Descripcion",
+      "name": "1Nombre",
+      "who": "1Quien"
+    },
+    "two": {
+      "description": "2Descripcion",
+      "name": "2Nombre",
+      "who": "2Quien"
+    }
   }
 }
