@@ -177,14 +177,14 @@
     "list": {
       "hts01": "Informes de uso",
       "hts02": "Mejoreas del equipamientro",
-      "hts03": "Actuzaliaciones",
+      "hts03": "Actualizaciones",
       "hts04": "Conexión a la red",
       "hts05": "Consultoría de negocios",
       "hts06": "Preparación del proyecto",
       "hts07": "Facturación",
       "hts08": "Señalización",
       "hts09": "Integraciones con sistemas propios",
-      "hts10": "Mantenimiento Preventivo",
+      "hts10": "Mantenimiento preventivo",
       "hts11": "Rotación de certificados",
       "hts12": "Viabilidad técnica",
       "hts13": "Monitoreo de estado",
@@ -225,14 +225,24 @@
   },
   "sliderContent": {
     "one": {
-      "description": "1Descripcion",
-      "name": "1Nombre",
-      "who": "1Quien"
+      "description": "Gaia Charge hizo que el proceso de instalación de un cargador de vehículos eléctricos para nuestros compañeros de trabajo fuera extremadamente fácil. Sólo pagamos una cuota mensual y nos olvidamos. Todo quedó resuelto.",
+      "name": "Miracle Martinez",
+      "who": "Generador Coworking"
     },
     "two": {
-      "description": "2Descripcion",
-      "name": "2Nombre",
-      "who": "2Quien"
+      "description": "Desde que Gaia Charge gestiona el cargador público que suelo utilizar, se acabó la pesadilla anterior. La disponibilidad y velocidad de carga ha mejorado mucho y el servicio técnico es ahora impecable y rápido en las pocas incidencias que ha habido.",
+      "name": "Vicente Meneu",
+      "who": "Usuario"
+    },
+    "three": {
+      "description": "Conocí la empresa Gaia Charge al ser cliente de sus cargadores eléctricos. Quise conocerlos personalmente porqué nunca había recibido una atención tan personalizada y profesional.",
+      "name": "Juan Fernando Bou Pérez",
+      "who": "Bou Consultores"
+    },
+    "four": {
+      "description": "Después de años de experiencias, puedo decir que Gaia Charge me ha sorprendido positivamente con su atención rápida y directa en cualquier situación. (...) Espero que más poblaciones sigan el ejemplo de Alboraya y la empresa gestora.",
+      "name": "Francisco J Montesinos Ramirez",
+      "who": "Usuario"
     }
   }
 }
