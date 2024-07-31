@@ -30,3 +30,15 @@ npm run prettier
 ```
 
 Otherwise, the [GitHub Action](.github/workflows/ci.yaml) will create a commit in your branch with a cleanup.
+
+## Setting the CORS
+
+### Troubleshooting `aws`
+
+```
+ls /opt/homebrew/Cellar/awscli/
+/opt/homebrew/Cellar/awscli/${VERSION}/libexec/bin/python3 -m ensurepip --upgrade
+/opt/homebrew/Cellar/awscli/${VERSION}/libexec/bin/python3 -m pip install awscli-plugin-endpoint
+```
+
+Update `~/.aws/config` with `cli_legacy_plugin_path = /opt/homebrew/Cellar/awscli/${VERSION}/libexec/lib/python3.11/site-packages`
