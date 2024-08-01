@@ -1,11 +1,8 @@
 <script>
   import { _, isLoading } from "svelte-i18n";
-  import "@beyonk/gdpr-cookie-consent-banner/style.css";
-  import { Banner as GdprBanner } from "@beyonk/gdpr-cookie-consent-banner";
-  import { HubSpotTracking } from "@beyonk/svelte-hubspot";
+  import GdprBanner from "@beyonk/gdpr-cookie-consent-banner";
   import { PlausibleAnalytics } from "@accuser/svelte-plausible-analytics";
 
-  let hubSpotTracking;
   let enableAnalytics = false;
   let enableMarketing = false;
 
@@ -17,9 +14,7 @@
   function initMarketing() {
     console.log("Consented to marketing");
     enableMarketing = true;
-    hubSpotTracking.loadChatWidget();
   }
-  
 </script>
 
 {#if !$isLoading}
@@ -33,7 +28,8 @@
       default: "We value your privacy",
     })}
     description={$_("gdpr.description", {
-      default: "We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Confirm all\", you consent to our use of cookies.",
+      default:
+        'We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Confirm all", you consent to our use of cookies.',
     })}
     acceptLabel={$_("gdpr.accept", {
       default: "Accept all",
@@ -60,7 +56,6 @@
         }),
         value: true,
       },
-
       tracking: {
         label: $_("gdpr.choices.tracking.label", {
           default: "Tracking cookies",
@@ -93,76 +88,6 @@
     on:analytics={initAnalytics}
     on:marketing={initMarketing}
   />
+
   <PlausibleAnalytics enabled={enableAnalytics} domain="gaiacharge.com" />
-  <HubSpotTracking
-    hubId={import.meta.env.VITE_HUBSPOT_HUB_ID}
-    doNotTrack={!enableMarketing}
-    loadChatWidgetImmediately={false}
-    bind:this={hubSpotTracking}
-  />
 {/if}
-
-<style lang="postcss">
-  :global(.cookieConsentWrapper) {
-    background: theme(colors.white);
-    position: fixed;
-    max-width: 600px;
-    top: 40%;
-    left: 10%;
-    height: -webkit-fit-content;
-    border-radius: 20px;
-    padding-inline-start: 60px;
-    padding-block-start: 40px;
-    padding-block-end: 40px;
-    flex-direction: column;
-    display: flex;
-    gap: 21px;
-  }
-  :global(.cookieConsent__Button) {
-    border-radius: 80px;
-    border: 1px solid #044348;
-    color: #044348;
-    margin-block-start: 24px;
-    margin-inline-start: 0px;
-    margin-inline-end: 8px;
-  }
-  :global(.cookieConsent__Button[aria-label="Confirm all"]) {
-        background-color: #044348;
-        color: white;
-    }
-  :global(.cookieConsent__Title) {
-    font-family: theme(fontFamily.serif);
-    font-weight: 500;
-    font-size: 28px;
-    color: #0D2823;
-  }
-  :global(.cookieConsent__Description) {
-    font-weight: 300;
-    font-size: 18px;
-    color: #0D2823;
-  }
-  :global(.cookieConsentOperations__List) {
-    border-radius: 20px;
-  }
-  :global(.cookieConsentOperations__Item label::after) {
-    background: theme(colors.white);
-  }
-  :global(.cookieConsent__Button--Close) {
-    background-color: #0D2823;
-    color: white;
-  } 
-
-  @media only screen and (max-width: theme(screens.sm)) {
-    :global(.cookieConsent__Right) {
-      flex-direction: column;
-    }
-    :global(.cookieConsentOperations__List) {
-      border-radius: 0;
-    }
-  }
-  @media only screen and (min-width: theme(screens.sm)) {
-    :global(.cookieConsent) {
-      flex-direction: column;
-    }
-  }
-</style>

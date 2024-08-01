@@ -1,0 +1,113 @@
+@import "@beyonk/gdpr-cookie-consent-banner/banner.css";
+
+.cookieConsentWrapper {
+  background: transparent;
+  padding-inline: 1rem;
+  width: 100%;
+
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: bottom;
+
+  @media (min-width: 600px) {
+    width: calc(1280 / var(--ratio));
+    padding-inline: 0;
+  }
+}
+
+.cookieConsent {
+  padding: 2rem;
+  background-color: theme("colors.white");
+  color: theme("colors.black");
+  border-radius: 1.25rem;
+  max-width: 40rem;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.5em;
+
+  font-size: .875rem;
+
+  @media (min-width: 600px) {
+    font-size: 1rem;
+    padding: 3.75rem 2.5rem;
+  }
+}
+
+.cookieConsentOperations__List {
+  border-radius: 1.25rem;
+}
+
+.cookieConsentOperations__Item label::after {
+  background: theme("colors.white");
+}
+
+.cookieConsentOperations__Item input:checked+label::before {
+  background: theme("colors.green");
+}
+
+.cookieConsentOperations__Item.disabled label::after,
+.cookieConsentOperations__Item.disabled label::before {
+  opacity: .6;
+}
+
+/* LEFT */
+.cookieConsent__Content {
+  color: theme("colors.blue");
+  margin: 0;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.cookieConsent__Title {
+  font-family: theme("fontFamily.serif");
+  font-weight: 500;
+  font-size: 2em;
+  margin: 0;
+}
+
+.cookieConsent__Description {
+  font-weight: 300;
+  font-size: 1.125em;
+  margin: 0;
+}
+
+.cookieConsent__Description a {
+  color: theme("colors.green");
+}
+
+/* RIGHT */
+.cookieConsent__Right {
+  gap: 0.5em;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.cookieConsent__Button {
+  border-radius: 5rem;
+  border: 1px solid theme("colors.medium-blue");
+  color: theme("colors.medium-blue");
+  margin: 0;
+}
+
+.cookieConsent__Button--Close,
+.cookieConsent__Button[aria-label="Confirm all"],
+.cookieConsent__Button[aria-label="Accept all"] {
+  background-color: theme("colors.medium-blue");
+  color: theme("colors.white");
+  flex: 1 1 auto;
+}
+
+.cookieConsent__Button--Close {
+  margin-left: auto;
+}
