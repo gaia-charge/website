@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import { _, isLoading } from "svelte-i18n";
   import arrow_right from "$lib/assets/svg/arrow_right.svg";
   import schema from "./../schema";
@@ -20,6 +21,24 @@
       }, {});
     }
   };
+
+  const scriptId = 'pipedriveWebForms';
+  const loadPipedriveScript = () => {
+    const scriptElem = document.getElementById(scriptId);
+
+    if (scriptElem) {
+      scriptElem.remove();
+    }
+
+    const script = document.createElement('script');
+    script.setAttribute('id', scriptId);
+    script.setAttribute('src','https://webforms.pipedrive.com/f/loader');
+    document.head.appendChild(script);
+  }
+
+  onMount(async () => {
+    loadPipedriveScript();
+  })
 </script>
 
 {#if !$isLoading}
@@ -55,127 +74,10 @@
         </p>
       </div>
       <div class="w-1/2 form-elements">
-        <form
-          bind:this={formBind}
-          action="?/submit"
-          method="POST"
-          on:submit|preventDefault={verify}
-        >
-          <div class="flex flex-row flex-col">
-            <label for="firstname"
-              >{$_("contact.name", {
-                default: "First name",
-              })}</label
-            >
-            <input
-              type="text"
-              name="firstname"
-              id="firstname"
-              bind:value={values.firstname}
-              placeholder={$_("contact.name")}
-            />
-            {#if errors.firstname}
-              <span class="error">{errors.firstname}</span>
-            {/if}
-          </div>
-          <div class="flex flex-row flex-col">
-            <label for="lastname"
-              >{$_("contact.lastname", {
-                default: "Last name",
-              })}</label
-            >
-            <input
-              type="text"
-              name="lastname"
-              id="lastname"
-              bind:value={values.lastname}
-              placeholder={$_("contact.lastname")}
-            />
-            {#if errors.lastname}
-              <span class="error">{errors.lastname}</span>
-            {/if}
-          </div>
-          <div class="flex flex-row flex-col">
-            <label for="company"
-              >{$_("contact.company", {
-                default: "Company",
-              })}</label
-            >
-            <input
-              type="text"
-              name="company"
-              id="company"
-              bind:value={values.company}
-              placeholder={$_("contact.company")}
-            />
-            {#if errors.company}
-              <span class="error">{errors.company}</span>
-            {/if}
-          </div>
-          <div class="flex flex-row flex-col">
-            <label for="email"
-              >{$_("contact.email", {
-                default: "Email",
-              })}</label
-            >
-            <input
-              type="email"
-              bind:value={values.email}
-              name="email"
-              id="email"
-              placeholder={$_("contact.email")}
-            />
-            {#if errors.email}
-              <span class="error">{errors.email}</span>
-            {/if}
-          </div>
-          <div class="flex flex-row flex-col">
-            <label for="phone"
-              >{$_("contact.phone", {
-                default: "Phone number",
-              })}</label
-            >
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              bind:value={values.phone}
-              placeholder={$_("contact.phone")}
-            />
-            {#if errors.phone}
-              <span class="error">{errors.phone}</span>
-            {/if}
-          </div>
-          <div class="flex flex-row flex-col">
-            <label for="message"
-              >{$_("contact.message", {
-                default: "Message",
-              })}</label
-            >
-            <input
-              type="text"
-              name="message"
-              id="message"
-              bind:value={values.message}
-              placeholder={$_("contact.message")}
-            />
-            {#if errors.message}
-              <span class="error">{errors.message}</span>
-            {/if}
-          </div>
-          <div class="submit flex mb-6">
-            <button
-              type="submit"
-              class="contact ml-auto text-white bg-green border-green border-2 rounded-full flex items-center justify-between justify-end"
-            >
-              {$_("contact.cta", {
-                default: "Send message",
-              })}
-
-              <img src={arrow_right} class="inline-block" alt="Contact" />
-            </button>
-          </div>
-        </form>
+        <div
+          class="pipedriveWebForms"
+          data-pd-webforms="https://webforms.pipedrive.com/f/72moX2d3I5kKo6qKLYRPmCBRuSlQfrEVbV9IYYbZ8qljei7JSW8hIcBKlnfvgqgMGD"
+        />
       </div>
     {/if}
   </div>
@@ -208,45 +110,6 @@
     line-height: calc(28 / var(--ratio));
   }
 
-  form .flex-row {
-    margin-bottom: calc(16 / var(--ratio));
-  }
-  label {
-    font-size: calc(16 / var(--ratio));
-    margin-bottom: calc(14 / var(--ratio));
-    font-weight: 300;
-  }
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
-    background-color: theme("colors.medium-blue");
-    border: none;
-    border-bottom: 1px solid theme("colors.white");
-    outline: none;
-    width: calc(510 / var(--ratio));
-    font-size: calc(16 / var(--ratio));
-    font-style: italic;
-    font-weight: 200;
-    padding-left: calc(30 / var(--ratio));
-  }
-  .submit {
-    width: calc(510 / var(--ratio));
-  }
-  button[type="submit"] {
-    font-size: calc(16 / var(--ratio));
-    font-weight: 400;
-    padding: calc(15 / var(--ratio)) calc(20 / var(--ratio));
-    width: calc(191 / var(--ratio));
-    margin-top: calc(30 / var(--ratio));
-  }
-  button[type="submit"] img {
-    width: calc(16 / var(--ratio));
-  }
-  .error {
-    display: block;
-    font-size: 12px;
-    color: red;
-  }
   @media only screen and (max-width: 431px) {
     .contact {
       width: 100% !important;
@@ -265,32 +128,7 @@
       font-size: 39px;
       line-height: 48px;
     }
-    label {
-      font-size: 14px;
-      line-height: 24px;
-      margin-bottom: calc(14 / var(--ratio));
-      font-weight: 400;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"] {
-      width: 100%;
-      font-size: 14px;
-      font-style: italic;
-      font-weight: 400;
-      line-height: 24px;
-      padding-left: calc(30 / var(--ratio));
-    }
-    .submit {
-      width: 60%;
-      margin-inline-start: auto;
-    }
-    button[type="submit"] {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
+
     .form-elements {
       width: 100%;
     }
