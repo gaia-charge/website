@@ -13,6 +13,8 @@
   export let data;
   let { initialLocale } = data;
   $: ({ initialLocale } = data);
+
+  console.log('startClient', initialLocale)
   startClient(initialLocale);
 
   onMount(() => {

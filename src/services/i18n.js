@@ -37,6 +37,8 @@ $locale.subscribe((value) => {
 
 // initialize the i18n library in client
 export async function startClient(initialLocale) {
+  console.log('startClient:func', initialLocale, INIT_OPTIONS)
+
   await init({
     ...INIT_OPTIONS,
     initialLocale,
