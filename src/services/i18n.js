@@ -37,6 +37,8 @@ $locale.subscribe((value) => {
 
 // initialize the i18n library in client
 export async function startClient(initialLocale) {
+  console.log('startClient:func', initialLocale, INIT_OPTIONS)
+
   await init({
     ...INIT_OPTIONS,
     initialLocale,
@@ -47,10 +49,19 @@ export async function startClient(initialLocale) {
 export function getInitialLocale() {
   let locale = getCookie("locale");
   // no cookie, let's get the first accepted language
+
   if (!locale) {
     locale = languageFromLocale(
       getLocaleFromNavigator() || INIT_OPTIONS.fallbackLocale
     );
   }
+
+  console.log('locale', {
+    cookie: getCookie("locale"),
+    navigator: getLocaleFromNavigator(),
+    fallback: INIT_OPTIONS.fallbackLocale,
+    locale,
+  });
+
   return locale;
 }
