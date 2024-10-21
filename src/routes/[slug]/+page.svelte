@@ -13,20 +13,6 @@
   import Testimonials from "../../components/Testimonials.svelte";
   import FAQ from "../../components/FAQ.svelte";
   import Footer from "../../components/Footer.svelte";
-  import { onMount } from "svelte";
-
-  export let form;
-  //let contactStatus = form?.contactStatus;
-  $: contactStatus = form?.contactStatus;
-
-  onMount(() => {
-    console.log("the component has mounted");
-
-    setTimeout(() => {
-      const element = document.getElementById("contact");
-      if (contactStatus) element.scrollIntoView({ behavior: "instant" });
-    }, 500);
-  });
 </script>
 
 <svelte:head>
@@ -42,6 +28,6 @@
 <Well />
 <Benefits />
 <Guarantees />
-<Contact {contactStatus} />
+<Contact />
 <Testimonials />
 <Footer />
