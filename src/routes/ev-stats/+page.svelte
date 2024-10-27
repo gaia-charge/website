@@ -29,7 +29,7 @@
     const key = country + orderNetworksBy;
     if (!cachedData[key]) {
       const response = await fetch(
-        `https://stats.staging.gaiagreen.dev/stats/${country}/?sort_networks_by=${orderNetworksBy}`
+        `https://stats.gaiacharge.com/stats/${country}/?sort_networks_by=${orderNetworksBy}`
       );
       const data = await response.json();
       cachedData[key] = data;
