@@ -35,6 +35,11 @@
     if (label === "Dr. Ing. h.c. F. Porsche AG") return "Porsche";
     if (label === "IBIL Gestor de Carga de VE S.A.") return "IBIL";
     if (label === "Wenea Mobile Energy | ES*WEN") return "Wenea";
+    if (label === "Acciona Recarga S.L.") return "Acciona";
+    if (label === "Eranovum e-mobility | ES*ERA") return "Eranovum";
+    if (label === "Exanergía [Cable Energia] | ES*SHE") return "Cable Energia";
+    if (label === "P-APP & WEB SERVICIOS DIGITALES | ES*IPK") return "Interparking";
+    if (label === "à CEPSA CPO") return "CEPSA";
     if (label === "Other") return $_("ev-stats.other", { default: "Other" });
     return label;
   }
