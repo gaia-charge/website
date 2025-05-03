@@ -11,7 +11,8 @@
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
     "prettier": "prettier --write **/*.{css,js,md,svelte}",
-    "i18n:extract": "svelte-i18n extract 'src/**/*.svelte' > src/services/messages/en.json"
+    "i18n:extract": "svelte-i18n extract 'src/**/*.svelte' > src/services/messages/en.json",
+    "cors:set": "aws s3api put-bucket-cors --bucket gaia-fonts --cors-configuration file://cors.json"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",

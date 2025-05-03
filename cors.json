@@ -1,0 +1,32 @@
+{
+    "CORSRules": [
+        {
+            "AllowedHeaders": [
+                "*"
+            ],
+            "AllowedMethods": [
+                "GET",
+                "HEAD",
+                "POST",
+                "PUT",
+                "DELETE"
+            ],
+            "AllowedOrigins": [
+                "http://localhost:5173",
+                "http://localhost:8000",
+                "http://0.0.0.0:8000",
+                "http://0.0.0.0:8080",
+                "https://gaiacharge.com",
+                "https://staging.gaiacharge.com",
+                "https://partner.gaiacharge.com",
+                "https://partner.staging.gaiagreen.dev",
+                "https://41ce7c90fae7.ngrok.app",
+                "https://invest.gaiacharge.com"
+            ],
+            "ExposeHeaders": [
+                "Etag"
+            ],
+            "MaxAgeSeconds": 3000
+        }
+    ]
+}
