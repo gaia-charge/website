@@ -196,7 +196,9 @@
     "start": "Cómo empezar",
     "ourService": "Nuestro servicio",
     "benefits": "Beneficios",
-    "guarantees": "Garantías"
+    "guarantees": "Garantías",
+    "app": "",
+    "invest": "Invierte"
   },
   "why": {
     "title": "¿Por qué tu empresa necesita recarga de VE?"
@@ -244,5 +246,13 @@
       "name": "Francisco J Montesinos Ramirez",
       "who": "Usuario"
     }
+  },
+  "app": {
+    "title": "Encuentra fácilmente",
+    "subtitle": "cargadores públicos en España",
+    "appStore": "Consíguelo en el App Store",
+    "googlePlay": "Disponible en Google Play",
+    "description": "Mapa Reve es una app no oficial de MapaReve.es, el mapa oficial de puntos de carga públicos para vehículos eléctricos en España.",
+    "description2": "Permite ver en un mapa los puntos de recarga cercanos, filtrarlos por tipo y estado, y obtener indicaciones para llegar con Apple Maps, Google Maps o Waze."
   }
 }

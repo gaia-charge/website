@@ -1,6 +1,5 @@
 <script>
-  import { _, isLoading } from "svelte-i18n";
-  import { locale, locales } from "svelte-i18n";
+  import { _, isLoading, locale, locales } from "svelte-i18n";
   export let open = false;
 </script>
 
@@ -23,16 +22,6 @@
         {/each}
       </div>
 
-      <a on:click={() => (open = !open)} href="#need" class="navigation"
-        >{$_("nav.need", {
-          default: "Why you need it",
-        })}</a
-      >
-      <a on:click={() => (open = !open)} href="#start" class="navigation"
-        >{$_("nav.start", {
-          default: "How to start",
-        })}</a
-      >
       <a on:click={() => (open = !open)} href="#ourService" class="navigation"
         >{$_("nav.ourService", {
           default: "Our service",
@@ -43,9 +32,19 @@
           default: "Benefits",
         })}</a
       >
-      <a on:click={() => (open = !open)} href="#guarantees" class="navigation"
-        >{$_("nav.guarantees", {
-          default: "Guarantees",
+      <a on:click={() => (open = !open)} href="/{$locale}/app" class="navigation"
+        >{$_("nav.app", {
+          default: "App",
+        })}</a
+      >
+      <a on:click={() => (open = !open)} href="https://invest.gaiacharge.com/?utm_source=gaiacharge&utm_medium=website" class="navigation"
+        >{$_("nav.invest", {
+          default: "Invest",
+        })}</a
+      >
+      <a on:click={() => (open = !open)} href="#contact" class="navigation"
+        >{$_("contactBtn.cta", {
+          default: "Contacto",
         })}</a
       >
     </nav>
@@ -66,7 +65,7 @@
     a {
       font-family: theme(fontFamily.serif);
       font-size: 1.75rem;
-      font-weight: 600;
+      font-weight: 300;
     }
   }
 

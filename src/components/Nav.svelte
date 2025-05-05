@@ -1,6 +1,5 @@
 <script>
-  import { locale, locales } from "svelte-i18n";
-  import { _, isLoading } from "svelte-i18n";
+  import { _, isLoading, locale, locales } from "svelte-i18n";
   import logo from "$lib/assets/svg/logo.svg";
 
   import SideBar from "./menu/SideBar.svelte";
@@ -22,16 +21,6 @@
       <Hamburger bind:open={sidebar} />
     </div>
     <div class="hidden md:flex justify-center gap-4">
-      <a href="#need" class="navigation"
-        >{$_("nav.need", {
-          default: "Why you need it",
-        })}</a
-      >
-      <a href="#start" class="navigation"
-        >{$_("nav.start", {
-          default: "How to start",
-        })}</a
-      >
       <a href="#ourService" class="navigation"
         >{$_("nav.ourService", {
           default: "Our service",
@@ -42,9 +31,14 @@
           default: "Benefits",
         })}</a
       >
-      <a href="#guarantees" class="navigation"
-        >{$_("nav.guarantees", {
-          default: "Guarantees",
+      <a href="/{$locale}/app" class="navigation"
+        >{$_("nav.app", {
+          default: "App",
+        })}</a
+      >
+      <a href="https://invest.gaiacharge.com/?utm_source=gaiacharge&utm_medium=website" class="navigation"
+        >{$_("nav.invest", {
+          default: "Invest",
         })}</a
       >
     </div>

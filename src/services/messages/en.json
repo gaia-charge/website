@@ -92,17 +92,8 @@
     }
   },
   "contact": {
-    "thankYouMsg": "Thank you for contacting us.\nWe will respond to you shortly",
-    "msgError": "There was an error.\n Please retry later",
     "title": "We are here for you",
-    "subtitle": "Leave us your contact details and we will get in touch with you as soon as possible.",
-    "name": "First name",
-    "lastname": "Last name",
-    "company": "Company",
-    "email": "Email",
-    "phone": "Phone number",
-    "message": "Message",
-    "cta": "Send message"
+    "subtitle": "Leave us your contact details and we will get in touch with you as soon as possible."
   },
   "guarantees": {
     "question": "¿Aún tienes\nalguna duda?",
@@ -172,31 +163,13 @@
   },
   "howToStart": {
     "title": "How can you get started?",
-    "subtitle": "You <em>could</em> call your electrician to install a basic EV charger from Amazon, but in reality<br/><em>the installation is just the first step</em> to a very complex ecosystem.",
-    "alt": "Example aspects to keep in mind",
-    "list": {
-      "hts01": "Usage reports",
-      "hts02": "Equipment upgrades",
-      "hts03": "Updates",
-      "hts04": "Network connection",
-      "hts05": "Business development",
-      "hts06": "Project preparation",
-      "hts07": "Billing",
-      "hts08": "Signage",
-      "hts09": "System integrations",
-      "hts10": "Preventive maintenance",
-      "hts11": "Certificate rotation",
-      "hts12": "Technical feasibility",
-      "hts13": "Status monitoring",
-      "hts14": "Legislative changes"
-    }
+    "subtitle": "You <em>could</em> call your electrician to install a basic EV charger from Amazon, but in reality<br/><em>the installation is just the first step</em> to a very complex ecosystem."
   },
   "nav": {
-    "need": "Why you need it",
-    "start": "How to start",
     "ourService": "Our service",
     "benefits": "Benefits",
-    "guarantees": "Guarantees"
+    "app": "App",
+    "invest": "Invest"
   },
   "why": {
     "title": "Why does your business need EV charging?"
@@ -206,43 +179,29 @@
   },
   "carousel": {
     "evSales": {
-      "header": "Because the sales of electric vehicles keep increasing",
-      "description": "Sales of EV already surpassed those of Diesel and the best selling car of the world is an EV."
+      "description": "Sales of EV already surpassed those of Diesel and the best selling car of the world is an EV.",
+      "header": "Because the sales of electric vehicles keep increasing"
     },
     "greatCustomers": {
-      "header": "Because the EV drivers make for great customers",
-      "description": "On average they are more welthy, spend more and are more loyal."
+      "description": "On average they are more welthy, spend more and are more loyal.",
+      "header": "Because the EV drivers make for great customers"
     },
     "fleetSavings": {
-      "header": "Because switching your fleet to EVs can save you money",
-      "description": "Running costs of EVs are fraction of the price of combustion vehicles."
+      "description": "Running costs of EVs are fraction of the price of combustion vehicles.",
+      "header": "Because switching your fleet to EVs can save you money"
     },
     "previous": "Previous",
     "next": "Next"
   },
+  "app": {
+    "title": "Find public EV chargers",
+    "subtitle": "across Spain with ease.",
+    "appStore": "Download on the App Store",
+    "googlePlay": "Get it on Google Play",
+    "description": "Reve Map is an unofficial app for MapaReve.es, the official registry of public electric vehicle charging points in Spain.",
+    "description2": "It allows you to see the nearby charging points on a map, filter them by type and status, and get directions with Apple Maps, Google Maps or Waze."
+  },
   "privacyPolicy": {
     "title": "Privacy Policy"
-  },
-  "sliderContent": {
-    "one": {
-      "description": "Gaia Charge made the process of installing an electric vehicle charger for our co-workers extremely easy. We just pay a monthly fee and forget about everything. It was all taken care of.",
-      "name": "Miracle Martinez",
-      "who": "Generador Coworking"
-    },
-    "two": {
-      "description": "Since Gaia Charge manages the public charger I usually use, the previous nightmare is over. The availability and speed of charging has improved a lot and the technical service is now impeccable and fast in the few incidents that have occurred.",
-      "name": "Vicente Meneu",
-      "who": "User"
-    },
-    "three": {
-      "description": "I got to know Gaia Charge as a customer of their electric chargers. I wanted to meet them personally because I had never received such a personalized and professional attention.",
-      "name": "Juan Fernando Bou Pérez",
-      "who": "Bou Consultores"
-    },
-    "four": {
-      "description": "After years of experience, I can say that Gaia Charge has surprised me positively with its quick and direct attention in any situation (...) I hope that more towns will follow the example of Alboraya and the management company.",
-      "name": "Francisco J Montesinos Ramirez",
-      "who": "User"
-    }
   }
 }
