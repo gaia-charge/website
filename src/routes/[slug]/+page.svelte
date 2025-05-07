@@ -1,5 +1,5 @@
 <script>
-  import { _, isLoading } from "svelte-i18n";
+  import { _, locale } from "svelte-i18n";
   import Nav from "../../components/Nav.svelte";
   import Hero from "../../components/Hero.svelte";
   import Partners from "../../components/Partners.svelte";
@@ -11,12 +11,14 @@
   import Guarantees from "../../components/Guarantees.svelte";
   import Contact from "../../components/Contact.svelte";
   import Testimonials from "../../components/Testimonials.svelte";
-  import FAQ from "../../components/FAQ.svelte";
   import Footer from "../../components/Footer.svelte";
+
+  $: canonicalUrl = `https://gaiacharge.com/${$locale}`;
 </script>
 
 <svelte:head>
   <title>Gaia Charge</title>
+  <link rel="canonical" href={canonicalUrl} />
 </svelte:head>
 
 <Nav />

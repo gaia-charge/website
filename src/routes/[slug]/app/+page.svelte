@@ -11,10 +11,12 @@
 
   $: appStoreBadge = $locale === 'en' ? appStoreBadgeEn : appStoreBadgeEs;
   $: googlePlayBadge = $locale === 'en' ? googlePlayBadgeEn : googlePlayBadgeEs;
+  $: canonicalUrl = `https://gaiacharge.com/${$locale}/app`;
 </script>
 
 <svelte:head>
-  <title>Gaia Charge</title>
+  <title>Gaia Charge App</title>
+  <link rel="canonical" href={canonicalUrl} />
 </svelte:head>
 
 <Nav />
@@ -105,6 +107,7 @@
     border-radius: 2.5em;
     box-shadow: 0 4px 24px rgba(0,0,0,0.15);
     width: 320px;
+    height: calc(310px / 0.4604166667);
     max-width: 100%;
     display: block;
     margin: 2em auto 0 auto;

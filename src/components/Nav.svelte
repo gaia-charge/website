@@ -21,12 +21,12 @@
       <Hamburger bind:open={sidebar} />
     </div>
     <div class="hidden md:flex justify-center gap-4">
-      <a href="#ourService" class="navigation"
+      <a href="/{$locale}/#ourService" class="navigation"
         >{$_("nav.ourService", {
           default: "Our service",
         })}</a
       >
-      <a href="#benefits" class="navigation"
+      <a href="/{$locale}/#benefits" class="navigation"
         >{$_("nav.benefits", {
           default: "Benefits",
         })}</a
@@ -43,7 +43,7 @@
       >
     </div>
     <div class="hidden md:flex">
-      <a href="#contact" class="contact text-green border-green rounded-full"
+      <a href="/{$locale}/#contact" class="contact text-green border-green rounded-full"
         >{$_("contactBtn.cta", {
           default: "Contacto",
         })}</a

@@ -22,12 +22,12 @@
         {/each}
       </div>
 
-      <a on:click={() => (open = !open)} href="#ourService" class="navigation"
+      <a on:click={() => (open = !open)} href="/{$locale}/#ourService" class="navigation"
         >{$_("nav.ourService", {
           default: "Our service",
         })}</a
       >
-      <a on:click={() => (open = !open)} href="#benefits" class="navigation"
+      <a on:click={() => (open = !open)} href="/{$locale}/#benefits" class="navigation"
         >{$_("nav.benefits", {
           default: "Benefits",
         })}</a
@@ -42,7 +42,7 @@
           default: "Invest",
         })}</a
       >
-      <a on:click={() => (open = !open)} href="#contact" class="navigation"
+      <a on:click={() => (open = !open)} href="/{$locale}/#contact" class="navigation"
         >{$_("contactBtn.cta", {
           default: "Contacto",
         })}</a
