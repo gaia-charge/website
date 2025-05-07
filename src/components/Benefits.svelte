@@ -44,11 +44,11 @@
     <div class="for-you">
       <div class="container">
         <div class="title text-center mx-auto mb-10">
-          <h1>
+          <h2>
             {$_("whatForYou.title", {
               default: "What are your benefits when working with Gaia?",
             })}
-          </h1>
+          </h2>
         </div>
         <div class="no-mobile grid grid-cols-3 gap-16">
           <BenefitsCards />
@@ -102,7 +102,7 @@
       width: calc(540 / var(--ratio));
     }
 
-    h1 {
+    h2 {
       font-family: theme("fontFamily.serif");
       font-size: calc(48 / var(--ratio));
       line-height: calc(56 / var(--ratio));

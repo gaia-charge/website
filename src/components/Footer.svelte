@@ -15,11 +15,11 @@
       />
     </picture>
     <div class="headline absolute z-40 text-center w-full">
-      <h1 class="title text-center">
+      <h2 class="title text-center">
         {$_("footer.title", {
           default: "Follow us on",
         })}
-      </h1>
+      </h2>
       <div class=" flex justify-center gap-4 column">
         <a
           href={$_("socials.linkedin", {

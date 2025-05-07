@@ -6,11 +6,11 @@
 
 {#if !$isLoading}
   <section class="container mx-auto">
-    <h1 class="text-center whitespace-pre-line">
+    <h2 class="text-center whitespace-pre-line">
       {$_("guarantees.question", {
         default: "¿Aún tienes\nalguna duda?",
       })}
-    </h1>
+    </h2>
     <div class="accordion-container">
       <Accordion>
         <span slot="head"
@@ -61,7 +61,7 @@
     padding: calc(65 / var(--ratio)) 0;
   }
 
-  h1 {
+  h2 {
     font-family: theme("fontFamily.serif");
     font-size: calc(48 / var(--ratio));
     font-weight: 300;

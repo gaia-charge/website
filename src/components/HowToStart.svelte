@@ -31,11 +31,11 @@
 {#if !$isLoading}
   <section class="container mx-auto" id="start">
     <div class="title text-center mx-auto">
-      <h1>
+      <h2>
         {$_("howToStart.title", {
           default: "How can you get started?",
         })}
-      </h1>
+      </h2>
       <p>
         {@html $_("howToStart.subtitle", {
           default:
@@ -81,7 +81,7 @@
     width: calc(700 / var(--ratio));
   }
 
-  .title h1 {
+  .title h2 {
     font-family: theme("fontFamily.serif");
     font-size: calc(48 / var(--ratio));
     line-height: calc(56 / var(--ratio));

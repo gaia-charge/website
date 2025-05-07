@@ -15,11 +15,11 @@
 {#if !$isLoading}
   <section class="root relative" id="ourService">
     <div class="title text-center mx-auto whitespace-pre-line">
-      <h1>
+      <h2>
         {@html $_("whatWeDo.title", {
           default: "How is our service <em>different</em>?",
         })}
-      </h1>
+      </h2>
       <p class="whitespace-pre-line">
         {@html $_("whatWeDo.description", {
           default:
@@ -155,7 +155,7 @@
     width: calc(480 / var(--ratio));
   }
 
-  .title h1 {
+  .title h2 {
     font-family: theme("fontFamily.serif");
     font-size: calc(48 / var(--ratio));
     line-height: calc(56 / var(--ratio));

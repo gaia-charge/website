@@ -51,11 +51,11 @@
 
 {#if !$isLoading}
   <section class="container mx-auto" id="guarantees">
-    <h1 class="text-center whitespace-pre-line">
+    <h2 class="text-center whitespace-pre-line">
       {$_("guarantees.title", {
         default: "Gaia Charge guarantees:",
       })}
-    </h1>
+    </h2>
 
     <div class="relative pl-4 pr-4">
       <div
@@ -234,7 +234,7 @@
     padding: calc(65 / var(--ratio)) 0;
   }
 
-  h1 {
+  h2 {
     font-family: theme("fontFamily.serif");
     font-size: calc(48 / var(--ratio));
     font-weight: 300;
