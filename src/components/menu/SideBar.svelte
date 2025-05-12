@@ -37,6 +37,11 @@
           default: "App",
         })}</a
       >
+      <a on:click={() => (open = !open)} href="/{$locale}/blog" class="navigation"
+        >{$_("nav.blog", {
+          default: "Blog",
+        })}</a
+      >
       <a on:click={() => (open = !open)} href="https://invest.gaiacharge.com/?utm_source=gaiacharge&utm_medium=website" class="navigation"
         >{$_("nav.invest", {
           default: "Invest",

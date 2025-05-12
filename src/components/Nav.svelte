@@ -36,6 +36,11 @@
           default: "App",
         })}</a
       >
+      <a href="/{$locale}/blog" class="navigation"
+        >{$_("nav.blog", {
+          default: "Blog",
+        })}</a
+      >
       <a href="https://invest.gaiacharge.com/?utm_source=gaiacharge&utm_medium=website" class="navigation"
         >{$_("nav.invest", {
           default: "Invest",

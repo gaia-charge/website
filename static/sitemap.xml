@@ -1,44 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
+<url xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <loc>https://gaiacharge.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gaiacharge.com/en"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://gaiacharge.com/es"/>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://gaiacharge.com/en" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://gaiacharge.com/es" />
     <lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
+<url xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <loc>https://gaiacharge.com/en</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gaiacharge.com/en"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://gaiacharge.com/es"/>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://gaiacharge.com/es" />
     <lastmod>2025-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
+<url xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <loc>https://gaiacharge.com/es</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gaiacharge.com/en"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://gaiacharge.com/es"/>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://gaiacharge.com/en" />
     <lastmod>2025-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
+<url xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <loc>https://gaiacharge.com/en/app</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gaiacharge.com/en/app"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://gaiacharge.com/es/app"/>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://gaiacharge.com/es/app" />
     <lastmod>2025-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
+<url xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <loc>https://gaiacharge.com/es/app</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gaiacharge.com/en/app"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://gaiacharge.com/es/app"/>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://gaiacharge.com/en/app" />
     <lastmod>2025-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+<url>
+  <loc>https://gaiacharge.com/en/blog</loc>
+  <link xmlns="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://gaiacharge.com/en/blog" />
+  <link xmlns="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://gaiacharge.com/es/blog" />
+  <lastmod>2025-05-12</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://gaiacharge.com/es/blog</loc>
+  <link xmlns="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://gaiacharge.com/en/blog" />
+  <link xmlns="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://gaiacharge.com/es/blog" />
+  <lastmod>2025-05-12</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://gaiacharge.com/en/blog/gaia-charge-signs-strategic-agreement-with-evspot</loc>
+  <lastmod>Tue May 06 2025 02:00:00 GMT+0200 (Central European Summer Time)</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://gaiacharge.com/es/blog/gaia-charge-firma-acuerdo-estrategico-con-evspot</loc>
+  <lastmod>Tue May 06 2025 02:00:00 GMT+0200 (Central European Summer Time)</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>

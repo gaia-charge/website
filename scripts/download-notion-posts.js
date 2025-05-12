@@ -114,7 +114,7 @@ async function downloadNotionPosts() {
       const formattedDate = date.toISOString().split('T')[0]; // YYYY-MM-DD
       
       // Use custom slug if available, otherwise generate from title
-      const slug = customSlug || title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const slug = (customSlug || title.toLowerCase().replace(/[^a-z0-9]+/g, '-')).trim();
       
       // Get all blocks for the page
       const blocks = await getAllBlocks(page.id);
