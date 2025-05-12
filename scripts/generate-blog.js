@@ -119,7 +119,7 @@ async function updateSitemap(posts) {
             url.appendChild(loc);
 
             const lastmod = xmlDoc.createElement('lastmod');
-            lastmod.textContent = post.frontmatter.date || new Date().toISOString().split('T')[0];
+            lastmod.textContent = post.frontmatter.date.toISOString() || new Date().toISOString();
             url.appendChild(lastmod);
 
             const changefreq = xmlDoc.createElement('changefreq');
