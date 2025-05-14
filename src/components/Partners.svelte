@@ -2,7 +2,6 @@
   import startup_valencia from "$lib/assets/partners/startup_valencia@2x.png";
   import aedive from "$lib/assets/partners/aedive@2x.png";
   import avve from "$lib/assets/partners/avve@2x.png";
-  import adestic from "$lib/assets/partners/adestic@2x.png";
   import portal_sostenibilidad from "$lib/assets/partners/portal_sostenibilidad@2x.png";
 </script>
 
@@ -15,12 +14,6 @@
     />
   </li>
   <li><img src={avve} alt="Asociación Valenciana del Vehículo Eléctrico" /></li>
-  <li>
-    <img
-      src={adestic}
-      alt="Clúster de Empresas Innovadoras para el Turismo de la Comunitat Valenciana"
-    />
-  </li>
   <li>
     <img
       src={portal_sostenibilidad}
