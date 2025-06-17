@@ -26,11 +26,6 @@
           default: "Our service",
         })}</a
       >
-      <a href="/{$locale}/#benefits" class="navigation"
-        >{$_("nav.benefits", {
-          default: "Benefits",
-        })}</a
-      >
       <a href="/{$locale}/app" class="navigation"
         >{$_("nav.app", {
           default: "App",
@@ -39,6 +34,11 @@
       <a href="/{$locale}/blog" class="navigation"
         >{$_("nav.blog", {
           default: "Blog",
+        })}</a
+      >
+      <a href="https://gaia-charge.mozello.shop/" class="navigation" target="_blank"
+        >{$_("nav.shop", {
+          default: "Shop",
         })}</a
       >
       <a href="https://invest.gaiacharge.com/?utm_source=gaiacharge&utm_medium=website" class="navigation"

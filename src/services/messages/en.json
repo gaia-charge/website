@@ -167,8 +167,9 @@
   },
   "nav": {
     "ourService": "Our service",
-    "benefits": "Benefits",
     "app": "App",
+    "blog": "Blog",
+    "shop": "Shop",
     "invest": "Invest"
   },
   "why": {
@@ -200,6 +201,9 @@
     "googlePlay": "Get it on Google Play",
     "description": "Reve Map is an unofficial app for MapaReve.es, the official registry of public electric vehicle charging points in Spain.",
     "description2": "It allows you to see the nearby charging points on a map, filter them by type and status, and get directions with Apple Maps, Google Maps or Waze."
+  },
+  "blog": {
+    "index": "Gaia Charge Blog"
   },
   "privacyPolicy": {
     "title": "Privacy Policy"

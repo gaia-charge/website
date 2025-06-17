@@ -27,11 +27,6 @@
           default: "Our service",
         })}</a
       >
-      <a on:click={() => (open = !open)} href="/{$locale}/#benefits" class="navigation"
-        >{$_("nav.benefits", {
-          default: "Benefits",
-        })}</a
-      >
       <a on:click={() => (open = !open)} href="/{$locale}/app" class="navigation"
         >{$_("nav.app", {
           default: "App",
@@ -40,6 +35,11 @@
       <a on:click={() => (open = !open)} href="/{$locale}/blog" class="navigation"
         >{$_("nav.blog", {
           default: "Blog",
+        })}</a
+      >
+      <a on:click={() => (open = !open)} href="https://gaia-charge.mozello.shop/" class="navigation" target="_blank"
+        >{$_("nav.shop", {
+          default: "Shop",
         })}</a
       >
       <a on:click={() => (open = !open)} href="https://invest.gaiacharge.com/?utm_source=gaiacharge&utm_medium=website" class="navigation"
