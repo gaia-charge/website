@@ -14,6 +14,10 @@
   import Footer from "../../components/Footer.svelte";
 
   $: canonicalUrl = `https://gaiacharge.com/${$locale}`;
+
+  /** @type {import('./$types').PageProps} */
+  export let data;
+  export let form;
 </script>
 
 <svelte:head>
@@ -30,6 +34,6 @@
 <Well />
 <Benefits />
 <Guarantees />
-<Contact />
+<Contact contactStatus={form?.contactStatus} />
 <Testimonials />
 <Footer />

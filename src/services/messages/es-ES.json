@@ -96,13 +96,20 @@
     "msgError": "Se ha producido un error.\nVuelve a intentarlo más tarde",
     "title": "Estamos aquí<br />para ti",
     "subtitle": "Déjanos tus datos y nos pondremos en contacto contigo lo antes posible.",
-    "name": "Nombre",
+    "firstname": "Nombre",
     "lastname": "Apellidos",
     "company": "Empresa",
     "email": "Email",
     "phone": "Teléfono",
     "message": "Comentarios",
-    "cta": "Enviar"
+    "cta": "Enviar",
+    "errorFirstNameRequired": "El nombre es obligatorio",
+    "errorLastNameRequired": "Los apellidos son obligatorios",
+    "errorCompanyRequired": "La empresa es obligatoria",
+    "errorEmailRequired": "El correo electrónico es obligatorio",
+    "errorEmailInvalid": "El correo electrónico no es válido",
+    "errorPhoneRequired": "El teléfono es obligatorio",
+    "errorMessageRequired": "El mensaje es obligatorio"
   },
   "guarantees": {
     "question": "¿Aún tienes\nalguna duda?",
@@ -198,8 +205,9 @@
     "benefits": "Beneficios",
     "guarantees": "Garantías",
     "app": "",
-    "shop": "Tienda",
-    "invest": "Invierte"
+    "invest": "Invierte",
+    "blog": "",
+    "shop": "Tienda"
   },
   "why": {
     "title": "¿Por qué tu empresa necesita recarga de VE?"
@@ -255,5 +263,8 @@
     "googlePlay": "Disponible en Google Play",
     "description": "Mapa Reve es una app no oficial de MapaReve.es, el mapa oficial de puntos de carga públicos para vehículos eléctricos en España.",
     "description2": "Permite ver en un mapa los puntos de recarga cercanos, filtrarlos por tipo y estado, y obtener indicaciones para llegar con Apple Maps, Google Maps o Waze."
+  },
+  "blog": {
+    "index": ""
   }
 }

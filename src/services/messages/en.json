@@ -92,8 +92,24 @@
     }
   },
   "contact": {
+    "thankYouMsg": "Thank you for contacting us.\nWe will respond to you shortly",
+    "msgError": "There was an error.\n Please retry later",
     "title": "We are here for you",
-    "subtitle": "Leave us your contact details and we will get in touch with you as soon as possible."
+    "subtitle": "Leave us your contact details and we will get in touch with you as soon as possible.",
+    "firstname": "First name",
+    "lastname": "Last name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone number",
+    "message": "Message",
+    "cta": "Send message",
+    "errorFirstNameRequired": "First name is required",
+    "errorLastNameRequired": "Last name is required",
+    "errorCompanyRequired": "Company is required",
+    "errorEmailRequired": "Email is required",
+    "errorEmailInvalid": "Email is invalid",
+    "errorPhoneRequired": "Phone is required",
+    "errorMessageRequired": "Message is required"
   },
   "guarantees": {
     "question": "¿Aún tienes\nalguna duda?",
