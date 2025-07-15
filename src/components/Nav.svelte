@@ -36,7 +36,7 @@
           default: "Blog",
         })}</a
       >
-      <a href="https://gaia-charge.mozello.shop/" class="navigation" target="_blank"
+      <a href="https://shop.gaiacharge.com/" class="navigation" target="_blank"
         >{$_("nav.shop", {
           default: "Shop",
         })}</a
