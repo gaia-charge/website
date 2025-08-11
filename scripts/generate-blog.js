@@ -119,7 +119,7 @@ async function updateSitemap(posts) {
             url.appendChild(loc);
 
             const lastmod = xmlDoc.createElement('lastmod');
-            lastmod.textContent = post.frontmatter.date.toISOString() || new Date().toISOString();
+            lastmod.textContent = new Date(post.frontmatter.date || Date.now()).toISOString();
             url.appendChild(lastmod);
 
             const changefreq = xmlDoc.createElement('changefreq');
@@ -200,6 +200,12 @@ async function generateBlogPages() {
 
         // Generate blog pages for each language
         for (const [lang, langPosts] of Object.entries(postsByLang)) {
+            // Sort posts newest to oldest by frontmatter.date
+            const sortedLangPosts = [...langPosts].sort((a, b) => {
+                const aTime = new Date(a.frontmatter?.date || 0).getTime();
+                const bTime = new Date(b.frontmatter?.date || 0).getTime();
+                return bTime - aTime;
+            });
             // Create the blog directory for this language
             const langBlogDir = path.join(ROUTES_DIR, lang, 'blog');
             await fs.mkdir(langBlogDir, { recursive: true });
@@ -217,7 +223,7 @@ async function generateBlogPages() {
     import Nav from "../../../components/Nav.svelte";
     import Footer from "../../../components/Footer.svelte";
     import green_arrow_right from "$lib/assets/svg/green_arrow_right.svg";
-    const posts = ${JSON.stringify(langPosts, null, 2)};
+    const posts = ${JSON.stringify(sortedLangPosts, null, 2)};
 </script>
 
 <svelte:head>
@@ -300,7 +306,7 @@ async function generateBlogPages() {
             await fs.writeFile(path.join(langBlogDir, '+page.svelte'), pageContent);
 
             // Generate individual blog post pages
-            for (const post of langPosts) {
+            for (const post of sortedLangPosts) {
                 const postDir = path.join(langBlogDir, post.frontmatter.slug);
                 await fs.mkdir(postDir, { recursive: true });
 

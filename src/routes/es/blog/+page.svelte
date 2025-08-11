@@ -12,31 +12,17 @@
     import green_arrow_right from "$lib/assets/svg/green_arrow_right.svg";
     const posts = [
   {
-    "url": "/es/blog/gaia-charge-firma-acuerdo-estrategico-con-evspot",
+    "url": "/es/blog/gaia-charge-y-last-mile-solutions-firman-un-acuerdo",
     "frontmatter": {
-      "title": "Gaia Charge firma acuerdo estratégico con EVspot",
-      "date": "2025-05-06T00:00:00.000Z",
-      "updated": "2025-05-07T10:20:00.000Z",
-      "notion_id": "1ebe5620-ab7b-800a-bd9a-d1338dbfb3ff",
-      "author": null,
+      "title": "Gaia Charge y Last Mile Solutions firman un acuerdo bilateral de roaming",
+      "date": "2025-07-28T00:00:00.000Z",
+      "updated": "2025-08-11T10:04:00.000Z",
+      "notion_id": "24ce5620-ab7b-808b-8cad-e9f81f7c377a",
+      "author": "Wojtek Siudzinski",
       "language": "spanish",
-      "slug": "gaia-charge-firma-acuerdo-estrategico-con-evspot"
+      "slug": "gaia-charge-y-last-mile-solutions-firman-un-acuerdo"
     },
-    "content": "<p>La empresa valenciana Gaia Charge, operadora independiente de puntos de recarga para vehículos eléctricos (CPO), anuncia la firma de un acuerdo estratégico con EVspot, compañía especializada en soluciones integrales de movilidad eléctrica, para la instalación de 120 nuevos cargadores en 37 ubicaciones distribuidas por toda España.</p>\n<blockquote>\n<p>“Este acuerdo marca un antes y un después para Gaia Charge”, afirma Wojtek Siudzinski, fundador y CEO. “Nuestra visión de una red de recarga funcional, transparente y centrada en el usuario se expande ahora con más fuerza, gracias a socios como EVspot.”</p>\n</blockquote>\n<p>Esta colaboración con EVspot, liderada por su CEO y fundador Ray Carballeira Gibson, fortalece el crecimiento de Gaia Charge a nivel nacional, consolidando su objetivo de crear una red de recarga fiable, accesible y alineada con las necesidades reales de los usuarios. Gaia Charge ya ha suministrado más de 750 MWh a más de 1.700 conductores, y continúa ampliando su presencia en nuevas regiones estratégicas.</p>\n<blockquote>\n<p>“En EVspot compartimos con Gaia Charge una visión clara: impulsar una movilidad eléctrica más accesible, eficiente y centrada en el usuario. Esta alianza refleja valores comunes, sinergia operativa y un compromiso conjunto con la sostenibilidad. Solo colaborando con socios así podemos acelerar esta transición.” compartido Carballeira Gibson.</p>\n</blockquote>\n",
-    "language": "es"
-  },
-  {
-    "url": "/es/blog/gaia-charge-lanza-app-de-mapa-reve",
-    "frontmatter": {
-      "title": "Gaia Charge lanza su nueva app para encontrar puntos de recarga en toda España",
-      "date": "2025-05-15T00:00:00.000Z",
-      "updated": "2025-08-11T10:02:00.000Z",
-      "notion_id": "1f2e5620-ab7b-8050-9aa1-f0ebcdbc2340",
-      "author": null,
-      "language": "spanish",
-      "slug": "gaia-charge-lanza-app-de-mapa-reve"
-    },
-    "content": "<p>La empresa valenciana Gaia Charge presenta su nueva aplicación móvil para ayudar a los conductores de vehículos eléctricos a encontrar fácilmente puntos de recarga públicos en toda España.</p>\n<p>Esta aplicación, desarrollada de forma independiente por el equipo de Gaia Charge, se basa en los datos abiertos del registro oficial MapaReve.es y ofrece una experiencia de usuario ágil, moderna y centrada en la utilidad práctica.</p>\n<blockquote>\n<p>“Sabemos que para muchos conductores la recarga sigue siendo una fuente de frustración. Queríamos crear algo sencillo, rápido y útil, que realmente ayude a encontrar un cargador compatible allá donde estés”, explica Wojtek Siudzinski, CEO de Gaia Charge.</p>\n</blockquote>\n<h2>Funcionalidades principales:</h2>\n<ul>\n<li>Búsqueda de puntos de recarga públicos en toda España</li>\n<li>Filtros por potencia, tipo de conector, método de pago, precio y más</li>\n<li>Visualización del estado en tiempo real</li>\n<li>Navegación integrada con Google Maps, Apple Maps o Waze</li>\n<li>Interfaz optimizada para velocidad y simplicidad<br>El lanzamiento forma parte de la estrategia de Gaia Charge para consolidarse como un referente en el sector de la movilidad eléctrica, no solo operando infraestructura propia, sino también mejorando el acceso y la transparencia de la red pública existente.</li>\n</ul>\n<blockquote>\n<p>“Queremos que los conductores no solo usen nuestros cargadores, sino que se beneficien de una red que funcione para todos, incluso si el punto no es de Gaia”, añade Siudzinski.</p>\n</blockquote>\n<p>La aplicación ya está disponible para su descarga tanto en Android como en iOS, desde el siguiente enlace:</p>\n<p>👉 <a href=\"https://ggrn.link/app\">https://ggrn.link/app</a></p>\n<p>Sobre Gaia Charge</p>\n<p>Gaia Charge SL es una empresa con sede en Valencia dedicada a la instalación y operación de puntos de recarga para vehículos eléctricos. Su enfoque está en ofrecer una red de recarga fiable, accesible y centrada en el usuario, contribuyendo activamente a la transición hacia una movilidad más sostenible.</p>\n",
+    "content": "<p>En Gaia Charge nos complace anunciar la firma de un acuerdo bilateral de roaming con Last Mile Solutions, uno de los líderes europeos en soluciones de movilidad eléctrica.</p>\n<p>Con más de 240.000 puntos de recarga operativos en 22 países, Last Mile Solutions es un referente en ofrecer plataformas inteligentes para la gestión de la recarga, combinando escalabilidad, interoperabilidad y fiabilidad.</p>\n<p>Este acuerdo bidireccional permite que los usuarios de Gaia Charge accedan a una red paneuropea de recarga sin fricciones, al mismo tiempo que los usuarios de LMS podrán utilizar la red de Gaia. Una colaboración de doble vía, como debe ser en un ecosistema que aspira a ser verdaderamente conectado y accesible.</p>\n<blockquote>\n<p>“La interoperabilidad no se trata solo de tecnología; se trata de alianzas que ponen al conductor en el centro”, señaló Wojtek Siudzinski, CEO de Gaia Charge. “Con Last Mile Solutions compartimos la visión de una infraestructura de recarga abierta, conectada y al servicio de todos.”</p>\n</blockquote>\n<p>Gaia Charge sigue tejiendo una red más amplia, más integrada y más útil — para las personas y para el planeta.</p>\n",
     "language": "es"
   },
   {
@@ -54,17 +40,31 @@
     "language": "es"
   },
   {
-    "url": "/es/blog/gaia-charge-y-last-mile-solutions-firman-un-acuerdo",
+    "url": "/es/blog/gaia-charge-lanza-app-de-mapa-reve",
     "frontmatter": {
-      "title": "Gaia Charge y Last Mile Solutions firman un acuerdo bilateral de roaming",
-      "date": "2025-07-28T00:00:00.000Z",
-      "updated": "2025-08-11T10:04:00.000Z",
-      "notion_id": "24ce5620-ab7b-808b-8cad-e9f81f7c377a",
-      "author": "Wojtek Siudzinski",
+      "title": "Gaia Charge lanza su nueva app para encontrar puntos de recarga en toda España",
+      "date": "2025-05-15T00:00:00.000Z",
+      "updated": "2025-08-11T10:02:00.000Z",
+      "notion_id": "1f2e5620-ab7b-8050-9aa1-f0ebcdbc2340",
+      "author": null,
       "language": "spanish",
-      "slug": "gaia-charge-y-last-mile-solutions-firman-un-acuerdo"
+      "slug": "gaia-charge-lanza-app-de-mapa-reve"
     },
-    "content": "<p>En Gaia Charge nos complace anunciar la firma de un acuerdo bilateral de roaming con Last Mile Solutions, uno de los líderes europeos en soluciones de movilidad eléctrica.</p>\n<p>Con más de 240.000 puntos de recarga operativos en 22 países, Last Mile Solutions es un referente en ofrecer plataformas inteligentes para la gestión de la recarga, combinando escalabilidad, interoperabilidad y fiabilidad.</p>\n<p>Este acuerdo bidireccional permite que los usuarios de Gaia Charge accedan a una red paneuropea de recarga sin fricciones, al mismo tiempo que los usuarios de LMS podrán utilizar la red de Gaia. Una colaboración de doble vía, como debe ser en un ecosistema que aspira a ser verdaderamente conectado y accesible.</p>\n<blockquote>\n<p>“La interoperabilidad no se trata solo de tecnología; se trata de alianzas que ponen al conductor en el centro”, señaló Wojtek Siudzinski, CEO de Gaia Charge. “Con Last Mile Solutions compartimos la visión de una infraestructura de recarga abierta, conectada y al servicio de todos.”</p>\n</blockquote>\n<p>Gaia Charge sigue tejiendo una red más amplia, más integrada y más útil — para las personas y para el planeta.</p>\n",
+    "content": "<p>La empresa valenciana Gaia Charge presenta su nueva aplicación móvil para ayudar a los conductores de vehículos eléctricos a encontrar fácilmente puntos de recarga públicos en toda España.</p>\n<p>Esta aplicación, desarrollada de forma independiente por el equipo de Gaia Charge, se basa en los datos abiertos del registro oficial MapaReve.es y ofrece una experiencia de usuario ágil, moderna y centrada en la utilidad práctica.</p>\n<blockquote>\n<p>“Sabemos que para muchos conductores la recarga sigue siendo una fuente de frustración. Queríamos crear algo sencillo, rápido y útil, que realmente ayude a encontrar un cargador compatible allá donde estés”, explica Wojtek Siudzinski, CEO de Gaia Charge.</p>\n</blockquote>\n<h2>Funcionalidades principales:</h2>\n<ul>\n<li>Búsqueda de puntos de recarga públicos en toda España</li>\n<li>Filtros por potencia, tipo de conector, método de pago, precio y más</li>\n<li>Visualización del estado en tiempo real</li>\n<li>Navegación integrada con Google Maps, Apple Maps o Waze</li>\n<li>Interfaz optimizada para velocidad y simplicidad<br>El lanzamiento forma parte de la estrategia de Gaia Charge para consolidarse como un referente en el sector de la movilidad eléctrica, no solo operando infraestructura propia, sino también mejorando el acceso y la transparencia de la red pública existente.</li>\n</ul>\n<blockquote>\n<p>“Queremos que los conductores no solo usen nuestros cargadores, sino que se beneficien de una red que funcione para todos, incluso si el punto no es de Gaia”, añade Siudzinski.</p>\n</blockquote>\n<p>La aplicación ya está disponible para su descarga tanto en Android como en iOS, desde el siguiente enlace:</p>\n<p>👉 <a href=\"https://ggrn.link/app\">https://ggrn.link/app</a></p>\n<p>Sobre Gaia Charge</p>\n<p>Gaia Charge SL es una empresa con sede en Valencia dedicada a la instalación y operación de puntos de recarga para vehículos eléctricos. Su enfoque está en ofrecer una red de recarga fiable, accesible y centrada en el usuario, contribuyendo activamente a la transición hacia una movilidad más sostenible.</p>\n",
+    "language": "es"
+  },
+  {
+    "url": "/es/blog/gaia-charge-firma-acuerdo-estrategico-con-evspot",
+    "frontmatter": {
+      "title": "Gaia Charge firma acuerdo estratégico con EVspot",
+      "date": "2025-05-06T00:00:00.000Z",
+      "updated": "2025-05-07T10:20:00.000Z",
+      "notion_id": "1ebe5620-ab7b-800a-bd9a-d1338dbfb3ff",
+      "author": null,
+      "language": "spanish",
+      "slug": "gaia-charge-firma-acuerdo-estrategico-con-evspot"
+    },
+    "content": "<p>La empresa valenciana Gaia Charge, operadora independiente de puntos de recarga para vehículos eléctricos (CPO), anuncia la firma de un acuerdo estratégico con EVspot, compañía especializada en soluciones integrales de movilidad eléctrica, para la instalación de 120 nuevos cargadores en 37 ubicaciones distribuidas por toda España.</p>\n<blockquote>\n<p>“Este acuerdo marca un antes y un después para Gaia Charge”, afirma Wojtek Siudzinski, fundador y CEO. “Nuestra visión de una red de recarga funcional, transparente y centrada en el usuario se expande ahora con más fuerza, gracias a socios como EVspot.”</p>\n</blockquote>\n<p>Esta colaboración con EVspot, liderada por su CEO y fundador Ray Carballeira Gibson, fortalece el crecimiento de Gaia Charge a nivel nacional, consolidando su objetivo de crear una red de recarga fiable, accesible y alineada con las necesidades reales de los usuarios. Gaia Charge ya ha suministrado más de 750 MWh a más de 1.700 conductores, y continúa ampliando su presencia en nuevas regiones estratégicas.</p>\n<blockquote>\n<p>“En EVspot compartimos con Gaia Charge una visión clara: impulsar una movilidad eléctrica más accesible, eficiente y centrada en el usuario. Esta alianza refleja valores comunes, sinergia operativa y un compromiso conjunto con la sostenibilidad. Solo colaborando con socios así podemos acelerar esta transición.” compartido Carballeira Gibson.</p>\n</blockquote>\n",
     "language": "es"
   }
 ];
