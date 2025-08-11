@@ -3,7 +3,7 @@ title: Gaia Charge firma acuerdo estratégico con EVspot
 date: 2025-05-06
 updated: 2025-05-07T10:20:00.000Z
 notion_id: 1ebe5620-ab7b-800a-bd9a-d1338dbfb3ff
-author: Santiago Muñoz Thomen
+author: 
 language: spanish
 slug: gaia-charge-firma-acuerdo-estrategico-con-evspot
 ---

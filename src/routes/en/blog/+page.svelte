@@ -18,11 +18,53 @@
       "date": "2025-05-06T00:00:00.000Z",
       "updated": "2025-05-12T16:24:00.000Z",
       "notion_id": "1f1e5620-ab7b-80f7-a3dc-c4568d407a5c",
-      "author": "Santiago Muñoz Thomen",
+      "author": null,
       "language": "english",
       "slug": "gaia-charge-signs-strategic-agreement-with-evspot"
     },
     "content": "<p>The Valencian company Gaia Charge, an independent operator of charging points for electric vehicles (CPO), announces the signing of a strategic agreement with EVspot, a company specialized in integral electric mobility solutions, for the installation of 120 new chargers in 37 locations throughout Spain.</p>\n<blockquote>\n<p>“This agreement marks a before and after for Gaia Charge,” says Wojtek Siudzinski, founder and CEO. “Our vision of a functional, transparent and user-centric charging network is now expanding even more strongly, thanks to partners like EVspot.”</p>\n</blockquote>\n<p>This collaboration with EVspot, led by its CEO and founder Ray Carballeira Gibson, strengthens Gaia Charge&#39;s growth nationwide, consolidating its goal of creating a reliable, accessible recharging network aligned with the real needs of users. Gaia Charge has already supplied over 750 MWh to over 1,700 drivers, and continues to expand its presence in new strategic regions.</p>\n<blockquote>\n<p>&quot;At EVspot we share with Gaia Charge a clear vision: to drive more accessible, efficient and user-centric electric mobility. This alliance reflects common values, operational synergy and a joint commitment to sustainability. Only by collaborating with partners like this can we accelerate this transition,&quot; shared Carballeira Gibson.</p>\n</blockquote>\n",
+    "language": "en"
+  },
+  {
+    "url": "/en/blog/gaia-charge-launches-mobile-app-for-mapa-reve",
+    "frontmatter": {
+      "title": "Gaia Charge launches new app to locate EV chargers across Spain",
+      "date": "2025-05-15T00:00:00.000Z",
+      "updated": "2025-08-11T10:02:00.000Z",
+      "notion_id": "1f2e5620-ab7b-801d-9c3d-f018629a7d0e",
+      "author": null,
+      "language": "english",
+      "slug": "gaia-charge-launches-mobile-app-for-mapa-reve"
+    },
+    "content": "<p>Valencia-based company Gaia Charge has launched its brand-new mobile app to help electric vehicle (EV) drivers easily locate public charging points across Spain.</p>\n<p>This app, independently developed by the Gaia Charge team, uses open data from the official MapaReve.es registry and offers a modern, streamlined experience focused on practical utility.</p>\n<blockquote>\n<p>“We know that charging can still be a frustrating experience for many EV drivers. We wanted to build something fast, simple and genuinely helpful—an app that makes it easy to find a compatible charger wherever you are,” said Wojtek Siudzinski, CEO of Gaia Charge.</p>\n</blockquote>\n<h2>Key features:</h2>\n<ul>\n<li>Search for public EV chargers across Spain</li>\n<li>Filter by power, connector type, payment method, price, and more</li>\n<li>View real-time availability</li>\n<li>Navigate directly with Google Maps, Apple Maps or Waze</li>\n<li>Fast and easy-to-use interface<br>The launch is part of Gaia Charge’s broader strategy to position itself as a leader in the EV sector—not only by operating its own infrastructure but also by improving access and transparency across the existing public charging network.</li>\n</ul>\n<blockquote>\n<p>“We want drivers not only to use our chargers, but to benefit from a network that works for everyone—even if the charging point isn’t operated by Gaia,” adds Siudzinski.</p>\n</blockquote>\n<p>The app is now available for download on both Android and iOS:</p>\n<p>👉 <a href=\"https://ggrn.link/app\">https://ggrn.link/app</a></p>\n",
+    "language": "en"
+  },
+  {
+    "url": "/en/blog/gaia-charge-launches-online-store",
+    "frontmatter": {
+      "title": "Gaia Charge Launches New Online Store to Strengthen Access to EV Charging Equipment in Spain",
+      "date": "2025-06-19T00:00:00.000Z",
+      "updated": "2025-08-11T10:10:00.000Z",
+      "notion_id": "24ce5620-ab7b-8075-b3d7-e82d4269934c",
+      "author": "Wojtek Siudzinski",
+      "language": "english",
+      "slug": "gaia-charge-launches-online-store"
+    },
+    "content": "<p>Gaia Charge announces the launch of its new online store, a strategic step to make the deployment of electric vehicle (EV) charging infrastructure in Spain more accessible, professional, and efficient.</p>\n<p>The platform offers a curated selection of certified chargers, accessories, and components from leading manufacturers such as CIRCUTOR and V2C, meeting the needs of both domestic and commercial installations. All equipment is shipped directly from Spain and backed by Gaia Charge’s technical expertise.</p>\n<h2>A Comprehensive Resource for Installers, Businesses, and Homeowners</h2>\n<p>The new store is designed to serve a broad spectrum of users — from CPOs (Charge Point Operators) managing public or semi-public charging networks, to hospitality and retail venues, and individual homeowners seeking reliable charging solutions.</p>\n<p>Customers will find:</p>\n<ul>\n<li>EV chargers for residential and commercial use</li>\n<li>Accessories and components for new and existing installations</li>\n<li>Certified, ready-to-install equipment complying with Spanish and European standards</li>\n<li>Specialised advice and fast national shipping<br>By centralising access to high-quality hardware and expert support, Gaia Charge aims to remove barriers that often delay or complicate the rollout of EV charging points.</li>\n</ul>\n<h2>Supporting the Transition to Electric Mobility</h2>\n<p>The store reinforces Gaia Charge’s mission to provide turnkey EV charging solutions, complementing its existing portfolio of planning, installation, maintenance, and support services. It represents a key component in the company’s commitment to building a more integrated, reliable, and future-proof charging network.</p>\n<p>Quality, compatibility, and trust — guaranteed</p>\n",
+    "language": "en"
+  },
+  {
+    "url": "/en/blog/gaia-charge-signs-agreement-with-last-mile-solutions",
+    "frontmatter": {
+      "title": "Gaia Charge and Last Mile Solutions Sign Bilateral Roaming Agreement",
+      "date": "2025-07-28T00:00:00.000Z",
+      "updated": "2025-08-11T10:02:00.000Z",
+      "notion_id": "24ce5620-ab7b-80b5-84bc-d0235fd97998",
+      "author": "Wojtek Siudzinski",
+      "language": "english",
+      "slug": "gaia-charge-signs-agreement-with-last-mile-solutions"
+    },
+    "content": "<p>Gaia Charge is pleased to announce the signing of a bilateral roaming agreement with Last Mile Solutions, one of Europe’s leading providers of electric mobility solutions.</p>\n<p>With over 240,000 operational charging points across 22 countries, Last Mile Solutions is a benchmark in the sector, offering intelligent charging management platforms that combine scalability, interoperability, and reliability.</p>\n<p>This two-way agreement allows Gaia Charge users to access a pan-European charging network seamlessly, while LMS users will be able to charge at Gaia’s network. A collaboration in both directions — just as it should be in an ecosystem that aims to be truly connected and accessible.</p>\n<blockquote>\n<p>“Building interoperability is not just about technology; it’s about partnerships that put drivers first,” said Wojtek Siudzinski, CEO of Gaia Charge. “With Last Mile Solutions, we share a vision of an open, connected charging infrastructure that works for everyone.”</p>\n</blockquote>\n<p>Gaia Charge continues to weave a broader, more integrated, and more useful network — for people and for the planet.</p>\n",
     "language": "en"
   }
 ];

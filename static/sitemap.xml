@@ -37,11 +37,17 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+<url xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <loc>https://gaiacharge.com/llms.txt</loc>
+  <lastmod>2025-08-11</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
 <url>
   <loc>https://gaiacharge.com/en/blog</loc>
   <link xmlns="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://gaiacharge.com/en/blog" />
   <link xmlns="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://gaiacharge.com/es/blog" />
-  <lastmod>2025-05-12</lastmod>
+  <lastmod>2025-08-11</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
 </url>
@@ -49,12 +55,6 @@
   <loc>https://gaiacharge.com/es/blog</loc>
   <link xmlns="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://gaiacharge.com/en/blog" />
   <link xmlns="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://gaiacharge.com/es/blog" />
-  <lastmod>2025-05-12</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://gaiacharge.com/llms.txt</loc>
   <lastmod>2025-08-11</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
@@ -66,8 +66,44 @@
   <priority>0.7</priority>
 </url>
 <url>
+  <loc>https://gaiacharge.com/en/blog/gaia-charge-launches-mobile-app-for-mapa-reve</loc>
+  <lastmod>2025-05-15T00:00:00.000Z</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://gaiacharge.com/en/blog/gaia-charge-launches-online-store</loc>
+  <lastmod>2025-06-19T00:00:00.000Z</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://gaiacharge.com/en/blog/gaia-charge-signs-agreement-with-last-mile-solutions</loc>
+  <lastmod>2025-07-28T00:00:00.000Z</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
   <loc>https://gaiacharge.com/es/blog/gaia-charge-firma-acuerdo-estrategico-con-evspot</loc>
   <lastmod>2025-05-06T00:00:00.000Z</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://gaiacharge.com/es/blog/gaia-charge-lanza-app-de-mapa-reve</loc>
+  <lastmod>2025-05-15T00:00:00.000Z</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://gaiacharge.com/es/blog/gaia-charge-lanza-su-nueva-tienda-online</loc>
+  <lastmod>2025-06-19T00:00:00.000Z</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://gaiacharge.com/es/blog/gaia-charge-y-last-mile-solutions-firman-un-acuerdo</loc>
+  <lastmod>2025-07-28T00:00:00.000Z</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>

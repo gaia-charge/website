@@ -16,7 +16,7 @@
     "date": "2025-05-06T00:00:00.000Z",
     "updated": "2025-05-07T10:20:00.000Z",
     "notion_id": "1ebe5620-ab7b-800a-bd9a-d1338dbfb3ff",
-    "author": "Santiago Muñoz Thomen",
+    "author": null,
     "language": "spanish",
     "slug": "gaia-charge-firma-acuerdo-estrategico-con-evspot"
   },

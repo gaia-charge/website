@@ -3,7 +3,7 @@ title: Gaia Charge signs strategic agreement with EVspot
 date: 2025-05-06
 updated: 2025-05-12T16:24:00.000Z
 notion_id: 1f1e5620-ab7b-80f7-a3dc-c4568d407a5c
-author: Santiago Muñoz Thomen
+author: 
 language: english
 slug: gaia-charge-signs-strategic-agreement-with-evspot
 ---

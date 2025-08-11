@@ -10,17 +10,17 @@
     import Footer from "../../../../components/Footer.svelte";
     export let data;
     const post = {
-  "url": "/en/blog/gaia-charge-signs-strategic-agreement-with-evspot",
+  "url": "/en/blog/gaia-charge-signs-agreement-with-last-mile-solutions",
   "frontmatter": {
-    "title": "Gaia Charge signs strategic agreement with EVspot",
-    "date": "2025-05-06T00:00:00.000Z",
-    "updated": "2025-05-12T16:24:00.000Z",
-    "notion_id": "1f1e5620-ab7b-80f7-a3dc-c4568d407a5c",
-    "author": null,
+    "title": "Gaia Charge and Last Mile Solutions Sign Bilateral Roaming Agreement",
+    "date": "2025-07-28T00:00:00.000Z",
+    "updated": "2025-08-11T10:02:00.000Z",
+    "notion_id": "24ce5620-ab7b-80b5-84bc-d0235fd97998",
+    "author": "Wojtek Siudzinski",
     "language": "english",
-    "slug": "gaia-charge-signs-strategic-agreement-with-evspot"
+    "slug": "gaia-charge-signs-agreement-with-last-mile-solutions"
   },
-  "content": "<p>The Valencian company Gaia Charge, an independent operator of charging points for electric vehicles (CPO), announces the signing of a strategic agreement with EVspot, a company specialized in integral electric mobility solutions, for the installation of 120 new chargers in 37 locations throughout Spain.</p>\n<blockquote>\n<p>“This agreement marks a before and after for Gaia Charge,” says Wojtek Siudzinski, founder and CEO. “Our vision of a functional, transparent and user-centric charging network is now expanding even more strongly, thanks to partners like EVspot.”</p>\n</blockquote>\n<p>This collaboration with EVspot, led by its CEO and founder Ray Carballeira Gibson, strengthens Gaia Charge&#39;s growth nationwide, consolidating its goal of creating a reliable, accessible recharging network aligned with the real needs of users. Gaia Charge has already supplied over 750 MWh to over 1,700 drivers, and continues to expand its presence in new strategic regions.</p>\n<blockquote>\n<p>&quot;At EVspot we share with Gaia Charge a clear vision: to drive more accessible, efficient and user-centric electric mobility. This alliance reflects common values, operational synergy and a joint commitment to sustainability. Only by collaborating with partners like this can we accelerate this transition,&quot; shared Carballeira Gibson.</p>\n</blockquote>\n",
+  "content": "<p>Gaia Charge is pleased to announce the signing of a bilateral roaming agreement with Last Mile Solutions, one of Europe’s leading providers of electric mobility solutions.</p>\n<p>With over 240,000 operational charging points across 22 countries, Last Mile Solutions is a benchmark in the sector, offering intelligent charging management platforms that combine scalability, interoperability, and reliability.</p>\n<p>This two-way agreement allows Gaia Charge users to access a pan-European charging network seamlessly, while LMS users will be able to charge at Gaia’s network. A collaboration in both directions — just as it should be in an ecosystem that aims to be truly connected and accessible.</p>\n<blockquote>\n<p>“Building interoperability is not just about technology; it’s about partnerships that put drivers first,” said Wojtek Siudzinski, CEO of Gaia Charge. “With Last Mile Solutions, we share a vision of an open, connected charging infrastructure that works for everyone.”</p>\n</blockquote>\n<p>Gaia Charge continues to weave a broader, more integrated, and more useful network — for people and for the planet.</p>\n",
   "language": "en"
 };
 </script>
@@ -31,7 +31,7 @@
       default: "Gaia Charge Blog",
     })}</title>
 {/if}
-  <link rel="canonical" href="https://gaiacharge.com/en/blog/gaia-charge-signs-strategic-agreement-with-evspot" />
+  <link rel="canonical" href="https://gaiacharge.com/en/blog/gaia-charge-signs-agreement-with-last-mile-solutions" />
 </svelte:head>
 
 <Nav />
