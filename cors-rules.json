@@ -8,8 +8,8 @@
                 "https://staging.gaiacharge.com",
                 "https://partner.gaiacharge.com",
                 "https://partner.staging.gaiagreen.dev",
-                "https://website-mlhicv43r-gaia-charge.vercel.app",
-                "https://41ce7c90fae7.ngrok.app"
+                "https://ggt-emsp.eu.ngrok.io",
+                "https://partner.eu.ngrok.io"
             ],
             "AllowedHeaders": [
                 "*"

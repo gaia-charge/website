@@ -15,8 +15,6 @@
 
   $: canonicalUrl = `https://gaiacharge.com/${$locale}`;
 
-  /** @type {import('./$types').PageProps} */
-  export let data;
   export let form;
 </script>
 
