@@ -42,11 +42,6 @@
           default: "Shop",
         })}</a
       >
-      <a on:click={() => (open = !open)} href="https://invest.gaiacharge.com/?utm_source=gaiacharge&utm_medium=website" class="navigation"
-        >{$_("nav.invest", {
-          default: "Invest",
-        })}</a
-      >
       <a on:click={() => (open = !open)} href="/{$locale}/#contact" class="navigation"
         >{$_("contactBtn.cta", {
           default: "Contacto",

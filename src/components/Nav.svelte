@@ -41,11 +41,6 @@
           default: "Shop",
         })}</a
       >
-      <a href="https://invest.gaiacharge.com/?utm_source=gaiacharge&utm_medium=website" class="navigation"
-        >{$_("nav.invest", {
-          default: "Invest",
-        })}</a
-      >
     </div>
     <div class="hidden md:flex">
       <a href="/{$locale}/#contact" class="contact text-green border-green rounded-full"
