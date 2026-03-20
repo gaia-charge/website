@@ -17,11 +17,11 @@
                 "http://0.0.0.0:8000",
                 "http://0.0.0.0:8080",
                 "https://gaiacharge.com",
-                "https://staging.gaiacharge.com",
                 "https://partner.gaiacharge.com",
-                "https://partner.staging.gaiagreen.dev",
-                "https://41ce7c90fae7.ngrok.app",
-                "https://invest.gaiacharge.com"
+                "https://partner-next.gaiacharge.com",
+                "https://invest.gaiacharge.com",
+                "https://ggt-emsp.eu.ngrok.io",
+                "https://partner.eu.ngrok.io"
             ],
             "ExposeHeaders": [
                 "Etag"
