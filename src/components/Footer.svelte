@@ -46,6 +46,11 @@
           class="socials">Facebook</a
         >
       </div>
+      <div class="flex justify-center gap-4 mt-8 column">
+        <a href="/privacy-policy" class="legal-link">
+          {$_("footer.privacyPolicy", { default: "Privacy Policy" })}
+        </a>
+      </div>
     </div>
   </div>
 {/if}
@@ -70,6 +75,13 @@
     color: white;
     text-transform: uppercase;
   }
+  .legal-link {
+    font-size: calc(14 / var(--ratio));
+    line-height: calc(24 / var(--ratio));
+    font-weight: 300;
+    color: white;
+    text-decoration: underline;
+  }
   @media only screen and (max-width: 431px) {
     .headline {
       padding-top: 125px;
@@ -80,6 +92,10 @@
       font-size: 16px;
       line-height: 28px;
       font-weight: 400;
+    }
+    .legal-link {
+      font-size: 14px;
+      line-height: 24px;
     }
     .column {
       flex-direction: column;
