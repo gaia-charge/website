@@ -36,11 +36,6 @@
           default: "Blog",
         })}</a
       >
-      <a href="https://shop.gaiacharge.com/" class="navigation" target="_blank"
-        >{$_("nav.shop", {
-          default: "Shop",
-        })}</a
-      >
     </div>
     <div class="hidden md:flex">
       <a href="/{$locale}/#contact" class="contact text-green border-green rounded-full"

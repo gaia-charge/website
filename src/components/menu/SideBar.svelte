@@ -37,11 +37,6 @@
           default: "Blog",
         })}</a
       >
-      <a on:click={() => (open = !open)} href="https://shop.gaiacharge.com/" class="navigation" target="_blank"
-        >{$_("nav.shop", {
-          default: "Shop",
-        })}</a
-      >
       <a on:click={() => (open = !open)} href="/{$locale}/#contact" class="navigation"
         >{$_("contactBtn.cta", {
           default: "Contacto",
