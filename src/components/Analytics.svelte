@@ -5,14 +5,37 @@
 
   let enableAnalytics = false;
   let enableMarketing = false;
+  let leadfeederLoaded = false;
+
+  // Leadfeeder (Dealfront) visitor tracking. Only loaded once the visitor has
+  // consented to analytics cookies, so the `_lfa` cookie is never set before
+  // consent (LSSI-CE Art. 22.2 / GDPR).
+  function loadLeadfeeder() {
+    if (leadfeederLoaded || typeof document === "undefined") return;
+    leadfeederLoaded = true;
+
+    const siteKey = "p1e024BKMYWaGB6d";
+    window.ldfdr =
+      window.ldfdr ||
+      function () {
+        (window.ldfdr._q = window.ldfdr._q || []).push(
+          [].slice.call(arguments),
+        );
+      };
+
+    const firstScript = document.getElementsByTagName("script")[0];
+    const tracker = document.createElement("script");
+    tracker.src = `https://sc.lfeeder.com/lftracker_v1_${siteKey}.js`;
+    tracker.async = true;
+    firstScript.parentNode.insertBefore(tracker, firstScript);
+  }
 
   function initAnalytics() {
-    console.log("Consented to analytics");
     enableAnalytics = true;
+    loadLeadfeeder();
   }
 
   function initMarketing() {
-    console.log("Consented to marketing");
     enableMarketing = true;
   }
 </script>
